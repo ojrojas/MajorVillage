@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+   mariadb:
+    container_name: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: majorPass
+    ports:
+      - 33063:3306
+    networks:
+      - majorvillagenetwork
+    volumes:
+      - majorvillagenetwork-sqldata:/var/lib/mysql/data \
+
+networks:
+  majorvillagenetwork:
+    driver: bridge
+
+volumes:
+  majorvillagenetwork-sqldata:
+    external: false

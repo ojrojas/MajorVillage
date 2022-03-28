@@ -1,0 +1,13 @@
+global using Microsoft.AspNetCore.Mvc;
+global using MajorVillage.Core.Interfaces;
+global using MajorVillage.Core.Entities;
+global using MajorVillage.Infraestructure.Dapper;
+global using MajorVillage.Core.Services;
+global using MajorVillage.Core.Repositories;
+global using MajorVillage.Core.Dtos;
+global using MajorVillage.Api.Extensions;
+global using Ardalis.ApiEndpoints;
+global using MajorVillage.Infraestructure.Configuration;
+global using Serilog.Context;
+global using Serilog;
+global using MajorVillage.Infraestructure.Encrypt;
