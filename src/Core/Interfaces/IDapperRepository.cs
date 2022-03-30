@@ -61,7 +61,7 @@ public interface IDapperRepository<T>
     /// <param name="transaction">IDb transaction</param>
     /// <param name="commandTimeout">Default time out </param>
     /// <returns>Boolean request</returns>
-    Task<dynamic> InsertAsync(T entity, CancellationToken cancellationToken, IDbTransaction transaction = null, int commandTimeout = 0);
+    Task<Guid> InsertAsync(T entity, CancellationToken cancellationToken, IDbTransaction transaction = null, int commandTimeout = 0);
     /// <summary>
     /// Inserts many entities 
     /// </summary>

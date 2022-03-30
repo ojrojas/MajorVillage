@@ -24,7 +24,7 @@ public class StudentService : IStudentService
     {
         CreateStudentResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Create student, in request {request.CorrelationId()}");
-        response.StudentDto = await _studentRepository.CreateStudentAsync(request.StudentDto, cancellationToken);
+        var result = await _studentRepository.CreateStudentAsync(request.StudentDto, cancellationToken);
         return response;
     }
 

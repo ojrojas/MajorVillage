@@ -115,12 +115,12 @@ public class DapperRepository<T> : IDapperRepository<T> where T : class
     /// <param name="transaction">IDb transaction</param>
     /// <param name="commandTimeout">Default time out </param>
     /// <returns>Boolean request</returns>
-    public async Task<dynamic> InsertAsync(T entity, CancellationToken cancellationToken, IDbTransaction transaction = null, int commandTimeout = default)
+    public async Task<Guid> InsertAsync(T entity, CancellationToken cancellationToken, IDbTransaction transaction = null, int commandTimeout = default)
     {
         cancellationToken.ThrowIfCancellationRequested();
 
         _logger.LogTrace("Insert entity {@entity}", entity);
-        var result = _connection.Insert<T>(entity, transaction, commandTimeout);
+        var result = _connection.Insert(entity, transaction, commandTimeout);
         await Task.Yield();
         return result;
     }

@@ -10,4 +10,6 @@ global using Microsoft.Extensions.Options;
 global using System.Security.Cryptography;
 global using MySql.Data.MySqlClient;
 global using System.Text;
+global using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+
 

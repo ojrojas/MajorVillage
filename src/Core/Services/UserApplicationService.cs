@@ -16,7 +16,7 @@ public class UserApplicationService : IUserApplicationService
     public async Task<CreateUserApplicationResponse> CreateUserApplication(CreateUserApplicationRequest request, CancellationToken cancellationToken)
     {
         CreateUserApplicationResponse response = new(request.CorrelationId());
-        response.applicationUserDto.Id = await _repository.CreateUserApplication(request.userApplicationDto, cancellationToken);
+        response.Id = await _repository.CreateUserApplication(request.userApplicationDto, cancellationToken);
         return response;
     }
 

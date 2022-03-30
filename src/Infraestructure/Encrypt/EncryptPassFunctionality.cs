@@ -1,4 +1,5 @@
 
+
 namespace MajorVillage.Infraestructure.Encrypt;
 
 
@@ -16,11 +17,12 @@ public class EncryptPassFunctionality : IEncryptPassFunctionality
 
     public async Task<string> Encrypt(string password, bool useHashing = true)
     {
-        byte[] saltBytes = Encoding.UTF8.GetBytes(_options.Salt);
-        byte[] passwordToEncrypt = Encoding.UTF8.GetBytes(password);
-        var sha512 = SHA512.Create();
-        passwordToEncrypt = sha512.ComputeHash(passwordToEncrypt);
-      
-        return Encoding.UTF8.GetString(passwordToEncrypt);
+        var encrypted = KeyDerivation.Pbkdf2(password,
+                                             Encoding.UTF8.GetBytes(_options.Salt),
+                                             KeyDerivationPrf.HMACSHA512,
+                                             _options.Iterations,
+                                             _options.SizeKey);
+
+        return Encoding.UTF8.GetString(encrypted);
     }
 }

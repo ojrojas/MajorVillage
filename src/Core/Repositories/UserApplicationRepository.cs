@@ -1,7 +1,5 @@
 namespace MajorVillage.Core.Repositories;
 
-
-
 public class UserApplicationRepository : IUserApplicationRepository
 {
     private readonly IDapperRepository<UserApplication> _repository;
