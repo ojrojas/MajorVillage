@@ -1,6 +1,6 @@
 namespace MajorVillage.Core.Dtos;
 
-public class UpdateStudentRequest : BaseResponse
+public class UpdateUserRequest : BaseResponse
 {
     public Guid Id { get; set; }
     public string FirstName { get; set; } = string.Empty;

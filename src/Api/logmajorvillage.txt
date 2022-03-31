@@ -1,0 +1,327 @@
+2022-03-30 22:37:15.003 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-03-30 22:37:15.103 -05:00 [DBG] Hosting starting
+2022-03-30 22:37:15.136 -05:00 [INF] User profile is available. Using '/home/ojrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-03-30 22:37:15.141 -05:00 [DBG] Reading data from file '/home/ojrojas/.aspnet/DataProtection-Keys/key-4cfd62cf-fba8-4c52-9a55-235295d69059.xml'.
+2022-03-30 22:37:15.152 -05:00 [DBG] Found key {4cfd62cf-fba8-4c52-9a55-235295d69059}.
+2022-03-30 22:37:15.174 -05:00 [DBG] Considering key {4cfd62cf-fba8-4c52-9a55-235295d69059} with expiration date 2022-06-29 03:22:28Z as default key.
+2022-03-30 22:37:15.177 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-03-30 22:37:15.207 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-03-30 22:37:15.207 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-03-30 22:37:15.218 -05:00 [DBG] Using key {4cfd62cf-fba8-4c52-9a55-235295d69059} as the default key.
+2022-03-30 22:37:15.218 -05:00 [DBG] Key ring with default key {4cfd62cf-fba8-4c52-9a55-235295d69059} was loaded during application startup.
+2022-03-30 22:37:15.403 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 23EC829A4CDEA0F9120F2407DA87223C1AFE5CAE)
+2022-03-30 22:37:15.555 -05:00 [INF] Now listening on: https://localhost:7068
+2022-03-30 22:37:15.555 -05:00 [INF] Now listening on: http://localhost:5284
+2022-03-30 22:37:15.555 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-03-30 22:37:15.555 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-30 22:37:15.555 -05:00 [INF] Hosting environment: Development
+2022-03-30 22:37:15.555 -05:00 [INF] Content root path: /home/ojrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-03-30 22:37:15.555 -05:00 [DBG] Hosting started
+2022-03-30 22:37:15.735 -05:00 [DBG] Connection id "0HMGIOV01QD0H" accepted.
+2022-03-30 22:37:15.737 -05:00 [DBG] Connection id "0HMGIOV01QD0H" started.
+2022-03-30 22:37:15.788 -05:00 [DBG] Connection 0HMGIOV01QD0H established using the following protocol: "Tls13"
+2022-03-30 22:37:15.812 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE".
+2022-03-30 22:37:15.815 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2022-03-30 22:37:15.815 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE".
+2022-03-30 22:37:15.816 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2022-03-30 22:37:15.818 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2022-03-30 22:37:15.818 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PRIORITY" frame for stream ID 3 with length 5 and flags 0x0.
+2022-03-30 22:37:15.818 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PRIORITY" frame for stream ID 5 with length 5 and flags 0x0.
+2022-03-30 22:37:15.818 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PRIORITY" frame for stream ID 7 with length 5 and flags 0x0.
+2022-03-30 22:37:15.818 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PRIORITY" frame for stream ID 9 with length 5 and flags 0x0.
+2022-03-30 22:37:15.818 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PRIORITY" frame for stream ID 11 with length 5 and flags 0x0.
+2022-03-30 22:37:15.818 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PRIORITY" frame for stream ID 13 with length 5 and flags 0x0.
+2022-03-30 22:37:15.819 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "HEADERS" frame for stream ID 15 with length 295 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2022-03-30 22:37:15.842 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "WINDOW_UPDATE" frame for stream ID 15 with length 4 and flags 0x0.
+2022-03-30 22:37:15.844 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2022-03-30 22:37:15.857 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7068/ - -
+2022-03-30 22:37:15.861 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-30 22:37:15.861 -05:00 [VRB] All hosts are allowed.
+2022-03-30 22:37:15.886 -05:00 [DBG] No candidates found for the request path '/'
+2022-03-30 22:37:15.886 -05:00 [DBG] Request did not match any endpoints
+2022-03-30 22:37:15.944 -05:00 [DBG] The request path  does not match the path filter
+2022-03-30 22:37:15.958 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "HEADERS" frame for stream ID 15 with length 45 and flags "END_STREAM, END_HEADERS".
+2022-03-30 22:37:15.966 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7068/ - - - 404 0 - 111.4342ms
+2022-03-30 22:37:35.996 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "HEADERS" frame for stream ID 17 with length 34 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2022-03-30 22:37:35.997 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "WINDOW_UPDATE" frame for stream ID 17 with length 4 and flags 0x0.
+2022-03-30 22:37:35.997 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7068/Swagger/index.html - -
+2022-03-30 22:37:35.998 -05:00 [VRB] All hosts are allowed.
+2022-03-30 22:37:35.998 -05:00 [DBG] No candidates found for the request path '/Swagger/index.html'
+2022-03-30 22:37:35.998 -05:00 [DBG] Request did not match any endpoints
+2022-03-30 22:37:36.056 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "HEADERS" frame for stream ID 17 with length 58 and flags "END_HEADERS".
+2022-03-30 22:37:36.057 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 17 with length 4738 and flags "NONE".
+2022-03-30 22:37:36.059 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 17 with length 0 and flags "END_STREAM".
+2022-03-30 22:37:36.059 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7068/Swagger/index.html - - - 200 - text/html;charset=utf-8 61.8254ms
+2022-03-30 22:37:36.207 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "HEADERS" frame for stream ID 19 with length 106 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2022-03-30 22:37:36.214 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7068/Swagger/v1/swagger.json - -
+2022-03-30 22:37:36.215 -05:00 [VRB] All hosts are allowed.
+2022-03-30 22:37:36.215 -05:00 [DBG] No candidates found for the request path '/Swagger/v1/swagger.json'
+2022-03-30 22:37:36.215 -05:00 [DBG] Request did not match any endpoints
+2022-03-30 22:37:36.217 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "WINDOW_UPDATE" frame for stream ID 19 with length 4 and flags 0x0.
+2022-03-30 22:37:36.353 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "HEADERS" frame for stream ID 19 with length 65 and flags "END_HEADERS".
+2022-03-30 22:37:36.353 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 19 with length 8854 and flags "NONE".
+2022-03-30 22:37:36.354 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 19 with length 0 and flags "END_STREAM".
+2022-03-30 22:37:36.354 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7068/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 139.5679ms
+2022-03-30 22:38:09.508 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "HEADERS" frame for stream ID 21 with length 63 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2022-03-30 22:38:09.512 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "WINDOW_UPDATE" frame for stream ID 21 with length 4 and flags 0x0.
+2022-03-30 22:38:09.512 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7068/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350 - -
+2022-03-30 22:38:09.513 -05:00 [VRB] All hosts are allowed.
+2022-03-30 22:38:09.528 -05:00 [DBG] 1 candidate(s) found for the request path '/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350'
+2022-03-30 22:38:09.532 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)' with route pattern 'api/GetUserById/{Id}' is valid for the request path '/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350'
+2022-03-30 22:38:09.533 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:38:09.533 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-03-30 22:38:09.534 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:38:09.565 -05:00 [INF] Route matched with {action = "Handle", controller = "GetUserById"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MajorVillage.Core.Dtos.GetUserByIdResponse]] HandleAsync(MajorVillage.Core.Dtos.GetUserByIdRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.GetUserById (Api).
+2022-03-30 22:38:09.566 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-03-30 22:38:09.566 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-03-30 22:38:09.566 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-03-30 22:38:09.567 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-03-30 22:38:09.567 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-03-30 22:38:09.567 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.GetUserById (Api)
+2022-03-30 22:38:09.659 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.GetUserById (Api)
+2022-03-30 22:38:09.674 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' ...
+2022-03-30 22:38:09.676 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' using the name '' in request data ...
+2022-03-30 22:38:09.680 -05:00 [DBG] Attempting to bind property 'MajorVillage.Core.Dtos.GetUserByIdRequest.Id' of type 'System.Guid' using the name 'Id' in request data ...
+2022-03-30 22:38:09.681 -05:00 [DBG] Done attempting to bind property 'MajorVillage.Core.Dtos.GetUserByIdRequest.Id' of type 'System.Guid'.
+2022-03-30 22:38:09.684 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:38:09.685 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:38:09.685 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' ...
+2022-03-30 22:38:09.688 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:38:09.688 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-03-30 22:38:09.688 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-03-30 22:38:09.688 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-03-30 22:38:09.689 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-03-30 22:38:09.689 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:38:09.689 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:38:09.690 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:38:09.690 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:38:09.695 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) - Validation state: "Valid"
+2022-03-30 22:38:09.695 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.GetUserByIdRequest","System.Threading.CancellationToken"])
+2022-03-30 22:38:09.699 -05:00 [INF] Get User by id, in request 3c65896c-df5a-4056-a5e0-4268fd03d445
+2022-03-30 22:38:09.710 -05:00 [VRB] Get entity firstordefault by property {"Value":"47b983b4-6a6c-4ac5-be0a-2cb6ff270350","DatabaseFunction":"None","DatabaseFunctionParameters":"","Properties":["System.Guid Id"],"Operator":"Eq","Not":false,"UseTableAlias":true,"PropertyName":"Id","$type":"FieldPredicate`1"}
+2022-03-30 22:38:10.384 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:38:10.384 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:38:10.384 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:38:10.384 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:38:10.391 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) in 818.8099ms
+2022-03-30 22:38:10.392 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:38:10.393 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'y_1.TypeUser' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1066
+   at Dapper.SqlMapper.QueryImpl[T](IDbConnection cnn, CommandDefinition command, Type effectiveType)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1094
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 734
+   at DapperExtensions.DapperImplementor.GetListAutoMap[T](IDbConnection connection, IList`1 colsToSelect, IClassMapper classMap, IPredicate predicate, IList`1 sort, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean buffered, IList`1 includedProperties)
+   at DapperExtensions.DapperImplementor.InternalGetListAutoMap[T](IDbConnection connection, Object predicate, IList`1 sort, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean buffered, IList`1 colsToSelect, IList`1 includedProperties)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute9[T0,T1,T2,T3,T4,T5,T6,T7,T8,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+   at DapperExtensions.DapperImplementor.InternalGet[T](IDbConnection connection, Object id, IDbTransaction transaction, Nullable`1 commandTimeout, IList`1 colsToSelect, IList`1 includedProperties)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute7[T0,T1,T2,T3,T4,T5,T6,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+   at DapperExtensions.DapperImplementor.Get[T](IDbConnection connection, Object id, IDbTransaction transaction, Nullable`1 commandTimeout, IList`1 includedProperties)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute5[T0,T1,T2,T3,T4,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
+   at DapperExtensions.DapperExtensions.Get[T](IDbConnection connection, Object id, IDbTransaction transaction, Nullable`1 commandTimeout)
+   at MajorVillage.Infraestructure.Dapper.DapperRepository`1.GetByIdAsync(Object Id, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Infraestructure/Dapper/DapperRepository.cs:line 45
+   at MajorVillage.Core.Repositories.UserRepository.GetUserByIdAsync(Object id, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Core/Repositories/UserRepository.cs:line 28
+   at MajorVillage.Core.Services.UserService.GetUserByIdAsync(GetUserByIdRequest request, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Core/Services/UserService.cs:line 19
+   at MajorVillage.Api.Endpoints.GetUserById.HandleAsync(GetUserByIdRequest request, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Api/Endpoints/UserEndpoints/GetStudentById.cs:line 26
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-30 22:38:10.458 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "HEADERS" frame for stream ID 21 with length 60 and flags "END_HEADERS".
+2022-03-30 22:38:10.458 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 21 with length 6139 and flags "NONE".
+2022-03-30 22:38:10.458 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 21 with length 0 and flags "END_STREAM".
+2022-03-30 22:38:10.459 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7068/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350 - - - 500 - text/plain;+charset=utf-8 946.0375ms
+2022-03-30 22:39:08.539 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2022-03-30 22:39:08.540 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2022-03-30 22:39:15.426 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "HEADERS" frame for stream ID 23 with length 58 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2022-03-30 22:39:15.426 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "WINDOW_UPDATE" frame for stream ID 23 with length 4 and flags 0x0.
+2022-03-30 22:39:15.426 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7068/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350 - -
+2022-03-30 22:39:15.427 -05:00 [VRB] All hosts are allowed.
+2022-03-30 22:39:15.428 -05:00 [DBG] 1 candidate(s) found for the request path '/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350'
+2022-03-30 22:39:15.429 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)' with route pattern 'api/GetUserById/{Id}' is valid for the request path '/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350'
+2022-03-30 22:39:15.429 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:39:15.429 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-03-30 22:39:15.429 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:39:15.429 -05:00 [INF] Route matched with {action = "Handle", controller = "GetUserById"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MajorVillage.Core.Dtos.GetUserByIdResponse]] HandleAsync(MajorVillage.Core.Dtos.GetUserByIdRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.GetUserById (Api).
+2022-03-30 22:39:15.429 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-03-30 22:39:15.429 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-03-30 22:39:15.429 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-03-30 22:39:15.430 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-03-30 22:39:15.430 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-03-30 22:39:15.430 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.GetUserById (Api)
+2022-03-30 22:39:15.430 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.GetUserById (Api)
+2022-03-30 22:39:15.430 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' ...
+2022-03-30 22:39:15.430 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' using the name '' in request data ...
+2022-03-30 22:39:15.430 -05:00 [DBG] Attempting to bind property 'MajorVillage.Core.Dtos.GetUserByIdRequest.Id' of type 'System.Guid' using the name 'Id' in request data ...
+2022-03-30 22:39:15.430 -05:00 [DBG] Done attempting to bind property 'MajorVillage.Core.Dtos.GetUserByIdRequest.Id' of type 'System.Guid'.
+2022-03-30 22:39:15.431 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:39:15.431 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:39:15.431 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' ...
+2022-03-30 22:39:15.431 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:39:15.431 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-03-30 22:39:15.431 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-03-30 22:39:15.431 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-03-30 22:39:15.431 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-03-30 22:39:15.431 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:39:15.431 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:39:15.431 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:39:15.432 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:39:15.432 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) - Validation state: "Valid"
+2022-03-30 22:39:15.432 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.GetUserByIdRequest","System.Threading.CancellationToken"])
+2022-03-30 22:39:24.252 -05:00 [INF] Get User by id, in request 6b8a2f7e-aea1-4885-bda1-ab04442fbb02
+2022-03-30 22:39:35.946 -05:00 [VRB] Get entity firstordefault by property {"Value":"47b983b4-6a6c-4ac5-be0a-2cb6ff270350","DatabaseFunction":"None","DatabaseFunctionParameters":"","Properties":["System.Guid Id"],"Operator":"Eq","Not":false,"UseTableAlias":true,"PropertyName":"Id","$type":"FieldPredicate`1"}
+2022-03-30 22:39:40.302 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:39:40.302 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:39:40.302 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:39:40.303 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:39:40.308 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) in 24877.789ms
+2022-03-30 22:39:40.311 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:39:40.315 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'y_1.TypeUser' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1066
+   at Dapper.SqlMapper.QueryImpl[T](IDbConnection cnn, CommandDefinition command, Type effectiveType)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1094
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 734
+   at DapperExtensions.DapperImplementor.GetListAutoMap[T](IDbConnection connection, IList`1 colsToSelect, IClassMapper classMap, IPredicate predicate, IList`1 sort, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean buffered, IList`1 includedProperties)
+   at DapperExtensions.DapperImplementor.InternalGetListAutoMap[T](IDbConnection connection, Object predicate, IList`1 sort, IDbTransaction transaction, Nullable`1 commandTimeout, Boolean buffered, IList`1 colsToSelect, IList`1 includedProperties)
+   at DapperExtensions.DapperImplementor.InternalGet[T](IDbConnection connection, Object id, IDbTransaction transaction, Nullable`1 commandTimeout, IList`1 colsToSelect, IList`1 includedProperties)
+   at DapperExtensions.DapperImplementor.Get[T](IDbConnection connection, Object id, IDbTransaction transaction, Nullable`1 commandTimeout, IList`1 includedProperties)
+   at DapperExtensions.DapperExtensions.Get[T](IDbConnection connection, Object id, IDbTransaction transaction, Nullable`1 commandTimeout)
+   at MajorVillage.Infraestructure.Dapper.DapperRepository`1.GetByIdAsync(Object Id, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Infraestructure/Dapper/DapperRepository.cs:line 45
+   at MajorVillage.Core.Repositories.UserRepository.GetUserByIdAsync(Object id, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Core/Repositories/UserRepository.cs:line 28
+   at MajorVillage.Core.Services.UserService.GetUserByIdAsync(GetUserByIdRequest request, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Core/Services/UserService.cs:line 19
+   at MajorVillage.Api.Endpoints.GetUserById.HandleAsync(GetUserByIdRequest request, CancellationToken cancellationToken) in /home/ojrojas/Sources/GitHub/MajorVillage/src/Api/Endpoints/UserEndpoints/GetStudentById.cs:line 26
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-30 22:39:40.324 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "HEADERS" frame for stream ID 23 with length 34 and flags "END_HEADERS".
+2022-03-30 22:39:40.324 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 23 with length 5659 and flags "NONE".
+2022-03-30 22:39:40.324 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "DATA" frame for stream ID 23 with length 0 and flags "END_STREAM".
+2022-03-30 22:39:40.325 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7068/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350 - - - 500 - text/plain;+charset=utf-8 24898.3476ms
+2022-03-30 22:40:38.622 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2022-03-30 22:40:38.646 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2022-03-30 22:41:37.592 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "PING" frame for stream ID 0 with length 8 and flags "NONE".
+2022-03-30 22:41:37.592 -05:00 [VRB] Connection id "0HMGIOV01QD0H" sending "PING" frame for stream ID 0 with length 8 and flags "ACK".
+2022-03-30 22:42:30.802 -05:00 [DBG] Connection id "0HMGIOV01QD0H" received FIN.
+2022-03-30 22:42:30.808 -05:00 [VRB] Connection id "0HMGIOV01QD0H" received "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0.
+2022-03-30 22:42:30.853 -05:00 [DBG] Connection id "0HMGIOV01QD0H" is closed. The last processed stream ID was 23.
+2022-03-30 22:42:30.853 -05:00 [DBG] Connection id "0HMGIOV01QD0H" sending FIN because: "The client closed the connection."
+2022-03-30 22:42:30.865 -05:00 [DBG] Connection id "0HMGIOV01QD0H" stopped.
+2022-03-30 22:42:32.431 -05:00 [DBG] Connection id "0HMGIOV01QD0I" accepted.
+2022-03-30 22:42:32.432 -05:00 [DBG] Connection id "0HMGIOV01QD0I" started.
+2022-03-30 22:42:32.440 -05:00 [DBG] Connection 0HMGIOV01QD0I established using the following protocol: "Tls13"
+2022-03-30 22:42:32.441 -05:00 [VRB] Connection id "0HMGIOV01QD0I" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE".
+2022-03-30 22:42:32.441 -05:00 [VRB] Connection id "0HMGIOV01QD0I" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2022-03-30 22:42:32.441 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE".
+2022-03-30 22:42:32.441 -05:00 [VRB] Connection id "0HMGIOV01QD0I" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "PRIORITY" frame for stream ID 3 with length 5 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "PRIORITY" frame for stream ID 5 with length 5 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "PRIORITY" frame for stream ID 7 with length 5 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "PRIORITY" frame for stream ID 9 with length 5 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "PRIORITY" frame for stream ID 11 with length 5 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "PRIORITY" frame for stream ID 13 with length 5 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "HEADERS" frame for stream ID 15 with length 267 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "WINDOW_UPDATE" frame for stream ID 15 with length 4 and flags 0x0.
+2022-03-30 22:42:32.442 -05:00 [VRB] Connection id "0HMGIOV01QD0I" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2022-03-30 22:42:32.442 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7068/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350 - -
+2022-03-30 22:42:32.443 -05:00 [VRB] All hosts are allowed.
+2022-03-30 22:42:32.443 -05:00 [DBG] 1 candidate(s) found for the request path '/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350'
+2022-03-30 22:42:32.443 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)' with route pattern 'api/GetUserById/{Id}' is valid for the request path '/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350'
+2022-03-30 22:42:32.443 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:42:32.443 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-03-30 22:42:32.443 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:42:32.443 -05:00 [INF] Route matched with {action = "Handle", controller = "GetUserById"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MajorVillage.Core.Dtos.GetUserByIdResponse]] HandleAsync(MajorVillage.Core.Dtos.GetUserByIdRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.GetUserById (Api).
+2022-03-30 22:42:32.443 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-03-30 22:42:32.443 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-03-30 22:42:32.443 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-03-30 22:42:32.444 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-03-30 22:42:32.444 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-03-30 22:42:32.444 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.GetUserById (Api)
+2022-03-30 22:42:32.444 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.GetUserById (Api)
+2022-03-30 22:42:32.444 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' ...
+2022-03-30 22:42:32.444 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' using the name '' in request data ...
+2022-03-30 22:42:32.444 -05:00 [DBG] Attempting to bind property 'MajorVillage.Core.Dtos.GetUserByIdRequest.Id' of type 'System.Guid' using the name 'Id' in request data ...
+2022-03-30 22:42:32.445 -05:00 [DBG] Done attempting to bind property 'MajorVillage.Core.Dtos.GetUserByIdRequest.Id' of type 'System.Guid'.
+2022-03-30 22:42:32.445 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:42:32.445 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:42:32.445 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest' ...
+2022-03-30 22:42:32.445 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.GetUserByIdRequest'.
+2022-03-30 22:42:32.445 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-03-30 22:42:32.445 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-03-30 22:42:32.445 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-03-30 22:42:32.445 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-03-30 22:42:32.445 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:42:32.445 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:42:32.445 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:42:32.445 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:42:32.445 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) - Validation state: "Valid"
+2022-03-30 22:42:32.446 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.GetUserByIdRequest","System.Threading.CancellationToken"])
+2022-03-30 22:42:37.760 -05:00 [INF] Get User by id, in request dfd0d09b-68c1-4137-8139-ac653fe64889
+2022-03-30 22:42:40.977 -05:00 [VRB] Get entity firstordefault by property {"Value":"47b983b4-6a6c-4ac5-be0a-2cb6ff270350","DatabaseFunction":"None","DatabaseFunctionParameters":"","Properties":["System.Guid Id"],"Operator":"Eq","Not":false,"UseTableAlias":true,"PropertyName":"Id","$type":"FieldPredicate`1"}
+2022-03-30 22:42:49.470 -05:00 [INF] Executed action method MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16944.1378ms.
+2022-03-30 22:42:49.472 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:42:49.472 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-03-30 22:42:49.473 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:42:49.473 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-03-30 22:42:49.474 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-03-30 22:42:49.474 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-03-30 22:42:49.475 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-03-30 22:42:49.477 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2022-03-30 22:42:49.479 -05:00 [DBG] No information found on request to perform content negotiation.
+2022-03-30 22:42:49.479 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-03-30 22:42:49.480 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-03-30 22:42:49.480 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-03-30 22:42:49.481 -05:00 [INF] Executing ObjectResult, writing value of type 'MajorVillage.Core.Dtos.GetUserByIdResponse'.
+2022-03-30 22:42:49.483 -05:00 [VRB] Connection id "0HMGIOV01QD0I" sending "HEADERS" frame for stream ID 15 with length 74 and flags "END_HEADERS".
+2022-03-30 22:42:49.484 -05:00 [VRB] Connection id "0HMGIOV01QD0I" sending "DATA" frame for stream ID 15 with length 16 and flags "NONE".
+2022-03-30 22:42:49.484 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-03-30 22:42:49.484 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-03-30 22:42:49.484 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-03-30 22:42:49.485 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api) in 17041.5522ms
+2022-03-30 22:42:49.486 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
+2022-03-30 22:42:49.488 -05:00 [VRB] Connection id "0HMGIOV01QD0I" sending "DATA" frame for stream ID 15 with length 0 and flags "END_STREAM".
+2022-03-30 22:42:49.488 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7068/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350 - - - 200 - application/json;+charset=utf-8 17045.6224ms

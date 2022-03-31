@@ -8,3 +8,4 @@ global using MajorVillage.Core.Dtos;
 global using AutoMapper;
 global using Microsoft.Extensions.Logging;
 global using System.Linq;
+

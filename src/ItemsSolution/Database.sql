@@ -2,6 +2,42 @@ CREATE DATABASE IF NOT EXISTS MajorVillageDB;
 
 USE MajorVillageDB;
 
+CREATE TABLE IF NOT EXISTS TypeIdentification(
+    Id varchar(36) primary key default uuid() not null,
+    Name varchar(150) not null,
+    CreatedBy varchar(36) not null,
+    CreatedOn Timestamp not null,
+    ModifiedBy varchar(36) null,
+    ModifiedOn Timestamp null
+);
+
+
+CREATE TABLE IF NOT EXISTS TypeUser(
+    Id varchar(36) primary key default uuid() not null,
+    Name varchar(150) not null,
+    CreatedBy varchar(36) not null,
+    CreatedOn Timestamp not null,
+    ModifiedBy varchar(36) null,
+    ModifiedOn Timestamp null
+);
+
+CREATE TABLE IF NOT EXISTS User(
+    Id varchar(36) primary key default uuid() not null,
+    FirstName varchar(60) not null,
+    Middlename varchar(60) null,
+    LastName varchar(60) not null,
+    SurName varchar(60) null,
+    Identification varchar(16) not null,
+    TypeIdentification  varchar(16) not null,
+    Age integer not null, 
+    BirthDate  DateTime not null,
+    TypeUser varchar(36) not null
+    CreatedBy varchar(36) not null,
+    CreatedOn Timestamp not null,
+    ModifiedBy varchar(36) null,
+    ModifiedOn Timestamp null
+);
+
 CREATE TABLE IF NOT EXISTS UserApplication (
     Id varchar(36) primary key default uuid() not null,
     UserName varchar(150) not null,
@@ -11,7 +47,7 @@ CREATE TABLE IF NOT EXISTS UserApplication (
     CreatedOn Timestamp not null,
     ModifiedBy varchar(36) null,
     ModifiedOn Timestamp null,
-    Foreign Key(UserId) references UserApplication(UserId)
+    Foreign Key(UserId) references User(Id)
 );
 
 CREATE TABLE IF NOT EXISTS Student (
@@ -25,3 +61,18 @@ CREATE TABLE IF NOT EXISTS Student (
     ModifiedBy varchar(36) null,
     ModifiedOn Timestamp null
 );
+
+
+INSERT INTO MajorVillageDB.TypeIdentification
+(Id, Name, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
+VALUES('551d4e76-38a0-4df4-848f-90ede4c76537', 'CC', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL),
+('4d357ece-880a-45d8-851a-cac02bba5092', 'TI', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL)
+
+
+
+
+
+
+
+
+

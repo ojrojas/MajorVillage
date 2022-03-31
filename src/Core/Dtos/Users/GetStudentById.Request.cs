@@ -1,6 +1,6 @@
 namespace MajorVillage.Core.Dtos;
 
-public class GetStudentByIdRequest : BaseResponse
+public class GetUserByIdRequest : BaseResponse
 {
     public Guid Id { get; set; }
 }

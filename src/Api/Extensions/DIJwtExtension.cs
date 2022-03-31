@@ -13,7 +13,7 @@ public static class DIJwtExtension
     /// <returns>Service configuration</returns>
     internal static IServiceCollection AddJwtExtension(this IServiceCollection services, IConfiguration configuration)
     {
-       var key = Encoding.ASCII.GetBytes(configuration["JwtOptions:JwtSecret"]);
+       var key = Encoding.ASCII.GetBytes(configuration["Jwt:SecretPhrase"]);
             services.AddAuthentication(config =>
             {
                 config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;

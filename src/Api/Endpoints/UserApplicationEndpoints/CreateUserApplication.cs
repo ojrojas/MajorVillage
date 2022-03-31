@@ -12,6 +12,11 @@ public class CreateUserApplication : EndpointBaseAsync.WithRequest<CreateUserApp
     }
 
     [HttpPost]
+     [SwaggerOperation(
+          Summary = "create userapplication",
+          Description = "create userapplication",
+          OperationId = "applicationuser.create",
+          Tags = new[] { "UserApplicationEndpoints" })]
     public override async Task<ActionResult<CreateUserApplicationResponse>> HandleAsync(CreateUserApplicationRequest request, CancellationToken cancellationToken = default)
     {
      return await _service.CreateUserApplication(request,cancellationToken);  

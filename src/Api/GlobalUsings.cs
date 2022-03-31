@@ -14,3 +14,5 @@ global using MajorVillage.Infraestructure.Encrypt;
 global using System.Text;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.IdentityModel.Tokens;
+global using Swashbuckle.AspNetCore.Annotations;
+global using Microsoft.OpenApi.Models;

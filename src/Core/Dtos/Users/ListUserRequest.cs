@@ -1,6 +1,6 @@
 namespace MajorVillage.Core.Dtos;
 
-public class ListStudentRequest : BaseRequest
+public class ListUserRequest : BaseRequest
 {
     public IPredicate predicate { get; set; }
 }

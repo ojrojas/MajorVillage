@@ -11,4 +11,5 @@ public class User : BaseEntity, IAggregateRoot
     public Guid TypeIdentification { get; set; }
     public int Age { get; set; }
     public DateTime BirthDate { get; set; }
+    public Guid TypeUser { get; set; }
 }

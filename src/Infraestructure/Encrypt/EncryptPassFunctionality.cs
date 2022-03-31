@@ -19,6 +19,8 @@ public class EncryptPassFunctionality : IEncryptPassFunctionality
                                              _options.Iterations,
                                              _options.SizeKey);
 
+                                             await Task.Yield();
+
         return Encoding.UTF8.GetString(encrypted);
     }
 }

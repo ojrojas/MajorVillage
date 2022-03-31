@@ -1,6 +1,6 @@
 namespace MajorVillage.Core.Entities;
 
-public class TypeIdentification: BaseEntity,IAggregateRoot
+public class TypeUser: BaseEntity,IAggregateRoot
 {
     public string Name { get; set; }
 }

@@ -1,6 +1,6 @@
 namespace MajorVillage.Core.Dtos;
 
-public class DeleteStudentRequest : BaseResponse
+public class DeleteUserRequest : BaseResponse
 {
     public Guid Id { get; set; }
 }
