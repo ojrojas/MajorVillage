@@ -1,8 +1,4 @@
-
-
 namespace MajorVillage.Infraestructure.Encrypt;
-
-
 
 public class EncryptPassFunctionality : IEncryptPassFunctionality
 {

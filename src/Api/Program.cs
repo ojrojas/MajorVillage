@@ -19,6 +19,7 @@ builder.Services.AddServicesDIApp();
 var configuration = builder.Configuration;
 
 builder.Services.AddDIOptionsConfiguration(configuration);
+builder.Services.AddJwtExtension(configuration);
 
 // //Asynchronous - Dialect don´t work
 // DapperExtensions.DapperAsyncExtensions.SqlDialect = new DapperExtensions.Sql.MySqlDialect();

@@ -7,6 +7,4 @@ internal static class DIOptionExtension {
         services.Configure<EncryptOption>(configuration.GetSection("EncryptOptions"));
         return services;
     }
-
-
 }

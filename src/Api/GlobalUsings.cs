@@ -11,3 +11,6 @@ global using MajorVillage.Infraestructure.Configuration;
 global using Serilog.Context;
 global using Serilog;
 global using MajorVillage.Infraestructure.Encrypt;
+global using System.Text;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;

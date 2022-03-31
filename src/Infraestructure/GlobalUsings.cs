@@ -7,9 +7,12 @@ global using DapperExtensions;
 global using DapperExtensions.Predicate;
 global using MajorVillage.Infraestructure.Configuration;
 global using Microsoft.Extensions.Options;
-global using System.Security.Cryptography;
 global using MySql.Data.MySqlClient;
 global using System.Text;
 global using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Reflection;
+global using System.Security.Claims;
+global using Microsoft.IdentityModel.Tokens;
 
 
