@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS User(
     TypeIdentification  varchar(16) not null,
     Age integer not null, 
     BirthDate  DateTime not null,
-    TypeUser varchar(36) not null
+    TypeUser varchar(36) not null,
     CreatedBy varchar(36) not null,
     CreatedOn Timestamp not null,
     ModifiedBy varchar(36) null,
@@ -62,11 +62,27 @@ CREATE TABLE IF NOT EXISTS Student (
     ModifiedOn Timestamp null
 );
 
+CREATE TABLE IF NOT EXISTS ElectiveYear(
+    Id varchar(36) primary key default uuid() not null,
+    Year integer not null,
+    CreatedBy varchar(36) not null,
+    CreatedOn Timestamp not null,
+    ModifiedBy varchar(36) null,
+    ModifiedOn Timestamp null
+);
+
 
 INSERT INTO MajorVillageDB.TypeIdentification
 (Id, Name, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
 VALUES('551d4e76-38a0-4df4-848f-90ede4c76537', 'CC', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL),
-('4d357ece-880a-45d8-851a-cac02bba5092', 'TI', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL)
+('4d357ece-880a-45d8-851a-cac02bba5092', 'TI', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL);
+
+INSERT INTO MajorVillageDB.TypeUser
+(Id, Name, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
+VALUES
+('82f5a433-3c73-4e61-a177-5703114ba0ac', 'Admin', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL),
+('cfbb1a1d-439e-42d0-a822-e07be28ec1aa', 'Student', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL),
+('4536ea48-f042-4656-8e10-64605f00584f', 'Teacher', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL);
 
 
 

@@ -18,6 +18,7 @@ public class UserRepository : IUserRepository
     {
         return await _repository.InsertsAsync(Users, cancellationToken, transaction, timeOut);
     }
+    
     public async Task<bool> DeleteUserAsync(User User, CancellationToken cancellationToken)
     {   
         return await _repository.DeleteAsync(User, cancellationToken);

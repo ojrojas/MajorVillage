@@ -1,7 +1,5 @@
 namespace MajorVillage.Core.Services;
 
-
-
 public class UserApplicationService : IUserApplicationService
 {
     private readonly IUserApplicationRepository _repository;

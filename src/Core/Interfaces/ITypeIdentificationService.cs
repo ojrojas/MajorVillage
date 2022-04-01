@@ -2,5 +2,5 @@ namespace MajorVillage.Core.Interfaces;
 
 public interface ITypeIdentificationService
 {
-    Task<IEnumerable<TypeIdentification>> GetAllTypeIdentifications(IPredicate predicate, CancellationToken cancellationToken);
+    Task<GetAllTypeIdentificationResponse> GetAllTypeIdentifications(GetAllTypeIdentificationRequest request, CancellationToken cancellationToken);
 }

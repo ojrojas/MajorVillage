@@ -325,3 +325,242 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'y_1.TypeUser
 2022-03-30 22:42:49.486 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.GetUserById.HandleAsync (Api)'
 2022-03-30 22:42:49.488 -05:00 [VRB] Connection id "0HMGIOV01QD0I" sending "DATA" frame for stream ID 15 with length 0 and flags "END_STREAM".
 2022-03-30 22:42:49.488 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7068/api/GetUserById/47b983b4-6a6c-4ac5-be0a-2cb6ff270350 - - - 200 - application/json;+charset=utf-8 17045.6224ms
+2022-03-31 21:59:46.076 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-03-31 21:59:46.217 -05:00 [DBG] Hosting starting
+2022-03-31 21:59:46.278 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-03-31 21:59:46.293 -05:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2022-03-31 21:59:46.294 -05:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2022-03-31 21:59:46.296 -05:00 [INF] Creating key {cfba2c84-15d3-4b18-a256-e66a1f573795} with creation date 2022-04-01 02:59:46Z, activation date 2022-04-01 02:59:46Z, and expiration date 2022-06-30 02:59:46Z.
+2022-03-31 21:59:46.474 -05:00 [DBG] Descriptor deserializer type for key {cfba2c84-15d3-4b18-a256-e66a1f573795} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2022-03-31 21:59:46.479 -05:00 [DBG] No key escrow sink found. Not writing key {cfba2c84-15d3-4b18-a256-e66a1f573795} to escrow.
+2022-03-31 21:59:46.479 -05:00 [WRN] No XML encryptor configured. Key {cfba2c84-15d3-4b18-a256-e66a1f573795} may be persisted to storage in unencrypted form.
+2022-03-31 21:59:46.499 -05:00 [INF] Writing data to file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-cfba2c84-15d3-4b18-a256-e66a1f573795.xml'.
+2022-03-31 21:59:46.501 -05:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2022-03-31 21:59:46.505 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-cfba2c84-15d3-4b18-a256-e66a1f573795.xml'.
+2022-03-31 21:59:46.543 -05:00 [DBG] Found key {cfba2c84-15d3-4b18-a256-e66a1f573795}.
+2022-03-31 21:59:46.549 -05:00 [DBG] Considering key {cfba2c84-15d3-4b18-a256-e66a1f573795} with expiration date 2022-06-30 02:59:46Z as default key.
+2022-03-31 21:59:46.552 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-03-31 21:59:46.567 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-03-31 21:59:46.567 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-03-31 21:59:46.574 -05:00 [DBG] Using key {cfba2c84-15d3-4b18-a256-e66a1f573795} as the default key.
+2022-03-31 21:59:46.575 -05:00 [DBG] Key ring with default key {cfba2c84-15d3-4b18-a256-e66a1f573795} was loaded during application startup.
+2022-03-31 21:59:46.813 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: FE11B009A646980FAF3AA9AE93D850F0D225355A)
+2022-03-31 21:59:46.870 -05:00 [INF] Now listening on: https://localhost:7068
+2022-03-31 21:59:46.870 -05:00 [INF] Now listening on: http://localhost:5284
+2022-03-31 21:59:46.870 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-03-31 21:59:46.870 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-31 21:59:46.870 -05:00 [INF] Hosting environment: Development
+2022-03-31 21:59:46.870 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-03-31 21:59:46.870 -05:00 [DBG] Hosting started
+2022-03-31 21:59:47.045 -05:00 [DBG] Connection id "0HMGJHEN36Q45" accepted.
+2022-03-31 21:59:47.045 -05:00 [DBG] Connection id "0HMGJHEN36Q46" accepted.
+2022-03-31 21:59:47.047 -05:00 [DBG] Connection id "0HMGJHEN36Q45" started.
+2022-03-31 21:59:47.047 -05:00 [DBG] Connection id "0HMGJHEN36Q46" started.
+2022-03-31 21:59:47.138 -05:00 [DBG] Connection 0HMGJHEN36Q45 established using the following protocol: "Tls12"
+2022-03-31 21:59:47.138 -05:00 [DBG] Connection 0HMGJHEN36Q46 established using the following protocol: "Tls12"
+2022-03-31 21:59:47.227 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-03-31 21:59:47.230 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-31 21:59:47.230 -05:00 [VRB] All hosts are allowed.
+2022-03-31 21:59:47.275 -05:00 [DBG] No candidates found for the request path '/'
+2022-03-31 21:59:47.276 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 21:59:47.344 -05:00 [DBG] The request path  does not match the path filter
+2022-03-31 21:59:47.365 -05:00 [DBG] Connection id "0HMGJHEN36Q46" completed keep alive response.
+2022-03-31 21:59:47.371 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 142.6256ms
+2022-03-31 22:01:07.434 -05:00 [DBG] Connection id "0HMGJHEN36Q45" received FIN.
+2022-03-31 22:01:07.464 -05:00 [DBG] Connection id "0HMGJHEN36Q45" sending FIN because: "The client closed the connection."
+2022-03-31 22:01:07.482 -05:00 [DBG] Connection id "0HMGJHEN36Q45" disconnecting.
+2022-03-31 22:01:07.488 -05:00 [DBG] Connection id "0HMGJHEN36Q45" stopped.
+2022-03-31 22:01:37.430 -05:00 [DBG] Connection id "0HMGJHEN36Q46" received FIN.
+2022-03-31 22:01:37.457 -05:00 [DBG] Connection id "0HMGJHEN36Q46" disconnecting.
+2022-03-31 22:01:37.482 -05:00 [DBG] Connection id "0HMGJHEN36Q46" sending FIN because: "The client closed the connection."
+2022-03-31 22:01:37.532 -05:00 [DBG] Connection id "0HMGJHEN36Q46" stopped.
+2022-03-31 22:06:24.605 -05:00 [DBG] Connection id "0HMGJHEN36Q47" accepted.
+2022-03-31 22:06:24.632 -05:00 [DBG] Connection id "0HMGJHEN36Q47" started.
+2022-03-31 22:06:24.769 -05:00 [DBG] Connection 0HMGJHEN36Q47 established using the following protocol: "Tls12"
+2022-03-31 22:06:24.824 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/index.html - -
+2022-03-31 22:06:24.825 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:24.825 -05:00 [DBG] No candidates found for the request path '/Swagger/index.html'
+2022-03-31 22:06:24.825 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:24.917 -05:00 [DBG] Connection id "0HMGJHEN36Q47" completed keep alive response.
+2022-03-31 22:06:24.917 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/index.html - - - 200 - text/html;charset=utf-8 92.9227ms
+2022-03-31 22:06:24.939 -05:00 [DBG] Connection id "0HMGJHEN36Q48" accepted.
+2022-03-31 22:06:24.939 -05:00 [DBG] Connection id "0HMGJHEN36Q48" started.
+2022-03-31 22:06:24.939 -05:00 [DBG] Connection id "0HMGJHEN36Q49" accepted.
+2022-03-31 22:06:24.939 -05:00 [DBG] Connection id "0HMGJHEN36Q49" started.
+2022-03-31 22:06:24.943 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - -
+2022-03-31 22:06:24.943 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:24.943 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui.css'
+2022-03-31 22:06:24.943 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:24.951 -05:00 [VRB] Range header's value is empty.
+2022-03-31 22:06:24.961 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-03-31 22:06:24.962 -05:00 [DBG] Connection id "0HMGJHEN36Q47" completed keep alive response.
+2022-03-31 22:06:24.962 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - - - 200 143821 text/css 18.8178ms
+2022-03-31 22:06:24.962 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - -
+2022-03-31 22:06:24.962 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:24.963 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-bundle.js'
+2022-03-31 22:06:24.963 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:24.963 -05:00 [VRB] Range header's value is empty.
+2022-03-31 22:06:24.972 -05:00 [DBG] Connection 0HMGJHEN36Q49 established using the following protocol: "Tls12"
+2022-03-31 22:06:25.049 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - -
+2022-03-31 22:06:25.049 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:25.049 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-standalone-preset.js'
+2022-03-31 22:06:25.049 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:25.049 -05:00 [VRB] Range header's value is empty.
+2022-03-31 22:06:25.053 -05:00 [DBG] Connection 0HMGJHEN36Q48 established using the following protocol: "Tls12"
+2022-03-31 22:06:25.222 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-03-31 22:06:25.222 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-03-31 22:06:25.224 -05:00 [DBG] Connection id "0HMGJHEN36Q47" completed keep alive response.
+2022-03-31 22:06:25.224 -05:00 [DBG] Connection id "0HMGJHEN36Q49" completed keep alive response.
+2022-03-31 22:06:25.224 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - - - 200 1079362 application/javascript 261.6696ms
+2022-03-31 22:06:25.224 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - - - 200 319705 application/javascript 175.4221ms
+2022-03-31 22:06:26.292 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/index.html - -
+2022-03-31 22:06:26.292 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:26.292 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-03-31 22:06:26.292 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:26.293 -05:00 [DBG] Connection id "0HMGJHEN36Q47" completed keep alive response.
+2022-03-31 22:06:26.294 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/index.html - - - 200 - text/html;charset=utf-8 1.9273ms
+2022-03-31 22:06:26.520 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui.css - -
+2022-03-31 22:06:26.520 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:26.520 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-bundle.js - -
+2022-03-31 22:06:26.520 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2022-03-31 22:06:26.520 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:26.520 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:26.520 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2022-03-31 22:06:26.521 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:26.521 -05:00 [VRB] Range header's value is empty.
+2022-03-31 22:06:26.521 -05:00 [VRB] Range header's value is empty.
+2022-03-31 22:06:26.521 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-standalone-preset.js - -
+2022-03-31 22:06:26.521 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:26.521 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2022-03-31 22:06:26.521 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:26.521 -05:00 [VRB] Range header's value is empty.
+2022-03-31 22:06:26.544 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-03-31 22:06:26.571 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-03-31 22:06:26.570 -05:00 [DBG] Connection id "0HMGJHEN36Q47" completed keep alive response.
+2022-03-31 22:06:26.596 -05:00 [DBG] Connection id "0HMGJHEN36Q48" completed keep alive response.
+2022-03-31 22:06:26.596 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-standalone-preset.js - - - 200 319705 application/javascript 75.2646ms
+2022-03-31 22:06:26.596 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui.css - - - 200 143821 text/css 75.8582ms
+2022-03-31 22:06:26.623 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-03-31 22:06:26.623 -05:00 [DBG] Connection id "0HMGJHEN36Q49" completed keep alive response.
+2022-03-31 22:06:26.623 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-bundle.js - - - 200 1079362 application/javascript 102.7706ms
+2022-03-31 22:06:26.704 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - -
+2022-03-31 22:06:26.704 -05:00 [VRB] All hosts are allowed.
+2022-03-31 22:06:26.704 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-03-31 22:06:26.704 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 22:06:26.825 -05:00 [DBG] Connection id "0HMGJHEN36Q49" completed keep alive response.
+2022-03-31 22:06:26.825 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 121.2571ms
+2022-03-31 23:11:57.618 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-03-31 23:12:42.111 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-03-31 23:13:16.156 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-03-31 23:13:16.281 -05:00 [DBG] Hosting starting
+2022-03-31 23:13:16.340 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-03-31 23:13:16.354 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-cfba2c84-15d3-4b18-a256-e66a1f573795.xml'.
+2022-03-31 23:13:16.394 -05:00 [DBG] Found key {cfba2c84-15d3-4b18-a256-e66a1f573795}.
+2022-03-31 23:13:16.414 -05:00 [DBG] Considering key {cfba2c84-15d3-4b18-a256-e66a1f573795} with expiration date 2022-06-30 02:59:46Z as default key.
+2022-03-31 23:13:16.418 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-03-31 23:13:16.431 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-03-31 23:13:16.431 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-03-31 23:13:16.439 -05:00 [DBG] Using key {cfba2c84-15d3-4b18-a256-e66a1f573795} as the default key.
+2022-03-31 23:13:16.440 -05:00 [DBG] Key ring with default key {cfba2c84-15d3-4b18-a256-e66a1f573795} was loaded during application startup.
+2022-03-31 23:13:16.675 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: FE11B009A646980FAF3AA9AE93D850F0D225355A)
+2022-03-31 23:13:16.732 -05:00 [INF] Now listening on: https://localhost:7068
+2022-03-31 23:13:16.732 -05:00 [INF] Now listening on: http://localhost:5284
+2022-03-31 23:13:16.732 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-03-31 23:13:16.733 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-31 23:13:16.733 -05:00 [INF] Hosting environment: Development
+2022-03-31 23:13:16.733 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-03-31 23:13:16.733 -05:00 [DBG] Hosting started
+2022-03-31 23:13:16.959 -05:00 [DBG] Connection id "0HMGJINPBGCQL" accepted.
+2022-03-31 23:13:16.959 -05:00 [DBG] Connection id "0HMGJINPBGCQM" accepted.
+2022-03-31 23:13:16.960 -05:00 [DBG] Connection id "0HMGJINPBGCQM" started.
+2022-03-31 23:13:16.960 -05:00 [DBG] Connection id "0HMGJINPBGCQL" started.
+2022-03-31 23:13:17.038 -05:00 [DBG] Connection 0HMGJINPBGCQL established using the following protocol: "Tls12"
+2022-03-31 23:13:17.038 -05:00 [DBG] Connection 0HMGJINPBGCQM established using the following protocol: "Tls12"
+2022-03-31 23:13:17.093 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-03-31 23:13:17.097 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-31 23:13:17.097 -05:00 [VRB] All hosts are allowed.
+2022-03-31 23:13:17.141 -05:00 [DBG] No candidates found for the request path '/'
+2022-03-31 23:13:17.141 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 23:13:17.207 -05:00 [DBG] The request path  does not match the path filter
+2022-03-31 23:13:17.228 -05:00 [DBG] Connection id "0HMGJINPBGCQM" completed keep alive response.
+2022-03-31 23:13:17.233 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 140.3670ms
+2022-03-31 23:13:19.541 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/index.html - -
+2022-03-31 23:13:19.541 -05:00 [VRB] All hosts are allowed.
+2022-03-31 23:13:19.541 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-03-31 23:13:19.542 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 23:13:19.657 -05:00 [DBG] Connection id "0HMGJINPBGCQM" completed keep alive response.
+2022-03-31 23:13:19.658 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/index.html - - - 200 - text/html;charset=utf-8 116.6200ms
+2022-03-31 23:13:19.823 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - -
+2022-03-31 23:13:19.823 -05:00 [VRB] All hosts are allowed.
+2022-03-31 23:13:19.823 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-03-31 23:13:19.823 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 23:13:19.864 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-31 23:13:19.903 -05:00 [DBG] Connection id "0HMGJINPBGCQM" completed keep alive response.
+2022-03-31 23:13:19.903 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 80.3705ms
+2022-03-31 23:13:45.823 -05:00 [DBG] Connection id "0HMGJINPBGCQL" received FIN.
+2022-03-31 23:13:45.822 -05:00 [DBG] Connection id "0HMGJINPBGCQM" received FIN.
+2022-03-31 23:13:45.861 -05:00 [DBG] Connection id "0HMGJINPBGCQL" disconnecting.
+2022-03-31 23:13:45.861 -05:00 [DBG] Connection id "0HMGJINPBGCQM" disconnecting.
+2022-03-31 23:13:45.862 -05:00 [DBG] Connection id "0HMGJINPBGCQM" sending FIN because: "The client closed the connection."
+2022-03-31 23:13:45.862 -05:00 [DBG] Connection id "0HMGJINPBGCQL" sending FIN because: "The client closed the connection."
+2022-03-31 23:13:45.889 -05:00 [DBG] Connection id "0HMGJINPBGCQM" stopped.
+2022-03-31 23:13:45.889 -05:00 [DBG] Connection id "0HMGJINPBGCQL" stopped.
+2022-03-31 23:18:44.162 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-03-31 23:18:44.288 -05:00 [DBG] Hosting starting
+2022-03-31 23:18:44.341 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-03-31 23:18:44.356 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-cfba2c84-15d3-4b18-a256-e66a1f573795.xml'.
+2022-03-31 23:18:44.395 -05:00 [DBG] Found key {cfba2c84-15d3-4b18-a256-e66a1f573795}.
+2022-03-31 23:18:44.414 -05:00 [DBG] Considering key {cfba2c84-15d3-4b18-a256-e66a1f573795} with expiration date 2022-06-30 02:59:46Z as default key.
+2022-03-31 23:18:44.418 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-03-31 23:18:44.438 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-03-31 23:18:44.438 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-03-31 23:18:44.445 -05:00 [DBG] Using key {cfba2c84-15d3-4b18-a256-e66a1f573795} as the default key.
+2022-03-31 23:18:44.446 -05:00 [DBG] Key ring with default key {cfba2c84-15d3-4b18-a256-e66a1f573795} was loaded during application startup.
+2022-03-31 23:18:44.664 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: FE11B009A646980FAF3AA9AE93D850F0D225355A)
+2022-03-31 23:18:44.743 -05:00 [INF] Now listening on: https://localhost:7068
+2022-03-31 23:18:44.743 -05:00 [INF] Now listening on: http://localhost:5284
+2022-03-31 23:18:44.743 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-03-31 23:18:44.744 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-31 23:18:44.744 -05:00 [INF] Hosting environment: Development
+2022-03-31 23:18:44.744 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-03-31 23:18:44.744 -05:00 [DBG] Hosting started
+2022-03-31 23:18:44.916 -05:00 [DBG] Connection id "0HMGJIQR351E9" accepted.
+2022-03-31 23:18:44.941 -05:00 [DBG] Connection id "0HMGJIQR351EA" accepted.
+2022-03-31 23:18:44.965 -05:00 [DBG] Connection id "0HMGJIQR351E9" started.
+2022-03-31 23:18:44.965 -05:00 [DBG] Connection id "0HMGJIQR351EA" started.
+2022-03-31 23:18:45.038 -05:00 [DBG] Connection 0HMGJIQR351E9 established using the following protocol: "Tls12"
+2022-03-31 23:18:45.038 -05:00 [DBG] Connection 0HMGJIQR351EA established using the following protocol: "Tls12"
+2022-03-31 23:18:45.089 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-03-31 23:18:45.092 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-31 23:18:45.092 -05:00 [VRB] All hosts are allowed.
+2022-03-31 23:18:45.132 -05:00 [DBG] No candidates found for the request path '/'
+2022-03-31 23:18:45.132 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 23:18:45.197 -05:00 [DBG] The request path  does not match the path filter
+2022-03-31 23:18:45.215 -05:00 [DBG] Connection id "0HMGJIQR351EA" completed keep alive response.
+2022-03-31 23:18:45.220 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 131.5877ms
+2022-03-31 23:18:47.512 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/index.html - -
+2022-03-31 23:18:47.512 -05:00 [VRB] All hosts are allowed.
+2022-03-31 23:18:47.513 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-03-31 23:18:47.513 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 23:18:47.628 -05:00 [DBG] Connection id "0HMGJIQR351EA" completed keep alive response.
+2022-03-31 23:18:47.628 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/index.html - - - 200 - text/html;charset=utf-8 115.8767ms
+2022-03-31 23:18:47.753 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - -
+2022-03-31 23:18:47.753 -05:00 [VRB] All hosts are allowed.
+2022-03-31 23:18:47.753 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-03-31 23:18:47.753 -05:00 [DBG] Request did not match any endpoints
+2022-03-31 23:18:47.844 -05:00 [DBG] Connection id "0HMGJIQR351EA" completed keep alive response.
+2022-03-31 23:18:47.844 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.8447ms
+2022-03-31 23:40:01.893 -05:00 [DBG] Connection id "0HMGJIQR351EA" received FIN.
+2022-03-31 23:40:01.893 -05:00 [DBG] Connection id "0HMGJIQR351E9" received FIN.
+2022-03-31 23:40:02.000 -05:00 [DBG] Connection id "0HMGJIQR351E9" sending FIN because: "The client closed the connection."
+2022-03-31 23:40:02.000 -05:00 [DBG] Connection id "0HMGJIQR351EA" sending FIN because: "The client closed the connection."
+2022-03-31 23:40:02.009 -05:00 [DBG] Connection id "0HMGJIQR351E9" disconnecting.
+2022-03-31 23:40:02.009 -05:00 [DBG] Connection id "0HMGJIQR351EA" disconnecting.
+2022-03-31 23:40:02.013 -05:00 [DBG] Connection id "0HMGJIQR351EA" stopped.
+2022-03-31 23:40:02.013 -05:00 [DBG] Connection id "0HMGJIQR351E9" stopped.

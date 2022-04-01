@@ -11,8 +11,10 @@ public class TypeUserService : ITypeUserService
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<IEnumerable<TypeUser>> GetAllTypeUsers(IPredicate predicate, CancellationToken  cancellationToken)
+    public async Task<GetAllTypeUserResponse> GetAllTypeUsers(GetAllTypeUsersRequest request, CancellationToken  cancellationToken)
     {
-        return await _typeUserRepository.GetAllUserType(predicate, cancellationToken);
+        GetAllTypeUserResponse response = new(request.CorrelationId());
+        response.TypeUsers = await _typeUserRepository.GetAllUserType(request.predicate, cancellationToken);
+        return response;
     }
 }

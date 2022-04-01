@@ -12,7 +12,8 @@ public class CreateUserApplication : EndpointBaseAsync.WithRequest<CreateUserApp
     }
 
     [HttpPost]
-     [SwaggerOperation(
+    [Produces(typeof(CreateUserApplicationResponse))]
+    [SwaggerOperation(
           Summary = "create userapplication",
           Description = "create userapplication",
           OperationId = "applicationuser.create",

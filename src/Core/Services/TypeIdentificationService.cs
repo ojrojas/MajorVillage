@@ -11,8 +11,10 @@ public class TypeIdentificationService : ITypeIdentificationService
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<IEnumerable<TypeIdentification>> GetAllTypeIdentifications(IPredicate predicate, CancellationToken cancellationToken)
+    public async Task<GetAllTypeIdentificationResponse> GetAllTypeIdentifications(GetAllTypeIdentificationRequest request, CancellationToken cancellationToken)
     {
-        return await _typeIdentificationRepository.GetAllIdentificationType(predicate, cancellationToken);
+        GetAllTypeIdentificationResponse response = new(request.CorrelationId());
+        response.typeIdentifications = await _typeIdentificationRepository.GetAllIdentificationType(request.predicate, cancellationToken);
+        return response;
     }
 }
