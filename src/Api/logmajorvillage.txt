@@ -636,3 +636,287 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP meth
 2022-04-02 01:03:51.518 -05:00 [DBG] Request did not match any endpoints
 2022-04-02 01:03:51.605 -05:00 [DBG] Connection id "0HMGKDQ4KUHQA" completed keep alive response.
 2022-04-02 01:03:51.605 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.8892ms
+2022-04-03 11:00:08.629 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-03 11:00:08.755 -05:00 [DBG] Hosting starting
+2022-04-03 11:00:08.787 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-03 11:00:08.802 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-03 11:00:08.842 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-03 11:00:08.861 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-03 11:00:08.865 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-03 11:00:08.878 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-03 11:00:08.879 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-03 11:00:09.041 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-03 11:00:09.042 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-03 11:00:14.824 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-03 11:00:14.922 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-03 11:00:14.922 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-03 11:00:14.922 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-03 11:00:14.922 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 11:00:14.922 -05:00 [INF] Hosting environment: Development
+2022-04-03 11:00:14.922 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-03 11:00:14.922 -05:00 [DBG] Hosting started
+2022-04-03 11:00:15.658 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" accepted.
+2022-04-03 11:00:15.659 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" started.
+2022-04-03 11:00:15.736 -05:00 [DBG] Connection 0HMGLHC5GV7N7 established using the following protocol: "Tls12"
+2022-04-03 11:00:15.831 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-04-03 11:00:15.835 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-04-03 11:00:15.835 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:15.874 -05:00 [DBG] No candidates found for the request path '/'
+2022-04-03 11:00:15.874 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:15.935 -05:00 [DBG] The request path  does not match the path filter
+2022-04-03 11:00:15.955 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" completed keep alive response.
+2022-04-03 11:00:15.960 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 128.8304ms
+2022-04-03 11:00:30.478 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger - -
+2022-04-03 11:00:30.478 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:30.478 -05:00 [DBG] No candidates found for the request path '/Swagger'
+2022-04-03 11:00:30.478 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:30.505 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" completed keep alive response.
+2022-04-03 11:00:30.505 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger - - - 301 0 - 27.5364ms
+2022-04-03 11:00:30.509 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/index.html - -
+2022-04-03 11:00:30.509 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:30.509 -05:00 [DBG] No candidates found for the request path '/Swagger/index.html'
+2022-04-03 11:00:30.509 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:30.584 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" completed keep alive response.
+2022-04-03 11:00:30.585 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/index.html - - - 200 - text/html;charset=utf-8 75.9861ms
+2022-04-03 11:00:30.595 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - -
+2022-04-03 11:00:30.595 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:30.595 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui.css'
+2022-04-03 11:00:30.595 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:30.596 -05:00 [DBG] Connection id "0HMGLHC5GV7N8" accepted.
+2022-04-03 11:00:30.597 -05:00 [DBG] Connection id "0HMGLHC5GV7N8" started.
+2022-04-03 11:00:30.622 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" accepted.
+2022-04-03 11:00:30.622 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" started.
+2022-04-03 11:00:30.630 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:00:30.644 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-03 11:00:30.644 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" completed keep alive response.
+2022-04-03 11:00:30.644 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - - - 200 143821 text/css 48.7678ms
+2022-04-03 11:00:30.655 -05:00 [DBG] Connection 0HMGLHC5GV7N9 established using the following protocol: "Tls12"
+2022-04-03 11:00:30.658 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 11:00:30.659 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:30.659 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-standalone-preset.js'
+2022-04-03 11:00:30.659 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:30.660 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:00:30.663 -05:00 [DBG] Connection id "0HMGLHC5GV7N8" received FIN.
+2022-04-03 11:00:30.664 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/index.html - -
+2022-04-03 11:00:30.664 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:30.664 -05:00 [DBG] No candidates found for the request path '/Swagger/index.html'
+2022-04-03 11:00:30.665 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:30.665 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" completed keep alive response.
+2022-04-03 11:00:30.665 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/index.html - - - 200 - text/html;charset=utf-8 0.4977ms
+2022-04-03 11:00:30.711 -05:00 [DBG] Connection id "0HMGLHC5GV7NA" accepted.
+2022-04-03 11:00:30.711 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - -
+2022-04-03 11:00:30.737 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:30.737 -05:00 [DBG] Connection id "0HMGLHC5GV7NA" started.
+2022-04-03 11:00:30.763 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-bundle.js'
+2022-04-03 11:00:30.763 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:30.763 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:00:30.887 -05:00 [DBG] Connection 0HMGLHC5GV7NA established using the following protocol: "Tls12"
+2022-04-03 11:00:30.939 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 11:00:30.939 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:30.939 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-standalone-preset.js'
+2022-04-03 11:00:30.939 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:30.939 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:00:31.071 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" reset.
+2022-04-03 11:00:31.071 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" reset.
+2022-04-03 11:00:31.103 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" sending FIN because: "Broken pipe"
+2022-04-03 11:00:31.105 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 11:00:31.108 -05:00 [DBG] Connection id "0HMGLHC5GV7NA" completed keep alive response.
+2022-04-03 11:00:31.108 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-03 11:00:31.113 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" completed keep alive response.
+2022-04-03 11:00:31.113 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - - - 200 319705 application/javascript 170.4914ms
+2022-04-03 11:00:31.113 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - - - 200 1079362 application/javascript 402.1575ms
+2022-04-03 11:00:31.125 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" disconnecting.
+2022-04-03 11:00:31.125 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 11:00:31.125 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" completed keep alive response.
+2022-04-03 11:00:31.125 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - - - 200 319705 application/javascript 467.2197ms
+2022-04-03 11:00:31.139 -05:00 [DBG] Connection id "0HMGLHC5GV7N9" stopped.
+2022-04-03 11:00:30.966 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-04-03 11:00:31.154 -05:00 [DBG] Connection id "0HMGLHC5GV7N8" stopped.
+2022-04-03 11:00:31.154 -05:00 [DBG] Connection id "0HMGLHC5GV7N8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-03 11:00:31.256 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/v1/swagger.json - -
+2022-04-03 11:00:31.256 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:31.256 -05:00 [DBG] No candidates found for the request path '/Swagger/v1/swagger.json'
+2022-04-03 11:00:31.256 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:31.272 -05:00 [DBG] Connection id "0HMGLHC5GV7NB" accepted.
+2022-04-03 11:00:31.272 -05:00 [DBG] Connection id "0HMGLHC5GV7NB" started.
+2022-04-03 11:00:31.302 -05:00 [DBG] Connection 0HMGLHC5GV7NB established using the following protocol: "Tls12"
+2022-04-03 11:00:31.303 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/favicon-32x32.png - -
+2022-04-03 11:00:31.303 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:31.303 -05:00 [DBG] No candidates found for the request path '/Swagger/favicon-32x32.png'
+2022-04-03 11:00:31.303 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:31.303 -05:00 [DBG] Connection id "0HMGLHC5GV7NC" accepted.
+2022-04-03 11:00:31.303 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:00:31.328 -05:00 [DBG] Connection id "0HMGLHC5GV7NC" started.
+2022-04-03 11:00:31.328 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-04-03 11:00:31.328 -05:00 [DBG] Connection id "0HMGLHC5GV7NB" completed keep alive response.
+2022-04-03 11:00:31.328 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/favicon-32x32.png - - - 200 628 image/png 25.3248ms
+2022-04-03 11:00:31.375 -05:00 [DBG] Connection 0HMGLHC5GV7NC established using the following protocol: "Tls12"
+2022-04-03 11:00:31.376 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/favicon-16x16.png - -
+2022-04-03 11:00:31.376 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:00:31.376 -05:00 [DBG] No candidates found for the request path '/Swagger/favicon-16x16.png'
+2022-04-03 11:00:31.376 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:00:31.376 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:00:31.376 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2022-04-03 11:00:31.376 -05:00 [DBG] Connection id "0HMGLHC5GV7NC" completed keep alive response.
+2022-04-03 11:00:31.376 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/favicon-16x16.png - - - 200 665 image/png 0.3260ms
+2022-04-03 11:00:31.396 -05:00 [DBG] Connection id "0HMGLHC5GV7N7" completed keep alive response.
+2022-04-03 11:00:31.396 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 140.0456ms
+2022-04-03 11:01:13.236 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-03 11:01:13.360 -05:00 [DBG] Hosting starting
+2022-04-03 11:01:13.379 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-03 11:01:13.394 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-03 11:01:13.435 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-03 11:01:13.452 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-03 11:01:13.457 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-03 11:01:13.466 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-03 11:01:13.467 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-03 11:01:13.474 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-03 11:01:13.474 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-03 11:01:13.648 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-03 11:01:13.728 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-03 11:01:13.729 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-03 11:01:13.729 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-03 11:01:13.729 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 11:01:13.729 -05:00 [INF] Hosting environment: Development
+2022-04-03 11:01:13.729 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-03 11:01:13.729 -05:00 [DBG] Hosting started
+2022-04-03 11:01:13.816 -05:00 [DBG] Connection id "0HMGLHCMRJFUR" accepted.
+2022-04-03 11:01:13.817 -05:00 [DBG] Connection id "0HMGLHCMRJFUR" started.
+2022-04-03 11:01:13.878 -05:00 [DBG] Connection id "0HMGLHCMRJFUR" received FIN.
+2022-04-03 11:01:13.888 -05:00 [DBG] Connection 0HMGLHCMRJFUR established using the following protocol: "Tls12"
+2022-04-03 11:01:13.899 -05:00 [DBG] Connection id "0HMGLHCMRJFUR" sending FIN because: "The client closed the connection."
+2022-04-03 11:01:13.904 -05:00 [DBG] Connection id "0HMGLHCMRJFUR" disconnecting.
+2022-04-03 11:01:13.917 -05:00 [DBG] Connection id "0HMGLHCMRJFUR" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-03 11:01:13.950 -05:00 [DBG] Connection id "0HMGLHCMRJFUR" stopped.
+2022-04-03 11:01:34.021 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-03 11:01:34.149 -05:00 [DBG] Hosting starting
+2022-04-03 11:01:34.168 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-03 11:01:34.182 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-03 11:01:34.224 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-03 11:01:34.243 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-03 11:01:34.247 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-03 11:01:34.256 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-03 11:01:34.257 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-03 11:01:34.263 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-03 11:01:34.264 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-03 11:01:34.432 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-03 11:01:34.537 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-03 11:01:34.537 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-03 11:01:34.537 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-03 11:01:34.537 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 11:01:34.537 -05:00 [INF] Hosting environment: Development
+2022-04-03 11:01:34.537 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-03 11:01:34.537 -05:00 [DBG] Hosting started
+2022-04-03 11:01:34.603 -05:00 [DBG] Connection id "0HMGLHCT1RG4N" accepted.
+2022-04-03 11:01:34.605 -05:00 [DBG] Connection id "0HMGLHCT1RG4N" started.
+2022-04-03 11:01:34.663 -05:00 [DBG] Connection id "0HMGLHCT1RG4N" received FIN.
+2022-04-03 11:01:34.674 -05:00 [DBG] Connection 0HMGLHCT1RG4N established using the following protocol: "Tls12"
+2022-04-03 11:01:34.684 -05:00 [DBG] Connection id "0HMGLHCT1RG4N" sending FIN because: "The client closed the connection."
+2022-04-03 11:01:34.689 -05:00 [DBG] Connection id "0HMGLHCT1RG4N" disconnecting.
+2022-04-03 11:01:34.702 -05:00 [DBG] Connection id "0HMGLHCT1RG4N" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-03 11:01:34.737 -05:00 [DBG] Connection id "0HMGLHCT1RG4N" stopped.
+2022-04-03 11:01:38.518 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" accepted.
+2022-04-03 11:01:38.519 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" started.
+2022-04-03 11:01:38.552 -05:00 [DBG] Connection 0HMGLHCT1RG4O established using the following protocol: "Tls12"
+2022-04-03 11:01:38.614 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-04-03 11:01:38.618 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-04-03 11:01:38.619 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:38.658 -05:00 [DBG] No candidates found for the request path '/'
+2022-04-03 11:01:38.658 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:38.716 -05:00 [DBG] The request path  does not match the path filter
+2022-04-03 11:01:38.731 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" completed keep alive response.
+2022-04-03 11:01:38.736 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 123.1161ms
+2022-04-03 11:01:38.745 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/favicon.ico - -
+2022-04-03 11:01:38.745 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:38.745 -05:00 [DBG] No candidates found for the request path '/favicon.ico'
+2022-04-03 11:01:38.745 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:38.753 -05:00 [DBG] The request path  does not match the path filter
+2022-04-03 11:01:38.753 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" completed keep alive response.
+2022-04-03 11:01:38.753 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/favicon.ico - - - 404 0 - 8.2816ms
+2022-04-03 11:01:43.203 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger - -
+2022-04-03 11:01:43.204 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:43.204 -05:00 [DBG] No candidates found for the request path '/Swagger'
+2022-04-03 11:01:43.205 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:43.218 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" completed keep alive response.
+2022-04-03 11:01:43.218 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger - - - 301 0 - 15.0070ms
+2022-04-03 11:01:43.219 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/index.html - -
+2022-04-03 11:01:43.219 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:43.220 -05:00 [DBG] No candidates found for the request path '/Swagger/index.html'
+2022-04-03 11:01:43.220 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:43.318 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" completed keep alive response.
+2022-04-03 11:01:43.319 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/index.html - - - 200 - text/html;charset=utf-8 99.3448ms
+2022-04-03 11:01:43.337 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - -
+2022-04-03 11:01:43.337 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:43.337 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui.css'
+2022-04-03 11:01:43.337 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:43.337 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" accepted.
+2022-04-03 11:01:43.337 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" started.
+2022-04-03 11:01:43.363 -05:00 [DBG] Connection id "0HMGLHCT1RG4Q" accepted.
+2022-04-03 11:01:43.363 -05:00 [DBG] Connection id "0HMGLHCT1RG4Q" started.
+2022-04-03 11:01:43.372 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:01:43.379 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-03 11:01:43.379 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" completed keep alive response.
+2022-04-03 11:01:43.379 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - - - 200 143821 text/css 42.3918ms
+2022-04-03 11:01:43.389 -05:00 [DBG] Connection 0HMGLHCT1RG4Q established using the following protocol: "Tls12"
+2022-04-03 11:01:43.390 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 11:01:43.390 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:43.390 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-standalone-preset.js'
+2022-04-03 11:01:43.390 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:43.391 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:01:43.391 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 11:01:43.391 -05:00 [DBG] Connection id "0HMGLHCT1RG4Q" completed keep alive response.
+2022-04-03 11:01:43.391 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - - - 200 319705 application/javascript 0.8893ms
+2022-04-03 11:01:43.398 -05:00 [DBG] Connection 0HMGLHCT1RG4P established using the following protocol: "Tls12"
+2022-04-03 11:01:43.400 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - -
+2022-04-03 11:01:43.400 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:43.400 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-bundle.js'
+2022-04-03 11:01:43.400 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:43.400 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:01:43.414 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-03 11:01:43.414 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" completed keep alive response.
+2022-04-03 11:01:43.414 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - - - 200 1079362 application/javascript 14.5784ms
+2022-04-03 11:01:43.479 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/favicon-16x16.png - -
+2022-04-03 11:01:43.479 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:43.479 -05:00 [DBG] No candidates found for the request path '/Swagger/favicon-16x16.png'
+2022-04-03 11:01:43.479 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:43.479 -05:00 [VRB] Range header's value is empty.
+2022-04-03 11:01:43.480 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2022-04-03 11:01:43.480 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" completed keep alive response.
+2022-04-03 11:01:43.480 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/favicon-16x16.png - - - 200 665 image/png 0.3529ms
+2022-04-03 11:01:43.493 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/v1/swagger.json - -
+2022-04-03 11:01:43.493 -05:00 [VRB] All hosts are allowed.
+2022-04-03 11:01:43.493 -05:00 [DBG] No candidates found for the request path '/Swagger/v1/swagger.json'
+2022-04-03 11:01:43.493 -05:00 [DBG] Request did not match any endpoints
+2022-04-03 11:01:43.575 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" completed keep alive response.
+2022-04-03 11:01:43.575 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 81.7344ms
+2022-04-03 11:03:39.420 -05:00 [DBG] Connection id "0HMGLHCT1RG4Q" received FIN.
+2022-04-03 11:03:39.447 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" received FIN.
+2022-04-03 11:03:39.450 -05:00 [DBG] Connection id "0HMGLHCT1RG4Q" sending FIN because: "The client closed the connection."
+2022-04-03 11:03:39.450 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" received FIN.
+2022-04-03 11:03:39.457 -05:00 [DBG] Connection id "0HMGLHCT1RG4Q" disconnecting.
+2022-04-03 11:03:39.457 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" sending FIN because: "The client closed the connection."
+2022-04-03 11:03:39.458 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" disconnecting.
+2022-04-03 11:03:39.467 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" disconnecting.
+2022-04-03 11:03:39.468 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" stopped.
+2022-04-03 11:03:39.496 -05:00 [DBG] Connection id "0HMGLHCT1RG4P" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-03 11:03:39.498 -05:00 [DBG] Connection id "0HMGLHCT1RG4O" stopped.
+2022-04-03 11:03:39.498 -05:00 [DBG] Connection id "0HMGLHCT1RG4Q" stopped.
