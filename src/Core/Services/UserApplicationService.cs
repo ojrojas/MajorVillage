@@ -5,7 +5,8 @@ public class UserApplicationService : IUserApplicationService
     private readonly IUserApplicationRepository _repository;
     private readonly ILogger<UserApplication> _logger;
 
-    public UserApplicationService(IUserApplicationRepository repository, ILogger<UserApplication> logger)
+    public UserApplicationService(IUserApplicationRepository repository,
+                                  ILogger<UserApplication> logger)
     {
         _repository = repository;
         _logger = logger;

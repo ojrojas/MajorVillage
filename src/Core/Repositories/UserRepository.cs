@@ -3,10 +3,13 @@ namespace MajorVillage.Core.Repositories;
 public class UserRepository : IUserRepository
 {
     private readonly IDapperRepository<User> _repository;
+    private readonly ILogger<UserRepository> _logger;
 
-    public UserRepository(IDapperRepository<User> repository)
+    public UserRepository(IDapperRepository<User> repository,
+                          ILogger<UserRepository> logger)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
     public async Task<dynamic> CreateUserAsync(User User, CancellationToken cancellationToken)

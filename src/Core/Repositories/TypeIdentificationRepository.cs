@@ -6,7 +6,8 @@ public class TypeIdentificationRepository : ITypeIdentificationRepository
     private readonly IDapperRepository<TypeIdentification> _repository;
     public ILogger<TypeIdentificationRepository> _logger;
 
-    public TypeIdentificationRepository(IDapperRepository<TypeIdentification> repository, ILogger<TypeIdentificationRepository> logger)
+    public TypeIdentificationRepository(IDapperRepository<TypeIdentification> repository,
+                                        ILogger<TypeIdentificationRepository> logger)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -16,5 +17,4 @@ public class TypeIdentificationRepository : ITypeIdentificationRepository
     {
         return await _repository.GetAllAsync(predicate, cancellationToken);
     }
-
 }

@@ -5,7 +5,8 @@ public class TypeUserRepository : ITypeUserRepository
     private readonly IDapperRepository<TypeUser> _repository;
     public ILogger<TypeUserRepository> _logger;
 
-    public TypeUserRepository(IDapperRepository<TypeUser> repository, ILogger<TypeUserRepository> logger)
+    public TypeUserRepository(IDapperRepository<TypeUser> repository,
+                              ILogger<TypeUserRepository> logger)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));

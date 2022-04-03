@@ -5,7 +5,8 @@ public class ElectiveYearService : IElectiveYearService
     private readonly IElectiveYearRepository _electiveRepsoitory;
     private readonly ILogger<ElectiveYearService> _logger;
 
-    public ElectiveYearService(IElectiveYearRepository electiveRepsoitory, ILogger<ElectiveYearService> logger)
+    public ElectiveYearService(IElectiveYearRepository electiveRepsoitory,
+                               ILogger<ElectiveYearService> logger)
     {
         _electiveRepsoitory = electiveRepsoitory ?? throw new ArgumentNullException(nameof(electiveRepsoitory));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -22,6 +23,20 @@ public class ElectiveYearService : IElectiveYearService
     {
         GetElectiveYearByIdResponse response = new(request.CorrelationId());
         response.ElectiveYearDto = await _electiveRepsoitory.GetElectiveYearById(request.Id, cancellationToken);
+        return response;
+    }
+
+    public async Task<DeleteElectiveYearResponse> DeleteElectiveYearAsync(DeleteElectiveYearRequest request, CancellationToken cancellationToken)
+    {
+        DeleteElectiveYearResponse response= new(request.CorrelationId());
+        response.ElectiveYearDeleted =  await _electiveRepsoitory.DeleteElectiveYear(request.ElectiveYearDto, cancellationToken);
+        return response;
+    }
+
+    public async Task<UpdateElectiveYearResponse> UpdateElectiveYearAsync(UpdateElectiveYearRequest request, CancellationToken cancellationToken)
+    {
+        UpdateElectiveYearResponse response= new(request.CorrelationId());
+        response.ElectiveYearUpdated =  await _electiveRepsoitory.UpdateElectiveYear(request.ElectiveYearDto, cancellationToken);
         return response;
     }
 }

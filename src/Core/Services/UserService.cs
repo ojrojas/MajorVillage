@@ -5,7 +5,8 @@ public class UserService : IUserService
     private readonly IUserRepository _UserRepository;
     private readonly ILogger<UserService> _logger;
 
-    public UserService(IUserRepository UserRepository, ILogger<UserService> logger)
+    public UserService(IUserRepository UserRepository,
+                       ILogger<UserService> logger)
     {
         _UserRepository = UserRepository;
         _logger = logger;
