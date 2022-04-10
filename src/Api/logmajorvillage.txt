@@ -28,3 +28,43 @@
 2022-04-03 16:52:15.363 -05:00 [DBG] The request path  does not match the path filter
 2022-04-03 16:52:15.381 -05:00 [DBG] Connection id "0HMGLNGRJUPQ1" completed keep alive response.
 2022-04-03 16:52:15.387 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 129.9769ms
+2022-04-10 01:44:04.521 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-10 01:44:04.644 -05:00 [DBG] Hosting starting
+2022-04-10 01:44:04.685 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-10 01:44:04.700 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-10 01:44:04.740 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-10 01:44:04.759 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-10 01:44:04.763 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-10 01:44:04.777 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-10 01:44:04.777 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-10 01:44:04.952 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-10 01:44:04.954 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-10 01:44:05.174 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-10 01:44:05.237 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-10 01:44:05.237 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-10 01:44:05.237 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-10 01:44:05.237 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-10 01:44:05.237 -05:00 [INF] Hosting environment: Development
+2022-04-10 01:44:05.237 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-10 01:44:05.237 -05:00 [DBG] Hosting started
+2022-04-10 01:44:05.924 -05:00 [DBG] Connection id "0HMGQNM10KV8P" accepted.
+2022-04-10 01:44:05.925 -05:00 [DBG] Connection id "0HMGQNM10KV8P" started.
+2022-04-10 01:44:06.002 -05:00 [DBG] Connection 0HMGQNM10KV8P established using the following protocol: "Tls12"
+2022-04-10 01:44:06.054 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-04-10 01:44:06.058 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-04-10 01:44:06.058 -05:00 [VRB] All hosts are allowed.
+2022-04-10 01:44:06.099 -05:00 [DBG] No candidates found for the request path '/'
+2022-04-10 01:44:06.100 -05:00 [DBG] Request did not match any endpoints
+2022-04-10 01:44:06.166 -05:00 [DBG] The request path  does not match the path filter
+2022-04-10 01:44:06.188 -05:00 [DBG] Connection id "0HMGQNM10KV8P" completed keep alive response.
+2022-04-10 01:44:06.193 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 139.9357ms
+2022-04-10 01:44:06.196 -05:00 [DBG] Connection id "0HMGQNM10KV8P" received FIN.
+2022-04-10 01:44:06.200 -05:00 [DBG] Connection id "0HMGQNM10KV8P" sending FIN because: "The client closed the connection."
+2022-04-10 01:44:06.202 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/favicon.ico - -
+2022-04-10 01:44:06.202 -05:00 [VRB] All hosts are allowed.
+2022-04-10 01:44:06.202 -05:00 [DBG] No candidates found for the request path '/favicon.ico'
+2022-04-10 01:44:06.202 -05:00 [DBG] Request did not match any endpoints
+2022-04-10 01:44:06.206 -05:00 [DBG] Connection id "0HMGQNM10KV8P" disconnecting.
+2022-04-10 01:44:06.211 -05:00 [DBG] The request path  does not match the path filter
+2022-04-10 01:44:06.211 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/favicon.ico - - - 0 - - 8.7231ms
+2022-04-10 01:44:06.214 -05:00 [DBG] Connection id "0HMGQNM10KV8P" stopped.
