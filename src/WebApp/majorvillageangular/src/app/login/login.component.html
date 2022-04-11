@@ -1,8 +1,10 @@
 <div class="container">
     <div class="form-login">
         <h1>Login</h1>
-        <input type="text" >
-        <input type="text" >
-        <input type="button" value="sign in" onclick="Login(oscar,ocas)">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <input type="text" placeholder="UserName" formControlName="userName">  
+            <input type="password" placeholder="Password" formControlName="password">
+            <input type="submit" value="sign in">
+        </form>
     </div>
 </div>
