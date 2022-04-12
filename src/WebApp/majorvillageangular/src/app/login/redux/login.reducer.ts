@@ -1,4 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
+import { IUser } from 'src/app/core/models/iuser.model';
 import * as fromActions from './login.actions';
 
 export const loginFeatureKey = 'login';
@@ -8,13 +9,15 @@ export interface State {
     token: string | null;
     error: any;
     isLogged: boolean;
+    userInfo: IUser | null;
 }
 
 export const initialState: State = {
     isLoading: false,
     token: null,
     error: null,
-    isLogged: false
+    isLogged: false,
+    userInfo: null
 };
 
 export const reducer = createReducer(
@@ -30,7 +33,17 @@ export const reducer = createReducer(
         isLogged: true,
         isLoading: false
     })),
-    on(fromActions.OnError, (state, { error }) => ({
+    on(fromActions.getClaims, (state, { token }) => ({
+        ...state,
+        token
+    })),
+    on(fromActions.getClaimsSuccess, (state, { userInfo }) => ({
+        ...state,
+        userInfo,
+        isLogged: true,
+        isLoading: false
+    })),
+    on(fromActions.onError, (state, { error }) => ({
         ...state,
         error,
         isLogged: false,

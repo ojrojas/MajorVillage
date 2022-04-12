@@ -16,9 +16,31 @@
     text-align: center;
 }
 
+.form-control{
+    width: 320px;
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-auto-rows: 40px;
+    padding: 10px;
+}
+
 input {
     height: 35px;
     margin: 10px;
     font-size: 1.2rem;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.form-control .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(159, 148, 148);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+  }
+  

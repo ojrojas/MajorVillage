@@ -9,6 +9,9 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { ApiService } from './core/services/api.service';
+import { REDUCER_TOKEN } from './app.reducer';
+import { metaReducers } from './meta.reducer';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { ApiService } from './core/services/api.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    HttpClientModule,
+    StoreModule.forRoot(REDUCER_TOKEN, {metaReducers}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot()

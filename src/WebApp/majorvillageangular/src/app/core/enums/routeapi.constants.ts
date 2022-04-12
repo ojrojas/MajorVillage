@@ -1,4 +1,4 @@
 export enum RouteApiConstants {
-    loginRoute="login",
+    loginRoute="LoginUserApplication",
     students='students'
 }

@@ -20,6 +20,10 @@ var configuration = builder.Configuration;
 
 builder.Services.AddDIOptionsConfiguration(configuration);
 builder.Services.AddJwtExtension(configuration);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MajorVillagePolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
 
 // //Asynchronous - Dialect don´t work
 // DapperExtensions.DapperAsyncExtensions.SqlDialect = new DapperExtensions.Sql.MySqlDialect();

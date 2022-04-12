@@ -2,9 +2,17 @@
     <div class="form-login">
         <h1>Login</h1>
         <form [formGroup]="form" (ngSubmit)="submit()">
-            <input type="text" placeholder="UserName" formControlName="userName">  
-            <input type="password" placeholder="Password" formControlName="password">
-            <input type="submit" value="sign in">
+            <div class="form-control">
+                <input type="text" placeholder="UserName" formControlName="userName" required="true">
+                <span class="tooltiptext" *ngIf="form.get('userName')?.invalid">El campo username es <strong>requerido</strong></span>
+            </div>
+            <div class="form-control">
+                <input type="password" placeholder="Password" formControlName="password" required="true">
+                <span class="tooltiptext" *ngIf="form.get('password')?.invalid">El campo password es <strong>requerido</strong></span>
+            </div>
+            <div class="form-control">
+                <input type="submit" value="sign in">
+            </div>
         </form>
     </div>
 </div>

@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS User(
     Age integer not null, 
     BirthDate  DateTime not null,
     TypeUser varchar(36) not null,
+    Email varchar(150) not null,
     CreatedBy varchar(36) not null,
     CreatedOn Timestamp not null,
     ModifiedBy varchar(36) null,

@@ -3,8 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
-import { LoginService } from '../core/services/login.service';
+import { LoginService } from './services/login.service';
 import { SharedModule } from '../shared/shared.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { LoginEffects } from './redux/login.effects';
+import * as fromReducer from './redux/login.reducer';
 
 
 @NgModule({
@@ -12,7 +16,9 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     LoginRoutingModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forFeature(fromReducer.loginFeatureKey, fromReducer.reducer),
+    EffectsModule.forFeature([LoginEffects])
   ]
 })
 export class LoginModule { }

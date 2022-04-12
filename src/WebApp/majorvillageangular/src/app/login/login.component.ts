@@ -1,7 +1,6 @@
 import { Component, Injector } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { ILogin } from "../core/models/ilogin";
-import { LoginService } from "../core/services/login.service";
+import { LoginService } from "./services/login.service";
 
 @Component({
     selector: 'app-login',
@@ -10,20 +9,27 @@ import { LoginService } from "../core/services/login.service";
 })
 export class LoginComponent {
     form: FormGroup;
-    private loginService:LoginService;
-    constructor(private injector: Injector,
+    constructor(private loginService: LoginService,
         private formBuilder: FormBuilder,
     ) {
-        this.loginService= this.injector.get(LoginService);
         this.form = this.formBuilder.group({
-            userName:['', Validators.required],
-            password:['', Validators.required]
+            userName: ['', Validators.required],
+            password: ['', Validators.required]
         })
     }
-   
+
     submit(): void {
-        alert(this.form.get('userName')?.value + " " + this.form.get('password')?.value);
-        this.loginService.Login(this.form.value);
+        if (this.form.valid)
+            this.loginService.Login(this.form.value);
+        else
+            this.markValidityForm();
     }
 
+    markValidityForm(): void {
+        for (const control in this.form.controls) {
+            this.form.controls[control].markAsDirty();
+            this.form.controls[control].markAsTouched();
+            document.querySelector(control)?.setAttribute("class", "visibility:visible")
+        }
+    }
 }

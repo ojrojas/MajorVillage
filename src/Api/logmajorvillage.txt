@@ -68,3 +68,549 @@
 2022-04-10 01:44:06.211 -05:00 [DBG] The request path  does not match the path filter
 2022-04-10 01:44:06.211 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/favicon.ico - - - 0 - - 8.7231ms
 2022-04-10 01:44:06.214 -05:00 [DBG] Connection id "0HMGQNM10KV8P" stopped.
+2022-04-11 23:10:12.169 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-11 23:10:12.298 -05:00 [DBG] Hosting starting
+2022-04-11 23:10:12.347 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-11 23:10:12.362 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-11 23:10:12.406 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-11 23:10:12.425 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-11 23:10:12.429 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-11 23:10:12.442 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-11 23:10:12.442 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-11 23:10:12.600 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-11 23:10:12.601 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-11 23:10:12.832 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-11 23:10:12.923 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-11 23:10:12.923 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-11 23:10:12.923 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-11 23:10:12.923 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 23:10:12.923 -05:00 [INF] Hosting environment: Development
+2022-04-11 23:10:12.923 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-11 23:10:12.923 -05:00 [DBG] Hosting started
+2022-04-11 23:10:13.019 -05:00 [DBG] Connection id "0HMGS79BQ167V" accepted.
+2022-04-11 23:10:13.021 -05:00 [DBG] Connection id "0HMGS79BQ167V" started.
+2022-04-11 23:10:13.097 -05:00 [DBG] Connection 0HMGS79BQ167V established using the following protocol: "Tls12"
+2022-04-11 23:10:13.150 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-04-11 23:10:13.155 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-04-11 23:10:13.155 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:10:13.195 -05:00 [DBG] No candidates found for the request path '/'
+2022-04-11 23:10:13.195 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:10:13.261 -05:00 [DBG] The request path  does not match the path filter
+2022-04-11 23:10:13.284 -05:00 [DBG] Connection id "0HMGS79BQ167V" completed keep alive response.
+2022-04-11 23:10:13.289 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 138.1611ms
+2022-04-11 23:10:13.300 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/favicon.ico - -
+2022-04-11 23:10:13.300 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:10:13.300 -05:00 [DBG] No candidates found for the request path '/favicon.ico'
+2022-04-11 23:10:13.300 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:10:13.308 -05:00 [DBG] The request path  does not match the path filter
+2022-04-11 23:10:13.308 -05:00 [DBG] Connection id "0HMGS79BQ167V" completed keep alive response.
+2022-04-11 23:10:13.308 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/favicon.ico - - - 404 0 - 8.4135ms
+2022-04-11 23:12:08.916 -05:00 [DBG] Connection id "0HMGS79BQ167V" received FIN.
+2022-04-11 23:12:08.943 -05:00 [DBG] Connection id "0HMGS79BQ167V" disconnecting.
+2022-04-11 23:12:08.944 -05:00 [DBG] Connection id "0HMGS79BQ167V" sending FIN because: "The client closed the connection."
+2022-04-11 23:12:08.955 -05:00 [DBG] Connection id "0HMGS79BQ167V" stopped.
+2022-04-11 23:19:25.877 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-11 23:19:26.004 -05:00 [DBG] Hosting starting
+2022-04-11 23:19:26.049 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-11 23:19:26.063 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-11 23:19:26.104 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-11 23:19:26.124 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-11 23:19:26.128 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-11 23:19:26.142 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-11 23:19:26.142 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-11 23:19:26.150 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-11 23:19:26.151 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-11 23:19:26.368 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-11 23:19:26.474 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-11 23:19:26.474 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-11 23:19:26.474 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-11 23:19:26.474 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 23:19:26.474 -05:00 [INF] Hosting environment: Development
+2022-04-11 23:19:26.474 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-11 23:19:26.474 -05:00 [DBG] Hosting started
+2022-04-11 23:19:26.565 -05:00 [DBG] Connection id "0HMGS7EGP20HD" accepted.
+2022-04-11 23:19:26.567 -05:00 [DBG] Connection id "0HMGS7EGP20HD" started.
+2022-04-11 23:19:26.646 -05:00 [DBG] Connection 0HMGS7EGP20HD established using the following protocol: "Tls12"
+2022-04-11 23:19:26.696 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-04-11 23:19:26.700 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-04-11 23:19:26.700 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:19:26.739 -05:00 [DBG] No candidates found for the request path '/'
+2022-04-11 23:19:26.739 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:19:26.803 -05:00 [DBG] The request path  does not match the path filter
+2022-04-11 23:19:26.827 -05:00 [DBG] Connection id "0HMGS7EGP20HD" completed keep alive response.
+2022-04-11 23:19:26.832 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 135.4341ms
+2022-04-11 23:21:22.634 -05:00 [DBG] Connection id "0HMGS7EGP20HD" received FIN.
+2022-04-11 23:21:22.646 -05:00 [DBG] Connection id "0HMGS7EGP20HD" disconnecting.
+2022-04-11 23:21:22.649 -05:00 [DBG] Connection id "0HMGS7EGP20HD" sending FIN because: "The client closed the connection."
+2022-04-11 23:21:22.674 -05:00 [DBG] Connection id "0HMGS7EGP20HD" stopped.
+2022-04-11 23:42:04.108 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-11 23:42:04.232 -05:00 [DBG] Hosting starting
+2022-04-11 23:42:04.278 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-11 23:42:04.293 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-11 23:42:04.336 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-11 23:42:04.355 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-11 23:42:04.359 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-11 23:42:04.372 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-11 23:42:04.372 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-11 23:42:04.380 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-11 23:42:04.381 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-11 23:42:04.584 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-11 23:42:04.662 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-11 23:42:04.662 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-11 23:42:04.662 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-11 23:42:04.662 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 23:42:04.662 -05:00 [INF] Hosting environment: Development
+2022-04-11 23:42:04.662 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-11 23:42:04.662 -05:00 [DBG] Hosting started
+2022-04-11 23:42:04.746 -05:00 [DBG] Connection id "0HMGS7R5HLS5V" accepted.
+2022-04-11 23:42:04.747 -05:00 [DBG] Connection id "0HMGS7R5HLS5V" started.
+2022-04-11 23:42:04.818 -05:00 [DBG] Connection 0HMGS7R5HLS5V established using the following protocol: "Tls12"
+2022-04-11 23:42:04.867 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-04-11 23:42:04.871 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-04-11 23:42:04.871 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:42:04.920 -05:00 [DBG] No candidates found for the request path '/'
+2022-04-11 23:42:04.921 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:42:04.988 -05:00 [DBG] The request path  does not match the path filter
+2022-04-11 23:42:05.011 -05:00 [DBG] Connection id "0HMGS7R5HLS5V" completed keep alive response.
+2022-04-11 23:42:05.016 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 148.8937ms
+2022-04-11 23:44:00.921 -05:00 [DBG] Connection id "0HMGS7R5HLS5V" received FIN.
+2022-04-11 23:44:00.999 -05:00 [DBG] Connection id "0HMGS7R5HLS5V" disconnecting.
+2022-04-11 23:44:01.001 -05:00 [DBG] Connection id "0HMGS7R5HLS5V" sending FIN because: "The client closed the connection."
+2022-04-11 23:44:01.016 -05:00 [DBG] Connection id "0HMGS7R5HLS5V" stopped.
+2022-04-11 23:44:26.925 -05:00 [DBG] Connection id "0HMGS7R5HLS60" accepted.
+2022-04-11 23:44:26.950 -05:00 [DBG] Connection id "0HMGS7R5HLS60" started.
+2022-04-11 23:44:26.951 -05:00 [DBG] Connection id "0HMGS7R5HLS61" accepted.
+2022-04-11 23:44:26.953 -05:00 [DBG] Connection id "0HMGS7R5HLS61" started.
+2022-04-11 23:44:27.006 -05:00 [DBG] Connection 0HMGS7R5HLS60 established using the following protocol: "Tls12"
+2022-04-11 23:44:27.007 -05:00 [DBG] Connection id "0HMGS7R5HLS60" received FIN.
+2022-04-11 23:44:27.008 -05:00 [DBG] Connection id "0HMGS7R5HLS61" received FIN.
+2022-04-11 23:44:27.008 -05:00 [DBG] Connection id "0HMGS7R5HLS60" sending FIN because: "The client closed the connection."
+2022-04-11 23:44:27.008 -05:00 [DBG] Connection id "0HMGS7R5HLS60" disconnecting.
+2022-04-11 23:44:27.020 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-04-11 23:44:27.044 -05:00 [DBG] Connection id "0HMGS7R5HLS61" stopped.
+2022-04-11 23:44:27.044 -05:00 [DBG] Connection id "0HMGS7R5HLS61" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-11 23:44:27.013 -05:00 [DBG] Connection id "0HMGS7R5HLS60" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-11 23:44:27.045 -05:00 [DBG] Connection id "0HMGS7R5HLS60" stopped.
+2022-04-11 23:47:37.289 -05:00 [DBG] Connection id "0HMGS7R5HLS62" accepted.
+2022-04-11 23:47:37.316 -05:00 [DBG] Connection id "0HMGS7R5HLS62" started.
+2022-04-11 23:47:37.317 -05:00 [DBG] Connection id "0HMGS7R5HLS63" accepted.
+2022-04-11 23:47:37.344 -05:00 [DBG] Connection id "0HMGS7R5HLS63" started.
+2022-04-11 23:47:37.348 -05:00 [DBG] Connection 0HMGS7R5HLS62 established using the following protocol: "Tls12"
+2022-04-11 23:47:37.393 -05:00 [DBG] Connection id "0HMGS7R5HLS63" received FIN.
+2022-04-11 23:47:37.394 -05:00 [DBG] Connection id "0HMGS7R5HLS62" received FIN.
+2022-04-11 23:47:37.394 -05:00 [DBG] Connection id "0HMGS7R5HLS62" sending FIN because: "The client closed the connection."
+2022-04-11 23:47:37.395 -05:00 [DBG] Connection id "0HMGS7R5HLS62" disconnecting.
+2022-04-11 23:47:37.395 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-04-11 23:47:37.395 -05:00 [DBG] Connection id "0HMGS7R5HLS62" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-11 23:47:37.396 -05:00 [DBG] Connection id "0HMGS7R5HLS62" stopped.
+2022-04-11 23:47:37.396 -05:00 [DBG] Connection id "0HMGS7R5HLS63" stopped.
+2022-04-11 23:47:37.396 -05:00 [DBG] Connection id "0HMGS7R5HLS63" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-11 23:53:19.164 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-04-11 23:53:19.292 -05:00 [DBG] Hosting starting
+2022-04-11 23:53:19.335 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-04-11 23:53:19.351 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-04-11 23:53:19.393 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-04-11 23:53:19.413 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-04-11 23:53:19.417 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-04-11 23:53:19.430 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-04-11 23:53:19.431 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-04-11 23:53:19.438 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-04-11 23:53:19.439 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-04-11 23:53:19.639 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-04-11 23:53:19.717 -05:00 [INF] Now listening on: https://localhost:7068
+2022-04-11 23:53:19.717 -05:00 [INF] Now listening on: http://localhost:5284
+2022-04-11 23:53:19.717 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-04-11 23:53:19.717 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 23:53:19.717 -05:00 [INF] Hosting environment: Development
+2022-04-11 23:53:19.717 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-04-11 23:53:19.717 -05:00 [DBG] Hosting started
+2022-04-11 23:53:19.791 -05:00 [DBG] Connection id "0HMGS81END75L" accepted.
+2022-04-11 23:53:19.793 -05:00 [DBG] Connection id "0HMGS81END75L" started.
+2022-04-11 23:53:19.870 -05:00 [DBG] Connection 0HMGS81END75L established using the following protocol: "Tls12"
+2022-04-11 23:53:19.920 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/ - -
+2022-04-11 23:53:19.924 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-04-11 23:53:19.924 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:53:19.964 -05:00 [DBG] No candidates found for the request path '/'
+2022-04-11 23:53:19.964 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:53:20.029 -05:00 [DBG] The request path  does not match the path filter
+2022-04-11 23:53:20.050 -05:00 [DBG] Connection id "0HMGS81END75L" completed keep alive response.
+2022-04-11 23:53:20.054 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/ - - - 404 0 - 134.2598ms
+2022-04-11 23:55:15.983 -05:00 [DBG] Connection id "0HMGS81END75L" received FIN.
+2022-04-11 23:55:15.999 -05:00 [DBG] Connection id "0HMGS81END75L" sending FIN because: "The client closed the connection."
+2022-04-11 23:55:16.016 -05:00 [DBG] Connection id "0HMGS81END75L" disconnecting.
+2022-04-11 23:55:16.020 -05:00 [DBG] Connection id "0HMGS81END75L" stopped.
+2022-04-11 23:55:40.790 -05:00 [DBG] Connection id "0HMGS81END75M" accepted.
+2022-04-11 23:55:40.817 -05:00 [DBG] Connection id "0HMGS81END75M" started.
+2022-04-11 23:55:40.817 -05:00 [DBG] Connection id "0HMGS81END75N" accepted.
+2022-04-11 23:55:40.842 -05:00 [DBG] Connection id "0HMGS81END75N" started.
+2022-04-11 23:55:40.882 -05:00 [DBG] Connection id "0HMGS81END75M" received FIN.
+2022-04-11 23:55:40.882 -05:00 [DBG] Connection id "0HMGS81END75N" received FIN.
+2022-04-11 23:55:40.883 -05:00 [DBG] Connection 0HMGS81END75M established using the following protocol: "Tls12"
+2022-04-11 23:55:40.884 -05:00 [DBG] Connection id "0HMGS81END75M" sending FIN because: "The client closed the connection."
+2022-04-11 23:55:40.933 -05:00 [DBG] Connection id "0HMGS81END75M" disconnecting.
+2022-04-11 23:55:40.936 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-04-11 23:55:40.967 -05:00 [DBG] Connection id "0HMGS81END75N" stopped.
+2022-04-11 23:55:40.967 -05:00 [DBG] Connection id "0HMGS81END75N" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-11 23:55:40.936 -05:00 [DBG] Connection id "0HMGS81END75M" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-11 23:55:40.968 -05:00 [DBG] Connection id "0HMGS81END75M" stopped.
+2022-04-11 23:57:38.216 -05:00 [DBG] Connection id "0HMGS81END75O" accepted.
+2022-04-11 23:57:38.217 -05:00 [DBG] Connection id "0HMGS81END75O" started.
+2022-04-11 23:57:38.266 -05:00 [DBG] Connection id "0HMGS81END75P" accepted.
+2022-04-11 23:57:38.317 -05:00 [DBG] Connection id "0HMGS81END75P" received FIN.
+2022-04-11 23:57:38.342 -05:00 [DBG] Connection id "0HMGS81END75P" started.
+2022-04-11 23:57:38.342 -05:00 [DBG] Connection id "0HMGS81END75O" received FIN.
+2022-04-11 23:57:38.368 -05:00 [DBG] Connection 0HMGS81END75O established using the following protocol: "Tls12"
+2022-04-11 23:57:38.369 -05:00 [DBG] Connection id "0HMGS81END75O" sending FIN because: "The client closed the connection."
+2022-04-11 23:57:38.369 -05:00 [DBG] Connection id "0HMGS81END75O" disconnecting.
+2022-04-11 23:57:38.369 -05:00 [DBG] Connection id "0HMGS81END75O" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-11 23:57:38.370 -05:00 [DBG] Connection id "0HMGS81END75O" stopped.
+2022-04-11 23:57:38.395 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-04-11 23:57:38.396 -05:00 [DBG] Connection id "0HMGS81END75P" stopped.
+2022-04-11 23:57:38.396 -05:00 [DBG] Connection id "0HMGS81END75P" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-11 23:58:28.285 -05:00 [DBG] Connection id "0HMGS81END75Q" accepted.
+2022-04-11 23:58:28.321 -05:00 [DBG] Connection id "0HMGS81END75Q" started.
+2022-04-11 23:58:28.402 -05:00 [DBG] Connection 0HMGS81END75Q established using the following protocol: "Tls12"
+2022-04-11 23:58:28.409 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/ - -
+2022-04-11 23:58:28.409 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:28.409 -05:00 [DBG] No candidates found for the request path '/Swagger/'
+2022-04-11 23:58:28.409 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:58:28.427 -05:00 [DBG] Connection id "0HMGS81END75Q" completed keep alive response.
+2022-04-11 23:58:28.427 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/ - - - 301 0 - 18.4394ms
+2022-04-11 23:58:28.430 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/index.html - -
+2022-04-11 23:58:28.430 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:28.431 -05:00 [DBG] No candidates found for the request path '/Swagger/index.html'
+2022-04-11 23:58:28.431 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:58:28.513 -05:00 [DBG] Connection id "0HMGS81END75Q" completed keep alive response.
+2022-04-11 23:58:28.513 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/index.html - - - 200 - text/html;charset=utf-8 82.9919ms
+2022-04-11 23:58:28.527 -05:00 [DBG] Connection id "0HMGS81END75R" accepted.
+2022-04-11 23:58:28.527 -05:00 [DBG] Connection id "0HMGS81END75R" started.
+2022-04-11 23:58:28.528 -05:00 [DBG] Connection id "0HMGS81END75S" accepted.
+2022-04-11 23:58:28.528 -05:00 [DBG] Connection id "0HMGS81END75S" started.
+2022-04-11 23:58:28.574 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - -
+2022-04-11 23:58:28.574 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:28.575 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui.css'
+2022-04-11 23:58:28.575 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:58:28.584 -05:00 [VRB] Range header's value is empty.
+2022-04-11 23:58:28.593 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-11 23:58:28.593 -05:00 [DBG] Connection id "0HMGS81END75Q" completed keep alive response.
+2022-04-11 23:58:28.593 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui.css - - - 200 143821 text/css 65.1867ms
+2022-04-11 23:58:28.603 -05:00 [DBG] Connection 0HMGS81END75R established using the following protocol: "Tls12"
+2022-04-11 23:58:28.604 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - -
+2022-04-11 23:58:28.604 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:28.604 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-bundle.js'
+2022-04-11 23:58:28.604 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:58:28.604 -05:00 [VRB] Range header's value is empty.
+2022-04-11 23:58:28.612 -05:00 [DBG] Connection 0HMGS81END75S established using the following protocol: "Tls12"
+2022-04-11 23:58:28.613 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - -
+2022-04-11 23:58:28.614 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:28.614 -05:00 [DBG] No candidates found for the request path '/Swagger/swagger-ui-standalone-preset.js'
+2022-04-11 23:58:28.614 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:58:28.639 -05:00 [VRB] Range header's value is empty.
+2022-04-11 23:58:28.690 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-11 23:58:28.690 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-11 23:58:28.692 -05:00 [DBG] Connection id "0HMGS81END75S" completed keep alive response.
+2022-04-11 23:58:28.692 -05:00 [DBG] Connection id "0HMGS81END75R" completed keep alive response.
+2022-04-11 23:58:28.692 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-standalone-preset.js - - - 200 319705 application/javascript 78.8475ms
+2022-04-11 23:58:28.692 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/swagger-ui-bundle.js - - - 200 1079362 application/javascript 88.2278ms
+2022-04-11 23:58:28.773 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/favicon-16x16.png - -
+2022-04-11 23:58:28.773 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:28.773 -05:00 [DBG] No candidates found for the request path '/Swagger/favicon-16x16.png'
+2022-04-11 23:58:28.773 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:58:28.774 -05:00 [VRB] Range header's value is empty.
+2022-04-11 23:58:28.774 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2022-04-11 23:58:28.774 -05:00 [DBG] Connection id "0HMGS81END75R" completed keep alive response.
+2022-04-11 23:58:28.774 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/favicon-16x16.png - - - 200 665 image/png 0.7162ms
+2022-04-11 23:58:28.788 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/Swagger/v1/swagger.json - -
+2022-04-11 23:58:28.788 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:28.788 -05:00 [DBG] No candidates found for the request path '/Swagger/v1/swagger.json'
+2022-04-11 23:58:28.788 -05:00 [DBG] Request did not match any endpoints
+2022-04-11 23:58:28.874 -05:00 [DBG] Connection id "0HMGS81END75R" completed keep alive response.
+2022-04-11 23:58:28.874 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 86.1078ms
+2022-04-11 23:58:41.543 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7068/api/LoginUserApplication application/json 50
+2022-04-11 23:58:41.544 -05:00 [VRB] All hosts are allowed.
+2022-04-11 23:58:41.561 -05:00 [DBG] 1 candidate(s) found for the request path '/api/LoginUserApplication'
+2022-04-11 23:58:41.565 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api)' with route pattern 'api/LoginUserApplication' is valid for the request path '/api/LoginUserApplication'
+2022-04-11 23:58:41.566 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api)'
+2022-04-11 23:58:41.566 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-04-11 23:58:41.567 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api)'
+2022-04-11 23:58:41.612 -05:00 [INF] Route matched with {action = "Handle", controller = "LoginUserApplication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MajorVillage.Core.Dtos.LoginUserApplicationResponse]] HandleAsync(MajorVillage.Core.Dtos.LoginUserApplicationRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.LoginUserApplication (Api).
+2022-04-11 23:58:41.613 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-04-11 23:58:41.614 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-04-11 23:58:41.615 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-04-11 23:58:41.616 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-04-11 23:58:41.616 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-04-11 23:58:41.621 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.LoginUserApplication (Api)
+2022-04-11 23:58:41.702 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.LoginUserApplication (Api)
+2022-04-11 23:58:41.712 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.LoginUserApplicationRequest' ...
+2022-04-11 23:58:41.716 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.LoginUserApplicationRequest' using the name '' in request data ...
+2022-04-11 23:58:41.717 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2022-04-11 23:58:41.727 -05:00 [DBG] Connection id "0HMGS81END75R", Request id "0HMGS81END75R:00000005": started reading request body.
+2022-04-11 23:58:41.727 -05:00 [DBG] Connection id "0HMGS81END75R", Request id "0HMGS81END75R:00000005": done reading request body.
+2022-04-11 23:58:41.736 -05:00 [DBG] JSON input formatter succeeded, deserializing to type 'MajorVillage.Core.Dtos.LoginUserApplicationRequest'
+2022-04-11 23:58:41.736 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.LoginUserApplicationRequest'.
+2022-04-11 23:58:41.736 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.LoginUserApplicationRequest'.
+2022-04-11 23:58:41.736 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.LoginUserApplicationRequest' ...
+2022-04-11 23:58:41.746 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.LoginUserApplicationRequest'.
+2022-04-11 23:58:41.747 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-04-11 23:58:41.747 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-04-11 23:58:41.747 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-04-11 23:58:41.747 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-04-11 23:58:41.748 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-04-11 23:58:41.748 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-04-11 23:58:41.749 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-04-11 23:58:41.749 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-04-11 23:58:41.752 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api) - Validation state: "Valid"
+2022-04-11 23:58:41.752 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.LoginUserApplicationRequest","System.Threading.CancellationToken"])
+2022-04-11 23:58:54.755 -05:00 [VRB] GetList entities by predicate {"Operator":"And","Predicates":[{"Value":"string","DatabaseFunction":"None","DatabaseFunctionParameters":"","Properties":["System.String UserName"],"Operator":"Eq","Not":false,"UseTableAlias":true,"PropertyName":"UserName","$type":"FieldPredicate`1"},{"Value":"��7�5\u001A��\u000E#�_�Fhz�P�] B��>G�\u0019 w�\u001E\u0013\u0018\u000F\u0018`Ӓr4���dק�G���$\u001E%Z����N�k�","DatabaseFunction":"None","DatabaseFunctionParameters":"","Properties":["System.String Password"],"Operator":"Eq","Not":false,"UseTableAlias":true,"PropertyName":"Password","$type":"FieldPredicate`1"}],"$type":"PredicateGroup"}
+2022-04-11 23:58:56.386 -05:00 [INF] Executed action method MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14630.4833ms.
+2022-04-11 23:58:56.390 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-04-11 23:58:56.390 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-04-11 23:58:56.390 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-04-11 23:58:56.390 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-04-11 23:58:56.391 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-04-11 23:58:56.392 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-04-11 23:58:56.393 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-04-11 23:58:56.396 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2022-04-11 23:58:56.401 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-04-11 23:58:56.405 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-04-11 23:58:56.406 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-04-11 23:58:56.406 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-04-11 23:58:56.406 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-04-11 23:58:56.406 -05:00 [INF] Executing ObjectResult, writing value of type 'MajorVillage.Core.Dtos.LoginUserApplicationResponse'.
+2022-04-11 23:58:57.548 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-04-11 23:58:57.548 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-04-11 23:58:57.548 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-04-11 23:58:57.552 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api) in 15932.9907ms
+2022-04-11 23:58:57.552 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.LoginUserApplication.HandleAsync (Api)'
+2022-04-11 23:58:57.552 -05:00 [DBG] Connection id "0HMGS81END75R" completed keep alive response.
+2022-04-11 23:58:57.552 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7068/api/LoginUserApplication application/json 50 - 200 - application/json;+charset=utf-8 16008.9617ms
+2022-04-11 23:59:58.730 -05:00 [DBG] Connection id "0HMGS81END75T" accepted.
+2022-04-11 23:59:58.731 -05:00 [DBG] Connection id "0HMGS81END75T" started.
+2022-04-11 23:59:58.731 -05:00 [DBG] Connection id "0HMGS81END75U" accepted.
+2022-04-11 23:59:58.756 -05:00 [DBG] Connection id "0HMGS81END75U" started.
+2022-04-11 23:59:58.808 -05:00 [DBG] Connection id "0HMGS81END75T" received FIN.
+2022-04-11 23:59:58.808 -05:00 [DBG] Connection id "0HMGS81END75U" received FIN.
+2022-04-11 23:59:58.852 -05:00 [DBG] Connection 0HMGS81END75T established using the following protocol: "Tls12"
+2022-04-11 23:59:58.852 -05:00 [DBG] Connection id "0HMGS81END75T" sending FIN because: "The client closed the connection."
+2022-04-11 23:59:58.852 -05:00 [DBG] Connection id "0HMGS81END75T" disconnecting.
+2022-04-11 23:59:58.854 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-04-11 23:59:58.854 -05:00 [DBG] Connection id "0HMGS81END75U" stopped.
+2022-04-11 23:59:58.854 -05:00 [DBG] Connection id "0HMGS81END75T" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-11 23:59:58.854 -05:00 [DBG] Connection id "0HMGS81END75U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-11 23:59:58.855 -05:00 [DBG] Connection id "0HMGS81END75T" stopped.
+2022-04-12 00:00:24.600 -05:00 [DBG] Connection id "0HMGS81END75S" received FIN.
+2022-04-12 00:00:24.600 -05:00 [DBG] Connection id "0HMGS81END75Q" received FIN.
+2022-04-12 00:00:24.623 -05:00 [DBG] Connection id "0HMGS81END75S" sending FIN because: "The client closed the connection."
+2022-04-12 00:00:24.650 -05:00 [DBG] Connection id "0HMGS81END75S" disconnecting.
+2022-04-12 00:00:24.623 -05:00 [DBG] Connection id "0HMGS81END75Q" sending FIN because: "The client closed the connection."
+2022-04-12 00:00:24.659 -05:00 [DBG] Connection id "0HMGS81END75Q" disconnecting.
+2022-04-12 00:00:24.662 -05:00 [DBG] Connection id "0HMGS81END75Q" stopped.
+2022-04-12 00:00:24.662 -05:00 [DBG] Connection id "0HMGS81END75S" stopped.
+2022-04-12 00:00:31.762 -05:00 [DBG] Connection id "0HMGS81END75V" accepted.
+2022-04-12 00:00:31.763 -05:00 [DBG] Connection id "0HMGS81END75V" started.
+2022-04-12 00:00:31.765 -05:00 [DBG] Connection id "0HMGS81END760" accepted.
+2022-04-12 00:00:31.765 -05:00 [DBG] Connection id "0HMGS81END760" started.
+2022-04-12 00:00:31.795 -05:00 [DBG] Connection 0HMGS81END75V established using the following protocol: "Tls12"
+2022-04-12 00:00:31.798 -05:00 [DBG] Connection id "0HMGS81END75V" received FIN.
+2022-04-12 00:00:31.798 -05:00 [DBG] Connection id "0HMGS81END75V" sending FIN because: "The client closed the connection."
+2022-04-12 00:00:31.798 -05:00 [DBG] Connection id "0HMGS81END75V" disconnecting.
+2022-04-12 00:00:31.798 -05:00 [DBG] Connection id "0HMGS81END75V" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:00:31.799 -05:00 [DBG] Connection id "0HMGS81END75V" stopped.
+2022-04-12 00:00:31.802 -05:00 [DBG] Connection 0HMGS81END760 established using the following protocol: "Tls12"
+2022-04-12 00:00:31.805 -05:00 [DBG] Connection id "0HMGS81END760" received FIN.
+2022-04-12 00:00:31.805 -05:00 [DBG] Connection id "0HMGS81END760" sending FIN because: "The client closed the connection."
+2022-04-12 00:00:31.805 -05:00 [DBG] Connection id "0HMGS81END760" disconnecting.
+2022-04-12 00:00:31.805 -05:00 [DBG] Connection id "0HMGS81END760" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:00:31.806 -05:00 [DBG] Connection id "0HMGS81END760" stopped.
+2022-04-12 00:00:53.547 -05:00 [DBG] Connection id "0HMGS81END75R" received FIN.
+2022-04-12 00:00:53.547 -05:00 [DBG] Connection id "0HMGS81END75R" disconnecting.
+2022-04-12 00:00:53.548 -05:00 [DBG] Connection id "0HMGS81END75R" sending FIN because: "The client closed the connection."
+2022-04-12 00:00:53.548 -05:00 [DBG] Connection id "0HMGS81END75R" stopped.
+2022-04-12 00:01:03.696 -05:00 [DBG] Connection id "0HMGS81END761" accepted.
+2022-04-12 00:01:03.696 -05:00 [DBG] Connection id "0HMGS81END761" started.
+2022-04-12 00:01:03.775 -05:00 [DBG] Connection id "0HMGS81END762" accepted.
+2022-04-12 00:01:03.800 -05:00 [DBG] Connection id "0HMGS81END762" started.
+2022-04-12 00:01:03.800 -05:00 [DBG] Connection id "0HMGS81END761" received FIN.
+2022-04-12 00:01:03.801 -05:00 [DBG] Connection 0HMGS81END761 established using the following protocol: "Tls12"
+2022-04-12 00:01:03.801 -05:00 [DBG] Connection id "0HMGS81END761" sending FIN because: "The client closed the connection."
+2022-04-12 00:01:03.801 -05:00 [DBG] Connection id "0HMGS81END761" disconnecting.
+2022-04-12 00:01:03.801 -05:00 [DBG] Connection id "0HMGS81END761" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:01:03.802 -05:00 [DBG] Connection id "0HMGS81END761" stopped.
+2022-04-12 00:01:03.828 -05:00 [DBG] Connection 0HMGS81END762 established using the following protocol: "Tls12"
+2022-04-12 00:01:03.878 -05:00 [DBG] Connection id "0HMGS81END762" received FIN.
+2022-04-12 00:01:03.878 -05:00 [DBG] Connection id "0HMGS81END762" sending FIN because: "The client closed the connection."
+2022-04-12 00:01:03.878 -05:00 [DBG] Connection id "0HMGS81END762" disconnecting.
+2022-04-12 00:01:03.878 -05:00 [DBG] Connection id "0HMGS81END762" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:01:03.879 -05:00 [DBG] Connection id "0HMGS81END762" stopped.
+2022-04-12 00:01:09.189 -05:00 [DBG] Connection id "0HMGS81END763" accepted.
+2022-04-12 00:01:09.191 -05:00 [DBG] Connection id "0HMGS81END763" started.
+2022-04-12 00:01:09.192 -05:00 [DBG] Connection id "0HMGS81END764" accepted.
+2022-04-12 00:01:09.193 -05:00 [DBG] Connection id "0HMGS81END764" started.
+2022-04-12 00:01:09.219 -05:00 [DBG] Connection 0HMGS81END763 established using the following protocol: "Tls12"
+2022-04-12 00:01:09.222 -05:00 [DBG] Connection id "0HMGS81END763" received FIN.
+2022-04-12 00:01:09.222 -05:00 [DBG] Connection id "0HMGS81END763" sending FIN because: "The client closed the connection."
+2022-04-12 00:01:09.222 -05:00 [DBG] Connection id "0HMGS81END763" disconnecting.
+2022-04-12 00:01:09.222 -05:00 [DBG] Connection id "0HMGS81END763" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:01:09.223 -05:00 [DBG] Connection id "0HMGS81END763" stopped.
+2022-04-12 00:01:09.251 -05:00 [DBG] Connection id "0HMGS81END764" received FIN.
+2022-04-12 00:01:09.251 -05:00 [DBG] Connection 0HMGS81END764 established using the following protocol: "Tls12"
+2022-04-12 00:01:09.251 -05:00 [DBG] Connection id "0HMGS81END764" sending FIN because: "The client closed the connection."
+2022-04-12 00:01:09.251 -05:00 [DBG] Connection id "0HMGS81END764" disconnecting.
+2022-04-12 00:01:09.252 -05:00 [DBG] Connection id "0HMGS81END764" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:01:09.252 -05:00 [DBG] Connection id "0HMGS81END764" stopped.
+2022-04-12 00:01:19.093 -05:00 [DBG] Connection id "0HMGS81END765" accepted.
+2022-04-12 00:01:19.093 -05:00 [DBG] Connection id "0HMGS81END765" started.
+2022-04-12 00:01:19.094 -05:00 [DBG] Connection id "0HMGS81END766" accepted.
+2022-04-12 00:01:19.094 -05:00 [DBG] Connection id "0HMGS81END766" started.
+2022-04-12 00:01:19.123 -05:00 [DBG] Connection 0HMGS81END765 established using the following protocol: "Tls12"
+2022-04-12 00:01:19.125 -05:00 [DBG] Connection id "0HMGS81END765" received FIN.
+2022-04-12 00:01:19.125 -05:00 [DBG] Connection id "0HMGS81END765" sending FIN because: "The client closed the connection."
+2022-04-12 00:01:19.125 -05:00 [DBG] Connection id "0HMGS81END765" disconnecting.
+2022-04-12 00:01:19.125 -05:00 [DBG] Connection id "0HMGS81END765" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:01:19.127 -05:00 [DBG] Connection id "0HMGS81END765" stopped.
+2022-04-12 00:01:19.139 -05:00 [DBG] Connection 0HMGS81END766 established using the following protocol: "Tls12"
+2022-04-12 00:01:19.142 -05:00 [DBG] Connection id "0HMGS81END766" received FIN.
+2022-04-12 00:01:19.142 -05:00 [DBG] Connection id "0HMGS81END766" sending FIN because: "The client closed the connection."
+2022-04-12 00:01:19.142 -05:00 [DBG] Connection id "0HMGS81END766" disconnecting.
+2022-04-12 00:01:19.142 -05:00 [DBG] Connection id "0HMGS81END766" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:01:19.143 -05:00 [DBG] Connection id "0HMGS81END766" stopped.
+2022-04-12 00:02:23.009 -05:00 [DBG] Connection id "0HMGS81END767" accepted.
+2022-04-12 00:02:23.010 -05:00 [DBG] Connection id "0HMGS81END767" started.
+2022-04-12 00:02:23.011 -05:00 [DBG] Connection id "0HMGS81END768" accepted.
+2022-04-12 00:02:23.011 -05:00 [DBG] Connection id "0HMGS81END768" started.
+2022-04-12 00:02:23.138 -05:00 [DBG] Connection id "0HMGS81END768" received FIN.
+2022-04-12 00:02:23.163 -05:00 [DBG] Connection id "0HMGS81END767" received FIN.
+2022-04-12 00:02:23.260 -05:00 [DBG] Connection 0HMGS81END767 established using the following protocol: "Tls12"
+2022-04-12 00:02:23.289 -05:00 [DBG] Connection id "0HMGS81END767" sending FIN because: "The client closed the connection."
+2022-04-12 00:02:23.289 -05:00 [DBG] Connection id "0HMGS81END767" disconnecting.
+2022-04-12 00:02:23.289 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-04-12 00:02:23.290 -05:00 [DBG] Connection id "0HMGS81END768" stopped.
+2022-04-12 00:02:23.290 -05:00 [DBG] Connection id "0HMGS81END768" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-04-12 00:02:23.290 -05:00 [DBG] Connection id "0HMGS81END767" request processing ended abnormally.
+System.IO.IOException: The decryption operation failed, see inner exception.
+ ---> Interop+AppleCrypto+SslException: misc. bad certificate
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.IO.Pipelines.StreamPipeReader.<ReadAsync>g__Core|36_0(StreamPipeReader reader, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2022-04-12 00:02:23.291 -05:00 [DBG] Connection id "0HMGS81END767" stopped.

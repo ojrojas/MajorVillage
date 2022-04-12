@@ -8,3 +8,8 @@ export const IsLogged = createSelector(
     getLoginState,
     (state) => state.isLogged
 );
+
+export const GetUserClaims = createSelector(
+    getLoginState,
+    (state) => state.userInfo
+)
