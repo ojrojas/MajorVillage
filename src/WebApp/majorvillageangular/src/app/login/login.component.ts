@@ -29,7 +29,6 @@ export class LoginComponent {
         for (const control in this.form.controls) {
             this.form.controls[control].markAsDirty();
             this.form.controls[control].markAsTouched();
-            document.querySelector(control)?.setAttribute("class", "visibility:visible")
         }
     }
 }

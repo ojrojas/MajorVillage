@@ -22,7 +22,9 @@ builder.Services.AddDIOptionsConfiguration(configuration);
 builder.Services.AddJwtExtension(configuration);
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: "MajorVillagePolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+    options.AddPolicy(name: "MajorVillagePolicy", 
+    builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+        
 });
 
 // //Asynchronous - Dialect don´t work
@@ -40,6 +42,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("MajorVillagePolicy");
 
 app.UseAuthorization();
 

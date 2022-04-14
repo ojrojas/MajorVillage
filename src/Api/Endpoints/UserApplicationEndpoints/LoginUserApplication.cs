@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Authorization;
+
 namespace MajorVillage.Api.Endpoints;
 
+[AllowAnonymous]
 [ApiController]
 [Route("api/[controller]")]
 public class LoginUserApplication : EndpointBaseAsync.WithRequest<LoginUserApplicationRequest>.WithActionResult<LoginUserApplicationResponse>
@@ -12,7 +15,7 @@ public class LoginUserApplication : EndpointBaseAsync.WithRequest<LoginUserAppli
     }
 
     [HttpPost]
-     [SwaggerOperation(
+    [SwaggerOperation(  
           Summary = "login userapplication",
           Description = "login userapplication",
           OperationId = "applicationuser.login",

@@ -14,7 +14,7 @@ export class ApiService implements IRequestService {
     constructor(@Inject(HttpClient) private httpClient: HttpClient) { }
 
     get<T>(routeApi: RouteApiConstants, params: IDictionary[]): Observable<HttpResponse<T>> {
-        return this.httpClient.get<T>(`${environment.BaseUrlApi}/${routeApi}/${params}`, { observe: 'response' });
+        return this.httpClient.get<T>(`${environment.BaseUrlApi}/${routeApi}/${params}`, { observe: 'response',headers:{"mode": "no-cors"} });
     }
 
     post<T>(routeApi: RouteApiConstants, body: any): Observable<HttpResponse<T>> {

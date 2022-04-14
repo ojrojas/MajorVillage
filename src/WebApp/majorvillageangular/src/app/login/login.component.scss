@@ -34,7 +34,7 @@ input {
 .form-control .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: rgb(159, 148, 148);
+    background-color: rgb(214, 175, 175);
     color: #fff;
     text-align: center;
     padding: 5px 0;
@@ -42,5 +42,22 @@ input {
    
     position: absolute;
     z-index: 1;
-  }
+  } 
+
+  .form-control .tooltiptext .visible {
+    visibility: visible;
+    width: 120px;
+    background-color: rgb(214, 175, 175);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+  } 
+
+
+
+
   
