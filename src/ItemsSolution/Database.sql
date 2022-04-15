@@ -11,7 +11,6 @@ CREATE TABLE IF NOT EXISTS TypeIdentification(
     ModifiedOn Timestamp null
 );
 
-
 CREATE TABLE IF NOT EXISTS TypeUser(
     Id varchar(36) primary key default uuid() not null,
     Name varchar(150) not null,
@@ -28,7 +27,7 @@ CREATE TABLE IF NOT EXISTS User(
     LastName varchar(60) not null,
     SurName varchar(60) null,
     Identification varchar(16) not null,
-    TypeIdentification  varchar(16) not null,
+    TypeIdentification  varchar(36) not null,
     Age integer not null, 
     BirthDate  DateTime not null,
     TypeUser varchar(36) not null,
@@ -51,18 +50,6 @@ CREATE TABLE IF NOT EXISTS UserApplication (
     Foreign Key(UserId) references User(Id)
 );
 
-CREATE TABLE IF NOT EXISTS Student (
-    Id varchar(36) primary key default uuid() not null,
-    FirstName varchar(50) not null,
-    MiddleName varchar(50) null,
-    LastName varchar(50) not null,
-    Identification nvarchar(15) not null,
-    CreatedBy varchar(36) not null,
-    CreatedOn Timestamp not null,
-    ModifiedBy varchar(36) null,
-    ModifiedOn Timestamp null
-);
-
 CREATE TABLE IF NOT EXISTS ElectiveYear(
     Id varchar(36) primary key default uuid() not null,
     Year integer not null,
@@ -71,7 +58,6 @@ CREATE TABLE IF NOT EXISTS ElectiveYear(
     ModifiedBy varchar(36) null,
     ModifiedOn Timestamp null
 );
-
 
 INSERT INTO MajorVillageDB.TypeIdentification
 (Id, Name, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
@@ -85,9 +71,15 @@ VALUES
 ('cfbb1a1d-439e-42d0-a822-e07be28ec1aa', 'Student', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL),
 ('4536ea48-f042-4656-8e10-64605f00584f', 'Teacher', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL);
 
+INSERT INTO MajorVillageDB.`User`
+(Id, FirstName, Middlename, LastName, SurName, Identification, TypeIdentification, Age, BirthDate, TypeUser, Email, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
+VALUES(uuid(), 'Oscar', NULL, 'Rojas', NULL, '111222333', '551d4e76-38a0-4df4-848f-90ede4c76537', 
+30, '10-05-1992', '82f5a433-3c73-4e61-a177-5703114ba0ac',
+'correo@correo.com', 'cb4fdac5-297e-4263-a09b-7dc2b0bc1b81', current_timestamp(), NULL, NULL);
 
-
-
+INSERT INTO MajorVillageDB.UserApplication
+(Id, UserName, UserId, Password, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
+VALUES(uuid(), 'ojrojas', '5d6bc497-bd0c-11ec-8048-0242ac120002', 'Abc12345#', '2c44e001-b337-4bb7-82c3-187c0b147015', current_timestamp(), NULL, NULL);
 
 
 

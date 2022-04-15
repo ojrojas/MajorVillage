@@ -3,12 +3,16 @@
         <h1>Login</h1>
         <form [formGroup]="form" (ngSubmit)="submit()">
             <div class="form-control">
-                <input type="text" placeholder="UserName" formControlName="userName" required="true">
-                <span class="tooltiptext" *ngIf="form.get('userName')?.invalid">El campo username es <strong>requerido</strong></span>
+                <input type="text" placeholder="UserName" formControlName="userName">
+                <span class="tooltiptext" 
+                *ngIf="form.get('userName')?.invalid && (form.get('userName')?.dirty || form.get('userName')?.touched)">
+                El campo username es <strong>requerido</strong></span>
             </div>
             <div class="form-control">
                 <input type="password" placeholder="Password" formControlName="password" required="true">
-                <span class="tooltiptext" ngClass="{visible: form.get('password')?.invalid === true}" *ngIf="form.get('password')?.invalid">El campo password es <strong>requerido</strong></span>
+                <span class="tooltiptext" 
+                *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)"
+                >El campo password es <strong>requerido</strong></span>
             </div>
             <div class="form-control">
                 <input type="submit" value="sign in">

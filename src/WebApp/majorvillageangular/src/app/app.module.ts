@@ -11,7 +11,9 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { ApiService } from './core/services/api.service';
 import { REDUCER_TOKEN } from './app.reducer';
 import { metaReducers } from './meta.reducer';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth/auth-interceptor.service';
+import { AppReducerService } from './app.reducer.service';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,20 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot(REDUCER_TOKEN, {metaReducers}),
+    StoreModule.forRoot(REDUCER_TOKEN, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot()
   ],
-  providers: [ApiService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    ApiService,
+    AppReducerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

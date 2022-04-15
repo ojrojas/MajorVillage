@@ -7,8 +7,6 @@ import { Router } from "@angular/router";
 })
 export class HomeComponent{
     constructor(private route: Router){
-        setTimeout(() => {
-            route.navigate(['/login']);
-        }, 500);
+      
     }
 }
