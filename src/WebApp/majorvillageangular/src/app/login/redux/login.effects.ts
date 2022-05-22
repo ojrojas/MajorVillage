@@ -62,8 +62,6 @@ export class LoginEffects {
         );
     }, { dispatch: false });
 
-
-
     constructor(
         private router: Router,
         private actions$: Actions,
