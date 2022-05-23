@@ -6,13 +6,13 @@
                 <input type="text" placeholder="UserName" formControlName="userName">
                 <span class="tooltiptext" 
                 *ngIf="form.get('userName')?.invalid && (form.get('userName')?.dirty || form.get('userName')?.touched)">
-                El campo username es <strong>requerido</strong></span>
+                The field username is <strong>required</strong></span>
             </div>
             <div class="form-control">
                 <input type="password" placeholder="Password" formControlName="password" required="true">
                 <span class="tooltiptext" 
                 *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)"
-                >El campo password es <strong>requerido</strong></span>
+                >The field password is <strong>required</strong></span>
             </div>
             <div class="form-control">
                 <input type="submit" value="sign in">

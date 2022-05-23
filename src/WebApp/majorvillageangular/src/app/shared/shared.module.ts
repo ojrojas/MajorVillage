@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderPageComponent } from './components/headerpages/headerpage.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [HeaderPageComponent],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports:[
+    HeaderPageComponent,
     FormsModule,
     ReactiveFormsModule
   ]
