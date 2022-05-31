@@ -1,12 +1,13 @@
 import { Injectable } from "@angular/core";
 
 @Injectable({
-    providedIn:'root'
+    providedIn: 'root'
 })
-export class HomeService {
-    constructor(){}
 
-    getHomeHeader = ()=> {
-        
+export class HomeService {
+    constructor() { }
+
+    getHomeHeader = () => {
+
     }
 }
