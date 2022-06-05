@@ -1,0 +1,35 @@
+.sidenav {
+    width: 260px;
+    height: 100vh;
+    background-color: rgba(95, 90, 95, 0.067);
+    color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #343333;
+}
+
+.icon-major-village {
+    font-size: 33px;
+}
+
+.main {
+    width: '100%';
+    background-color: 'red';
+    margin-left: 260px;
+    padding: 15px;
+}

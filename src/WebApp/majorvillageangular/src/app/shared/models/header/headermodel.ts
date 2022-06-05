@@ -1,11 +1,12 @@
 export interface HeaderModel {
     titlePage: string;
     subTitle: string;
-    buttons: ConfigureButtons;
+    buttons: ConfigureButton[];
 }
 
-export interface ConfigureButtons {
-    color: string;
+export interface ConfigureButton {
+    styles?: string;
     description: string;
+    type:string;
     action: () => void;
 }

@@ -4,5 +4,17 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(221, 216, 216);
+}
+
+.nav-header {
+    display: flex;
+}
+
+.title-header {
+    width: 40%;
+}
+
+.buttons-actions {
+    width: 100%;
+    text-align: end;
 }

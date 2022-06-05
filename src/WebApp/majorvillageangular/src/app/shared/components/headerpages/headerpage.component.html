@@ -1,7 +1,10 @@
 <header class="container">
-    <nav>
-        <h5>
-            {{headerModel?.titlePage}}
-        </h5>
+    <nav class="nav-header">
+        <h3 class="title-header">{{headerModel?.titlePage}}</h3>
+        <div class="buttons-actions">
+            <button (click)="button.action()" class={{button.styles}} *ngFor="let button of headerModel?.buttons" type={{button.type}}>
+                {{button.description}}
+            </button>
+        </div>
     </nav>
 </header>
