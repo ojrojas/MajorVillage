@@ -30,7 +30,6 @@ export class HomeComponent {
                     type:'button'
                 },
                 {
-                    styles:'background-color: grey;', 
                     action: ()=> { alert("hi i'm button #2")},
                     description:'SEND 4',
                     type:'button'

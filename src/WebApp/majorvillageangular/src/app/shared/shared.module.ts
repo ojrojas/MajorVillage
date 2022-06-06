@@ -30,7 +30,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     InputComponent,
     SelectComponent,
     TextareaComponent,
-    SidenavComponent
+    SidenavComponent,
   ]
 })
 export class SharedModule { }
