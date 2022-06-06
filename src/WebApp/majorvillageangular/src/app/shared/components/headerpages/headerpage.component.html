@@ -1,10 +1,16 @@
 <header class="container">
-    <nav class="nav-header">
-        <h3 class="title-header">{{headerModel?.titlePage}}</h3>
-        <div class="buttons-actions">
-            <button (click)="button.action()" class={{button.styles}} *ngFor="let button of headerModel?.buttons" type={{button.type}}>
-                {{button.description}}
-            </button>
+    <nav class="nav_header">
+        <div class="nav_header-main">
+            <h2 class="title-header">{{headerModel?.titlePage}}</h2>
+        </div>
+        <div class="nav_header-subtitle">
+            <h4>{{headerModel?.subTitle}}</h4>
+            <div class="buttons-actions">
+                <button (click)="button.action()" [style]="button.styles" *ngFor="let button of headerModel?.buttons" type={{button.type}}>
+                    {{button.description}}
+                </button>
+            </div>
         </div>
     </nav>
 </header>
+<hr class="line_header">

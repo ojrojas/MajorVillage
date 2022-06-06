@@ -1,20 +1,27 @@
 .container {
     margin: 0;
     padding: 0;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
-.nav-header {
-    display: flex;
+.line_header {
+    margin-top: 5px;
 }
 
-.title-header {
-    width: 40%;
+.nav_header {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.nav_header-subtitle {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .buttons-actions {
-    width: 100%;
-    text-align: end;
+    text-align: right;
+}
+
+.buttons-actions>button {
+    height: 20px;
+    width: 100px;
 }

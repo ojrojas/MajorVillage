@@ -4,9 +4,9 @@ import { HeaderModel } from "../../models/header/headermodel";
 @Component({
     selector: 'app-header-page',
     templateUrl: 'headerpage.component.html',
-    styleUrls:['headerpage.component.scss']
+    styleUrls: ['headerpage.component.scss']
 })
 export class HeaderPageComponent {
-    @Input() headerModel:HeaderModel | undefined;
-    constructor(){}
+    @Input() headerModel: HeaderModel | undefined;
+    constructor() { }
 }
