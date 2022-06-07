@@ -7,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
   constructor() { }
-  open: boolean = true;
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  openNav(): void {
+    let div = document.getElementById("sidenav") as HTMLDivElement;
+    let divMain = document.getElementById("main-content") as HTMLDivElement;
+    divMain.style.marginLeft = "250px"
+    div.style.width = "250px";
   }
 
-  toogleMenu() {
+  closeNav(): void {
+    let div = document.getElementById("sidenav") as HTMLDivElement;
+    let divMain = document.getElementById("main-content") as HTMLDivElement;
+    divMain.style.marginLeft = "0px"
+    div.style.width = "0px";
   }
-
 }

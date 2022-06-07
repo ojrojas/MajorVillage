@@ -14,6 +14,7 @@ public class PermissionManagerService : IPermissionManagerService
     public async Task<PermissionManagerResponse> GetPermission(PermissionManagerRequest request, CancellationToken cancellationToken)
     {
         PermissionManagerResponse response = new(request.CorrelationId());
+        _logger.LogInformation("Get Permission");
         response.PermissionManager = await _repository.GetPermission(request.TypeUserId, cancellationToken);
         return response;
     }

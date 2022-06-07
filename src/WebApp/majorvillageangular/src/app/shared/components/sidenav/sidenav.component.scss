@@ -1,35 +1,63 @@
 .sidenav {
-    width: 260px;
-    height: 100vh;
-    background-color: rgba(95, 90, 95, 0.067);
-    color: white;
+    height: 100%;
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
+    background-color: grey;
     overflow-x: hidden;
-    padding-top: 20px;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 18px;
-    color: #818181;
+    font-size: 25px;
+    color: white;
     display: block;
+    transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #343333;
+    color: black;
 }
 
-.icon-major-village {
-    font-size: 33px;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 .main {
-    width: '100%';
-    background-color: 'red';
-    margin-left: 260px;
-    padding: 15px;
+    padding: 5px;;
+}
+
+.project-name{
+    vertical-align: middle;
+}
+
+#sidenav a:hover{
+    cursor: pointer;
+}
+
+.pointer-menu{
+    cursor: pointer;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }

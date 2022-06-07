@@ -1,12 +1,10 @@
 <div id="sidenav" class="sidenav">
-    <a><span class="material-icons" (click)="toogleMenu()">menu</span></a>
-    <a class="icon-major-village"> <span class="material-icons">10k</span>MajorVillage</a>
-    <a style="vertical-align: middle;"><span class="material-icons">pie_chart</span> Dashboard</a>
-    <a></a>
-    <a></a>
-    <a></a>
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a [routerLink]="['/home']" class="icon-major-village"><span class="material-icons">10k</span>Home</a>
+    <a [routerLink]="['/settings']" style="vertical-align: middle;"><span class="material-icons">settings</span> Settings</a>
 </div>
 
-<div class="main">
+<div id="main-content" class="main">
+    <span class="material-icons pointer-menu" (click)="openNav()">menu</span>
     <router-outlet></router-outlet>
 </div>
