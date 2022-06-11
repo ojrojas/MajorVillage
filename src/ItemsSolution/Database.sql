@@ -85,6 +85,18 @@ CREATE TABLE IF NOT EXISTS PermissionAction(
     Foreign Key(PermissionManagerId) references PermissionManager(Id)
 );
 
+CREATE TABLE IF NOT EXISTS Enrollment(
+    Id varchar(36) primary key default uuid() not null,
+    UserId varchar(36) not null,
+    UserApplicationId varchar(36) not null,
+    ElectiveYearId varchar(36) not null,
+    CreatedBy varchar(36) not null,
+    CreatedOn Timestamp not null,
+    ModifiedBy varchar(36) null,
+    ModifiedOn Timestamp null,
+    Foreign Key(UserId) references User(Id),
+    Foreign Key(ElectiveYearId) references ElectiveYear(Id)
+);
 
 INSERT INTO MajorVillageDB.TypeIdentification
 (Id, Name, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
