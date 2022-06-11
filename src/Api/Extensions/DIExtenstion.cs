@@ -17,6 +17,8 @@ internal static class AddExtensionInjectDependencies
         services.AddTransient<ITypeUserService, TypeUserService>();
         services.AddTransient<IPermissionManagerRepository, PermissionManagerRepository>();
         services.AddTransient<IPermissionManagerService, PermissionManagerService>();
+        services.AddTransient<IEnrollmentService, EnrollmentService>();
+        services.AddTransient<IEnrollmentRepository, EnrollmentRepository>();
 
         return services;
     }
