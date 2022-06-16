@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 import { LoginService } from "./services/login.service";
 
 @Component({
@@ -8,9 +8,9 @@ import { LoginService } from "./services/login.service";
     styleUrls: ['login.component.scss']
 })
 export class LoginComponent {
-    form: FormGroup;
+    form: UntypedFormGroup;
     constructor(private loginService: LoginService,
-        private formBuilder: FormBuilder,
+        private formBuilder: UntypedFormBuilder,
     ) {
         this.form = this.formBuilder.group({
             userName: ['', Validators.required],
