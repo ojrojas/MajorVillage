@@ -37,9 +37,9 @@ public class CourseRepository : ICourseRepository
         return await _repository.GetByIdAsync(predicate, cancellationToken);
     }
 
-    public async Task<IEnumerable<Course>> GetAllCoursesAsync(IPredicate predicate, CancellationToken cancellationToken)
+    public async Task<IEnumerable<Course>> GetAllCoursesAsync(CancellationToken cancellationToken)
     {
         _logger.LogInformation($"Get all courses request");
-        return await _repository.GetAllAsync(predicate, cancellationToken);
+        return await _repository.GetAllAsync(null, cancellationToken);
     }
 }

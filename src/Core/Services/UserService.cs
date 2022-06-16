@@ -16,8 +16,8 @@ public class UserService : IUserService
     {
         var response = new GetUserByIdResponse(request.CorrelationId());
         _logger.LogInformation($"Get User by id, in request {request.CorrelationId()}");
-        var predicate = Predicates.Field<User>(s => s.Id, Operator.Eq, request.Id);
-        response.UserDto = await _UserRepository.GetUserByIdAsync(predicate, cancellationToken);
+       
+        response.UserDto = await _UserRepository.GetUserByIdAsync(request.Id, cancellationToken);
         return response;
     }
 
@@ -25,7 +25,7 @@ public class UserService : IUserService
     {
         CreateUserResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Create User, in request {request.CorrelationId()}");
-        var result = await _UserRepository.CreateUserAsync(request.UserDto, cancellationToken);
+        response.CreatedUser = await _UserRepository.CreateUserAsync(request.UserDto, cancellationToken);
         return response;
     }
 
