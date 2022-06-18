@@ -1,4 +1,5 @@
 ﻿namespace MajorVillage.Core.Entities;
+
 public class PermissionManager : BaseEntity
 {
     public Guid TypeUser { get; set; }

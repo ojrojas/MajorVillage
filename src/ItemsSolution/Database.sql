@@ -98,6 +98,18 @@ CREATE TABLE IF NOT EXISTS Enrollment(
     Foreign Key(ElectiveYearId) references ElectiveYear(Id)
 );
 
+CREATE TABLE IF NOT EXISTS Course(
+    Id varchar(36) primary key default uuid() not null,
+    Name varchar(150) not null,
+    ElectiveYearId varchar(36) not null,
+    CreatedBy varchar(36) not null,
+    CreatedOn Timestamp not null,
+    ModifiedBy varchar(36) null,
+    ModifiedOn Timestamp null,
+    Foreign Key(ElectiveYearId) references ElectiveYear(Id)
+)
+
+
 INSERT INTO MajorVillageDB.TypeIdentification
 (Id, Name, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn)
 VALUES('551d4e76-38a0-4df4-848f-90ede4c76537', 'CC', '1b04fcbc-c0c4-437d-8a6b-c590b0da11f4', current_timestamp(), NULL, NULL),
