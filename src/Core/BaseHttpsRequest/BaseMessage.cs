@@ -13,6 +13,3 @@ public abstract class BaseMessage
 
     public Guid CorrelationId() => _correlationId;
 }
-
-
-

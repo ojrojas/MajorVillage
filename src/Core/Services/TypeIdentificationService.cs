@@ -15,7 +15,7 @@ public class TypeIdentificationService : ITypeIdentificationService
     public async Task<GetAllTypeIdentificationResponse> GetAllTypeIdentifications(GetAllTypeIdentificationRequest request, CancellationToken cancellationToken)
     {
         GetAllTypeIdentificationResponse response = new(request.CorrelationId());
-        response.typeIdentifications = await _typeIdentificationRepository.GetAllIdentificationType(request.predicate, cancellationToken);
+        response.TypeIdentifications = await _typeIdentificationRepository.GetAllIdentificationType(cancellationToken);
         return response;
     }
 }

@@ -8,15 +8,15 @@ public class CourseService : ICourseService
     public CourseService(ICourseRepository courseRepository,
                          ILogger<CourseService> logger)
     {
-        _courseRepository = courseRepository;
-        _logger = logger;
+        _courseRepository = courseRepository ?? throw new ArgumentNullException(nameof(courseRepository));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
     public async Task<CreateCourseResponse> CreateCourse(CreateCourseRequest request, CancellationToken cancellationToken)
     {
         CreateCourseResponse response = new(request.CorrelationId());
         _logger.LogInformation($"CreateCourse correlationdata {response.CorrelationId()}");
-        response.Id = await _courseRepository.CreateCourseAsync(request.CourseDto, cancellationToken);
+        response.Id = await _courseRepository.CreateCourseAsync(request.Course, cancellationToken);
         return response;
     }
 
@@ -24,7 +24,7 @@ public class CourseService : ICourseService
     {
         UpdateCourseResponse response = new(request.CorrelationId());
         _logger.LogInformation($"UpdateCourseRequest correlationdata {response.CorrelationId()}");
-        response.CourseUpdated = await _courseRepository.UpdateCourseAsync(request.CourseDto, cancellationToken);
+        response.CourseUpdated = await _courseRepository.UpdateCourseAsync(request.Course, cancellationToken);
         return response;
     }
 
@@ -32,7 +32,7 @@ public class CourseService : ICourseService
     {
         GetAllCoursesResponse response = new(request.CorrelationId());
         _logger.LogInformation($"GetAllCourses request relation ${response.CorrelationId()}");
-        response.CoursesDto = await _courseRepository.GetAllCoursesAsync(cancellationToken);
+        response.Courses = await _courseRepository.GetAllCoursesAsync(cancellationToken);
         return response;
     }
 
@@ -40,7 +40,7 @@ public class CourseService : ICourseService
     {
         GetCourseByIdResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request GetCourseById correlationId {response.CorrelationId()}");
-        response.CourseDto = await _courseRepository.GetCourseByIdAsync(request.Id, cancellationToken);
+        response.Course = await _courseRepository.GetCourseByIdAsync(request.Id, cancellationToken);
         return response;
     }
 
@@ -48,7 +48,7 @@ public class CourseService : ICourseService
     {
         DeleteCourseResponse response = new(request.CorrelationId());
         _logger.LogInformation($"DeleteCourse request information {response.CorrelationId()}");
-        response.CourseDeleteDto = await _courseRepository.DeleteCourseAsync(request.CourseDto, cancellationToken);
+        response.CourseDelete = await _courseRepository.DeleteCourseAsync(request.Course, cancellationToken);
         return response;
     }
 }

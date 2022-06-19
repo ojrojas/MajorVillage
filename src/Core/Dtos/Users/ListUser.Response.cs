@@ -4,5 +4,5 @@ public class ListUserResponse : BaseResponse
 {
     public ListUserResponse(){}
     public ListUserResponse(Guid correlationId) : base(correlationId) { }
-    public IEnumerable<User> ListUsersDto { get; set; }
+    public IEnumerable<User> ListUsers { get; set; }
 }

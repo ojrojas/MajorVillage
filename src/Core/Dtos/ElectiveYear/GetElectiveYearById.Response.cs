@@ -6,5 +6,5 @@ public class GetElectiveYearByIdResponse : BaseResponse
     {
     }
 
-    public ElectiveYear ElectiveYearDto { get; set; }
+    public ElectiveYear ElectiveYear { get; set; }
 }

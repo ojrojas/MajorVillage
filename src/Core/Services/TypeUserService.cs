@@ -15,7 +15,7 @@ public class TypeUserService : ITypeUserService
     public async Task<GetAllTypeUserResponse> GetAllTypeUsers(GetAllTypeUsersRequest request, CancellationToken  cancellationToken)
     {
         GetAllTypeUserResponse response = new(request.CorrelationId());
-        response.TypeUsers = await _typeUserRepository.GetAllUserType(request.predicate, cancellationToken);
+        response.TypeUsers = await _typeUserRepository.GetAllUserType(cancellationToken);
         return response;
     }
 }

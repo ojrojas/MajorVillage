@@ -33,9 +33,9 @@ public class UserRepository : IUserRepository
         return await _repository.GetByIdAsync(predicate, cancellationToken);
     }
 
-    public async Task<IEnumerable<User>> ListUserAsync(IPredicate predicate, CancellationToken cancellationToken)
+    public async Task<IEnumerable<User>> ListUserAsync(CancellationToken cancellationToken)
     {
-        return await _repository.GetAllAsync(predicate, cancellationToken);
+        return await _repository.GetAllAsync(null, cancellationToken);
     }
 
     public async Task<bool> UpdateUserAsync(User User, CancellationToken cancellationToken)

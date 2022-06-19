@@ -6,5 +6,5 @@ public class GetAllTypeIdentificationResponse: BaseResponse
     {
     }
 
-    public IEnumerable<TypeIdentification> typeIdentifications { get; set; }
+    public IEnumerable<TypeIdentification> TypeIdentifications { get; set; }
 }

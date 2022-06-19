@@ -4,5 +4,5 @@ public class LoginUserApplicationResponse : BaseResponse
 {
     public LoginUserApplicationResponse(Guid correlationId):base(correlationId){}
 
-    public UserApplication UserApplicationDto { get; set; }
+    public UserApplication UserApplication { get; set; }
 }

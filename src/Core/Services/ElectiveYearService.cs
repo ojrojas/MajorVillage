@@ -15,28 +15,28 @@ public class ElectiveYearService : IElectiveYearService
     public async Task<CreateElectiveYearResponse> CreateElectiveYear(CreateElectiveYearRequest request, CancellationToken cancellationToken)
     {
         CreateElectiveYearResponse response = new(request.CorrelationId());
-        response.Id = await _electiveRepsoitory.CreateElectiveYear(request.ElectiveYearDto, cancellationToken);
+        response.Id = await _electiveRepsoitory.CreateElectiveYear(request.ElectiveYear, cancellationToken);
         return response;
     }
 
     public async Task<GetElectiveYearByIdResponse> GetElectiveYearById(GetElectiveYearByIdRequest request, CancellationToken cancellationToken)
     {
         GetElectiveYearByIdResponse response = new(request.CorrelationId());
-        response.ElectiveYearDto = await _electiveRepsoitory.GetElectiveYearById(request.Id, cancellationToken);
+        response.ElectiveYear = await _electiveRepsoitory.GetElectiveYearById(request.Id, cancellationToken);
         return response;
     }
 
     public async Task<DeleteElectiveYearResponse> DeleteElectiveYearAsync(DeleteElectiveYearRequest request, CancellationToken cancellationToken)
     {
         DeleteElectiveYearResponse response= new(request.CorrelationId());
-        response.ElectiveYearDeleted =  await _electiveRepsoitory.DeleteElectiveYear(request.ElectiveYearDto, cancellationToken);
+        response.ElectiveYearDeleted =  await _electiveRepsoitory.DeleteElectiveYear(request.ElectiveYear, cancellationToken);
         return response;
     }
 
     public async Task<UpdateElectiveYearResponse> UpdateElectiveYearAsync(UpdateElectiveYearRequest request, CancellationToken cancellationToken)
     {
         UpdateElectiveYearResponse response= new(request.CorrelationId());
-        response.ElectiveYearUpdated =  await _electiveRepsoitory.UpdateElectiveYear(request.ElectiveYearDto, cancellationToken);
+        response.ElectiveYearUpdated =  await _electiveRepsoitory.UpdateElectiveYear(request.ElectiveYear, cancellationToken);
         return response;
     }
 }

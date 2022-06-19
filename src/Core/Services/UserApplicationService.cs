@@ -15,14 +15,14 @@ public class UserApplicationService : IUserApplicationService
     public async Task<CreateUserApplicationResponse> CreateUserApplication(CreateUserApplicationRequest request, CancellationToken cancellationToken)
     {
         CreateUserApplicationResponse response = new(request.CorrelationId());
-        response.Id = await _repository.CreateUserApplication(request.userApplicationDto, cancellationToken);
+        response.Id = await _repository.CreateUserApplication(request.userApplication, cancellationToken);
         return response;
     }
 
     public async Task<LoginUserApplicationResponse> LoginUserApplication(LoginUserApplicationRequest request, CancellationToken cancellationToken)
     {
         LoginUserApplicationResponse response = new(request.CorrelationId());
-        response.UserApplicationDto = await _repository.LoginAsync(new() {Password = request.Password, UserName = request.UserName}, cancellationToken);
+        response.UserApplication = await _repository.LoginAsync(new() {Password = request.Password, UserName = request.UserName}, cancellationToken);
         return response;
     }
 }

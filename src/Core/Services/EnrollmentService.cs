@@ -15,7 +15,7 @@ public class EnrollmentService : IEnrollmentService
     {
         _logger.LogInformation($"CreateEnrollmentRequest {request}");
         CreateEnrollmentResponse response = new(request.CorrelationId());
-        response.EnrollmentId = await _repository.CreateEnrollment(request.Enrollment, cancellationToken);
+        response.Id = await _repository.CreateEnrollment(request.Enrollment, cancellationToken);
         return response;
     }
 
@@ -39,7 +39,7 @@ public class EnrollmentService : IEnrollmentService
     {
         _logger.LogInformation($"GetByIdEnrollmentRequest {request}");
         GetByIdEnrollmentResponse response = new(request.CorrelationId());
-        response.Enrollment = await _repository.GetEnrollmentById(request.EnrollmentId, cancellationToken);
+        response.Enrollment = await _repository.GetEnrollmentById(request.Id, cancellationToken);
         return response;
     }
 }

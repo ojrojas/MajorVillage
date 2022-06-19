@@ -13,8 +13,8 @@ public class TypeIdentificationRepository : ITypeIdentificationRepository
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<IEnumerable<TypeIdentification>> GetAllIdentificationType(IPredicate predicate, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TypeIdentification>> GetAllIdentificationType(CancellationToken cancellationToken)
     {
-        return await _repository.GetAllAsync(predicate, cancellationToken);
+        return await _repository.GetAllAsync(null, cancellationToken);
     }
 }

@@ -12,9 +12,9 @@ public class TypeUserRepository : ITypeUserRepository
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<IEnumerable<TypeUser>> GetAllUserType(IPredicate predicate, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TypeUser>> GetAllUserType(CancellationToken cancellationToken)
     {
-        return await _repository.GetAllAsync(predicate, cancellationToken);
+        return await _repository.GetAllAsync(null, cancellationToken);
     }
 
 }

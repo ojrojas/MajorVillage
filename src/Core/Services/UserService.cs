@@ -16,8 +16,7 @@ public class UserService : IUserService
     {
         var response = new GetUserByIdResponse(request.CorrelationId());
         _logger.LogInformation($"Get User by id, in request {request.CorrelationId()}");
-       
-        response.UserDto = await _UserRepository.GetUserByIdAsync(request.Id, cancellationToken);
+        response.User = await _UserRepository.GetUserByIdAsync(request.Id, cancellationToken);
         return response;
     }
 
@@ -25,7 +24,7 @@ public class UserService : IUserService
     {
         CreateUserResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Create User, in request {request.CorrelationId()}");
-        response.CreatedUser = await _UserRepository.CreateUserAsync(request.UserDto, cancellationToken);
+        response.CreatedUser = await _UserRepository.CreateUserAsync(request.User, cancellationToken);
         return response;
     }
 
@@ -33,7 +32,7 @@ public class UserService : IUserService
     {
         UpdateUserResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Update User, in request {request.CorrelationId()}");
-        response.Updated = await _UserRepository.UpdateUserAsync(request.UserDto, cancellationToken);
+        response.Updated = await _UserRepository.UpdateUserAsync(request.User, cancellationToken);
         return response;
     }
 
@@ -49,9 +48,8 @@ public class UserService : IUserService
     public async Task<ListUserResponse> ListUserAsync(ListUserRequest request, CancellationToken cancellationToken)
     {
         ListUserResponse response = new(request.CorrelationId());
-        request.predicate = null;
         _logger.LogInformation($"List Users, in request {request.CorrelationId()}");
-        response.ListUsersDto = await _UserRepository.ListUserAsync(request.predicate, cancellationToken);
+        response.ListUsers = await _UserRepository.ListUserAsync(cancellationToken);
         return response;
     }
 }
