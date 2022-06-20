@@ -7242,3 +7242,582 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2022-06-19 01:23:04.450 -05:00 [DBG] Connection id "0HMIHNFHEJBJ7" disconnecting.
 2022-06-19 01:23:04.451 -05:00 [DBG] Connection id "0HMIHNFHEJBJ7" sending FIN because: "The client closed the connection."
 2022-06-19 01:23:04.452 -05:00 [DBG] Connection id "0HMIHNFHEJBJ7" stopped.
+2022-06-20 02:15:40.884 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-06-20 02:15:40.945 -05:00 [DBG] Hosting starting
+2022-06-20 02:15:40.958 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-06-20 02:15:40.961 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-06-20 02:15:40.966 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-06-20 02:15:40.971 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-06-20 02:15:40.972 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-06-20 02:15:40.976 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-06-20 02:15:40.976 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-06-20 02:15:40.978 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-06-20 02:15:40.979 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-06-20 02:15:41.066 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-06-20 02:15:41.207 -05:00 [INF] Now listening on: https://localhost:7068
+2022-06-20 02:15:41.207 -05:00 [INF] Now listening on: http://localhost:5284
+2022-06-20 02:15:41.207 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-06-20 02:15:41.207 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 02:15:41.207 -05:00 [INF] Hosting environment: Development
+2022-06-20 02:15:41.207 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-06-20 02:15:41.208 -05:00 [DBG] Hosting started
+2022-06-20 02:15:41.217 -05:00 [DBG] Connection id "0HMIIHINGRFDB" accepted.
+2022-06-20 02:15:41.218 -05:00 [DBG] Connection id "0HMIIHINGRFDB" started.
+2022-06-20 02:15:42.127 -05:00 [DBG] Connection id "0HMIIHINGRFDB" received FIN.
+2022-06-20 02:15:42.140 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-06-20 02:15:42.168 -05:00 [DBG] Connection id "0HMIIHINGRFDB" stopped.
+2022-06-20 02:15:42.170 -05:00 [DBG] Connection id "0HMIIHINGRFDB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-06-20 02:15:42.205 -05:00 [DBG] Connection id "0HMIIHINGRFDC" accepted.
+2022-06-20 02:15:42.205 -05:00 [DBG] Connection id "0HMIIHINGRFDC" started.
+2022-06-20 02:15:42.257 -05:00 [DBG] Connection 0HMIIHINGRFDC established using the following protocol: "Tls12"
+2022-06-20 02:15:42.283 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger - -
+2022-06-20 02:15:42.283 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-20 02:15:42.284 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:42.295 -05:00 [DBG] No candidates found for the request path '/swagger'
+2022-06-20 02:15:42.295 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:15:42.321 -05:00 [DBG] Connection id "0HMIIHINGRFDC" completed keep alive response.
+2022-06-20 02:15:42.322 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger - - - 301 0 - 40.7352ms
+2022-06-20 02:15:42.326 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/index.html - -
+2022-06-20 02:15:42.327 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:42.327 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-06-20 02:15:42.327 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:15:42.357 -05:00 [DBG] Connection id "0HMIIHINGRFDC" completed keep alive response.
+2022-06-20 02:15:42.357 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/index.html - - - 200 - text/html;charset=utf-8 30.7192ms
+2022-06-20 02:15:42.367 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui.css - -
+2022-06-20 02:15:42.367 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:42.367 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2022-06-20 02:15:42.367 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:15:42.370 -05:00 [VRB] Range header's value is empty.
+2022-06-20 02:15:42.371 -05:00 [DBG] Connection id "0HMIIHINGRFDD" accepted.
+2022-06-20 02:15:42.371 -05:00 [DBG] Connection id "0HMIIHINGRFDD" started.
+2022-06-20 02:15:42.371 -05:00 [DBG] Connection id "0HMIIHINGRFDE" accepted.
+2022-06-20 02:15:42.372 -05:00 [DBG] Connection id "0HMIIHINGRFDE" started.
+2022-06-20 02:15:42.375 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-06-20 02:15:42.375 -05:00 [DBG] Connection id "0HMIIHINGRFDC" completed keep alive response.
+2022-06-20 02:15:42.375 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui.css - - - 200 143943 text/css 8.0130ms
+2022-06-20 02:15:42.396 -05:00 [DBG] Connection 0HMIIHINGRFDD established using the following protocol: "Tls12"
+2022-06-20 02:15:42.397 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-bundle.js - -
+2022-06-20 02:15:42.397 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:42.397 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2022-06-20 02:15:42.397 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:15:42.397 -05:00 [VRB] Range header's value is empty.
+2022-06-20 02:15:42.402 -05:00 [DBG] Connection 0HMIIHINGRFDE established using the following protocol: "Tls12"
+2022-06-20 02:15:42.454 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-standalone-preset.js - -
+2022-06-20 02:15:42.454 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:42.454 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2022-06-20 02:15:42.454 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:15:42.480 -05:00 [VRB] Range header's value is empty.
+2022-06-20 02:15:42.641 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-06-20 02:15:42.677 -05:00 [DBG] Connection id "0HMIIHINGRFDE" completed keep alive response.
+2022-06-20 02:15:42.677 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-standalone-preset.js - - - 200 339486 application/javascript 223.4172ms
+2022-06-20 02:15:42.678 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-06-20 02:15:42.679 -05:00 [DBG] Connection id "0HMIIHINGRFDD" completed keep alive response.
+2022-06-20 02:15:42.679 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/swagger-ui-bundle.js - - - 200 1095087 application/javascript 281.9582ms
+2022-06-20 02:15:42.774 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/favicon-32x32.png - -
+2022-06-20 02:15:42.774 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:42.774 -05:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2022-06-20 02:15:42.774 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:15:42.775 -05:00 [VRB] Range header's value is empty.
+2022-06-20 02:15:42.775 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-06-20 02:15:42.775 -05:00 [DBG] Connection id "0HMIIHINGRFDD" completed keep alive response.
+2022-06-20 02:15:42.775 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/favicon-32x32.png - - - 200 628 image/png 1.2930ms
+2022-06-20 02:15:42.787 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - -
+2022-06-20 02:15:42.788 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:42.788 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-06-20 02:15:42.788 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:15:42.868 -05:00 [DBG] Connection id "0HMIIHINGRFDD" completed keep alive response.
+2022-06-20 02:15:42.868 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 81.0546ms
+2022-06-20 02:15:52.320 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/api/GetAllCourses - -
+2022-06-20 02:15:52.320 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:15:52.338 -05:00 [DBG] 1 candidate(s) found for the request path '/api/GetAllCourses'
+2022-06-20 02:15:52.340 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api)' with route pattern 'api/GetAllCourses' is valid for the request path '/api/GetAllCourses'
+2022-06-20 02:15:52.340 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api)'
+2022-06-20 02:15:52.340 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-06-20 02:15:52.342 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api)'
+2022-06-20 02:15:52.358 -05:00 [INF] Route matched with {action = "Handle", controller = "GetAllCourses"}. Executing controller action with signature System.Threading.Tasks.Task`1[MajorVillage.Core.Interfaces.GetAllCoursesResponse] HandleAsync(MajorVillage.Core.Interfaces.GetAllCoursesRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.GetAllCourses (Api).
+2022-06-20 02:15:52.359 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-06-20 02:15:52.359 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-06-20 02:15:52.359 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-06-20 02:15:52.359 -05:00 [DBG] Execution plan of exception filters (in the following order): ["MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter"]
+2022-06-20 02:15:52.359 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2022-06-20 02:15:52.359 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.GetAllCourses (Api)
+2022-06-20 02:15:52.389 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.GetAllCourses (Api)
+2022-06-20 02:15:52.391 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Interfaces.GetAllCoursesRequest' ...
+2022-06-20 02:15:52.391 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Interfaces.GetAllCoursesRequest' using the name '' in request data ...
+2022-06-20 02:15:52.393 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Interfaces.GetAllCoursesRequest'.
+2022-06-20 02:15:52.393 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Interfaces.GetAllCoursesRequest'.
+2022-06-20 02:15:52.393 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Interfaces.GetAllCoursesRequest' ...
+2022-06-20 02:15:52.394 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Interfaces.GetAllCoursesRequest'.
+2022-06-20 02:15:52.395 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:15:52.395 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:15:52.395 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:15:52.395 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:15:52.395 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:15:52.395 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:15:52.395 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:15:52.395 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:15:52.398 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api) - Validation state: "Valid"
+2022-06-20 02:15:52.399 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api) with arguments (["MajorVillage.Core.Interfaces.GetAllCoursesRequest","System.Threading.CancellationToken"])
+2022-06-20 02:15:52.399 -05:00 [INF] GetAllCourses request $MajorVillage.Core.Interfaces.GetAllCoursesRequest
+2022-06-20 02:15:52.400 -05:00 [INF] GetAllCourses request relation $f2ef4b56-35d4-429e-a419-34a05893d8e9
+2022-06-20 02:15:52.400 -05:00 [INF] Get all courses request
+2022-06-20 02:15:52.401 -05:00 [VRB] GetList entities by predicate null
+2022-06-20 02:15:52.675 -05:00 [INF] Executed action method MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 274.2114ms.
+2022-06-20 02:15:52.676 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:15:52.676 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:15:52.677 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:15:52.677 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:15:52.678 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:15:52.678 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:15:52.678 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:15:52.678 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:15:52.679 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:15:52.679 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2022-06-20 02:15:52.680 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-06-20 02:15:52.680 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-06-20 02:15:52.680 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-06-20 02:15:52.680 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-06-20 02:15:52.680 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-06-20 02:15:52.680 -05:00 [INF] Executing ObjectResult, writing value of type 'MajorVillage.Core.Interfaces.GetAllCoursesResponse'.
+2022-06-20 02:15:52.686 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:15:52.686 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:15:52.686 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:15:52.686 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:15:52.686 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:15:52.689 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api) in 327.3846ms
+2022-06-20 02:15:52.690 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.GetAllCourses.HandleAsync (Api)'
+2022-06-20 02:15:52.690 -05:00 [DBG] Connection id "0HMIIHINGRFDD" completed keep alive response.
+2022-06-20 02:15:52.690 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/api/GetAllCourses - - - 200 - application/json;+charset=utf-8 370.7157ms
+2022-06-20 02:17:37.455 -05:00 [DBG] Connection id "0HMIIHINGRFDC" received FIN.
+2022-06-20 02:17:37.547 -05:00 [DBG] Connection id "0HMIIHINGRFDC" sending FIN because: "The client closed the connection."
+2022-06-20 02:17:37.548 -05:00 [DBG] Connection id "0HMIIHINGRFDC" disconnecting.
+2022-06-20 02:17:37.551 -05:00 [DBG] Connection id "0HMIIHINGRFDC" stopped.
+2022-06-20 02:17:38.394 -05:00 [DBG] Connection id "0HMIIHINGRFDE" received FIN.
+2022-06-20 02:17:38.395 -05:00 [DBG] Connection id "0HMIIHINGRFDE" disconnecting.
+2022-06-20 02:17:38.395 -05:00 [DBG] Connection id "0HMIIHINGRFDE" stopped.
+2022-06-20 02:17:38.396 -05:00 [DBG] Connection id "0HMIIHINGRFDE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-06-20 02:17:48.404 -05:00 [DBG] Connection id "0HMIIHINGRFDD" received FIN.
+2022-06-20 02:17:48.405 -05:00 [DBG] Connection id "0HMIIHINGRFDD" disconnecting.
+2022-06-20 02:17:48.408 -05:00 [DBG] Connection id "0HMIIHINGRFDD" sending FIN because: "The client closed the connection."
+2022-06-20 02:17:48.412 -05:00 [DBG] Connection id "0HMIIHINGRFDD" stopped.
+2022-06-20 02:18:00.707 -05:00 [DBG] Connection id "0HMIIHINGRFDF" accepted.
+2022-06-20 02:18:00.708 -05:00 [DBG] Connection id "0HMIIHINGRFDF" started.
+2022-06-20 02:18:00.743 -05:00 [DBG] Connection 0HMIIHINGRFDF established using the following protocol: "Tls12"
+2022-06-20 02:18:00.745 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7068/api/CreateCourse application/json 360
+2022-06-20 02:18:00.745 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:18:00.756 -05:00 [DBG] 1 candidate(s) found for the request path '/api/CreateCourse'
+2022-06-20 02:18:00.757 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)' with route pattern 'api/CreateCourse' is valid for the request path '/api/CreateCourse'
+2022-06-20 02:18:00.757 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:18:00.757 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-06-20 02:18:00.758 -05:00 [DBG] The request has an origin header: 'https://localhost:7068'.
+2022-06-20 02:18:00.758 -05:00 [INF] CORS policy execution successful.
+2022-06-20 02:18:00.760 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:18:00.770 -05:00 [INF] Route matched with {action = "Handle", controller = "CreateCourse"}. Executing controller action with signature System.Threading.Tasks.Task`1[MajorVillage.Core.Dtos.CreateCourseResponse] HandleAsync(MajorVillage.Core.Dtos.CreateCourseRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.CreateCourse (Api).
+2022-06-20 02:18:00.771 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-06-20 02:18:00.771 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-06-20 02:18:00.771 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-06-20 02:18:00.771 -05:00 [DBG] Execution plan of exception filters (in the following order): ["MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter"]
+2022-06-20 02:18:00.771 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2022-06-20 02:18:00.771 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.CreateCourse (Api)
+2022-06-20 02:18:00.771 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.CreateCourse (Api)
+2022-06-20 02:18:00.774 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' ...
+2022-06-20 02:18:00.775 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' using the name '' in request data ...
+2022-06-20 02:18:00.775 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2022-06-20 02:18:00.778 -05:00 [DBG] Connection id "0HMIIHINGRFDF", Request id "0HMIIHINGRFDF:00000002": started reading request body.
+2022-06-20 02:18:00.778 -05:00 [DBG] Connection id "0HMIIHINGRFDF", Request id "0HMIIHINGRFDF:00000002": done reading request body.
+2022-06-20 02:18:00.784 -05:00 [DBG] JSON input formatter succeeded, deserializing to type 'MajorVillage.Core.Dtos.CreateCourseRequest'
+2022-06-20 02:18:00.785 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:18:00.785 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:18:00.785 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' ...
+2022-06-20 02:18:00.786 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:18:00.786 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:18:00.786 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:18:00.786 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:18:00.786 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:18:00.786 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:18:00.786 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:18:00.786 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:18:00.786 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:18:00.786 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) - Validation state: "Valid"
+2022-06-20 02:18:00.786 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.CreateCourseRequest","System.Threading.CancellationToken"])
+2022-06-20 02:18:00.787 -05:00 [INF] CreateCourse correlationdata 5c51bf56-2143-46c2-b910-ca0c7d384cfb
+2022-06-20 02:18:00.792 -05:00 [INF] Create course params {"Name":"SextoA","ElectiveYearId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","Id":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedOn":"2022-06-20T07:17:43.296Z","ModifiedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","ModifiedOn":"2022-06-20T07:17:43.296Z"}
+2022-06-20 02:18:00.796 -05:00 [VRB] Insert entity {"Name":"SextoA","ElectiveYearId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","Id":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedOn":"2022-06-20T07:17:43.2960000Z","ModifiedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","ModifiedOn":"2022-06-20T07:17:43.2960000Z","$type":"Course"}
+2022-06-20 02:18:00.990 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:18:00.990 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:18:00.990 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:18:00.990 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:18:00.990 -05:00 [VRB] Exception Filter: Before executing OnException on filter MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter.
+2022-06-20 02:18:00.991 -05:00 [ERR] Cannot add or update a child row: a foreign key constraint fails (`MajorVillageDB`.`Course`, CONSTRAINT `Course_ibfk_1` FOREIGN KEY (`ElectiveYearId`) REFERENCES `ElectiveYear` (`Id`))
+MySql.Data.MySqlClient.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`MajorVillageDB`.`Course`, CONSTRAINT `Course_ibfk_1` FOREIGN KEY (`ElectiveYearId`) REFERENCES `ElectiveYear` (`Id`))
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at DapperExtensions.DapperImplementor.InternalInsert[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, IClassMapper classMap, IList`1 nonIdentityKeyProperties, IMemberMap identityColumn, IMemberMap triggerIdentityColumn, IList`1 sequenceIdentityColumn)
+   at DapperExtensions.DapperImplementor.Insert[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout)
+   at MajorVillage.Infraestructure.Dapper.DapperRepository`1.InsertAsync(T entity, CancellationToken cancellationToken, IDbTransaction transaction, Int32 commandTimeout)
+   at MajorVillage.Core.Repositories.CourseRepository.CreateCourseAsync(Course course, CancellationToken cancellationToken) in /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Core/Repositories/CourseRepository.cs:line 18
+   at MajorVillage.Core.Services.CourseService.CreateCourse(CreateCourseRequest request, CancellationToken cancellationToken) in /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Core/Services/CourseService.cs:line 19
+   at MajorVillage.Api.Endpoints.CreateCourse.HandleAsync(CreateCourseRequest request, CancellationToken cancellationToken) in /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/Endpoints/Course/CreateCourse.cs:line 25
+   at lambda_method16(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2022-06-20 02:18:01.005 -05:00 [VRB] Exception Filter: After executing OnException on filter MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter.
+2022-06-20 02:18:01.006 -05:00 [DBG] Request was short circuited at exception filter 'MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter'.
+2022-06-20 02:18:01.006 -05:00 [VRB] Always Run Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:18:01.006 -05:00 [VRB] Always Run Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:18:01.006 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2022-06-20 02:18:01.006 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2022-06-20 02:18:01.006 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-06-20 02:18:01.006 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2022-06-20 02:18:01.006 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2022-06-20 02:18:01.007 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult.
+2022-06-20 02:18:01.007 -05:00 [VRB] Always Run Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:18:01.007 -05:00 [VRB] Always Run Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:18:01.007 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) in 235.9319ms
+2022-06-20 02:18:01.007 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:18:01.007 -05:00 [DBG] Connection id "0HMIIHINGRFDF" completed keep alive response.
+2022-06-20 02:18:01.007 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7068/api/CreateCourse application/json 360 - 400 - text/plain;+charset=utf-8 262.1215ms
+2022-06-20 02:19:56.781 -05:00 [DBG] Connection id "0HMIIHINGRFDF" received FIN.
+2022-06-20 02:19:56.808 -05:00 [DBG] Connection id "0HMIIHINGRFDF" disconnecting.
+2022-06-20 02:19:56.862 -05:00 [DBG] Connection id "0HMIIHINGRFDF" sending FIN because: "The client closed the connection."
+2022-06-20 02:19:56.869 -05:00 [DBG] Connection id "0HMIIHINGRFDF" stopped.
+2022-06-20 02:22:29.960 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-06-20 02:22:30.028 -05:00 [DBG] Hosting starting
+2022-06-20 02:22:30.050 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2022-06-20 02:22:30.053 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-8daa9234-c52f-4afb-a48f-a2d15a3c3d52.xml'.
+2022-06-20 02:22:30.058 -05:00 [DBG] Found key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52}.
+2022-06-20 02:22:30.064 -05:00 [DBG] Considering key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} with expiration date 2022-07-02 05:55:38Z as default key.
+2022-06-20 02:22:30.064 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-06-20 02:22:30.069 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2022-06-20 02:22:30.069 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2022-06-20 02:22:30.071 -05:00 [DBG] Using key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} as the default key.
+2022-06-20 02:22:30.072 -05:00 [DBG] Key ring with default key {8daa9234-c52f-4afb-a48f-a2d15a3c3d52} was loaded during application startup.
+2022-06-20 02:22:30.166 -05:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 9FEFD90C5AA114F257A52669DE4AACE95C312956)
+2022-06-20 02:22:30.204 -05:00 [INF] Now listening on: https://localhost:7068
+2022-06-20 02:22:30.204 -05:00 [INF] Now listening on: http://localhost:5284
+2022-06-20 02:22:30.205 -05:00 [DBG] Loaded hosting startup assembly Api
+2022-06-20 02:22:30.205 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 02:22:30.205 -05:00 [INF] Hosting environment: Development
+2022-06-20 02:22:30.205 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/
+2022-06-20 02:22:30.205 -05:00 [DBG] Hosting started
+2022-06-20 02:22:30.230 -05:00 [DBG] Connection id "0HMIIHMHDGHFB" accepted.
+2022-06-20 02:22:30.231 -05:00 [DBG] Connection id "0HMIIHMHDGHFB" started.
+2022-06-20 02:22:31.232 -05:00 [DBG] Connection id "0HMIIHMHDGHFB" received FIN.
+2022-06-20 02:22:31.244 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-06-20 02:22:31.273 -05:00 [DBG] Connection id "0HMIIHMHDGHFB" stopped.
+2022-06-20 02:22:31.275 -05:00 [DBG] Connection id "0HMIIHMHDGHFB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-06-20 02:22:31.296 -05:00 [DBG] Connection id "0HMIIHMHDGHFC" accepted.
+2022-06-20 02:22:31.297 -05:00 [DBG] Connection id "0HMIIHMHDGHFC" started.
+2022-06-20 02:22:31.307 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" accepted.
+2022-06-20 02:22:31.334 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" started.
+2022-06-20 02:22:31.368 -05:00 [DBG] Connection 0HMIIHMHDGHFC established using the following protocol: "Tls12"
+2022-06-20 02:22:31.385 -05:00 [DBG] Connection 0HMIIHMHDGHFD established using the following protocol: "Tls12"
+2022-06-20 02:22:31.405 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/index.html - -
+2022-06-20 02:22:31.405 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-20 02:22:31.405 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:22:31.416 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-06-20 02:22:31.416 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:22:31.476 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" completed keep alive response.
+2022-06-20 02:22:31.477 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/index.html - - - 200 - text/html;charset=utf-8 73.5735ms
+2022-06-20 02:22:31.586 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - -
+2022-06-20 02:22:31.586 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:22:31.586 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-06-20 02:22:31.586 -05:00 [DBG] Request did not match any endpoints
+2022-06-20 02:22:31.658 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" completed keep alive response.
+2022-06-20 02:22:31.659 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7068/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 72.9064ms
+2022-06-20 02:22:36.320 -05:00 [DBG] Connection id "0HMIIHMHDGHFC" received FIN.
+2022-06-20 02:22:36.322 -05:00 [DBG] Connection id "0HMIIHMHDGHFC" sending FIN because: "The client closed the connection."
+2022-06-20 02:22:36.323 -05:00 [DBG] Connection id "0HMIIHMHDGHFC" disconnecting.
+2022-06-20 02:22:36.334 -05:00 [DBG] Connection id "0HMIIHMHDGHFC" stopped.
+2022-06-20 02:22:48.245 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7068/api/CreateCourse application/json 359
+2022-06-20 02:22:48.245 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:22:48.258 -05:00 [DBG] 1 candidate(s) found for the request path '/api/CreateCourse'
+2022-06-20 02:22:48.265 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)' with route pattern 'api/CreateCourse' is valid for the request path '/api/CreateCourse'
+2022-06-20 02:22:48.265 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:22:48.266 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-06-20 02:22:48.267 -05:00 [DBG] The request has an origin header: 'https://localhost:7068'.
+2022-06-20 02:22:48.267 -05:00 [INF] CORS policy execution successful.
+2022-06-20 02:22:48.269 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:22:48.287 -05:00 [INF] Route matched with {action = "Handle", controller = "CreateCourse"}. Executing controller action with signature System.Threading.Tasks.Task`1[MajorVillage.Core.Dtos.CreateCourseResponse] HandleAsync(MajorVillage.Core.Dtos.CreateCourseRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.CreateCourse (Api).
+2022-06-20 02:22:48.287 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-06-20 02:22:48.287 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-06-20 02:22:48.288 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-06-20 02:22:48.288 -05:00 [DBG] Execution plan of exception filters (in the following order): ["MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter"]
+2022-06-20 02:22:48.288 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2022-06-20 02:22:48.288 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.CreateCourse (Api)
+2022-06-20 02:22:48.319 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.CreateCourse (Api)
+2022-06-20 02:22:48.322 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' ...
+2022-06-20 02:22:48.323 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' using the name '' in request data ...
+2022-06-20 02:22:48.323 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2022-06-20 02:22:48.325 -05:00 [DBG] Connection id "0HMIIHMHDGHFD", Request id "0HMIIHMHDGHFD:00000004": started reading request body.
+2022-06-20 02:22:48.326 -05:00 [DBG] Connection id "0HMIIHMHDGHFD", Request id "0HMIIHMHDGHFD:00000004": done reading request body.
+2022-06-20 02:22:48.336 -05:00 [DBG] JSON input formatter succeeded, deserializing to type 'MajorVillage.Core.Dtos.CreateCourseRequest'
+2022-06-20 02:22:48.336 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:22:48.336 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:22:48.336 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' ...
+2022-06-20 02:22:48.338 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:22:48.339 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:22:48.339 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:22:48.339 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:22:48.340 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:22:48.340 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:22:48.340 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:22:48.340 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:22:48.340 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:22:48.343 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) - Validation state: "Valid"
+2022-06-20 02:22:48.343 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.CreateCourseRequest","System.Threading.CancellationToken"])
+2022-06-20 02:22:48.344 -05:00 [INF] CreateCourse correlationdata 9c8a8c32-9feb-45b2-997b-9e0eba59d859
+2022-06-20 02:22:48.349 -05:00 [INF] Create course params {"Name":"Six-A","ElectiveYearId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","Id":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedOn":"2022-06-20T07:22:36.353Z","ModifiedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","ModifiedOn":"2022-06-20T07:22:36.353Z"}
+2022-06-20 02:22:48.358 -05:00 [VRB] Insert entity {"Name":"Six-A","ElectiveYearId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","Id":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedOn":"2022-06-20T07:22:36.3530000Z","ModifiedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","ModifiedOn":"2022-06-20T07:22:36.3530000Z","$type":"Course"}
+2022-06-20 02:22:48.725 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:22:48.725 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:22:48.725 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:22:48.725 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:22:48.726 -05:00 [VRB] Exception Filter: Before executing OnException on filter MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter.
+2022-06-20 02:22:48.726 -05:00 [ERR] Cannot add or update a child row: a foreign key constraint fails (`MajorVillageDB`.`Course`, CONSTRAINT `Course_ibfk_1` FOREIGN KEY (`ElectiveYearId`) REFERENCES `ElectiveYear` (`Id`))
+MySql.Data.MySqlClient.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`MajorVillageDB`.`Course`, CONSTRAINT `Course_ibfk_1` FOREIGN KEY (`ElectiveYearId`) REFERENCES `ElectiveYear` (`Id`))
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at DapperExtensions.DapperImplementor.InternalInsert[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout, IClassMapper classMap, IList`1 nonIdentityKeyProperties, IMemberMap identityColumn, IMemberMap triggerIdentityColumn, IList`1 sequenceIdentityColumn)
+   at DapperExtensions.DapperImplementor.Insert[T](IDbConnection connection, T entity, IDbTransaction transaction, Nullable`1 commandTimeout)
+   at MajorVillage.Infraestructure.Dapper.DapperRepository`1.InsertAsync(T entity, CancellationToken cancellationToken, IDbTransaction transaction, Int32 commandTimeout)
+   at MajorVillage.Core.Repositories.CourseRepository.CreateCourseAsync(Course course, CancellationToken cancellationToken) in /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Core/Repositories/CourseRepository.cs:line 18
+   at MajorVillage.Core.Services.CourseService.CreateCourse(CreateCourseRequest request, CancellationToken cancellationToken) in /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Core/Services/CourseService.cs:line 19
+   at MajorVillage.Api.Endpoints.CreateCourse.HandleAsync(CreateCourseRequest request, CancellationToken cancellationToken) in /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Api/Endpoints/Course/CreateCourse.cs:line 25
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2022-06-20 02:22:48.739 -05:00 [VRB] Exception Filter: After executing OnException on filter MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter.
+2022-06-20 02:22:48.739 -05:00 [DBG] Request was short circuited at exception filter 'MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter'.
+2022-06-20 02:22:48.739 -05:00 [VRB] Always Run Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:22:48.739 -05:00 [VRB] Always Run Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:22:48.740 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:22:48.740 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2022-06-20 02:22:48.741 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-06-20 02:22:48.742 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-06-20 02:22:48.742 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-06-20 02:22:48.742 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-06-20 02:22:48.742 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-06-20 02:22:48.742 -05:00 [INF] Executing ObjectResult, writing value of type 'MajorVillage.Api.Intraestructure.ErrorDetails'.
+2022-06-20 02:22:48.768 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:22:48.768 -05:00 [VRB] Always Run Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:22:48.768 -05:00 [VRB] Always Run Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:22:48.771 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) in 481.0105ms
+2022-06-20 02:22:48.772 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:22:48.772 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances are not supported. Path: $.MessagesEnvDeveloper.TargetSite.MethodHandle.Value.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeAlwaysRunResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-20 02:22:48.776 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" completed keep alive response.
+2022-06-20 02:22:48.776 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7068/api/CreateCourse application/json 359 - 500 - text/plain;+charset=utf-8 531.7473ms
+2022-06-20 02:24:44.335 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" received FIN.
+2022-06-20 02:24:44.390 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" sending FIN because: "The client closed the connection."
+2022-06-20 02:24:44.416 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" disconnecting.
+2022-06-20 02:24:44.473 -05:00 [DBG] Connection id "0HMIIHMHDGHFD" stopped.
+2022-06-20 02:26:04.585 -05:00 [DBG] Connection id "0HMIIHMHDGHFE" accepted.
+2022-06-20 02:26:04.586 -05:00 [DBG] Connection id "0HMIIHMHDGHFE" started.
+2022-06-20 02:26:04.614 -05:00 [DBG] Connection 0HMIIHMHDGHFE established using the following protocol: "Tls12"
+2022-06-20 02:26:04.615 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7068/api/CreateElectiveYear application/json 250
+2022-06-20 02:26:04.615 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:26:04.621 -05:00 [DBG] 1 candidate(s) found for the request path '/api/CreateElectiveYear'
+2022-06-20 02:26:04.622 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api)' with route pattern 'api/CreateElectiveYear' is valid for the request path '/api/CreateElectiveYear'
+2022-06-20 02:26:04.622 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api)'
+2022-06-20 02:26:04.622 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-06-20 02:26:04.622 -05:00 [DBG] The request has an origin header: 'https://localhost:7068'.
+2022-06-20 02:26:04.622 -05:00 [INF] CORS policy execution successful.
+2022-06-20 02:26:04.622 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api)'
+2022-06-20 02:26:04.627 -05:00 [INF] Route matched with {action = "Handle", controller = "CreateElectiveYear"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MajorVillage.Core.Dtos.CreateElectiveYearResponse]] HandleAsync(MajorVillage.Core.Dtos.CreateElectiveYearRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.CreateElectiveYear (Api).
+2022-06-20 02:26:04.627 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-06-20 02:26:04.627 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-06-20 02:26:04.627 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-06-20 02:26:04.628 -05:00 [DBG] Execution plan of exception filters (in the following order): ["MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter"]
+2022-06-20 02:26:04.628 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2022-06-20 02:26:04.628 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.CreateElectiveYear (Api)
+2022-06-20 02:26:04.630 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.CreateElectiveYear (Api)
+2022-06-20 02:26:04.630 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateElectiveYearRequest' ...
+2022-06-20 02:26:04.631 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateElectiveYearRequest' using the name '' in request data ...
+2022-06-20 02:26:04.631 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2022-06-20 02:26:04.631 -05:00 [DBG] Connection id "0HMIIHMHDGHFE", Request id "0HMIIHMHDGHFE:00000002": started reading request body.
+2022-06-20 02:26:04.631 -05:00 [DBG] Connection id "0HMIIHMHDGHFE", Request id "0HMIIHMHDGHFE:00000002": done reading request body.
+2022-06-20 02:26:04.635 -05:00 [DBG] JSON input formatter succeeded, deserializing to type 'MajorVillage.Core.Dtos.CreateElectiveYearRequest'
+2022-06-20 02:26:04.636 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateElectiveYearRequest'.
+2022-06-20 02:26:04.636 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateElectiveYearRequest'.
+2022-06-20 02:26:04.636 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateElectiveYearRequest' ...
+2022-06-20 02:26:04.637 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateElectiveYearRequest'.
+2022-06-20 02:26:04.637 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:26:04.637 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:26:04.637 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:26:04.637 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:26:04.637 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:04.637 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:04.637 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:04.637 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:04.637 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api) - Validation state: "Valid"
+2022-06-20 02:26:04.637 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.CreateElectiveYearRequest","System.Threading.CancellationToken"])
+2022-06-20 02:26:04.638 -05:00 [INF] CreateElectiveYear request data MajorVillage.Core.Dtos.CreateElectiveYearRequest
+2022-06-20 02:26:04.638 -05:00 [VRB] Insert entity {"Year":2022,"Id":"00000000-0000-0000-0000-000000000000","CreatedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedOn":"2022-06-20T07:24:48.6200000Z","ModifiedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","ModifiedOn":"2022-06-20T07:24:48.6200000Z","$type":"ElectiveYear"}
+2022-06-20 02:26:04.730 -05:00 [INF] Executed action method MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 88.6591ms.
+2022-06-20 02:26:04.730 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:04.730 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:04.731 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:04.731 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:04.732 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:04.732 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:04.732 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:04.732 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:04.733 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:26:04.733 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2022-06-20 02:26:04.733 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-06-20 02:26:04.733 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-06-20 02:26:04.733 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-06-20 02:26:04.733 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-06-20 02:26:04.733 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-06-20 02:26:04.733 -05:00 [INF] Executing ObjectResult, writing value of type 'MajorVillage.Core.Dtos.CreateElectiveYearResponse'.
+2022-06-20 02:26:04.734 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:26:04.734 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:04.734 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:04.734 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:04.734 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:04.735 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api) in 106.7507ms
+2022-06-20 02:26:04.735 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.CreateElectiveYear.HandleAsync (Api)'
+2022-06-20 02:26:04.737 -05:00 [DBG] Connection id "0HMIIHMHDGHFE" completed keep alive response.
+2022-06-20 02:26:04.737 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7068/api/CreateElectiveYear application/json 250 - 200 - application/json;+charset=utf-8 121.7105ms
+2022-06-20 02:26:39.747 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7068/api/CreateCourse application/json 309
+2022-06-20 02:26:39.748 -05:00 [VRB] All hosts are allowed.
+2022-06-20 02:26:39.748 -05:00 [DBG] 1 candidate(s) found for the request path '/api/CreateCourse'
+2022-06-20 02:26:39.748 -05:00 [DBG] Endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)' with route pattern 'api/CreateCourse' is valid for the request path '/api/CreateCourse'
+2022-06-20 02:26:39.749 -05:00 [DBG] Request matched endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:26:39.749 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-06-20 02:26:39.797 -05:00 [DBG] The request has an origin header: 'https://localhost:7068'.
+2022-06-20 02:26:39.797 -05:00 [INF] CORS policy execution successful.
+2022-06-20 02:26:39.798 -05:00 [INF] Executing endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:26:39.798 -05:00 [INF] Route matched with {action = "Handle", controller = "CreateCourse"}. Executing controller action with signature System.Threading.Tasks.Task`1[MajorVillage.Core.Dtos.CreateCourseResponse] HandleAsync(MajorVillage.Core.Dtos.CreateCourseRequest, System.Threading.CancellationToken) on controller MajorVillage.Api.Endpoints.CreateCourse (Api).
+2022-06-20 02:26:39.798 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-06-20 02:26:39.799 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-06-20 02:26:39.799 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-06-20 02:26:39.799 -05:00 [DBG] Execution plan of exception filters (in the following order): ["MajorVillage.Api.Intraestructure.HttpExceptionsApplicationFilter"]
+2022-06-20 02:26:39.799 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2022-06-20 02:26:39.799 -05:00 [DBG] Executing controller factory for controller MajorVillage.Api.Endpoints.CreateCourse (Api)
+2022-06-20 02:26:39.799 -05:00 [DBG] Executed controller factory for controller MajorVillage.Api.Endpoints.CreateCourse (Api)
+2022-06-20 02:26:39.799 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' ...
+2022-06-20 02:26:39.799 -05:00 [DBG] Attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' using the name '' in request data ...
+2022-06-20 02:26:39.799 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2022-06-20 02:26:39.800 -05:00 [DBG] Connection id "0HMIIHMHDGHFE", Request id "0HMIIHMHDGHFE:00000003": started reading request body.
+2022-06-20 02:26:39.800 -05:00 [DBG] Connection id "0HMIIHMHDGHFE", Request id "0HMIIHMHDGHFE:00000003": done reading request body.
+2022-06-20 02:26:39.800 -05:00 [DBG] JSON input formatter succeeded, deserializing to type 'MajorVillage.Core.Dtos.CreateCourseRequest'
+2022-06-20 02:26:39.800 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:26:39.800 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:26:39.801 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest' ...
+2022-06-20 02:26:39.801 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'MajorVillage.Core.Dtos.CreateCourseRequest'.
+2022-06-20 02:26:39.801 -05:00 [DBG] Attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:26:39.801 -05:00 [DBG] Done attempting to bind parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:26:39.801 -05:00 [DBG] Attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken' ...
+2022-06-20 02:26:39.801 -05:00 [DBG] Done attempting to validate the bound parameter 'cancellationToken' of type 'System.Threading.CancellationToken'.
+2022-06-20 02:26:39.801 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:39.801 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:39.801 -05:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:39.801 -05:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:39.801 -05:00 [INF] Executing action method MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) - Validation state: "Valid"
+2022-06-20 02:26:39.802 -05:00 [VRB] Executing action method MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) with arguments (["MajorVillage.Core.Dtos.CreateCourseRequest","System.Threading.CancellationToken"])
+2022-06-20 02:26:39.802 -05:00 [INF] CreateCourse correlationdata 3c05b039-adeb-4aee-8280-71ab3a07b49f
+2022-06-20 02:26:39.802 -05:00 [INF] Create course params {"Name":"Six-A","ElectiveYearId":"64de649e-95e9-4cd9-8053-aeba00281f10","Id":"00000000-0000-0000-0000-000000000000","CreatedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedOn":"2022-06-20T07:22:36.353Z","ModifiedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","ModifiedOn":"2022-06-20T07:22:36.353Z"}
+2022-06-20 02:26:39.802 -05:00 [VRB] Insert entity {"Name":"Six-A","ElectiveYearId":"64de649e-95e9-4cd9-8053-aeba00281f10","Id":"00000000-0000-0000-0000-000000000000","CreatedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","CreatedOn":"2022-06-20T07:22:36.3530000Z","ModifiedBy":"3fa85f64-5717-4562-b3fc-2c963f66afa6","ModifiedOn":"2022-06-20T07:22:36.3530000Z","$type":"Course"}
+2022-06-20 02:26:39.889 -05:00 [INF] Executed action method MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 87.6547ms.
+2022-06-20 02:26:39.890 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:39.890 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-06-20 02:26:39.890 -05:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:39.890 -05:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-06-20 02:26:39.890 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:39.890 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:39.890 -05:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:39.890 -05:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:39.890 -05:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:26:39.891 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2022-06-20 02:26:39.891 -05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-06-20 02:26:39.891 -05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-06-20 02:26:39.891 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-06-20 02:26:39.891 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-06-20 02:26:39.894 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-06-20 02:26:39.894 -05:00 [INF] Executing ObjectResult, writing value of type 'MajorVillage.Core.Dtos.CreateCourseResponse'.
+2022-06-20 02:26:39.899 -05:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2022-06-20 02:26:39.899 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:39.900 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ProducesAttribute.
+2022-06-20 02:26:39.900 -05:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:39.900 -05:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-06-20 02:26:39.900 -05:00 [INF] Executed action MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api) in 101.4442ms
+2022-06-20 02:26:39.900 -05:00 [INF] Executed endpoint 'MajorVillage.Api.Endpoints.CreateCourse.HandleAsync (Api)'
+2022-06-20 02:26:39.900 -05:00 [DBG] Connection id "0HMIIHMHDGHFE" completed keep alive response.
+2022-06-20 02:26:39.901 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7068/api/CreateCourse application/json 309 - 200 - application/json;+charset=utf-8 154.1055ms

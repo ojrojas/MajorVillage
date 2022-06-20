@@ -28,5 +28,9 @@
   <ItemGroup>
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="logmajorvillage.txt" />
+    <None Remove="Infraestructure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infraestructure\" />
   </ItemGroup>
 </Project>

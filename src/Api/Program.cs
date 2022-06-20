@@ -9,7 +9,7 @@ Log.Logger = CreateSerilogLogger();
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => options.Filters.Add(typeof(HttpExceptionsApplicationFilter)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGenDocumention();
@@ -24,7 +24,6 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "MajorVillagePolicy", 
     builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-        
 });
 
 // //Asynchronous - Dialect don´t work
