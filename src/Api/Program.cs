@@ -50,8 +50,7 @@ app.MapControllers();
 
 app.Run();
 
-
-Serilog.ILogger CreateSerilogLogger() => new LoggerConfiguration()
+static Serilog.ILogger CreateSerilogLogger() => new LoggerConfiguration()
         .MinimumLevel.Verbose()
         .Enrich.WithProperty("ApplicationContext", typeof(Program).Namespace)
         .Enrich.FromLogContext()

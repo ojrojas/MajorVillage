@@ -4,7 +4,6 @@
 [Route("api/[controller]")]
 public class DeleteCourse : EndpointBaseAsync.WithRequest<DeleteCourseRequest>.WithResult<DeleteCourseResponse>
 {
-
     private readonly ILogger<DeleteCourse> _logger;
     private readonly ICourseService _service;
 
