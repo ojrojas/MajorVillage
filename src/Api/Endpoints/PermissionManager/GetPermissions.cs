@@ -22,6 +22,7 @@ public class GetPermission : EndpointBaseAsync.WithRequest<PermissionManagerRequ
               Tags = new[] { "Permission" })]
     public override async Task<ActionResult<PermissionManagerResponse>> HandleAsync(PermissionManagerRequest request, CancellationToken cancellationToken = default)
     {
+        _logger.LogInformation($"Request get all premissions request {request}");
         return await _service.GetPermission(request, cancellationToken);
     }
 }

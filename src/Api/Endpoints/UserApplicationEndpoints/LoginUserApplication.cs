@@ -11,7 +11,7 @@ public class LoginUserApplication : EndpointBaseAsync.WithRequest<LoginUserAppli
 
     public LoginUserApplication(IUserApplicationService service)
     {
-        _service = service;
+        _service = service ?? throw new ArgumentNullException(nameof(service));
     }
 
     [HttpPost]

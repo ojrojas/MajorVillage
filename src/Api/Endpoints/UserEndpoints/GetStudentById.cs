@@ -10,8 +10,8 @@ public class GetUserById : EndpointBaseAsync.WithRequest<GetUserByIdRequest>.Wit
 
     public GetUserById(ILogger<GetUserById> logger, IUserService service)
     {
-        _logger = logger;
-        _service = service;
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _service = service ?? throw new ArgumentNullException(nameof(service));
     }
 
     [HttpGet("{Id}")]
@@ -23,6 +23,7 @@ public class GetUserById : EndpointBaseAsync.WithRequest<GetUserByIdRequest>.Wit
           Tags = new[] { "UserEndpoints" })]
     public async override Task<ActionResult<GetUserByIdResponse>> HandleAsync([FromRoute] GetUserByIdRequest request, CancellationToken cancellationToken = default)
     {
+        _logger.LogInformation($"Request service get user by id request {request}");
         return await _service.GetUserByIdAsync(request, cancellationToken);
     }
 }

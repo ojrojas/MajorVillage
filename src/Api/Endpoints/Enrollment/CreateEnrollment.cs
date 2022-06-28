@@ -9,8 +9,8 @@ public class CreateEnrollment : EndpointBaseAsync.WithRequest<CreateEnrollmentRe
 
     public CreateEnrollment(ILogger<CreateEnrollment> logger, IEnrollmentService service)
     {
-        _logger = logger;
-        _service = service;
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _service = service ?? throw new ArgumentNullException(nameof(service));
     }
 
     [HttpPost]
@@ -22,6 +22,7 @@ public class CreateEnrollment : EndpointBaseAsync.WithRequest<CreateEnrollmentRe
               Tags = new[] { "EnrollmentEndpoint" })]
     public override async Task<ActionResult<CreateEnrollmentResponse>> HandleAsync(CreateEnrollmentRequest request, CancellationToken cancellationToken = default)
     {
+        _logger.LogInformation($"Request create enrollment {request}");
         return await _service.CreateEnrollment(request, cancellationToken);
     }
 }

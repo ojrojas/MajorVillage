@@ -8,7 +8,7 @@ public class CreateUserApplication : EndpointBaseAsync.WithRequest<CreateUserApp
 
     public CreateUserApplication(IUserApplicationService service)
     {
-        _service = service;
+        _service = service ?? throw new ArgumentNullException(nameof(service));
     }
 
     [HttpPost]

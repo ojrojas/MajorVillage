@@ -10,8 +10,8 @@ public class CreateUser : EndpointBaseAsync.WithRequest<CreateUserRequest>.WithA
 
     public CreateUser(ILogger<CreateUser> logger, IUserService service)
     {
-        _logger = logger;
-        _service = service;
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _service = service ?? throw new ArgumentNullException(nameof(service));
     }
   
     [HttpPost]
@@ -23,6 +23,7 @@ public class CreateUser : EndpointBaseAsync.WithRequest<CreateUserRequest>.WithA
           Tags = new[] { "UserEndpoints" })]
     public async override Task<ActionResult<CreateUserResponse>> HandleAsync(CreateUserRequest request, CancellationToken cancellationToken = default)
     {
+        _logger.LogInformation($"Request create user request {request}");
         return await _service.CreateUserAsync(request, cancellationToken);
     }
 }

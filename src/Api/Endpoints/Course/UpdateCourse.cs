@@ -9,8 +9,8 @@ public class UpdateCourse : EndpointBaseAsync.WithRequest<UpdateCourseRequest>.W
 
     public UpdateCourse(ILogger<UpdateCourse> logger, ICourseService service)
     {
-        _logger = logger;
-        _service = service;
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _service = service ?? throw new ArgumentNullException(nameof(service));
     }
 
     [HttpPut]

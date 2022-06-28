@@ -9,8 +9,8 @@ public class UpdateEnrollment : EndpointBaseAsync.WithRequest<UpdateEnrollmentRe
 
     public UpdateEnrollment(ILogger<UpdateEnrollment> logger, IEnrollmentService service)
     {
-        _logger = logger;
-        _service = service;
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _service = service ?? throw new ArgumentNullException(nameof(service));
     }
 
     [HttpPut]
