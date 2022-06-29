@@ -1,12 +1,12 @@
-<mat-drawer-container> 
-    <mat-drawer #drawer mode="side">
+<mat-drawer-container>
+    <mat-drawer #drawer mode="side" class="sidenav-drawer">
         <div class="sidenav">
             <br>
             <span class="project-name">Major village</span>
             <br>
-            <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
             <a [routerLink]="['/home']" class="icon-major-village"><span class="material-icons">10k</span>Home</a>
-            <a [routerLink]="['/settings']" style="vertical-align: middle;"><span class="material-icons">settings</span> Settings</a>
+            <a [routerLink]="['/settings']" style="vertical-align: middle;"><span class="material-icons">settings</span>
+                Settings</a>
         </div>
 
     </mat-drawer>

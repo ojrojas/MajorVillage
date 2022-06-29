@@ -13,7 +13,7 @@ export class AuthService {
         this.store.dispatch(fromActions.loadAuths());
     }
 
-    setClaims(user: IUser, token: string): void {
-        this.store.dispatch(fromActions.setClaimsAuth({ user, token }));
+    setClaims( token: string): void {
+        this.store.dispatch(fromActions.setClaimsAuth({ token }));
     }
 }

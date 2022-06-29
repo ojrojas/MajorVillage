@@ -5,7 +5,7 @@ import { State } from 'src/app/login/redux/login.reducer';
 import { ILoginService } from '../../core/interfaces/login.interface';
 import { ILogin } from '../../core/models/ilogin.model';
 import * as fromAction from '../redux/login.actions';
-import { getLoginState, GetUserClaims } from '../redux/login.selectors';
+import { getLoginState } from '../redux/login.selectors';
 
 @Injectable({
     providedIn: 'root'
@@ -17,10 +17,6 @@ export class LoginService implements ILoginService {
 
     GetState(): Observable<State> {
         return this.store.pipe(select(getLoginState));
-    }
-
-    GetClaims(token: string): void {
-        this.store.dispatch(fromAction.getClaims({token}));
     }
 
     Login(login: ILogin): void {

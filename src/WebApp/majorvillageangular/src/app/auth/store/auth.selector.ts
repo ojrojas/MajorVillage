@@ -7,3 +7,14 @@ export const getApplicationUser = createSelector(
     getStateAuth,
     (state) => state.user
 );
+
+
+export const IsLogged = createSelector(
+    getStateAuth,
+    (state) => state.isLogged
+);
+
+export const GetUserClaims = createSelector(
+    getStateAuth,
+    (state) => state.userInfo
+)

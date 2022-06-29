@@ -10,12 +10,25 @@ export const loadAuthsSuccess = createAction(
     props<{ user: IUser }>()
 );
 
-export const OnError = createAction(
-    '[Auth] Error module auth',
-    props<{ error: any }>()
-);
-
 export const setClaimsAuth = createAction(
     '[Auth] set Claims Auth',
-    props<{ user: IUser, token: string }>()
+    props<{ token: string }>()
+);
+
+export const setClaimsAuthSuccess = createAction(
+    '[Auth] set Claims Auth Success',
+    props<{ user: IUser }>()
+);
+
+export const logOutAuth = createAction(
+    '[Auth] set logout application'
+);
+
+export const logOutAuthSuccess = createAction(
+    '[Auth] set logout application success'
+);
+
+export const onError = createAction(
+    '[Auth] Error module auth',
+    props<{ error: any }>()
 );

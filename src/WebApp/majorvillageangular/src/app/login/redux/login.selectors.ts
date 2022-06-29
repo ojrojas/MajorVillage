@@ -3,13 +3,3 @@ import * as fromReducer from './login.reducer';
 
 export const getLoginState = createFeatureSelector<fromReducer.State>(fromReducer.loginFeatureKey);
 
-
-export const IsLogged = createSelector(
-    getLoginState,
-    (state) => state.isLogged
-);
-
-export const GetUserClaims = createSelector(
-    getLoginState,
-    (state) => state.userInfo
-)

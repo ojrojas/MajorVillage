@@ -12,16 +12,6 @@ export const loginSuccess = createAction(
   props<{ token: string }>()
 );
 
-export const getClaims = createAction(
-  '[Login] Get Claims', 
-  props<{ token:string }>()
-);
-
-export const getClaimsSuccess = createAction(
-  '[Login] Get Claims Success', 
-  props<{ userInfo: IUser}>()
-);
-
 export const onError = createAction(
   '[Login] On Error',
   props<{ error: any }>()

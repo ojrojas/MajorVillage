@@ -4,7 +4,11 @@
 }
 
 .line_header {
-    margin-top: 5px;
+    margin-top: 1px;
+}
+
+.title-header {
+    margin:0;
 }
 
 .nav_header {
@@ -22,6 +26,6 @@
 }
 
 .buttons-actions>button {
-    height: 20px;
     width: 100px;
+    line-height: 10px;
 }

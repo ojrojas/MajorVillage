@@ -2,9 +2,11 @@ import { inject, InjectionToken } from '@angular/core';
 import {  ActionReducerMap, createSelector } from '@ngrx/store';
 import { AppReducerService } from './app.reducer.service';
 import * as fromLoginReducer from './login/redux/login.reducer';
+import * as fromAuthReducer from './auth/store/auth.reducer';
 
 export interface AppState {
     loginState: fromLoginReducer.State;
+    authState: fromAuthReducer.State;
 }
 
 export const REDUCER_TOKEN = new InjectionToken<ActionReducerMap<AppState>>
@@ -15,9 +17,9 @@ export const REDUCER_TOKEN = new InjectionToken<ActionReducerMap<AppState>>
     }
 });
 
-export const getAppStateLoginState = (state: AppState) => state.loginState;
+export const getAppStateAuthState = (state: AppState) => state.authState;
 
-export const getAppStateLoginData = createSelector(
-    getAppStateLoginState,
+export const getAppStateAuthData = createSelector(
+    getAppStateAuthState,
     (state) => state
 );

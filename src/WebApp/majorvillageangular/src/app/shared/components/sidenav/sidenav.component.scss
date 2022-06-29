@@ -1,9 +1,24 @@
 .main {
-    padding: 5px;;
+    padding: 5px;
+    height: 100vh;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-bottom: 5px;
+}
+
+.sidenav-drawer{
+    height: 100hv;
+    width: 200px;
+    padding: 10px;
 }
 
 .project-name{
     vertical-align: middle;
+    margin: 30px;
 }
 
 #sidenav a:hover{

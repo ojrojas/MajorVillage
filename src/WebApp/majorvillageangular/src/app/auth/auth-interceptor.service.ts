@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { select, Store } from "@ngrx/store";
 import { catchError, Observable, throwError } from "rxjs";
-import { AppState, getAppStateLoginState } from "../app.reducer";
+import { AppState, getAppStateAuthData } from "../app.reducer";
 
 @Injectable({
     providedIn: 'root'
@@ -13,7 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
         private route: Router) { }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         let token: string | undefined = undefined;
-        this.store.pipe(select(getAppStateLoginState)).subscribe((response) => {
+        this.store.pipe(select(getAppStateAuthData)).subscribe((response) => {
             if (response !== undefined) {
                 token = response.token as string;
             }

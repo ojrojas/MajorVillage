@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderModel } from 'src/app/shared/models/header/headermodel';
+import { ConfigureButton, HeaderModel } from 'src/app/shared/models/header/headermodel';
+import { SettingsResources } from './settings.resources';
 
 @Component({
   selector: 'app-settings',
@@ -8,7 +9,11 @@ import { HeaderModel } from 'src/app/shared/models/header/headermodel';
 })
 export class SettingsComponent implements OnInit {
   headerSettings: HeaderModel | undefined;
-  constructor() { }
+  buttonsScreen: Array<ConfigureButton>;
+  constructor(private settingResources: SettingsResources) {
+    this.headerSettings = this.settingResources.getHeaderSettings();
+    this.buttonsScreen = this.settingResources.getButtons();
+  }
 
   ngOnInit(): void {
   }

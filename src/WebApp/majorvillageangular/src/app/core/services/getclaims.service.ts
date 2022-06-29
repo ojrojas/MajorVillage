@@ -8,27 +8,33 @@ import { IUser } from "../models/iuser.model";
 })
 export class ClaimService implements IClaimService {
 
-    GetClaims(token: string): Observable<IUser> {
-        const userInfo = JSON.parse(atob(token.split('.')[1]));
+    GetClaims(token: any): Observable<IUser> {
+        let tokenAssigned = token.token;
+        const userInfo = JSON.parse(atob(tokenAssigned.split('.')[1]));
         const user = new Observable<IUser>((observer) => {
-            let user: IUser = {
-                id: userInfo.Id,
-                firstName: userInfo.firstName,
-                middlename: userInfo.middleName,
-                lastName: userInfo.lastName,
-                surName: userInfo.surName,
-                email: userInfo.email,
-                typeUser: userInfo.typeUser,
-                typeIdentification: userInfo.typeIdentification,
-                identification: userInfo.identification,
-                age: userInfo.age,
-                birthDate: userInfo.birthDate,
-                createdOn: userInfo.CreatedOn,
-                modifiedOn: userInfo.ModifiedOn,
-                createdBy: userInfo.CreatedBy,
-                modifiedBy: userInfo.ModifiedBy
-            };
-            observer.next(user);
+            try {
+                let user: IUser = {
+                    id: userInfo.Id,
+                    firstName: userInfo.FirstName,
+                    middlename: userInfo.middleName,
+                    lastName: userInfo.LastName,
+                    surName: userInfo.SurName,
+                    email: userInfo.Email,
+                    typeUser: userInfo.TypeUser,
+                    typeIdentification: userInfo.TypeIdentification,
+                    identification: userInfo.Identification,
+                    age: userInfo.Age,
+                    birthDate: userInfo.BirthDate,
+                    createdOn: userInfo.CreatedOn,
+                    modifiedOn: userInfo.ModifiedOn,
+                    createdBy: userInfo.CreatedBy,
+                    modifiedBy: userInfo.ModifiedBy
+                };
+                observer.next(user);
+            } catch (error) {
+                console.error("Error getclaims ==> ", error);
+                observer.next(undefined);
+            }
         });
         return user;
     }

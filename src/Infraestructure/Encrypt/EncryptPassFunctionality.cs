@@ -13,14 +13,24 @@ public class EncryptPassFunctionality : IEncryptPassFunctionality
 
     public async Task<string> Encrypt(string password, bool useHashing = true)
     {
-        var encrypted = KeyDerivation.Pbkdf2(password,
-                                             Encoding.UTF8.GetBytes(_options.Salt),
-                                             KeyDerivationPrf.HMACSHA512,
-                                             _options.Iterations,
-                                             _options.SizeKey);
+        try
+        {
+            _logger.LogInformation($"Encrypt password options encryptation options");
+            var encrypted = KeyDerivation.Pbkdf2(password,
+                                                 Encoding.UTF8.GetBytes(_options.Salt),
+                                                 KeyDerivationPrf.HMACSHA512,
+                                                 _options.Iterations,
+                                                 _options.SizeKey);
 
-                                             await Task.Yield();
+            await Task.Yield();
 
-        return Encoding.UTF8.GetString(encrypted);
+            return Encoding.UTF8.GetString(encrypted);
+        }
+        catch (Exception ex)
+        {
+            await Task.Yield();
+            _logger.LogError("Encrypt fail password result null", ex.Message);
+            return null;
+        }
     }
 }
