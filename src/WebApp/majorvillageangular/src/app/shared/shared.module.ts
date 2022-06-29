@@ -8,6 +8,10 @@ import { SelectComponent } from './components/select/select.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { RouterModule } from '@angular/router';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
 
 @NgModule({
   declarations: [
@@ -16,11 +20,16 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     InputComponent,
     SelectComponent,
     TextareaComponent,
-    SidenavComponent
+    SidenavComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSidenavModule
   ],
   exports: [
     HeaderPageComponent,
@@ -31,6 +40,10 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     SelectComponent,
     TextareaComponent,
     SidenavComponent,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule
   ]
 })
 export class SharedModule { }

@@ -1,22 +1,19 @@
 <div class="container">
     <div class="form-login">
-        <h1>Login</h1>
+        <h1 class="login-title">Login</h1>
         <form [formGroup]="form" (ngSubmit)="submit()">
-            <div class="form-control">
-                <input type="text" placeholder="UserName" formControlName="userName">
-                <span class="tooltiptext"
-                    *ngIf="form.get('userName')?.invalid && (form.get('userName')?.dirty || form.get('userName')?.touched)">
-                    The field username is <strong>required</strong></span>
-            </div>
-            <div class="form-control">
-                <input type="password" placeholder="Password" formControlName="password" required="true">
-                <span class="material-icons">visibility</span>
-                <span class="tooltiptext"
-                    *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)">The
-                    field password is <strong>required</strong></span>
-            </div>
-            <div class="form-control">
-                <input type="submit" value="sign in">
+            <mat-form-field appearance="standard" class="form-control">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="userName" required>
+                <mat-error *ngIf="form.get('userName')?.invalid">Field username is <strong>requerid</strong></mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="standard" class="form-control"> 
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="password" required>
+                <mat-error *ngIf="form.get('password')?.invalid">Field password is <strong>requerid</strong></mat-error>
+            </mat-form-field>
+            <div class="form-control-button">
+                <button mat-button type="submit">Sign in</button>
             </div>
         </form>
     </div>

@@ -27,7 +27,6 @@ export class LoginEffects {
             ofType(fromActions.loginSuccess),
             tap((props) => {
                 if (props.token !== null) {
-
                     this.router.navigate(['/home']);
                 } else {
 

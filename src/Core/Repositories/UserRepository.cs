@@ -33,6 +33,12 @@ public class UserRepository : IUserRepository
         return await _repository.GetByIdAsync(predicate, cancellationToken);
     }
 
+    public async Task<User> GetUserByUserApplicationIdAsync(Guid id, CancellationToken cancellationToken)
+    {
+        var predicate = Predicates.Field<User>(s => s.Id, Operator.Eq, id);
+        return await _repository.GetByIdAsync(predicate, cancellationToken);
+    }
+
     public async Task<IEnumerable<User>> ListUserAsync(CancellationToken cancellationToken)
     {
         return await _repository.GetAllAsync(null, cancellationToken);

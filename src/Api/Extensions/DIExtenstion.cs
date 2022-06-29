@@ -5,6 +5,7 @@ internal static class AddExtensionInjectDependencies
     {
         services.AddSingleton(typeof(IDapperRepository<>), typeof(DapperRepository<>));
         services.AddTransient<IUserRepository, UserRepository>();
+        services.AddTransient<ITokenClaimService, TokenClaimService>();
         services.AddTransient<IUserService, UserService>();
         services.AddTransient<IUserApplicationService, UserApplicationService>();
         services.AddTransient<IUserApplicationRepository, UserApplicationRepository>();

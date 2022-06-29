@@ -8,9 +8,9 @@ public class PermissionManagerRepository : IPermissionManagerRepository
 
     public PermissionManagerRepository(IDapperRepository<PermissionManager> repository, IDapperRepository<PermissionAction> repositoryAction, ILogger<PermissionManagerRepository> logger)
     {
-        _repository = repository;
-        _repositoryAction = repositoryAction;
-        _logger = logger;
+        _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+        _repositoryAction = repositoryAction ?? throw new ArgumentNullException(nameof(repositoryAction));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger)); 
     }
 
     public async Task<PermissionManager> GetPermission(Guid typeUserId, CancellationToken cancellationToken)
