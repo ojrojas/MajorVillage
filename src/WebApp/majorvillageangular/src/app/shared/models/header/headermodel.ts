@@ -6,6 +6,7 @@ export interface HeaderModel {
 
 export interface ConfigureButton {
     styles?: string;
+    icon?:string;
     description: string;
     type:string;
     action: () => void;

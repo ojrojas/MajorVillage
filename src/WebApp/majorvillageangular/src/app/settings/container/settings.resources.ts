@@ -2,11 +2,10 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { ConfigureButton, HeaderModel } from "src/app/shared/models/header/headermodel";
 
-
 @Injectable()
 export class SettingsResources {
 
-    constructor(private router:Router) {}
+    constructor(private router: Router) { }
 
     getHeaderSettings = (): HeaderModel => {
         return {
@@ -17,19 +16,17 @@ export class SettingsResources {
     }
 
     getButtons = (): Array<ConfigureButton> => {
-        return [
-            {
-                description: 'Students',
-                type: 'button',
-                action: () => { this.router.navigate(['/students']) }
-            },
-            {
-                description: 'Teachers',
-                type: 'button',
-                action: () => { this.router.navigate(['/teachers']) }
-            }
-        ];
+        return [{
+            description: 'Add Students',
+            type: 'button',
+            icon: 'add' , 
+            action: () => { this.router.navigate(['/students']) }
+        },
+        {
+            description: 'Add Teachers',
+            type: 'button',
+            icon:'add',
+            action: () => { this.router.navigate(['/teachers']) }
+        }];
     }
 }
-
-
