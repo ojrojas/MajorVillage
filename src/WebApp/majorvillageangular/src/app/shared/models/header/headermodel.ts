@@ -1,7 +1,7 @@
 export interface HeaderModel {
     titlePage: string;
     subTitle: string;
-    buttons: ConfigureButton[];
+    buttons?: ConfigureButton[];
 }
 
 export interface ConfigureButton {

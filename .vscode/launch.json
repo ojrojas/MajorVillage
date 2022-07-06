@@ -5,15 +5,8 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "name": "Firefox localhost",
-            "url": "localhost:4200",
-            "webRoot": "${workspaceFolder}",
-            "pathMappings": [
-                {
-                    "url": "webpack:///src",
-                    "path": "${workspaceFolder}/src/WebApp/majorvillageangular/src"
-                }
-            ]
+            "name": "Firefox Launch",
+            "url": "http://localhost:4200",
         },
         {
             "name": ".NET Core Launch (web)",

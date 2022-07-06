@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { HeaderModel } from "src/app/shared/models/header/headermodel";
 
 @Injectable({
     providedIn: 'root'
@@ -7,5 +8,12 @@ import { Injectable } from "@angular/core";
 export class HomeService {
     constructor() { }
 
-  
+    getHomeHeader = (): HeaderModel => 
+  {
+    return {
+        titlePage:"Home",
+        subTitle: "Dashboard"
+    }
+
+  }
 }

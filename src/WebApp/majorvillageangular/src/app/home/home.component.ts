@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { HeaderModel } from "../shared/models/header/headermodel";
-import { getHomeHeader } from "./home.resources";
 import { HomeService } from "./services/home.service";
 
 @Component({
@@ -12,7 +11,8 @@ import { HomeService } from "./services/home.service";
 export class HomeComponent {
     headerHome: HeaderModel;
     constructor(private route: Router,
+      
         private service: HomeService) {
-        this.headerHome = getHomeHeader();
+        this.headerHome = this.service.getHomeHeader();
     }
 }

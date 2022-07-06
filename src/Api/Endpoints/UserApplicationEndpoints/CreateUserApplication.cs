@@ -5,10 +5,12 @@ namespace MajorVillage.Api.Endpoints;
 public class CreateUserApplication : EndpointBaseAsync.WithRequest<CreateUserApplicationRequest>.WithActionResult<CreateUserApplicationResponse>
 {
     private readonly IUserApplicationService _service;
+    private readonly ILogger<CreateUserApplication> _logger;
 
-    public CreateUserApplication(IUserApplicationService service)
+    public CreateUserApplication(IUserApplicationService service, ILogger<CreateUserApplication> logger)
     {
         _service = service ?? throw new ArgumentNullException(nameof(service));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
     [HttpPost]
@@ -20,6 +22,7 @@ public class CreateUserApplication : EndpointBaseAsync.WithRequest<CreateUserApp
           Tags = new[] { "UserApplicationEndpoints" })]
     public override async Task<ActionResult<CreateUserApplicationResponse>> HandleAsync(CreateUserApplicationRequest request, CancellationToken cancellationToken = default)
     {
-     return await _service.CreateUserApplication(request,cancellationToken);  
+        _logger.LogInformation($"Create user application request {request}");
+        return await _service.CreateUserApplication(request, cancellationToken);
     }
 }

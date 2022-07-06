@@ -3,29 +3,20 @@
     padding: 0;
 }
 
-.line_header {
-    margin-top: 1px;
-}
-
-.title-header {
-    margin:0;
-}
-
 .nav_header {
-    display: grid;
-    grid-template-columns: 1fr;
+    padding: 5px;
 }
 
 .nav_header-subtitle {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-.buttons-actions {
-    text-align: right;
-}
-
-.buttons-actions>button {
-    width: 100px;
-    line-height: 10px;
+.title-header__subtitle {
+    place-self: end;
+    font-size: 1rem;
+    color:grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
 }

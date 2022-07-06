@@ -2,13 +2,7 @@
     <nav class="nav_header">
         <div class="nav_header-subtitle">
             <h2 class="title-header">{{headerModel?.titlePage}}</h2>
-            <div class="buttons-actions">
-                <h6>{{headerModel?.subTitle}}</h6>
-                <button mat-button (click)="button.action()" [style]="button.styles" *ngFor="let button of headerModel?.buttons"
-                    type={{button.type}}>
-                    {{button.description}}
-                </button>
-            </div>
+            <h6 class="title-header__subtitle">{{headerModel?.subTitle}}</h6>
         </div>
     </nav>
 </header>
