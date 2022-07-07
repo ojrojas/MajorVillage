@@ -8,10 +8,10 @@ export const getAllTeachers = createAction(
 
 export const getAllTeachersSuccess = createAction(
     '[Teachers] get all teachers success',
-    props<{ users: IUser[]}>()
+    props<{ users: IUser[] | null}>()
 )
 
 export const onError = createAction(
     '[Teachers] Error request',
-    props<{error: HttpErrorResponse}>
+    props<{error: any}>()
 )

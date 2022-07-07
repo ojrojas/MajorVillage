@@ -8,7 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { LoginEffects } from './redux/login.effects';
 import * as fromReducer from './redux/login.reducer';
-import { AuthEffects } from '../auth/store/auth.effects';
+import { AuthEffects } from '../auth/redux/auth.effects';
 
 
 @NgModule({

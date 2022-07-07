@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, of, concatMap, tap } from 'rxjs';
 import { ClaimService } from 'src/app/core/services/getclaims.service';
-import * as fromActions from '../store/auth.actions';
+import * as fromActions from './auth.actions';
 
 @Injectable()
 export class AuthEffects {

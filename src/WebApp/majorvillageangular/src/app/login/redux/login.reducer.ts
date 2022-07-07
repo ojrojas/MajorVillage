@@ -1,5 +1,4 @@
 import { createReducer, on } from '@ngrx/store';
-import { IUser } from 'src/app/core/models/iuser.model';
 import * as fromActions from './login.actions';
 
 export const loginFeatureKey = 'login';

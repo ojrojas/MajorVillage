@@ -1,5 +1,4 @@
 import { ActionReducer, MetaReducer, INIT, UPDATE } from '@ngrx/store';
-import { merge } from 'lodash'
 import { environment } from 'src/environments/environment';
 import { AppState } from './app.reducer';
 

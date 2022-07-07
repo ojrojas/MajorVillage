@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { IUser } from "src/app/core/models/iuser.model";
-import { State } from "../store/auth.reducer";
-import * as fromActions from '../store/auth.actions';
+import { State } from "../redux/auth.reducer";
+import * as fromActions from '../redux/auth.actions';
 
 @Injectable({
     providedIn: 'root'
