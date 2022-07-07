@@ -6,7 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
+
+  showMenu = false;
+
   constructor() { }
 
   ngOnInit(): void { }
+
+  toggleMenu = () => {
+    alert("This show ? " + !this.showMenu);
+    this.showMenu =  !this.showMenu;
+    return this.showMenu;
+    
+  }
 }

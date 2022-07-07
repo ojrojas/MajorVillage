@@ -33,6 +33,29 @@
     vertical-align: middle;
 }
 
+.header-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.header-nav__user {
+    place-self: end;
+    display: grid;
+    grid-template-columns: 100px 40px;
+    align-items: center;
+}
+
+.header-nav__user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 45px;
+    border: 1px solid grey;
+    display: grid;
+    place-content: center;
+
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;

@@ -1,1 +1,29 @@
-<p>teachers works!</p>
+<app-header-page [headerModel]="headerTeachers">
+</app-header-page>
+<div class="content-teachers">
+    <table mat-table [dataSource]="teachersList" class="mat-elevation-z8">
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- LastName Column -->
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef> Last Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+        </ng-container>
+      
+        <!-- CreatedOn Column -->
+        <ng-container matColumnDef="createdOn">
+          <th mat-header-cell *matHeaderCellDef> Created On </th>
+          <td mat-cell *matCellDef="let element"> {{element.createdOn}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="namesColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: namesColumns;"></tr>
+      </table>
+      
+      
+</div>

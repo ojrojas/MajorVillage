@@ -9,8 +9,14 @@
         </div>
 
     </mat-drawer>
-    <div id="main-content" class="main">
-        <span class="material-icons pointer-menu" (click)="drawer.toggle()">menu</span>
+    <div id="main-content" class="main" >
+        <div class="header-nav">
+            <span  class="material-icons pointer-menu" (click)="drawer.toggle()">menu</span>
+            <div class="header-nav__user"> 
+                <span><strong> Oscar Rojas </strong></span>
+                <div class="header-nav__user-avatar" (click)="toggleMenu()"><strong>OR</strong></div>
+            </div>
+        </div>
         <router-outlet></router-outlet>
     </div>
 </mat-drawer-container>
