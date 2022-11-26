@@ -1,7 +1,6 @@
-﻿namespace Core.Interfaces
+﻿namespace Core.Interfaces;
+
+public interface ITokenService<T>
 {
-    public interface ITokenService<T>
-    {
-        Task<string> GetTokenAsync(T user);
-    }
+    Task<string> GetTokenAsync(T user);
 }

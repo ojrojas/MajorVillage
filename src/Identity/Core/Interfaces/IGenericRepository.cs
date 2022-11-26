@@ -1,6 +1,6 @@
 ﻿namespace Core.Interfaces
 {
-    public interface IGenericRepository<T> where T : class, IAggregateRoot
+    public interface IGenericRepository<T> where T : BaseEntity, IAggregateRoot
     {
         /// <summary>
         /// Count async 
@@ -47,13 +47,6 @@
         /// <param name="cancellationToken"></param>
         /// <returns>list records type parameter <see cref="IEnumerable{T}"/></returns>
         Task<IEnumerable<T>> ListAsync(ISpecification<T> spec, CancellationToken cancellationToken);
-
-        /// <summary>
-        /// Save async 
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation process</param>
-        /// <returns>Nothing</returns>
-        Task SaveAsync(CancellationToken cancellationToken);
 
         /// <summary>
         /// Update async entity

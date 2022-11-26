@@ -1,6 +1,6 @@
 ﻿namespace Infraestructure.Data
 {
-    public class GenericRepository<T> where T : class, IAggregateRoot
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity, IAggregateRoot
     {
         private readonly ILogger<GenericRepository<T>> _logger;
         private readonly IdentityDbContext _context;
@@ -24,7 +24,7 @@
         /// </summary>
         /// <param name="logger">logger application</param>
         /// <param name="context">context application</param>
-        public GenericRepository(ILogger<GenericRepository<T>> logger, IdentityDbContext context): this(logger, context, SpecificationEvaluator.Default) { }
+        public GenericRepository(ILogger<GenericRepository<T>> logger, IdentityDbContext context) : this(logger, context, SpecificationEvaluator.Default) { }
 
         public async Task<T> CreateAsync(T entity, CancellationToken cancellationToken)
         {
@@ -75,7 +75,7 @@
             _logger.LogInformation($"Get all entities type {typeof(T)}");
             return await _context.Set<T>().ToListAsync(cancellationToken);
         }
-        
+
         public async Task<IEnumerable<T>> ListAsync(ISpecification<T> spec, CancellationToken cancellationToken)
         {
             _logger.LogInformation($"Specification settled {(spec)}");

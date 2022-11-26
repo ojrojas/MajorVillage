@@ -2,7 +2,7 @@
 
 namespace Infraestructure.Data
 {
-    public class GenericRepository<T> where T : class, IAggregateRoot
+    public class GenericRepository<T>: IGenericRepository<T> where T : BaseEntity, IAggregateRoot
     {
         private readonly ILogger<GenericRepository<T>> _logger;
         private readonly SchoolDbContext _context;

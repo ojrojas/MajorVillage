@@ -17,3 +17,4 @@ global using Api.DI;
 global using Api.Filters;
 global using Microsoft.EntityFrameworkCore;
 global using Serilog;
+global using Core.Services;

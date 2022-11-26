@@ -49,13 +49,6 @@
         Task<IEnumerable<T>> ListAsync(ISpecification<T> spec, CancellationToken cancellationToken);
 
         /// <summary>
-        /// Save async 
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation process</param>
-        /// <returns>Nothing</returns>
-        Task SaveAsync(CancellationToken cancellationToken);
-
-        /// <summary>
         /// Update async entity
         /// </summary>
         /// <param name="entity">entity model</param>
