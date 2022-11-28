@@ -19,6 +19,7 @@ builder.Services.AddSwaggerGenDocumention();
 
 //builder.Services.AddDIOptionsConfiguration(configuration);
 builder.Services.AddJwtExtension(configuration);
+builder.Services.AddOptionsExtensions(configuration);
 builder.Services.AddServicesDIApp();
 builder.Services.AddHealthChecks();
 

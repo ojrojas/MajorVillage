@@ -8,4 +8,5 @@ global using Core.Dtos;
 global using Microsoft.Extensions.Logging;
 global using Core.Specifications;
 global using System.Text.Json;
+global using Core.Enums;
 
