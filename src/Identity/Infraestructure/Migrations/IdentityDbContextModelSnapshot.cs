@@ -40,6 +40,9 @@ namespace Infraestructure.Migrations
                     b.Property<int>("PrincipalAddress")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
+
                     b.Property<Guid>("UpdatedBy")
                         .HasColumnType("TEXT");
 
@@ -79,6 +82,9 @@ namespace Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
+
                     b.Property<Guid>("TypeIdentificationId")
                         .HasColumnType("TEXT");
 
@@ -112,7 +118,7 @@ namespace Infraestructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("NumberContact")
+                    b.Property<string>("NumberContact1")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -121,6 +127,9 @@ namespace Infraestructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("PrincipalNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("State")
                         .HasColumnType("INTEGER");
 
                     b.Property<Guid>("UpdatedBy")
@@ -150,6 +159,9 @@ namespace Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
+
                     b.Property<Guid>("UpdatedBy")
                         .HasColumnType("TEXT");
 
@@ -176,6 +188,9 @@ namespace Infraestructure.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
 
                     b.Property<Guid>("UpdatedBy")
                         .HasColumnType("TEXT");
@@ -215,11 +230,16 @@ namespace Infraestructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MiddleName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("SurName")
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("TypeIdentificationId")
@@ -262,6 +282,9 @@ namespace Infraestructure.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("State")
+                        .HasColumnType("INTEGER");
 
                     b.Property<Guid>("UpdatedBy")
                         .HasColumnType("TEXT");
