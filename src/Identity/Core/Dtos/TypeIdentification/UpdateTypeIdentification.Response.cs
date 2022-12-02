@@ -3,6 +3,6 @@
 public class UpdateTypeIdentificationResponse: BaseResponse
 {
 	public UpdateTypeIdentificationResponse(Guid CorrelationId) : base(CorrelationId){}
-	public TypeIdentification TypeIdenticicationUpdated{ get; set; }
+	public TypeIdentification TypeIdentificationUpdated{ get; set; }
 }
 
