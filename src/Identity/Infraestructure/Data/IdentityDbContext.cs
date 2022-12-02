@@ -15,18 +15,12 @@
         /// Table Users
         /// </summary>
         public DbSet<User> Users { get; set; }
+
         /// <summary>
         /// Table TypeIdentifications
         /// </summary>
         public DbSet<TypeIdentification> TypeIdentifications { get; set; }
-        /// <summary>
-        /// Table Contacts
-        /// </summary>
-        public DbSet<Contact> Contacts { get; set; }
-        /// <summary>
-        /// Tables Addresses
-        /// </summary>
-        public DbSet<Address> Addresses { get; set; }
+
         /// <summary>
         /// Table attendants by students
         /// </summary>
