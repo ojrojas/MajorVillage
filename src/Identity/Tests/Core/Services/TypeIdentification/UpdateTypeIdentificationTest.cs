@@ -4,38 +4,44 @@ namespace Tests.Core.Services;
 
 public class UpdateTypeIdentificationTest
 {
-    private readonly Mock<IGenericRepository<TypeIdentification>> _repositoryMock;
-    private readonly Mock<ILogger<TypeIdentificationService>> _loggerMock;
-    private readonly Mock<ITypeIdentificationService> _typeIdentificationServiceMock;
+    private readonly IGenericRepository<TypeIdentification> _repository;
+    private readonly ILogger<TypeIdentificationService> _logger;
+    private readonly ITypeIdentificationService _typeIdentificationService;
+
+    private readonly IdentityDbContext identityDbContext;
+    private readonly DbContextOptions<IdentityDbContext> options;
+    private const string isPayloadUpdate = "ISUPDATE";
 
     public UpdateTypeIdentificationTest()
     {
-        _repositoryMock = new Mock<IGenericRepository<TypeIdentification>>();
-        _loggerMock = new Mock<ILogger<TypeIdentificationService>>();
-        _typeIdentificationServiceMock = new Mock<ITypeIdentificationService>();
+        var logger = LoggerFactory.Create(factory => factory.AddConsole());
+        options = new DbContextOptionsBuilder<IdentityDbContext>().UseInMemoryDatabase(databaseName: "in-memory").Options;
+        identityDbContext = new IdentityDbContext(options);
+        _repository = new GenericRepository<TypeIdentification>(logger.CreateLogger<GenericRepository<TypeIdentification>>(), identityDbContext);
+        _typeIdentificationService = new TypeIdentificationService(_repository, logger.CreateLogger<TypeIdentificationService>());
+
     }
 
     [Fact]
     public async Task Update_TypeIdentification_Success()
     {
         //Arrange
-        // repo
-        TypeIdentification typeIdentificationFake = GetTypeIdentificationFake();
-        // dtos
-        UpdateTypeIdentificationRequest request = GetTypeIdentificationRequestFake();
-        UpdateTypeIdentificationResponse response = GetTypeIdentificaitonResponseFake(request);
+        var update = Task.Run(() => CreatePayloadData()).GetAwaiter();
+        update.GetResult();
 
-        _repositoryMock.Setup(repo => repo.UpdateAsync(It.IsAny<TypeIdentification>(), default))
-            .Returns(Task.FromResult(typeIdentificationFake));
+        //Act 1 Get from db
+        GetAllTypeIdentification endpointget = new(_typeIdentificationService);
+        var actionGet = endpointget.HandleAsync(default);
 
-        _typeIdentificationServiceMock.Setup(service => service.UpdateTypeIdentificationAsync(It.IsAny<UpdateTypeIdentificationRequest>(), default))
-            .Returns(Task.FromResult(response));
+        var record = actionGet.Result.TypeIdentifications.FirstOrDefault();
 
-        //Act
-        UpdateTypeIdentification endpoint = new(_typeIdentificationServiceMock.Object);
-        var actionResult = endpoint.HandleAsync(request, default);
+        record.Name = isPayloadUpdate;
 
-        Assert.NotNull((actionResult.Result as UpdateTypeIdentificationResponse).TypeIdentificationUpdated);
+        //Act 2 update record
+        UpdateTypeIdentification endpoint = new(_typeIdentificationService);
+        var actionResult = endpoint.HandleAsync(new UpdateTypeIdentificationRequest { TypeIdentification= record }, default);
+
+        Assert.True((actionResult.Result as UpdateTypeIdentificationResponse).TypeIdentificationUpdated.Name.Equals(isPayloadUpdate));
 
     }
 
@@ -43,29 +49,17 @@ public class UpdateTypeIdentificationTest
     public async Task Update_TypeIdentification_Fail()
     {
         //Arrange
-        // repo
-        TypeIdentification typeIdentificationFake = GetTypeIdentificationFake();
-        // dtos
-        UpdateTypeIdentificationRequest request = GetTypeIdentificationRequestFake();
-        UpdateTypeIdentificationResponse response = GetTypeIdentificaitonResponseFake(request);
-
-        _repositoryMock.Setup(repo => repo.CreateAsync(It.IsAny<TypeIdentification>(), default))
-            .Returns(Task.FromResult(typeIdentificationFake));
-
-        _typeIdentificationServiceMock.Setup(service => service.UpdateTypeIdentificationAsync(It.IsAny<UpdateTypeIdentificationRequest>(), default))
-            .Returns(Task.FromResult(new UpdateTypeIdentificationResponse(request.CorrelationId()) { TypeIdentificationUpdated = default }));
-
         //Act
-        UpdateTypeIdentification endpoint = new(_typeIdentificationServiceMock.Object);
+        UpdateTypeIdentification endpoint = new(_typeIdentificationService);
         var actionResult = endpoint.HandleAsync(default, default);
 
-        Assert.Null((actionResult.Result as UpdateTypeIdentificationResponse).TypeIdentificationUpdated);
+        Assert.ThrowsAsync(typeof(InvalidOperationException), () => actionResult);
 
     }
 
-    private UpdateTypeIdentificationResponse GetTypeIdentificaitonResponseFake(UpdateTypeIdentificationRequest request)
+    private async Task CreatePayloadData()
     {
-        return new UpdateTypeIdentificationResponse(request.CorrelationId()) { TypeIdentificationUpdated = GetTypeIdentificationFake() };
+        await _repository.CreateAsync(GetTypeIdentificationFake(), default);
     }
 
     private UpdateTypeIdentificationRequest GetTypeIdentificationRequestFake()
