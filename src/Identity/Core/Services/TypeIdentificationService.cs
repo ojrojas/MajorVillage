@@ -65,7 +65,7 @@ public class TypeIdentificationService : ITypeIdentificationService
     {
         UpdateTypeIdentificationResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
-        response.TypeIdenticicationUpdated = await _repository.UpdateAsync(request.TypeIdentification, cancellationToken);
+        response.TypeIdentificationUpdated = await _repository.UpdateAsync(request.TypeIdentification, cancellationToken);
         _logger.LogInformation($"Update record params {JsonSerializer.Serialize(request.TypeIdentification)}");
         return response;
     }

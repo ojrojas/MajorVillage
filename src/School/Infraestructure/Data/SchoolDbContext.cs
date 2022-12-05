@@ -12,6 +12,11 @@
         public SchoolDbContext(DbContextOptions<SchoolDbContext> options): base(options) { }
 
         /// <summary>
+        /// Table courses
+        /// </summary>
+        public DbSet<Course> Courses { get; set; }
+
+        /// <summary>
         /// On model creating database, and specific change model
         /// </summary>
         /// <param name="modelBuilder">Model builder application</param>
