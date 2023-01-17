@@ -1,5 +1,4 @@
-﻿
-namespace Api.EndPoints;
+﻿namespace Api.EndPoints;
 
 [Authorize]
 [ApiController]
