@@ -3673,3 +3673,299 @@ System.OperationCanceledException: The operation was canceled.
 2022-12-05 17:45:11.272 -05:00 [DBG] Request did not match any endpoints
 2022-12-05 17:45:11.307 -05:00 [DBG] Connection id "0HMMN29E7HFV8" completed keep alive response.
 2022-12-05 17:45:11.307 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7087/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 34.9666ms
+2023-01-16 19:24:29.059 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-01-16 19:24:29.168 -05:00 [DBG] Hosting starting
+2023-01-16 19:24:29.386 -05:00 [INF] User profile is available. Using 'C:\Users\oroja\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-16 19:24:29.432 -05:00 [DBG] Reading data from file 'C:\Users\oroja\AppData\Local\ASP.NET\DataProtection-Keys\key-6ec11266-2fee-48ff-8f97-60739678b8a0.xml'.
+2023-01-16 19:24:29.446 -05:00 [DBG] Reading data from file 'C:\Users\oroja\AppData\Local\ASP.NET\DataProtection-Keys\key-c3d98f19-53f3-4642-8732-04addd25f2f0.xml'.
+2023-01-16 19:24:29.457 -05:00 [DBG] Found key {6ec11266-2fee-48ff-8f97-60739678b8a0}.
+2023-01-16 19:24:29.462 -05:00 [DBG] Found key {c3d98f19-53f3-4642-8732-04addd25f2f0}.
+2023-01-16 19:24:29.468 -05:00 [DBG] Considering key {c3d98f19-53f3-4642-8732-04addd25f2f0} with expiration date 2023-02-05 21:02:11Z as default key.
+2023-01-16 19:24:29.470 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-01-16 19:24:29.473 -05:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-01-16 19:24:29.474 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-01-16 19:24:29.478 -05:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-01-16 19:24:29.479 -05:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-01-16 19:24:29.482 -05:00 [DBG] Using key {c3d98f19-53f3-4642-8732-04addd25f2f0} as the default key.
+2023-01-16 19:24:29.483 -05:00 [DBG] Key ring with default key {c3d98f19-53f3-4642-8732-04addd25f2f0} was loaded during application startup.
+2023-01-16 19:24:29.811 -05:00 [INF] Now listening on: https://localhost:7087
+2023-01-16 19:24:29.812 -05:00 [INF] Now listening on: http://localhost:5266
+2023-01-16 19:24:29.813 -05:00 [DBG] Loaded hosting startup assembly Api
+2023-01-16 19:24:29.814 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-01-16 19:24:29.815 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-01-16 19:24:29.816 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-16 19:24:29.816 -05:00 [INF] Hosting environment: Development
+2023-01-16 19:24:29.817 -05:00 [INF] Content root path: C:\Users\oroja\source\repos\MajorVillage\src\School\Api
+2023-01-16 19:24:29.818 -05:00 [DBG] Hosting started
+2023-01-16 19:24:30.147 -05:00 [DBG] Connection id "0HMNO44PHP5BE" accepted.
+2023-01-16 19:24:30.147 -05:00 [DBG] Connection id "0HMNO44PHP5BF" accepted.
+2023-01-16 19:24:30.149 -05:00 [DBG] Connection id "0HMNO44PHP5BE" started.
+2023-01-16 19:24:30.149 -05:00 [DBG] Connection id "0HMNO44PHP5BF" started.
+2023-01-16 19:24:31.363 -05:00 [DBG] Connection id "0HMNO44PHP5BG" accepted.
+2023-01-16 19:24:31.365 -05:00 [DBG] Connection id "0HMNO44PHP5BG" started.
+2023-01-16 19:24:31.412 -05:00 [DBG] Connection 0HMNO44PHP5BG established using the following protocol: "Tls13"
+2023-01-16 19:24:31.463 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE".
+2023-01-16 19:24:31.470 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2023-01-16 19:24:31.473 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "SETTINGS" frame for stream ID 0 with length 30 and flags "NONE".
+2023-01-16 19:24:31.475 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2023-01-16 19:24:31.477 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0.
+2023-01-16 19:24:31.479 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 1 with length 483 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:31.496 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK".
+2023-01-16 19:24:31.528 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/swagger - -
+2023-01-16 19:24:31.560 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-01-16 19:24:31.561 -05:00 [VRB] All hosts are allowed.
+2023-01-16 19:24:31.582 -05:00 [DBG] No candidates found for the request path '/swagger'
+2023-01-16 19:24:31.583 -05:00 [DBG] Request did not match any endpoints
+2023-01-16 19:24:31.657 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/swagger - - - 301 0 - 130.3954ms
+2023-01-16 19:24:31.719 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 1 with length 69 and flags "END_STREAM, END_HEADERS".
+2023-01-16 19:24:31.729 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 3 with length 45 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:31.734 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/swagger/index.html - -
+2023-01-16 19:24:31.736 -05:00 [VRB] All hosts are allowed.
+2023-01-16 19:24:31.738 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-01-16 19:24:31.752 -05:00 [DBG] Request did not match any endpoints
+2023-01-16 19:24:31.966 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-01-16 19:24:31.985 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 3 with length 28 and flags "END_HEADERS".
+2023-01-16 19:24:31.987 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 3 with length 5081 and flags "NONE".
+2023-01-16 19:24:31.992 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-01-16 19:24:31.992 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 3 with length 81 and flags "NONE".
+2023-01-16 19:24:31.996 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/swagger/index.html - - - 200 - text/html;charset=utf-8 261.4388ms
+2023-01-16 19:24:31.996 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 3 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:32.048 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 5 with length 108 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:32.062 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 7 with length 53 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:32.062 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/swagger/swagger-ui.css - -
+2023-01-16 19:24:32.066 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 9 with length 51 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:32.066 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/swagger/swagger-ui-bundle.js - -
+2023-01-16 19:24:32.067 -05:00 [VRB] All hosts are allowed.
+2023-01-16 19:24:32.075 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/swagger/swagger-ui-standalone-preset.js - -
+2023-01-16 19:24:32.075 -05:00 [VRB] All hosts are allowed.
+2023-01-16 19:24:32.076 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-01-16 19:24:32.079 -05:00 [VRB] All hosts are allowed.
+2023-01-16 19:24:32.080 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-01-16 19:24:32.081 -05:00 [DBG] Request did not match any endpoints
+2023-01-16 19:24:32.081 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-01-16 19:24:32.082 -05:00 [DBG] Request did not match any endpoints
+2023-01-16 19:24:32.085 -05:00 [DBG] Request did not match any endpoints
+2023-01-16 19:24:32.087 -05:00 [VRB] Range header's value is empty.
+2023-01-16 19:24:32.087 -05:00 [VRB] Range header's value is empty.
+2023-01-16 19:24:32.087 -05:00 [VRB] Range header's value is empty.
+2023-01-16 19:24:32.092 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 7 with length 87 and flags "END_HEADERS".
+2023-01-16 19:24:32.094 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.097 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.100 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.102 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.105 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 9 with length 34 and flags "END_HEADERS".
+2023-01-16 19:24:32.107 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.108 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.110 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.111 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.113 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 5 with length 43 and flags "END_HEADERS".
+2023-01-16 19:24:32.119 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.121 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.123 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.125 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.127 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.134 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.136 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.138 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.147 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.150 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.151 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.153 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.156 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.159 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.168 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.170 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.173 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.177 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.180 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.182 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.184 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.187 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.189 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.191 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.195 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 12871 and flags "NONE".
+2023-01-16 19:24:32.197 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.200 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-16 19:24:32.200 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.203 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/swagger/swagger-ui.css - - - 200 143943 text/css 141.1491ms
+2023-01-16 19:24:32.205 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.219 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.225 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.229 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.230 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.231 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.234 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 5 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:32.237 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.242 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.244 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.249 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.251 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.257 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.259 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.261 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.264 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.267 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.275 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.291 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.296 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 11806 and flags "NONE".
+2023-01-16 19:24:32.343 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.343 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-16 19:24:32.350 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.351 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 276.1186ms
+2023-01-16 19:24:32.352 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.354 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.361 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 9 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:32.363 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.366 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.368 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.370 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.374 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.378 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.378 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 11 with length 52 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:32.380 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.382 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/_framework/aspnetcore-browser-refresh.js - -
+2023-01-16 19:24:32.383 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.386 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 11 with length 60 and flags "END_HEADERS".
+2023-01-16 19:24:32.393 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 11 with length 11976 and flags "NONE".
+2023-01-16 19:24:32.395 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.396 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/_framework/aspnetcore-browser-refresh.js - - - 200 11976 application/javascript;+charset=utf-8 14.4945ms
+2023-01-16 19:24:32.397 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.399 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.401 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.403 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 11 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:32.405 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.407 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.409 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.412 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.414 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 13 with length 34 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:32.415 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.416 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/_vs/browserLink - -
+2023-01-16 19:24:32.417 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.419 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.424 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.427 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 13 with length 119 and flags "END_HEADERS".
+2023-01-16 19:24:32.428 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 9986 and flags "NONE".
+2023-01-16 19:24:32.430 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.432 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.433 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.435 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.437 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.439 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.441 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.443 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.444 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.446 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.448 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.449 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.451 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.453 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.455 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.457 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.459 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.460 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.462 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.463 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.466 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.468 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 16384 and flags "NONE".
+2023-01-16 19:24:32.470 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 14801 and flags "NONE".
+2023-01-16 19:24:32.471 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.472 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-16 19:24:32.474 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.474 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 408.3083ms
+2023-01-16 19:24:32.476 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 7 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:32.478 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.480 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.484 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.487 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.492 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.497 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.502 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.504 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.507 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.509 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.511 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.515 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.517 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.519 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.521 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.523 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.525 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.527 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.529 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.531 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.533 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.536 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.538 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.540 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.542 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.546 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.548 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.550 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.552 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.554 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.556 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.558 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.560 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.562 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.564 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.567 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.569 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.571 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.573 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.577 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.580 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.582 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.585 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.587 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.589 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.594 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.596 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.598 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.603 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.606 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.609 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.612 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.614 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.616 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.618 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.621 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.625 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.627 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.629 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.631 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.633 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.635 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.637 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.639 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.641 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.643 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.645 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 10240 and flags "NONE".
+2023-01-16 19:24:32.646 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 6147 and flags "NONE".
+2023-01-16 19:24:32.648 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 13 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:32.648 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 231.7502ms
+2023-01-16 19:24:32.893 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 15 with length 67 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:32.895 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/swagger/v1/swagger.json - -
+2023-01-16 19:24:32.896 -05:00 [VRB] All hosts are allowed.
+2023-01-16 19:24:32.897 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-01-16 19:24:32.898 -05:00 [DBG] Request did not match any endpoints
+2023-01-16 19:24:33.009 -05:00 [VRB] Connection id "0HMNO44PHP5BG" received "HEADERS" frame for stream ID 17 with length 89 and flags "END_STREAM, END_HEADERS, PRIORITY".
+2023-01-16 19:24:33.012 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7087/swagger/favicon-32x32.png - -
+2023-01-16 19:24:33.013 -05:00 [VRB] All hosts are allowed.
+2023-01-16 19:24:33.014 -05:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-01-16 19:24:33.015 -05:00 [DBG] Request did not match any endpoints
+2023-01-16 19:24:33.015 -05:00 [VRB] Range header's value is empty.
+2023-01-16 19:24:33.017 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-01-16 19:24:33.017 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 17 with length 71 and flags "END_HEADERS".
+2023-01-16 19:24:33.018 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/swagger/favicon-32x32.png - - - 200 628 image/png 5.7739ms
+2023-01-16 19:24:33.019 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 17 with length 628 and flags "NONE".
+2023-01-16 19:24:33.021 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 17 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:33.035 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "HEADERS" frame for stream ID 15 with length 35 and flags "END_HEADERS".
+2023-01-16 19:24:33.035 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7087/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 139.9760ms
+2023-01-16 19:24:33.039 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 15 with length 1232 and flags "NONE".
+2023-01-16 19:24:33.042 -05:00 [VRB] Connection id "0HMNO44PHP5BG" sending "DATA" frame for stream ID 15 with length 0 and flags "END_STREAM".
+2023-01-16 19:24:40.162 -05:00 [DBG] Authentication of the HTTPS connection timed out.
+2023-01-16 19:24:40.162 -05:00 [DBG] Authentication of the HTTPS connection timed out.
+2023-01-16 19:24:40.164 -05:00 [DBG] Connection id "0HMNO44PHP5BF" stopped.
+2023-01-16 19:24:40.164 -05:00 [DBG] Connection id "0HMNO44PHP5BE" stopped.
+2023-01-16 19:24:40.166 -05:00 [DBG] Connection id "0HMNO44PHP5BF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-01-16 19:24:40.166 -05:00 [DBG] Connection id "0HMNO44PHP5BE" sending FIN because: "The Socket transport's send loop completed gracefully."

@@ -14,7 +14,7 @@
         public override async Task<ActionResult> HandleAsync(CancellationToken cancellationToken = default)
         {
             await Task.Yield();
-            return Ok("Credit Application Ok");
+            return Ok("API Status Ok");
         }
     }
 }
