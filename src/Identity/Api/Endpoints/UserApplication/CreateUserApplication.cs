@@ -1,5 +1,6 @@
 ﻿namespace Api.EndPoints;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class CreateUserApplication : EndpointBaseAsync.WithRequest<CreateUserApplicationRequest>.WithResult<CreateUserApplicationResponse>
