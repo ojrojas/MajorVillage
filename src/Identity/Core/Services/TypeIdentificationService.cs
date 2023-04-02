@@ -5,7 +5,7 @@ public class TypeIdentificationService : ITypeIdentificationService
     /// <summary>
     /// Generic repository instance type of TypeIdentification
     /// </summary>
-    private readonly IGenericRepository<TypeIdentification> _repository;
+    private readonly TypeIdentificationRepository _repository;
     /// <summary>
     /// Logger instance type of TypeIdentification Service
     /// </summary>
@@ -17,7 +17,7 @@ public class TypeIdentificationService : ITypeIdentificationService
     /// <param name="repository">Repository instance TypeIdentification</param>
     /// <param name="logger">Logger instance service</param>
     /// <exception cref="ArgumentNullException">Dependency null exception instances type repository and logger</exception>
-    public TypeIdentificationService(IGenericRepository<TypeIdentification> repository, ILogger<TypeIdentificationService> logger)
+    public TypeIdentificationService(TypeIdentificationRepository repository, ILogger<TypeIdentificationService> logger)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));

@@ -2,12 +2,12 @@
 
 public class UserApplicationService : IUserApplicationService
 {
-    private readonly IGenericRepository<UserApplication> _repository;
+    private readonly UserApplicationRepository _repository;
     private readonly IEncryptService _encryptService;
     private readonly ILogger<UserApplicationService> _logger;
     private readonly ITokenService<User> _tokenService;
 
-    public UserApplicationService(IGenericRepository<UserApplication> repository, IEncryptService encryptService, ILogger<UserApplicationService> logger, ITokenService<User> tokenService)
+    public UserApplicationService(UserApplicationRepository repository, IEncryptService encryptService, ILogger<UserApplicationService> logger, ITokenService<User> tokenService)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _encryptService = encryptService ?? throw new ArgumentNullException(nameof(encryptService));

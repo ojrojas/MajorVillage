@@ -9,12 +9,20 @@
   <ItemGroup>
     <PackageReference Include="Ardalis.Specification" Version="6.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Enums\" />
+    <None Remove="Data\" />
+    <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enums\" />
+    <Folder Include="Data\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlock\Repository\Repository.csproj" />
   </ItemGroup>
 </Project>

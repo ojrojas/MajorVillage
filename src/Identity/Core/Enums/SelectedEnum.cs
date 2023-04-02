@@ -1,9 +1,7 @@
-﻿using System;
-namespace Core.Enums
+﻿namespace Core.Enums;
+
+public enum SelectedEnum
 {
-	public enum SelectedEnum
-	{
-		 FIRST=1, SECOND
-	}
+	 FIRST=1, SECOND
 }
 

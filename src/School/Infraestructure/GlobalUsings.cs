@@ -1,5 +1,4 @@
-﻿global using Core.Interfaces;
-global using Core.Entities;
+﻿global using Core.Entities;
 global using Microsoft.Extensions.Logging;
 global using Microsoft.EntityFrameworkCore;
 global using System.Reflection;

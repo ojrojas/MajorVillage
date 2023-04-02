@@ -48,6 +48,10 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    using var scope = app.Services.CreateScope();
+    var service = scope.ServiceProvider;
+    var initializer = service.GetRequiredService<InitializerDbContext>();
+    await initializer.Run();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

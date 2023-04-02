@@ -2,7 +2,7 @@
 
 public class GetByIdTypeIdentificationTest
 {
-    private readonly IGenericRepository<TypeIdentification> _repository;
+    private readonly TypeIdentificationRepository _repository;
     private readonly ILogger<TypeIdentificationService> _logger;
     private readonly ITypeIdentificationService _typeIdentificationService;
 
@@ -15,7 +15,8 @@ public class GetByIdTypeIdentificationTest
         var logger = LoggerFactory.Create(factory => factory.AddConsole());
         options = new DbContextOptionsBuilder<IdentityDbContext>().UseInMemoryDatabase(databaseName: "in-memory").Options;
         identityDbContext = new IdentityDbContext(options);
-        _repository = new GenericRepository<TypeIdentification>(logger.CreateLogger<GenericRepository<TypeIdentification>>(), identityDbContext);
+        _repository = new TypeIdentificationRepository(
+             logger.CreateLogger<GenericRepository<TypeIdentification>>(), identityDbContext);
         _typeIdentificationService = new TypeIdentificationService(_repository, logger.CreateLogger<TypeIdentificationService>());
     }
 
@@ -33,7 +34,6 @@ public class GetByIdTypeIdentificationTest
         var actionResult = endpoint.HandleAsync(request, default);
 
         Assert.True((actionResult.Result as GetTypeIdentificationByIdResponse).TypeIdentification.Id.Equals(typeIdentificationById));
-
     }
 
     [Fact]

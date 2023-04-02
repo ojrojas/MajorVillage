@@ -5,7 +5,7 @@ public class AttendantService : IAttendantService
     /// <summary>
     /// Generic repository instance type of Attendant
     /// </summary>
-    private readonly IGenericRepository<Attendant> _repository;
+    private readonly AttendantRepository _repository;
     /// <summary>
     /// Logger instance type of Attendant Service
     /// </summary>
@@ -17,7 +17,7 @@ public class AttendantService : IAttendantService
     /// <param name="repository">Repository instance Attendant</param>
     /// <param name="logger">Logger instance service</param>
     /// <exception cref="ArgumentNullException">Dependency null exception instances type repository and logger</exception>
-    public AttendantService(IGenericRepository<Attendant> repository, ILogger<AttendantService> logger)
+    public AttendantService(AttendantRepository repository, ILogger<AttendantService> logger)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));

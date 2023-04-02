@@ -9,4 +9,11 @@ global using Microsoft.Extensions.Logging;
 global using Core.Specifications;
 global using System.Text.Json;
 global using Core.Enums;
-
+global using Microsoft.EntityFrameworkCore;
+global using System.Reflection;
+global using BuildingBlocks.Repository;
+global using BuildingBlocks.Repository.Interfaces;
+global using System;
+global using BuildingBlocks.Repository.Data;
+global using Core.Data;
+global using Core.Repositories;

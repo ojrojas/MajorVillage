@@ -2,7 +2,6 @@
 global using Microsoft.AspNetCore.Mvc;
 global using System.Net;
 global using Core.Interfaces;
-global using Infraestructure.Data;
 global using Infraestructure.Encrypt;
 global using Infraestructure.Token;
 global using Ardalis.ApiEndpoints;
@@ -18,3 +17,10 @@ global using Api.Filters;
 global using Microsoft.EntityFrameworkCore;
 global using Serilog;
 global using Core.Services;
+global using BuildingBlocks.Repository;
+global using BuildingBlocks.Repository.Interfaces;
+global using BuildingBlocks.Repository.Data;
+global using Core.Data;
+global using Core.Repositories;
+
+
