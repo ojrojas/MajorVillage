@@ -1,4 +1,5 @@
-﻿namespace Core.Entities
+﻿
+namespace Core.Entities
 {
     public class Course: BaseEntity, IAggregateRoot
     {

@@ -1,0 +1,10 @@
+﻿global using Microsoft.Extensions.Logging;
+global using Microsoft.EntityFrameworkCore;
+global using System.Reflection;
+global using Ardalis.Specification;
+global using System.Text.Json;
+global using Ardalis.Specification.EntityFrameworkCore;
+global using Microsoft.Extensions.Options;
+global using System.Text;
+global using System.Security.Claims;
+global using BuildingBlocks.Repository.Interfaces;

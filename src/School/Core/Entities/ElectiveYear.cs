@@ -1,7 +1,6 @@
-﻿namespace Core.Entities
+﻿namespace Core.Entities;
+
+public  class ElectiveYear: BaseEntity, IAggregateRoot
 {
-    public  class ElectiveYear: BaseEntity, IAggregateRoot
-    {
-        public int Year { get; set; }
-    }
+    public int Year { get; set; }
 }

@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Tests.Core.Services;
+﻿namespace Tests.Core.Services;
 
 public class UpdateTypeIdentificationTest
 {
-    private readonly IGenericRepository<TypeIdentification> _repository;
+    private readonly TypeIdentificationRepository _repository;
     private readonly ILogger<TypeIdentificationService> _logger;
     private readonly ITypeIdentificationService _typeIdentificationService;
 
@@ -17,9 +15,9 @@ public class UpdateTypeIdentificationTest
         var logger = LoggerFactory.Create(factory => factory.AddConsole());
         options = new DbContextOptionsBuilder<IdentityDbContext>().UseInMemoryDatabase(databaseName: "in-memory").Options;
         identityDbContext = new IdentityDbContext(options);
-        _repository = new GenericRepository<TypeIdentification>(logger.CreateLogger<GenericRepository<TypeIdentification>>(), identityDbContext);
+        _repository = new TypeIdentificationRepository(
+             logger.CreateLogger<GenericRepository<TypeIdentification>>(), identityDbContext);
         _typeIdentificationService = new TypeIdentificationService(_repository, logger.CreateLogger<TypeIdentificationService>());
-
     }
 
     [Fact]

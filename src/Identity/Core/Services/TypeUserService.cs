@@ -2,10 +2,10 @@
 
 public class TypeUserService : ITypeUserService
 {
-    private readonly IGenericRepository<TypeUser> _repository;
+    private readonly TypeUserRepository _repository;
     private readonly ILogger<TypeUserService> _logger;
 
-    public TypeUserService(IGenericRepository<TypeUser> repository, ILogger<TypeUserService> logger)
+    public TypeUserService(TypeUserRepository repository, ILogger<TypeUserService> logger)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));

@@ -1,6 +1,6 @@
 ﻿namespace Api.EndPoints;
 
-[Authorize]
+//[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class GetAllTypeIdentification : EndpointBaseAsync.WithoutRequest.WithResult<GetAllTypeIdentificationResponse>
