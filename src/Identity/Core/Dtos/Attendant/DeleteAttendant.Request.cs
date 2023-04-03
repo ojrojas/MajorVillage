@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class DeleteAttendantRequest: BaseRequest
+public record DeleteAttendantRequest : BaseRequest
 {
 	public Guid Id { get; set; }
 }

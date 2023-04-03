@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class DeleteTypeIdentificationRequest: BaseRequest
+public record DeleteTypeIdentificationRequest : BaseRequest
 {
 	public Guid Id { get; set; }
 }

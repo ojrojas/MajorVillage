@@ -1,23 +1,20 @@
-﻿using System.Runtime.Serialization;
+﻿namespace Api.Exceptions;
 
-namespace Api.Exceptions
+public class IdentityApplicationException : Exception
 {
-    public class IdentityApplicationException : Exception
+    public IdentityApplicationException()
     {
-        public IdentityApplicationException()
-        {
-        }
+    }
 
-        public IdentityApplicationException(string? message) : base(message)
-        {
-        }
+    public IdentityApplicationException(string? message) : base(message)
+    {
+    }
 
-        public IdentityApplicationException(string? message, Exception? innerException) : base(message, innerException)
-        {
-        }
+    public IdentityApplicationException(string? message, Exception? innerException) : base(message, innerException)
+    {
+    }
 
-        protected IdentityApplicationException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
+    protected IdentityApplicationException(SerializationInfo info, StreamingContext context) : base(info, context)
+    {
     }
 }

@@ -1,11 +1,10 @@
-﻿namespace Core.Dtos
-{
-    public class CreateCourseResponse : BaseResponse
-    {
-        public CreateCourseResponse(Guid correlationId) : base(correlationId)
-        {
-        }
+﻿namespace Core.Dtos;
 
-        public Course CourseCreated { get; set; }
+public record CreateCourseResponse : BaseResponse
+{
+    public CreateCourseResponse(Guid correlationId) : base(correlationId)
+    {
     }
+
+    public Course CourseCreated { get; set; }
 }

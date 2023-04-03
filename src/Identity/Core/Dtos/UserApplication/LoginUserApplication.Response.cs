@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class LoginUserApplicationResponse: BaseResponse
+public record LoginUserApplicationResponse : BaseResponse
 {
 	public LoginUserApplicationResponse(Guid CorrelationId): base(CorrelationId)
 	{

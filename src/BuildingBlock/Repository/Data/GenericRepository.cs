@@ -1,5 +1,4 @@
-﻿
-namespace BuildingBlocks.Repository.Data;
+﻿namespace BuildingBlocks.Repository.Data;
 
 public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRoot
 {
@@ -29,18 +28,18 @@ public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRo
 
     public async Task<T> CreateAsync(T entity, CancellationToken cancellationToken)
     {
-        await _context.Set<T>().AddAsync(entity, cancellationToken);
+        var entityCreated = await _context.Set<T>().AddAsync(entity, cancellationToken);
         await SaveAsync(cancellationToken);
         _logger.LogInformation($"Created entity {entity} type {typeof(T)}, model {JsonSerializer.Serialize(entity)}");
-        return entity;
+        return entityCreated.Entity;
     }
 
     public async Task<T> UpdateAsync(T entity, CancellationToken cancellationToken)
     {
-        _context.Entry(entity).State = EntityState.Modified;
+        var entityUpdate = _context.Set<T>().Update(entity);
         await SaveAsync(cancellationToken);
         _logger.LogInformation($"Updated entity {entity} type {typeof(T)}, model {JsonSerializer.Serialize(entity)}");
-        return entity;
+        return entityUpdate.Entity;
     }
 
     private async Task SaveAsync(CancellationToken cancellationToken)
@@ -51,11 +50,10 @@ public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRo
     public async Task<T> DeleteAsync(T entity, CancellationToken cancellationToken)
     {
         _logger.LogInformation($"Delete entity {entity} type {typeof(T)}, model {JsonSerializer.Serialize(entity)}");
-        _context.Set<T>().Remove(entity);
+        var entityRemoved = _context.Set<T>().Remove(entity);
         await SaveAsync(cancellationToken);
-        return entity;
+        return entityRemoved.Entity;
     }
-
 
     public async Task<int> CountAsync(CancellationToken cancellationToken)
     {
@@ -63,7 +61,6 @@ public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRo
         _logger.LogInformation(message: $"Count entities: {counts} type {typeof(T)}");
         return counts;
     }
-
 
     public async Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {

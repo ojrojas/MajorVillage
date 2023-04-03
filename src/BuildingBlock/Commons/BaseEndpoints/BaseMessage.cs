@@ -1,6 +1,6 @@
-namespace Core.BaseEndpoints;
+namespace BuildingBlocks.Commons.BaseEndpoints;
 
-public abstract class BaseMessage
+public abstract record BaseMessage
 {
     protected Guid correlationId = Guid.NewGuid();
     public Guid CorrelationId() => correlationId;

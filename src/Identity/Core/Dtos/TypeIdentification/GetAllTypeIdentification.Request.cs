@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class GetAllTypeIdentificationRequest: BaseRequest
+public record GetAllTypeIdentificationRequest : BaseRequest
 {
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class UpdateTypeUserRequest: BaseRequest
+public record UpdateTypeUserRequest : BaseRequest
 {
     public TypeUser TypeUser { get; set; }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class UpdateAttendantRequest: BaseRequest
+public record UpdateAttendantRequest : BaseRequest
 {
     public Attendant Attendant { get; set; }
 }

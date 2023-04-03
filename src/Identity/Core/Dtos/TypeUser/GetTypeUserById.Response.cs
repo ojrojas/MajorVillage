@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class GetTypeUserByIdResponse: BaseResponse
+public record GetTypeUserByIdResponse : BaseResponse
 {
 	public GetTypeUserByIdResponse(Guid CorrelationId): base(CorrelationId)
 	{

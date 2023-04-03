@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class DeleteTypeUserResponse: BaseResponse
+public record DeleteTypeUserResponse : BaseResponse
 {
 	public DeleteTypeUserResponse(Guid CorrelationId): base(CorrelationId)
 	{
