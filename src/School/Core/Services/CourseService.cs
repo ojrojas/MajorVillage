@@ -27,7 +27,16 @@ public class CourseService
         return response;
     }
 
-    public async ValueTask<GetAllCoursesResponse> GetAllCousesAsync(GetAllCoursesRequest request, CancellationToken cancellationToken)
+    public async ValueTask<DeleteCourseResponse> DeleteCourseAsync(DeleteCourseRequest request, CancellationToken cancellationToken)
+    {
+        DeleteCourseResponse response = new(request.CorrelationId());
+        _logger.LogInformation($"Delete course request id: {response.CorrelationId}, entity: {JsonSerializer.Serialize(request.Id)}");
+        var entity = await _repository.GetByIdAsync(request.Id, cancellationToken);
+        response.CourseDeleted = await _repository.DeleteAsync(entity, cancellationToken);
+        return response;
+    }
+
+    public async ValueTask<GetAllCoursesResponse> GetAllCoursesAsync(GetAllCoursesRequest request, CancellationToken cancellationToken)
     {
         GetAllCoursesResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Get all courses request id: {response.CorrelationId}");
@@ -35,7 +44,7 @@ public class CourseService
         return response;
     }
 
-    public async ValueTask<GetAllCoursesByElectiveYearResponse> GetAllCousesByElectiveYearAsync(
+    public async ValueTask<GetAllCoursesByElectiveYearResponse> GetAllCoursesByElectiveYearAsync(
         GetAllCoursesByElectiveYearRequest request, CancellationToken cancellationToken)
     {
         GetAllCoursesByElectiveYearResponse response = new(request.CorrelationId());

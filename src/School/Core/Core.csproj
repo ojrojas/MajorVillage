@@ -17,6 +17,9 @@
 	  <None Remove="Repositories\" />
 	  <None Remove="Services\" />
 	  <None Remove="Specifications\" />
+	  <None Remove="Dtos\ElectiveYear\" />
+	  <None Remove="Dtos\Enrollment\" />
+	  <None Remove="Dtos\Enrollment\DeleteEnrollment.Request" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Interfaces\" />
@@ -24,6 +27,8 @@
 	  <Folder Include="Repositories\" />
 	  <Folder Include="Services\" />
 	  <Folder Include="Specifications\" />
+	  <Folder Include="Dtos\ElectiveYear\" />
+	  <Folder Include="Dtos\Enrollment\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\..\BuildingBlock\Repository\Repository.csproj" />
