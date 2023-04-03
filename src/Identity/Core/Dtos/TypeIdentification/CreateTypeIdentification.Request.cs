@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class CreateTypeIdentificationRequest: BaseRequest
+public record CreateTypeIdentificationRequest : BaseRequest
 {
     public TypeIdentification TypeIdentification { get; set; }
 }

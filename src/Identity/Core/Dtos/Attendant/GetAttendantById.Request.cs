@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class GetAttendantByIdRequest: BaseRequest
+public record GetAttendantByIdRequest : BaseRequest
 {
 	public Guid Id { get; set; }
 }

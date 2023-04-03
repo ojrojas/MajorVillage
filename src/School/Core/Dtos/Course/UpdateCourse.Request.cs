@@ -1,7 +1,6 @@
-﻿namespace Core.Dtos
+﻿namespace Core.Dtos;
+
+public record UpdateCourseRequest : BaseRequest
 {
-    public  class UpdateCourse: BaseRequest
-    {
-        public Course Course { get; set; }
-    }
+    public Course Course { get; set; }
 }

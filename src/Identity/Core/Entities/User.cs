@@ -14,5 +14,6 @@
         public string Contact { get; set; }
         public TypeUser? TypeUser { get; set; }
         public Guid TypeUserId { get; set; }
+        public bool HasHealtInsurance { get; set; }
     }
 }

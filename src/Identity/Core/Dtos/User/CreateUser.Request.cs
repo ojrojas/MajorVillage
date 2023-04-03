@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class CreateUserRequest: BaseRequest
+public record CreateUserRequest : BaseRequest
 {
     public User User { get; set; }
 }

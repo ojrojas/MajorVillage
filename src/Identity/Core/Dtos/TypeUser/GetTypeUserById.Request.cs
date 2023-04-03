@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class GetTypeUserByIdRequest: BaseRequest
+public record GetTypeUserByIdRequest : BaseRequest
 {
 	public Guid Id { get; set; }
 }

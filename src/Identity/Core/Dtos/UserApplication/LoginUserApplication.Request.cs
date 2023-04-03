@@ -1,5 +1,5 @@
 ﻿namespace Core.Dtos;
-public class LoginUserApplicationRequest : BaseRequest 
+public record LoginUserApplicationRequest : BaseRequest 
 {
     [DataType(DataType.EmailAddress)]
     public string UserName { get; set; }

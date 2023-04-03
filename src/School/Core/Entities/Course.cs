@@ -1,8 +1,7 @@
-﻿
-namespace Core.Entities
+﻿namespace Core.Entities;
+
+public class Course: BaseEntity, IAggregateRoot
 {
-    public class Course: BaseEntity, IAggregateRoot
-    {
-        public string Name { get; set; }
-    }
+    public string Name { get; set; }
+    public IList<Guid> StudentsId { get; set; }
 }

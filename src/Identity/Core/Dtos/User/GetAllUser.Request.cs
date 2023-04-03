@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos;
 
-public class GetAllUserRequest: BaseRequest
+public record GetAllUserRequest : BaseRequest
 {
 }
 

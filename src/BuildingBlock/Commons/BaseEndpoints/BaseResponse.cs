@@ -1,6 +1,6 @@
-namespace Core.BaseEndpoints;
+namespace BuildingBlocks.Commons.BaseEndpoints;
 
-public class BaseResponse : BaseMessage
+public record BaseResponse : BaseMessage
 {
     public BaseResponse(Guid correlationId) : base()
     {
