@@ -1,0 +1,887 @@
+2023-04-04 19:47:10.891 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 19:47:10.941 -05:00 [DBG] Hosting starting
+2023-04-04 19:47:10.955 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 19:47:10.959 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 19:47:10.961 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 19:47:10.963 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 19:47:10.964 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 19:47:10.967 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 19:47:10.968 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 19:47:10.971 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 19:47:10.971 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 19:47:10.972 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 19:47:10.973 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 19:47:11.189 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 19:47:11.190 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 19:47:11.190 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 19:47:11.190 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 19:47:11.190 -05:00 [INF] Hosting environment: Development
+2023-04-04 19:47:11.190 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 19:47:11.190 -05:00 [DBG] Hosting started
+2023-04-04 19:47:11.205 -05:00 [DBG] Connection id "0HMPLDT59C71L" accepted.
+2023-04-04 19:47:11.205 -05:00 [DBG] Connection id "0HMPLDT59C71L" started.
+2023-04-04 19:47:12.205 -05:00 [DBG] Connection id "0HMPLDT59C71L" received FIN.
+2023-04-04 19:47:12.210 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 19:47:12.227 -05:00 [DBG] Connection id "0HMPLDT59C71L" stopped.
+2023-04-04 19:47:12.229 -05:00 [DBG] Connection id "0HMPLDT59C71L" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 19:47:12.256 -05:00 [DBG] Connection id "0HMPLDT59C71M" accepted.
+2023-04-04 19:47:12.256 -05:00 [DBG] Connection id "0HMPLDT59C71M" started.
+2023-04-04 19:47:12.268 -05:00 [DBG] Connection id "0HMPLDT59C71N" accepted.
+2023-04-04 19:47:12.268 -05:00 [DBG] Connection id "0HMPLDT59C71N" started.
+2023-04-04 19:47:12.321 -05:00 [DBG] Connection 0HMPLDT59C71M established using the following protocol: "Tls12"
+2023-04-04 19:47:12.321 -05:00 [DBG] Connection 0HMPLDT59C71N established using the following protocol: "Tls12"
+2023-04-04 19:47:12.344 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 19:47:12.344 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 19:47:12.344 -05:00 [VRB] All hosts are allowed.
+2023-04-04 19:47:12.354 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 19:47:12.355 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 19:47:12.409 -05:00 [DBG] Connection id "0HMPLDT59C71M" completed keep alive response.
+2023-04-04 19:47:12.410 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 66.4079ms
+2023-04-04 19:47:12.490 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 19:47:12.490 -05:00 [VRB] All hosts are allowed.
+2023-04-04 19:47:12.491 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 19:47:12.491 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 19:47:12.524 -05:00 [DBG] Connection id "0HMPLDT59C71N" completed keep alive response.
+2023-04-04 19:47:12.525 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 34.4351ms
+2023-04-04 19:49:08.040 -05:00 [DBG] Connection id "0HMPLDT59C71N" received FIN.
+2023-04-04 19:49:08.041 -05:00 [DBG] Connection id "0HMPLDT59C71M" received FIN.
+2023-04-04 19:49:08.046 -05:00 [DBG] Connection id "0HMPLDT59C71N" disconnecting.
+2023-04-04 19:49:08.049 -05:00 [DBG] Connection id "0HMPLDT59C71N" stopped.
+2023-04-04 19:49:08.051 -05:00 [DBG] Connection id "0HMPLDT59C71M" disconnecting.
+2023-04-04 19:49:08.055 -05:00 [DBG] Connection id "0HMPLDT59C71N" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 19:49:08.055 -05:00 [DBG] Connection id "0HMPLDT59C71M" sending FIN because: "The client closed the connection."
+2023-04-04 19:49:08.058 -05:00 [DBG] Connection id "0HMPLDT59C71M" stopped.
+2023-04-04 22:50:39.823 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 22:50:39.876 -05:00 [DBG] Hosting starting
+2023-04-04 22:50:39.890 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 22:50:39.894 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 22:50:39.897 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 22:50:39.899 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 22:50:39.900 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 22:50:39.902 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 22:50:39.903 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 22:50:39.906 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 22:50:39.906 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 22:50:39.908 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 22:50:39.908 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 22:50:40.084 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 22:50:40.085 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 22:50:40.085 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 22:50:40.085 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 22:50:40.085 -05:00 [INF] Hosting environment: Development
+2023-04-04 22:50:40.085 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 22:50:40.085 -05:00 [DBG] Hosting started
+2023-04-04 22:50:40.118 -05:00 [DBG] Connection id "0HMPLH3M6HU3V" accepted.
+2023-04-04 22:50:40.119 -05:00 [DBG] Connection id "0HMPLH3M6HU3V" started.
+2023-04-04 22:50:41.091 -05:00 [DBG] Connection id "0HMPLH3M6HU3V" received FIN.
+2023-04-04 22:50:41.101 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 22:50:41.125 -05:00 [DBG] Connection id "0HMPLH3M6HU3V" stopped.
+2023-04-04 22:50:41.127 -05:00 [DBG] Connection id "0HMPLH3M6HU3V" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 22:50:41.201 -05:00 [DBG] Connection id "0HMPLH3M6HU40" accepted.
+2023-04-04 22:50:41.202 -05:00 [DBG] Connection id "0HMPLH3M6HU40" started.
+2023-04-04 22:50:41.205 -05:00 [DBG] Connection id "0HMPLH3M6HU40" received FIN.
+2023-04-04 22:50:41.208 -05:00 [DBG] Connection id "0HMPLH3M6HU41" accepted.
+2023-04-04 22:50:41.208 -05:00 [DBG] Connection id "0HMPLH3M6HU41" started.
+2023-04-04 22:50:41.236 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 22:50:41.237 -05:00 [DBG] Connection id "0HMPLH3M6HU40" stopped.
+2023-04-04 22:50:41.237 -05:00 [DBG] Connection id "0HMPLH3M6HU40" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 22:50:41.241 -05:00 [DBG] Connection 0HMPLH3M6HU41 established using the following protocol: "Tls12"
+2023-04-04 22:50:41.261 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 22:50:41.262 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 22:50:41.262 -05:00 [VRB] All hosts are allowed.
+2023-04-04 22:50:41.270 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 22:50:41.270 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 22:50:41.316 -05:00 [DBG] Connection id "0HMPLH3M6HU41" completed keep alive response.
+2023-04-04 22:50:41.317 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 56.6275ms
+2023-04-04 22:50:42.094 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/favicon-32x32.png - -
+2023-04-04 22:50:42.094 -05:00 [VRB] All hosts are allowed.
+2023-04-04 22:50:42.095 -05:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-04-04 22:50:42.095 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 22:50:42.096 -05:00 [VRB] Range header's value is empty.
+2023-04-04 22:50:42.098 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-04-04 22:50:42.098 -05:00 [DBG] Connection id "0HMPLH3M6HU41" completed keep alive response.
+2023-04-04 22:50:42.098 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/favicon-32x32.png - - - 200 628 image/png 3.8858ms
+2023-04-04 22:50:42.109 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 22:50:42.109 -05:00 [VRB] All hosts are allowed.
+2023-04-04 22:50:42.109 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 22:50:42.109 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 22:50:42.151 -05:00 [DBG] Connection id "0HMPLH3M6HU41" completed keep alive response.
+2023-04-04 22:50:42.152 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 42.4650ms
+2023-04-04 22:52:17.955 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 22:52:18.009 -05:00 [DBG] Hosting starting
+2023-04-04 22:52:18.022 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 22:52:18.026 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 22:52:18.028 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 22:52:18.029 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 22:52:18.031 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 22:52:18.033 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 22:52:18.033 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 22:52:18.037 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 22:52:18.037 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 22:52:18.038 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 22:52:18.038 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 22:52:18.276 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 22:52:18.276 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 22:52:18.276 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 22:52:18.276 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 22:52:18.276 -05:00 [INF] Hosting environment: Development
+2023-04-04 22:52:18.276 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 22:52:18.277 -05:00 [DBG] Hosting started
+2023-04-04 22:52:18.299 -05:00 [DBG] Connection id "0HMPLH4JESF29" accepted.
+2023-04-04 22:52:18.300 -05:00 [DBG] Connection id "0HMPLH4JESF29" started.
+2023-04-04 22:52:19.298 -05:00 [DBG] Connection id "0HMPLH4JESF29" received FIN.
+2023-04-04 22:52:19.316 -05:00 [DBG] Connection id "0HMPLH4JESF2A" accepted.
+2023-04-04 22:52:19.316 -05:00 [DBG] Connection id "0HMPLH4JESF2A" started.
+2023-04-04 22:52:19.302 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 22:52:19.319 -05:00 [DBG] Connection id "0HMPLH4JESF29" stopped.
+2023-04-04 22:52:19.321 -05:00 [DBG] Connection id "0HMPLH4JESF29" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 22:52:19.323 -05:00 [DBG] Connection id "0HMPLH4JESF2B" accepted.
+2023-04-04 22:52:19.323 -05:00 [DBG] Connection id "0HMPLH4JESF2B" started.
+2023-04-04 22:52:19.399 -05:00 [DBG] Connection 0HMPLH4JESF2A established using the following protocol: "Tls12"
+2023-04-04 22:52:19.399 -05:00 [DBG] Connection 0HMPLH4JESF2B established using the following protocol: "Tls12"
+2023-04-04 22:52:19.421 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 22:52:19.421 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 22:52:19.422 -05:00 [VRB] All hosts are allowed.
+2023-04-04 22:52:19.431 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 22:52:19.431 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 22:52:19.483 -05:00 [DBG] Connection id "0HMPLH4JESF2B" completed keep alive response.
+2023-04-04 22:52:19.484 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 63.2138ms
+2023-04-04 22:52:19.552 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 22:52:19.552 -05:00 [VRB] All hosts are allowed.
+2023-04-04 22:52:19.553 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 22:52:19.553 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 22:52:19.597 -05:00 [DBG] Connection id "0HMPLH4JESF2A" completed keep alive response.
+2023-04-04 22:52:19.597 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 44.9404ms
+2023-04-04 22:54:15.370 -05:00 [DBG] Connection id "0HMPLH4JESF2A" received FIN.
+2023-04-04 22:54:15.370 -05:00 [DBG] Connection id "0HMPLH4JESF2B" received FIN.
+2023-04-04 22:54:15.398 -05:00 [DBG] Connection id "0HMPLH4JESF2B" sending FIN because: "The client closed the connection."
+2023-04-04 22:54:15.398 -05:00 [DBG] Connection id "0HMPLH4JESF2A" sending FIN because: "The client closed the connection."
+2023-04-04 22:54:15.399 -05:00 [DBG] Connection id "0HMPLH4JESF2B" disconnecting.
+2023-04-04 22:54:15.399 -05:00 [DBG] Connection id "0HMPLH4JESF2A" disconnecting.
+2023-04-04 22:54:15.401 -05:00 [DBG] Connection id "0HMPLH4JESF2A" stopped.
+2023-04-04 22:54:15.401 -05:00 [DBG] Connection id "0HMPLH4JESF2B" stopped.
+2023-04-04 23:02:24.663 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:02:24.717 -05:00 [DBG] Hosting starting
+2023-04-04 23:02:24.730 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:02:24.733 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:02:24.736 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:02:24.737 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:02:24.739 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:02:24.741 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:02:24.742 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:02:24.745 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:02:24.745 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:02:24.747 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:02:24.747 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:02:24.939 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:02:24.939 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:02:24.939 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:02:24.940 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:02:24.940 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:02:24.940 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:02:24.940 -05:00 [DBG] Hosting started
+2023-04-04 23:02:24.962 -05:00 [DBG] Connection id "0HMPLHA88F5UL" accepted.
+2023-04-04 23:02:24.962 -05:00 [DBG] Connection id "0HMPLHA88F5UL" started.
+2023-04-04 23:02:25.960 -05:00 [DBG] Connection id "0HMPLHA88F5UL" received FIN.
+2023-04-04 23:02:25.975 -05:00 [DBG] Connection id "0HMPLHA88F5UM" accepted.
+2023-04-04 23:02:25.976 -05:00 [DBG] Connection id "0HMPLHA88F5UM" started.
+2023-04-04 23:02:25.964 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:02:25.984 -05:00 [DBG] Connection id "0HMPLHA88F5UL" stopped.
+2023-04-04 23:02:25.984 -05:00 [DBG] Connection id "0HMPLHA88F5UN" accepted.
+2023-04-04 23:02:25.985 -05:00 [DBG] Connection id "0HMPLHA88F5UN" started.
+2023-04-04 23:02:25.990 -05:00 [DBG] Connection id "0HMPLHA88F5UL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:02:25.997 -05:00 [DBG] Connection 0HMPLHA88F5UM established using the following protocol: "Tls12"
+2023-04-04 23:02:26.000 -05:00 [DBG] Connection 0HMPLHA88F5UN established using the following protocol: "Tls12"
+2023-04-04 23:02:26.019 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:02:26.020 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:02:26.020 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:02:26.031 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:02:26.031 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:02:26.081 -05:00 [DBG] Connection id "0HMPLHA88F5UM" completed keep alive response.
+2023-04-04 23:02:26.082 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 63.3482ms
+2023-04-04 23:02:26.152 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:02:26.152 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:02:26.153 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:02:26.153 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:02:26.198 -05:00 [DBG] Connection id "0HMPLHA88F5UN" completed keep alive response.
+2023-04-04 23:02:26.198 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 45.9213ms
+2023-04-04 23:03:16.389 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:03:16.445 -05:00 [DBG] Hosting starting
+2023-04-04 23:03:16.458 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:03:16.461 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:03:16.463 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:03:16.465 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:03:16.466 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:03:16.468 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:03:16.469 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:03:16.472 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:03:16.473 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:03:16.474 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:03:16.474 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:03:16.680 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:03:16.681 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:03:16.681 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:03:16.681 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:03:16.682 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:03:16.682 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:03:16.682 -05:00 [DBG] Hosting started
+2023-04-04 23:03:16.692 -05:00 [DBG] Connection id "0HMPLHANLPVK9" accepted.
+2023-04-04 23:03:16.692 -05:00 [DBG] Connection id "0HMPLHANLPVK9" started.
+2023-04-04 23:03:17.689 -05:00 [DBG] Connection id "0HMPLHANLPVK9" received FIN.
+2023-04-04 23:03:17.705 -05:00 [DBG] Connection id "0HMPLHANLPVKA" accepted.
+2023-04-04 23:03:17.706 -05:00 [DBG] Connection id "0HMPLHANLPVKA" started.
+2023-04-04 23:03:17.693 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:03:17.714 -05:00 [DBG] Connection id "0HMPLHANLPVKB" accepted.
+2023-04-04 23:03:17.715 -05:00 [DBG] Connection id "0HMPLHANLPVKB" started.
+2023-04-04 23:03:17.716 -05:00 [DBG] Connection id "0HMPLHANLPVK9" stopped.
+2023-04-04 23:03:17.718 -05:00 [DBG] Connection id "0HMPLHANLPVK9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:03:17.728 -05:00 [DBG] Connection 0HMPLHANLPVKA established using the following protocol: "Tls12"
+2023-04-04 23:03:17.731 -05:00 [DBG] Connection 0HMPLHANLPVKB established using the following protocol: "Tls12"
+2023-04-04 23:03:17.752 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:03:17.752 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:03:17.752 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:03:17.762 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:03:17.762 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:03:17.813 -05:00 [DBG] Connection id "0HMPLHANLPVKB" completed keep alive response.
+2023-04-04 23:03:17.815 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 63.9136ms
+2023-04-04 23:03:17.880 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:03:17.880 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:03:17.880 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:03:17.880 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:03:17.926 -05:00 [DBG] Connection id "0HMPLHANLPVKB" completed keep alive response.
+2023-04-04 23:03:17.926 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 46.6543ms
+2023-04-04 23:03:23.687 -05:00 [DBG] Connection id "0HMPLHANLPVKA" received FIN.
+2023-04-04 23:03:23.690 -05:00 [DBG] Connection id "0HMPLHANLPVKA" disconnecting.
+2023-04-04 23:03:23.695 -05:00 [DBG] Connection id "0HMPLHANLPVKA" sending FIN because: "The client closed the connection."
+2023-04-04 23:03:23.698 -05:00 [DBG] Connection id "0HMPLHANLPVKA" stopped.
+2023-04-04 23:05:13.725 -05:00 [DBG] Connection id "0HMPLHANLPVKB" received FIN.
+2023-04-04 23:05:13.727 -05:00 [DBG] Connection id "0HMPLHANLPVKB" disconnecting.
+2023-04-04 23:05:13.727 -05:00 [DBG] Connection id "0HMPLHANLPVKB" stopped.
+2023-04-04 23:05:13.728 -05:00 [DBG] Connection id "0HMPLHANLPVKB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:16:37.300 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:16:37.355 -05:00 [DBG] Hosting starting
+2023-04-04 23:16:37.368 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:16:37.371 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:16:37.373 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:16:37.375 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:16:37.376 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:16:37.379 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:16:37.379 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:16:37.383 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:16:37.383 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:16:37.384 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:16:37.384 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:16:37.585 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:16:37.586 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:16:37.586 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:16:37.586 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:16:37.586 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:16:37.586 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:16:37.587 -05:00 [DBG] Hosting started
+2023-04-04 23:16:37.627 -05:00 [DBG] Connection id "0HMPLHI6C3U2V" accepted.
+2023-04-04 23:16:37.627 -05:00 [DBG] Connection id "0HMPLHI6C3U2V" started.
+2023-04-04 23:16:38.624 -05:00 [DBG] Connection id "0HMPLHI6C3U2V" received FIN.
+2023-04-04 23:16:38.628 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:16:38.644 -05:00 [DBG] Connection id "0HMPLHI6C3U2V" stopped.
+2023-04-04 23:16:38.646 -05:00 [DBG] Connection id "0HMPLHI6C3U2V" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:16:38.665 -05:00 [DBG] Connection id "0HMPLHI6C3U30" accepted.
+2023-04-04 23:16:38.665 -05:00 [DBG] Connection id "0HMPLHI6C3U30" started.
+2023-04-04 23:16:38.670 -05:00 [DBG] Connection id "0HMPLHI6C3U31" accepted.
+2023-04-04 23:16:38.670 -05:00 [DBG] Connection id "0HMPLHI6C3U31" started.
+2023-04-04 23:16:38.695 -05:00 [DBG] Connection 0HMPLHI6C3U30 established using the following protocol: "Tls12"
+2023-04-04 23:16:38.698 -05:00 [DBG] Connection 0HMPLHI6C3U31 established using the following protocol: "Tls12"
+2023-04-04 23:16:38.718 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:16:38.718 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:16:38.718 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:16:38.729 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:16:38.729 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:16:38.782 -05:00 [DBG] Connection id "0HMPLHI6C3U31" completed keep alive response.
+2023-04-04 23:16:38.783 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 65.7005ms
+2023-04-04 23:16:38.853 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:16:38.853 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:16:38.853 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:16:38.853 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:16:38.900 -05:00 [DBG] Connection id "0HMPLHI6C3U31" completed keep alive response.
+2023-04-04 23:16:38.900 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.7535ms
+2023-04-04 23:16:43.678 -05:00 [DBG] Connection id "0HMPLHI6C3U30" received FIN.
+2023-04-04 23:16:43.682 -05:00 [DBG] Connection id "0HMPLHI6C3U30" disconnecting.
+2023-04-04 23:16:43.683 -05:00 [DBG] Connection id "0HMPLHI6C3U30" sending FIN because: "The client closed the connection."
+2023-04-04 23:16:43.687 -05:00 [DBG] Connection id "0HMPLHI6C3U30" stopped.
+2023-04-04 23:18:20.905 -05:00 [DBG] Connection id "0HMPLHI6C3U32" accepted.
+2023-04-04 23:18:20.905 -05:00 [DBG] Connection id "0HMPLHI6C3U32" started.
+2023-04-04 23:18:20.934 -05:00 [DBG] Connection 0HMPLHI6C3U32 established using the following protocol: "Tls12"
+2023-04-04 23:18:20.940 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:18:20.941 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:18:20.941 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:18:20.941 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:18:20.942 -05:00 [DBG] Connection id "0HMPLHI6C3U32" completed keep alive response.
+2023-04-04 23:18:20.942 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 1.7851ms
+2023-04-04 23:18:34.682 -05:00 [DBG] Connection id "0HMPLHI6C3U31" received FIN.
+2023-04-04 23:18:34.683 -05:00 [DBG] Connection id "0HMPLHI6C3U31" sending FIN because: "The client closed the connection."
+2023-04-04 23:18:34.684 -05:00 [DBG] Connection id "0HMPLHI6C3U31" disconnecting.
+2023-04-04 23:18:34.685 -05:00 [DBG] Connection id "0HMPLHI6C3U31" stopped.
+2023-04-04 23:26:23.068 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:26:23.130 -05:00 [DBG] Hosting starting
+2023-04-04 23:26:23.143 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:26:23.146 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:26:23.149 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:26:23.150 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:26:23.152 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:26:23.154 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:26:23.155 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:26:23.158 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:26:23.158 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:26:23.159 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:26:23.160 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:26:23.338 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:26:23.338 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:26:23.338 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:26:23.339 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:26:23.339 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:26:23.339 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:26:23.339 -05:00 [DBG] Hosting started
+2023-04-04 23:26:23.368 -05:00 [DBG] Connection id "0HMPLHNKU61V9" accepted.
+2023-04-04 23:26:23.369 -05:00 [DBG] Connection id "0HMPLHNKU61V9" started.
+2023-04-04 23:26:24.370 -05:00 [DBG] Connection id "0HMPLHNKU61V9" received FIN.
+2023-04-04 23:26:24.380 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:26:24.402 -05:00 [DBG] Connection id "0HMPLHNKU61V9" stopped.
+2023-04-04 23:26:24.405 -05:00 [DBG] Connection id "0HMPLHNKU61V9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:26:24.504 -05:00 [DBG] Connection id "0HMPLHNKU61VA" accepted.
+2023-04-04 23:26:24.504 -05:00 [DBG] Connection id "0HMPLHNKU61VA" started.
+2023-04-04 23:26:24.504 -05:00 [DBG] Connection id "0HMPLHNKU61VA" received FIN.
+2023-04-04 23:26:24.505 -05:00 [DBG] Connection id "0HMPLHNKU61VB" accepted.
+2023-04-04 23:26:24.505 -05:00 [DBG] Connection id "0HMPLHNKU61VB" started.
+2023-04-04 23:26:24.527 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:26:24.528 -05:00 [DBG] Connection id "0HMPLHNKU61VA" stopped.
+2023-04-04 23:26:24.528 -05:00 [DBG] Connection id "0HMPLHNKU61VA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:26:24.538 -05:00 [DBG] Connection 0HMPLHNKU61VB established using the following protocol: "Tls12"
+2023-04-04 23:26:24.558 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:26:24.559 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:26:24.559 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:26:24.568 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:26:24.569 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:26:24.617 -05:00 [DBG] Connection id "0HMPLHNKU61VB" completed keep alive response.
+2023-04-04 23:26:24.619 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 60.7992ms
+2023-04-04 23:26:24.676 -05:00 [DBG] Connection id "0HMPLHNKU61VB" received FIN.
+2023-04-04 23:26:24.677 -05:00 [DBG] Connection id "0HMPLHNKU61VB" sending FIN because: "The client closed the connection."
+2023-04-04 23:26:24.677 -05:00 [DBG] Connection id "0HMPLHNKU61VB" disconnecting.
+2023-04-04 23:26:24.678 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/favicon-32x32.png - -
+2023-04-04 23:26:24.678 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:26:24.679 -05:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-04-04 23:26:24.679 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:26:24.681 -05:00 [VRB] Range header's value is empty.
+2023-04-04 23:26:24.682 -05:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2023-04-04 23:26:24.683 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-04-04 23:26:24.683 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/favicon-32x32.png - - - 0 628 image/png 4.8983ms
+2023-04-04 23:26:24.684 -05:00 [DBG] Connection id "0HMPLHNKU61VB" stopped.
+2023-04-04 23:26:24.693 -05:00 [DBG] Connection id "0HMPLHNKU61VC" accepted.
+2023-04-04 23:26:24.694 -05:00 [DBG] Connection id "0HMPLHNKU61VC" started.
+2023-04-04 23:26:24.719 -05:00 [DBG] Connection 0HMPLHNKU61VC established using the following protocol: "Tls12"
+2023-04-04 23:26:24.722 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:26:24.722 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:26:24.722 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:26:24.722 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:26:24.769 -05:00 [DBG] Connection id "0HMPLHNKU61VC" completed keep alive response.
+2023-04-04 23:26:24.770 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.3311ms
+2023-04-04 23:27:49.503 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:27:49.504 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:27:49.504 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:27:49.505 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:27:49.508 -05:00 [DBG] Connection id "0HMPLHNKU61VC" completed keep alive response.
+2023-04-04 23:27:49.509 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 7.0974ms
+2023-04-04 23:27:49.588 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:27:49.588 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:27:49.588 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:27:49.589 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:27:49.599 -05:00 [DBG] Connection id "0HMPLHNKU61VC" completed keep alive response.
+2023-04-04 23:27:49.600 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.2657ms
+2023-04-04 23:29:45.479 -05:00 [DBG] Connection id "0HMPLHNKU61VC" received FIN.
+2023-04-04 23:29:45.482 -05:00 [DBG] Connection id "0HMPLHNKU61VC" sending FIN because: "The client closed the connection."
+2023-04-04 23:29:45.484 -05:00 [DBG] Connection id "0HMPLHNKU61VC" disconnecting.
+2023-04-04 23:29:45.510 -05:00 [DBG] Connection id "0HMPLHNKU61VC" stopped.
+2023-04-04 23:39:42.785 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:39:42.842 -05:00 [DBG] Hosting starting
+2023-04-04 23:39:42.855 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:39:42.859 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:39:42.861 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:39:42.862 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:39:42.864 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:39:42.866 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:39:42.867 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:39:42.870 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:39:42.870 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:39:42.872 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:39:42.872 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:39:43.076 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:39:43.076 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:39:43.076 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:39:43.077 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:39:43.077 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:39:43.077 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:39:43.077 -05:00 [DBG] Hosting started
+2023-04-04 23:39:43.107 -05:00 [DBG] Connection id "0HMPLHV392QI5" accepted.
+2023-04-04 23:39:43.107 -05:00 [DBG] Connection id "0HMPLHV392QI5" started.
+2023-04-04 23:39:44.105 -05:00 [DBG] Connection id "0HMPLHV392QI5" received FIN.
+2023-04-04 23:39:44.109 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:39:44.125 -05:00 [DBG] Connection id "0HMPLHV392QI5" stopped.
+2023-04-04 23:39:44.127 -05:00 [DBG] Connection id "0HMPLHV392QI5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:39:44.146 -05:00 [DBG] Connection id "0HMPLHV392QI6" accepted.
+2023-04-04 23:39:44.147 -05:00 [DBG] Connection id "0HMPLHV392QI6" started.
+2023-04-04 23:39:44.154 -05:00 [DBG] Connection id "0HMPLHV392QI7" accepted.
+2023-04-04 23:39:44.154 -05:00 [DBG] Connection id "0HMPLHV392QI7" started.
+2023-04-04 23:39:44.176 -05:00 [DBG] Connection 0HMPLHV392QI6 established using the following protocol: "Tls12"
+2023-04-04 23:39:44.179 -05:00 [DBG] Connection 0HMPLHV392QI7 established using the following protocol: "Tls12"
+2023-04-04 23:39:44.224 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:39:44.225 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:39:44.225 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:39:44.234 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:39:44.234 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:39:44.284 -05:00 [DBG] Connection id "0HMPLHV392QI7" completed keep alive response.
+2023-04-04 23:39:44.285 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 61.4687ms
+2023-04-04 23:39:44.360 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:39:44.360 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:39:44.360 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:39:44.360 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:39:44.409 -05:00 [DBG] Connection id "0HMPLHV392QI7" completed keep alive response.
+2023-04-04 23:39:44.409 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 49.5346ms
+2023-04-04 23:39:49.733 -05:00 [DBG] Connection id "0HMPLHV392QI6" received FIN.
+2023-04-04 23:39:49.735 -05:00 [DBG] Connection id "0HMPLHV392QI6" sending FIN because: "The client closed the connection."
+2023-04-04 23:39:49.736 -05:00 [DBG] Connection id "0HMPLHV392QI6" disconnecting.
+2023-04-04 23:39:49.738 -05:00 [DBG] Connection id "0HMPLHV392QI6" stopped.
+2023-04-04 23:40:12.582 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:40:12.638 -05:00 [DBG] Hosting starting
+2023-04-04 23:40:12.651 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:40:12.654 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:40:12.657 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:40:12.658 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:40:12.660 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:40:12.662 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:40:12.662 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:40:12.666 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:40:12.666 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:40:12.667 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:40:12.667 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:40:12.861 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:40:12.861 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:40:12.862 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:40:12.862 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:40:12.862 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:40:12.862 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:40:12.862 -05:00 [DBG] Hosting started
+2023-04-04 23:40:12.895 -05:00 [DBG] Connection id "0HMPLHVC55GSH" accepted.
+2023-04-04 23:40:12.896 -05:00 [DBG] Connection id "0HMPLHVC55GSH" started.
+2023-04-04 23:40:13.893 -05:00 [DBG] Connection id "0HMPLHVC55GSH" received FIN.
+2023-04-04 23:40:13.908 -05:00 [DBG] Connection id "0HMPLHVC55GSI" accepted.
+2023-04-04 23:40:13.909 -05:00 [DBG] Connection id "0HMPLHVC55GSI" started.
+2023-04-04 23:40:13.897 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:40:13.936 -05:00 [DBG] Connection id "0HMPLHVC55GSJ" accepted.
+2023-04-04 23:40:13.936 -05:00 [DBG] Connection id "0HMPLHVC55GSJ" started.
+2023-04-04 23:40:13.938 -05:00 [DBG] Connection id "0HMPLHVC55GSH" stopped.
+2023-04-04 23:40:13.941 -05:00 [DBG] Connection id "0HMPLHVC55GSH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:40:13.956 -05:00 [DBG] Connection 0HMPLHVC55GSI established using the following protocol: "Tls12"
+2023-04-04 23:40:13.983 -05:00 [DBG] Connection 0HMPLHVC55GSJ established using the following protocol: "Tls12"
+2023-04-04 23:40:14.003 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:40:14.004 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:40:14.004 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:40:14.014 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:40:14.014 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:40:14.068 -05:00 [DBG] Connection id "0HMPLHVC55GSI" completed keep alive response.
+2023-04-04 23:40:14.069 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 66.0920ms
+2023-04-04 23:40:14.137 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:40:14.138 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:40:14.138 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:40:14.138 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:40:14.186 -05:00 [DBG] Connection id "0HMPLHVC55GSJ" completed keep alive response.
+2023-04-04 23:40:14.186 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.5110ms
+2023-04-04 23:42:09.949 -05:00 [DBG] Connection id "0HMPLHVC55GSI" received FIN.
+2023-04-04 23:42:09.957 -05:00 [DBG] Connection id "0HMPLHVC55GSI" disconnecting.
+2023-04-04 23:42:09.959 -05:00 [DBG] Connection id "0HMPLHVC55GSI" stopped.
+2023-04-04 23:42:09.985 -05:00 [DBG] Connection id "0HMPLHVC55GSJ" received FIN.
+2023-04-04 23:42:09.985 -05:00 [DBG] Connection id "0HMPLHVC55GSI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:42:09.986 -05:00 [DBG] Connection id "0HMPLHVC55GSJ" disconnecting.
+2023-04-04 23:42:09.986 -05:00 [DBG] Connection id "0HMPLHVC55GSJ" stopped.
+2023-04-04 23:42:10.027 -05:00 [DBG] Connection id "0HMPLHVC55GSJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:42:30.240 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:42:30.294 -05:00 [DBG] Hosting starting
+2023-04-04 23:42:30.308 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:42:30.311 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:42:30.316 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:42:30.318 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:42:30.319 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:42:30.322 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:42:30.322 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:42:30.326 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:42:30.326 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:42:30.327 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:42:30.327 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:42:30.517 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:42:30.517 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:42:30.517 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:42:30.517 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:42:30.517 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:42:30.517 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:42:30.517 -05:00 [DBG] Hosting started
+2023-04-04 23:42:30.555 -05:00 [DBG] Connection id "0HMPLI0L5VQIH" accepted.
+2023-04-04 23:42:30.555 -05:00 [DBG] Connection id "0HMPLI0L5VQIH" started.
+2023-04-04 23:42:31.556 -05:00 [DBG] Connection id "0HMPLI0L5VQIH" received FIN.
+2023-04-04 23:42:31.563 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:42:31.584 -05:00 [DBG] Connection id "0HMPLI0L5VQIH" stopped.
+2023-04-04 23:42:31.586 -05:00 [DBG] Connection id "0HMPLI0L5VQIH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:42:31.624 -05:00 [DBG] Connection id "0HMPLI0L5VQII" accepted.
+2023-04-04 23:42:31.625 -05:00 [DBG] Connection id "0HMPLI0L5VQII" started.
+2023-04-04 23:42:31.630 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" accepted.
+2023-04-04 23:42:31.630 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" started.
+2023-04-04 23:42:31.670 -05:00 [DBG] Connection 0HMPLI0L5VQII established using the following protocol: "Tls12"
+2023-04-04 23:42:31.672 -05:00 [DBG] Connection 0HMPLI0L5VQIJ established using the following protocol: "Tls12"
+2023-04-04 23:42:31.691 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:42:31.691 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:42:31.691 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:42:31.700 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:42:31.700 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:42:31.748 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" completed keep alive response.
+2023-04-04 23:42:31.749 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 58.4651ms
+2023-04-04 23:42:31.815 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:42:31.815 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:42:31.816 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:42:31.816 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:42:31.863 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" completed keep alive response.
+2023-04-04 23:42:31.864 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.5040ms
+2023-04-04 23:42:36.633 -05:00 [DBG] Connection id "0HMPLI0L5VQII" received FIN.
+2023-04-04 23:42:36.637 -05:00 [DBG] Connection id "0HMPLI0L5VQII" disconnecting.
+2023-04-04 23:42:36.639 -05:00 [DBG] Connection id "0HMPLI0L5VQII" sending FIN because: "The client closed the connection."
+2023-04-04 23:42:36.642 -05:00 [DBG] Connection id "0HMPLI0L5VQII" stopped.
+2023-04-04 23:44:27.773 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" received FIN.
+2023-04-04 23:44:27.779 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" sending FIN because: "The client closed the connection."
+2023-04-04 23:44:27.780 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" disconnecting.
+2023-04-04 23:44:27.781 -05:00 [DBG] Connection id "0HMPLI0L5VQIJ" stopped.
+2023-04-04 23:45:39.761 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:45:39.816 -05:00 [DBG] Hosting starting
+2023-04-04 23:45:39.829 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:45:39.833 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:45:39.835 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:45:39.837 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:45:39.838 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:45:39.840 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:45:39.841 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:45:39.844 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:45:39.844 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:45:39.845 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:45:39.846 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:45:40.015 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:45:40.041 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:45:40.042 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:45:40.042 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:45:40.042 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:45:40.042 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:45:40.042 -05:00 [DBG] Hosting started
+2023-04-04 23:45:40.047 -05:00 [DBG] Connection id "0HMPLI2DL4EJV" accepted.
+2023-04-04 23:45:40.048 -05:00 [DBG] Connection id "0HMPLI2DL4EJV" started.
+2023-04-04 23:45:41.030 -05:00 [DBG] Connection id "0HMPLI2DL4EJV" received FIN.
+2023-04-04 23:45:41.038 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:45:41.063 -05:00 [DBG] Connection id "0HMPLI2DL4EJV" stopped.
+2023-04-04 23:45:41.066 -05:00 [DBG] Connection id "0HMPLI2DL4EJV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:45:41.087 -05:00 [DBG] Connection id "0HMPLI2DL4EK0" accepted.
+2023-04-04 23:45:41.087 -05:00 [DBG] Connection id "0HMPLI2DL4EK0" started.
+2023-04-04 23:45:41.099 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" accepted.
+2023-04-04 23:45:41.100 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" started.
+2023-04-04 23:45:41.140 -05:00 [DBG] Connection 0HMPLI2DL4EK0 established using the following protocol: "Tls12"
+2023-04-04 23:45:41.142 -05:00 [DBG] Connection 0HMPLI2DL4EK1 established using the following protocol: "Tls12"
+2023-04-04 23:45:41.165 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:45:41.165 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:45:41.166 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:45:41.176 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:45:41.176 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:45:41.224 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" completed keep alive response.
+2023-04-04 23:45:41.225 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 60.4046ms
+2023-04-04 23:45:41.290 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:45:41.290 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:45:41.291 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:45:41.291 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:45:41.335 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" completed keep alive response.
+2023-04-04 23:45:41.335 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 44.8367ms
+2023-04-04 23:45:46.109 -05:00 [DBG] Connection id "0HMPLI2DL4EK0" received FIN.
+2023-04-04 23:45:46.113 -05:00 [DBG] Connection id "0HMPLI2DL4EK0" disconnecting.
+2023-04-04 23:45:46.114 -05:00 [DBG] Connection id "0HMPLI2DL4EK0" stopped.
+2023-04-04 23:45:46.115 -05:00 [DBG] Connection id "0HMPLI2DL4EK0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:47:36.485 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" received FIN.
+2023-04-04 23:47:36.512 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" disconnecting.
+2023-04-04 23:47:36.513 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" stopped.
+2023-04-04 23:47:36.514 -05:00 [DBG] Connection id "0HMPLI2DL4EK1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:52:10.900 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:52:10.956 -05:00 [DBG] Hosting starting
+2023-04-04 23:52:10.971 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:52:10.975 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:52:10.977 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:52:10.979 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:52:10.981 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:52:10.983 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:52:10.984 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:52:10.987 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:52:10.987 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:52:10.989 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:52:10.989 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:52:11.173 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:52:11.174 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:52:11.174 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:52:11.174 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:52:11.175 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:52:11.175 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:52:11.175 -05:00 [DBG] Hosting started
+2023-04-04 23:52:11.220 -05:00 [DBG] Connection id "0HMPLI627KT77" accepted.
+2023-04-04 23:52:11.221 -05:00 [DBG] Connection id "0HMPLI627KT77" started.
+2023-04-04 23:52:12.222 -05:00 [DBG] Connection id "0HMPLI627KT77" received FIN.
+2023-04-04 23:52:12.230 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:52:12.257 -05:00 [DBG] Connection id "0HMPLI627KT77" stopped.
+2023-04-04 23:52:12.259 -05:00 [DBG] Connection id "0HMPLI627KT77" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:52:12.275 -05:00 [DBG] Connection id "0HMPLI627KT78" accepted.
+2023-04-04 23:52:12.275 -05:00 [DBG] Connection id "0HMPLI627KT78" started.
+2023-04-04 23:52:12.290 -05:00 [DBG] Connection id "0HMPLI627KT79" accepted.
+2023-04-04 23:52:12.291 -05:00 [DBG] Connection id "0HMPLI627KT79" started.
+2023-04-04 23:52:12.372 -05:00 [DBG] Connection 0HMPLI627KT78 established using the following protocol: "Tls12"
+2023-04-04 23:52:12.372 -05:00 [DBG] Connection 0HMPLI627KT79 established using the following protocol: "Tls12"
+2023-04-04 23:52:12.392 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:52:12.392 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:52:12.392 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:52:12.402 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:52:12.402 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:52:12.447 -05:00 [DBG] Connection id "0HMPLI627KT79" completed keep alive response.
+2023-04-04 23:52:12.447 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 56.2451ms
+2023-04-04 23:52:12.512 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:52:12.512 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:52:12.512 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:52:12.512 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:52:12.557 -05:00 [DBG] Connection id "0HMPLI627KT79" completed keep alive response.
+2023-04-04 23:52:12.557 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 44.9943ms
+2023-04-04 23:52:17.300 -05:00 [DBG] Connection id "0HMPLI627KT78" received FIN.
+2023-04-04 23:52:17.302 -05:00 [DBG] Connection id "0HMPLI627KT78" disconnecting.
+2023-04-04 23:52:17.302 -05:00 [DBG] Connection id "0HMPLI627KT78" sending FIN because: "The client closed the connection."
+2023-04-04 23:52:17.303 -05:00 [DBG] Connection id "0HMPLI627KT78" stopped.
+2023-04-04 23:52:56.975 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:52:57.038 -05:00 [DBG] Hosting starting
+2023-04-04 23:52:57.052 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:52:57.057 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:52:57.059 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:52:57.061 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:52:57.063 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:52:57.065 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:52:57.065 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:52:57.069 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:52:57.069 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:52:57.070 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:52:57.071 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:52:57.245 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:52:57.246 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:52:57.246 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:52:57.246 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:52:57.246 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:52:57.246 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:52:57.246 -05:00 [DBG] Hosting started
+2023-04-04 23:52:57.294 -05:00 [DBG] Connection id "0HMPLI6FV1EQV" accepted.
+2023-04-04 23:52:57.294 -05:00 [DBG] Connection id "0HMPLI6FV1EQV" started.
+2023-04-04 23:52:58.295 -05:00 [DBG] Connection id "0HMPLI6FV1EQV" received FIN.
+2023-04-04 23:52:58.302 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:52:58.329 -05:00 [DBG] Connection id "0HMPLI6FV1EQV" stopped.
+2023-04-04 23:52:58.331 -05:00 [DBG] Connection id "0HMPLI6FV1EQV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:52:58.350 -05:00 [DBG] Connection id "0HMPLI6FV1ER0" accepted.
+2023-04-04 23:52:58.350 -05:00 [DBG] Connection id "0HMPLI6FV1ER0" started.
+2023-04-04 23:52:58.359 -05:00 [DBG] Connection id "0HMPLI6FV1ER1" accepted.
+2023-04-04 23:52:58.383 -05:00 [DBG] Connection id "0HMPLI6FV1ER1" started.
+2023-04-04 23:52:58.415 -05:00 [DBG] Connection 0HMPLI6FV1ER0 established using the following protocol: "Tls12"
+2023-04-04 23:52:58.418 -05:00 [DBG] Connection 0HMPLI6FV1ER1 established using the following protocol: "Tls12"
+2023-04-04 23:52:58.462 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:52:58.462 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:52:58.462 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:52:58.471 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:52:58.471 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:52:58.520 -05:00 [DBG] Connection id "0HMPLI6FV1ER1" completed keep alive response.
+2023-04-04 23:52:58.520 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 59.2271ms
+2023-04-04 23:52:58.586 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:52:58.586 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:52:58.587 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:52:58.587 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:52:58.630 -05:00 [DBG] Connection id "0HMPLI6FV1ER1" completed keep alive response.
+2023-04-04 23:52:58.630 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 44.1910ms
+2023-04-04 23:53:03.364 -05:00 [DBG] Connection id "0HMPLI6FV1ER0" received FIN.
+2023-04-04 23:53:03.364 -05:00 [DBG] Connection id "0HMPLI6FV1ER0" sending FIN because: "The client closed the connection."
+2023-04-04 23:53:03.365 -05:00 [DBG] Connection id "0HMPLI6FV1ER0" disconnecting.
+2023-04-04 23:53:03.365 -05:00 [DBG] Connection id "0HMPLI6FV1ER0" stopped.
+2023-04-04 23:55:07.698 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:55:07.758 -05:00 [DBG] Hosting starting
+2023-04-04 23:55:07.773 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:55:07.776 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:55:07.779 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:55:07.780 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:55:07.782 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:55:07.785 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:55:07.786 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:55:07.789 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:55:07.789 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:55:07.791 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:55:07.791 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:55:07.974 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:55:08.000 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:55:08.045 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:55:08.045 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:55:08.045 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:55:08.045 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:55:08.045 -05:00 [DBG] Hosting started
+2023-04-04 23:55:08.052 -05:00 [DBG] Connection id "0HMPLI7MU1PHN" accepted.
+2023-04-04 23:55:08.053 -05:00 [DBG] Connection id "0HMPLI7MU1PHN" started.
+2023-04-04 23:55:09.007 -05:00 [DBG] Connection id "0HMPLI7MU1PHN" received FIN.
+2023-04-04 23:55:09.016 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:55:09.047 -05:00 [DBG] Connection id "0HMPLI7MU1PHO" accepted.
+2023-04-04 23:55:09.047 -05:00 [DBG] Connection id "0HMPLI7MU1PHO" started.
+2023-04-04 23:55:09.051 -05:00 [DBG] Connection id "0HMPLI7MU1PHN" stopped.
+2023-04-04 23:55:09.055 -05:00 [DBG] Connection id "0HMPLI7MU1PHN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:55:09.059 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" accepted.
+2023-04-04 23:55:09.059 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" started.
+2023-04-04 23:55:09.107 -05:00 [DBG] Connection 0HMPLI7MU1PHO established using the following protocol: "Tls12"
+2023-04-04 23:55:09.110 -05:00 [DBG] Connection 0HMPLI7MU1PHP established using the following protocol: "Tls12"
+2023-04-04 23:55:09.134 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:55:09.135 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:55:09.135 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:55:09.145 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:55:09.145 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:55:09.192 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" completed keep alive response.
+2023-04-04 23:55:09.193 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 59.8089ms
+2023-04-04 23:55:09.260 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:55:09.260 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:55:09.260 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:55:09.260 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:55:09.309 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" completed keep alive response.
+2023-04-04 23:55:09.309 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.9977ms
+2023-04-04 23:55:14.070 -05:00 [DBG] Connection id "0HMPLI7MU1PHO" received FIN.
+2023-04-04 23:55:14.072 -05:00 [DBG] Connection id "0HMPLI7MU1PHO" sending FIN because: "The client closed the connection."
+2023-04-04 23:55:14.074 -05:00 [DBG] Connection id "0HMPLI7MU1PHO" disconnecting.
+2023-04-04 23:55:14.077 -05:00 [DBG] Connection id "0HMPLI7MU1PHO" stopped.
+2023-04-04 23:57:05.106 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" received FIN.
+2023-04-04 23:57:05.108 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" sending FIN because: "The client closed the connection."
+2023-04-04 23:57:05.136 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" disconnecting.
+2023-04-04 23:57:05.138 -05:00 [DBG] Connection id "0HMPLI7MU1PHP" stopped.
+2023-04-04 23:57:57.309 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-04 23:57:57.363 -05:00 [DBG] Hosting starting
+2023-04-04 23:57:57.377 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-04-04 23:57:57.380 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-04-04 23:57:57.382 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-04-04 23:57:57.384 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-04-04 23:57:57.385 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-04-04 23:57:57.388 -05:00 [DBG] Considering key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} with expiration date 2023-05-24 03:01:57Z as default key.
+2023-04-04 23:57:57.388 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-04-04 23:57:57.392 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-04-04 23:57:57.392 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-04-04 23:57:57.393 -05:00 [DBG] Using key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} as the default key.
+2023-04-04 23:57:57.393 -05:00 [DBG] Key ring with default key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d} was loaded during application startup.
+2023-04-04 23:57:57.561 -05:00 [INF] Now listening on: https://localhost:7209
+2023-04-04 23:57:57.605 -05:00 [INF] Now listening on: http://localhost:5290
+2023-04-04 23:57:57.605 -05:00 [DBG] Loaded hosting startup assembly School.Api
+2023-04-04 23:57:57.605 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-04 23:57:57.605 -05:00 [INF] Hosting environment: Development
+2023-04-04 23:57:57.605 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api
+2023-04-04 23:57:57.605 -05:00 [DBG] Hosting started
+2023-04-04 23:57:57.612 -05:00 [DBG] Connection id "0HMPLI99F3C77" accepted.
+2023-04-04 23:57:57.613 -05:00 [DBG] Connection id "0HMPLI99F3C77" started.
+2023-04-04 23:57:58.595 -05:00 [DBG] Connection id "0HMPLI99F3C77" received FIN.
+2023-04-04 23:57:58.603 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-04 23:57:58.625 -05:00 [DBG] Connection id "0HMPLI99F3C77" stopped.
+2023-04-04 23:57:58.627 -05:00 [DBG] Connection id "0HMPLI99F3C77" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-04 23:57:58.643 -05:00 [DBG] Connection id "0HMPLI99F3C78" accepted.
+2023-04-04 23:57:58.643 -05:00 [DBG] Connection id "0HMPLI99F3C78" started.
+2023-04-04 23:57:58.657 -05:00 [DBG] Connection id "0HMPLI99F3C79" accepted.
+2023-04-04 23:57:58.657 -05:00 [DBG] Connection id "0HMPLI99F3C79" started.
+2023-04-04 23:57:58.690 -05:00 [DBG] Connection 0HMPLI99F3C78 established using the following protocol: "Tls12"
+2023-04-04 23:57:58.691 -05:00 [DBG] Connection 0HMPLI99F3C79 established using the following protocol: "Tls12"
+2023-04-04 23:57:58.711 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/index.html - -
+2023-04-04 23:57:58.712 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-04 23:57:58.712 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:57:58.721 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-04-04 23:57:58.722 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:57:58.770 -05:00 [DBG] Connection id "0HMPLI99F3C79" completed keep alive response.
+2023-04-04 23:57:58.771 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/index.html - - - 200 - text/html;charset=utf-8 59.9985ms
+2023-04-04 23:57:58.831 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - -
+2023-04-04 23:57:58.831 -05:00 [VRB] All hosts are allowed.
+2023-04-04 23:57:58.831 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-04-04 23:57:58.831 -05:00 [DBG] Request did not match any endpoints
+2023-04-04 23:57:58.879 -05:00 [DBG] Connection id "0HMPLI99F3C79" completed keep alive response.
+2023-04-04 23:57:58.879 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7209/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.8624ms
+2023-04-04 23:58:03.669 -05:00 [DBG] Connection id "0HMPLI99F3C78" received FIN.
+2023-04-04 23:58:03.673 -05:00 [DBG] Connection id "0HMPLI99F3C78" disconnecting.
+2023-04-04 23:58:03.674 -05:00 [DBG] Connection id "0HMPLI99F3C78" sending FIN because: "The client closed the connection."
+2023-04-04 23:58:03.678 -05:00 [DBG] Connection id "0HMPLI99F3C78" stopped.
+2023-04-04 23:59:54.322 -05:00 [DBG] Connection id "0HMPLI99F3C79" received FIN.
+2023-04-04 23:59:54.349 -05:00 [DBG] Connection id "0HMPLI99F3C79" disconnecting.
+2023-04-04 23:59:54.350 -05:00 [DBG] Connection id "0HMPLI99F3C79" stopped.
+2023-04-04 23:59:54.351 -05:00 [DBG] Connection id "0HMPLI99F3C79" sending FIN because: "The Socket transport's send loop completed gracefully."

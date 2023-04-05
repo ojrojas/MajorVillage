@@ -42,4 +42,14 @@
      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
    </ProjectReference>
  </ItemGroup>
+ <ItemGroup>
+   <None Remove="Endpoints\Course\" />
+   <None Remove="Endpoints\Enrollment\" />
+   <None Remove="Endpoints\ElectiveYear\" />
+ </ItemGroup>
+ <ItemGroup>
+   <Folder Include="Endpoints\Course\" />
+   <Folder Include="Endpoints\Enrollment\" />
+   <Folder Include="Endpoints\ElectiveYear\" />
+ </ItemGroup>
 </Project>

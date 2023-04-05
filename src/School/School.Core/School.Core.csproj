@@ -15,4 +15,10 @@
     <ProjectReference Include="..\..\BuildingBlock\BuildingBlock.Commons\BuildingBlock.Commons.csproj" />
     <ProjectReference Include="..\..\BuildingBlock\BuildingBlock.Repository\BuildingBlock.Repository.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
 </Project>
