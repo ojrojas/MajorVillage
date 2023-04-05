@@ -1,0 +1,15 @@
+﻿global using System.ComponentModel.DataAnnotations;
+global using System.Reflection;
+global using System.Text.Json;
+global using Ardalis.Specification;
+global using BuildingBlocks.Commons.BaseEndpoints;
+global using BuildingBlocks.Repository.Data;
+global using BuildingBlocks.Repository.Interfaces;
+global using Identity.Core.Data;
+global using Identity.Core.Dtos;
+global using Identity.Core.Entities;
+global using Identity.Core.Interfaces;
+global using Identity.Core.Repositories;
+global using Identity.Core.Specifications;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
