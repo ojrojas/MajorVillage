@@ -1,0 +1,15 @@
+﻿global using Identity.Core.Interfaces;
+global using Identity.Core.Entities;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.EntityFrameworkCore;
+global using System.Reflection;
+global using Ardalis.Specification;
+global using System.Text.Json;
+global using Ardalis.Specification.EntityFrameworkCore;
+global using Identity.Infraestructure.Configuration;
+global using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+global using Microsoft.Extensions.Options;
+global using System.Text;
+global using Microsoft.IdentityModel.Tokens;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;

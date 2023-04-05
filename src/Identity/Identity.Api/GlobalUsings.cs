@@ -1,0 +1,26 @@
+﻿global using System.Net;
+global using System.Runtime.Serialization;
+global using System.Text;
+global using Identity.Api.DI;
+global using Identity.Api.Exceptions;
+global using Identity.Api.Filters;
+global using Ardalis.ApiEndpoints;
+global using BuildingBlocks.Repository.Data;
+global using Identity.Core.Data;
+global using Identity.Core.Dtos;
+global using Identity.Core.Interfaces;
+global using Identity.Core.Repositories;
+global using Identity.Core.Services;
+global using Identity.Infraestructure.Encrypt;
+global using Identity.Infraestructure.Token;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.Filters;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi.Models;
+global using Serilog;
+global using Swashbuckle.AspNetCore.Annotations;
+global using Identity.Infraestructure.Configuration;
+

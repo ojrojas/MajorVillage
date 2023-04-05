@@ -1,0 +1,17 @@
+﻿global using Microsoft.AspNetCore.Mvc.Filters;
+global using Microsoft.AspNetCore.Mvc;
+global using System.Net;
+global using School.Api.Exceptions;
+global using Ardalis.ApiEndpoints;
+global using Microsoft.OpenApi.Models;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;
+global using System.Text;
+global using School.Api.DI;
+global using School.Api.Filters;
+global using Microsoft.EntityFrameworkCore;
+global using Serilog;
+global using Swashbuckle.AspNetCore.Annotations;
+global using System.Runtime.Serialization;
+global using BuildingBlocks.Repository.Data;
+global using School.Core.Data;
