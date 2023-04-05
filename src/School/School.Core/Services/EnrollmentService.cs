@@ -1,6 +1,6 @@
 ﻿namespace School.Core.Services;
 
-public class EnrollmentService
+public class EnrollmentService : IEnrollmentService
 {
     private readonly ILogger<EnrollmentService> _logger;
     private readonly EnrollmentRepository _repository;

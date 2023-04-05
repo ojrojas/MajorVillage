@@ -1,6 +1,6 @@
 ﻿namespace School.Core.Services;
 
-public class CourseService
+public class CourseService : ICourseService
 {
     private readonly ILogger<CourseService> _logger;
     private readonly CourseRepository _repository;

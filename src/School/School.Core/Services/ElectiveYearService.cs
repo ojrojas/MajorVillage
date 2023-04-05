@@ -1,6 +1,6 @@
 ﻿namespace School.Core.Services;
 
-public class ElectiveYearService
+public class ElectiveYearService : IElectiveYearService
 {
     private readonly ILogger<ElectiveYearService> _logger;
     private readonly ElectiveYearRepository _repository;

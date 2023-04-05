@@ -9,9 +9,13 @@ global using Microsoft.IdentityModel.Tokens;
 global using System.Text;
 global using School.Api.DI;
 global using School.Api.Filters;
+global using School.Core.Dtos;
+global using School.Core.Services;
 global using Microsoft.EntityFrameworkCore;
 global using Serilog;
 global using Swashbuckle.AspNetCore.Annotations;
 global using System.Runtime.Serialization;
 global using BuildingBlocks.Repository.Data;
 global using School.Core.Data;
+global using Microsoft.AspNetCore.Authorization;
+
