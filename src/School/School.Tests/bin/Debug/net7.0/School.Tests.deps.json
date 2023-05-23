@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "School.Tests/1.0.0": {
         "dependencies": {
-          "Microsoft.NET.Test.Sdk": "17.5.0",
+          "Microsoft.NET.Test.Sdk": "17.6.0",
           "coverlet.collector": "3.2.0",
           "xunit": "2.4.2",
           "xunit.runner.visualstudio": "2.4.5"
@@ -18,23 +18,23 @@
         }
       },
       "coverlet.collector/3.2.0": {},
-      "Microsoft.CodeCoverage/17.5.0": {
+      "Microsoft.CodeCoverage/17.6.0": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.500.222.62001"
+            "fileVersion": "17.600.1123.17103"
           }
         }
       },
-      "Microsoft.NET.Test.Sdk/17.5.0": {
+      "Microsoft.NET.Test.Sdk/17.6.0": {
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.5.0",
-          "Microsoft.TestPlatform.TestHost": "17.5.0"
+          "Microsoft.CodeCoverage": "17.6.0",
+          "Microsoft.TestPlatform.TestHost": "17.6.0"
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.TestPlatform.ObjectModel/17.5.0": {
+      "Microsoft.TestPlatform.ObjectModel/17.6.0": {
         "dependencies": {
           "NuGet.Frameworks": "5.11.0",
           "System.Reflection.Metadata": "1.6.0"
@@ -134,9 +134,9 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/17.5.0": {
+      "Microsoft.TestPlatform.TestHost/17.6.0": {
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "17.5.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.6.0",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
@@ -1035,19 +1035,19 @@
       "path": "coverlet.collector/3.2.0",
       "hashPath": "coverlet.collector.3.2.0.nupkg.sha512"
     },
-    "Microsoft.CodeCoverage/17.5.0": {
+    "Microsoft.CodeCoverage/17.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6FQo0O6LKDqbCiIgVQhJAf810HSjFlOj7FunWaeOGDKxy8DAbpHzPk4SfBTXz9ytaaceuIIeR6hZgplt09m+ig==",
-      "path": "microsoft.codecoverage/17.5.0",
-      "hashPath": "microsoft.codecoverage.17.5.0.nupkg.sha512"
+      "sha512": "sha512-5v2GwzpR7JEuQUzupjx3zLwn2FutADW/weLzLt726DR3WXxsM+ICPoJG6pxuKFsumtZp890UrVuudTUhsE8Qyg==",
+      "path": "microsoft.codecoverage/17.6.0",
+      "hashPath": "microsoft.codecoverage.17.6.0.nupkg.sha512"
     },
-    "Microsoft.NET.Test.Sdk/17.5.0": {
+    "Microsoft.NET.Test.Sdk/17.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IJ4eSPcsRbwbAZehh1M9KgejSy0u3d0wAdkJytfCh67zOaCl5U3ltruUEe15MqirdRqGmm/ngbjeaVeGapSZxg==",
-      "path": "microsoft.net.test.sdk/17.5.0",
-      "hashPath": "microsoft.net.test.sdk.17.5.0.nupkg.sha512"
+      "sha512": "sha512-tHyg4C6c89QvLv6Utz3xKlba4EeoyJyIz59Q1NrjRENV7gfGnSE6I+sYPIbVOzQttoo2zpHDgOK/p6Hw2OlD7A==",
+      "path": "microsoft.net.test.sdk/17.6.0",
+      "hashPath": "microsoft.net.test.sdk.17.6.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -1063,19 +1063,19 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.ObjectModel/17.5.0": {
+    "Microsoft.TestPlatform.ObjectModel/17.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QwiBJcC/oEA1kojOaB0uPWOIo4i6BYuTBBYJVhUvmXkyYqZ2Ut/VZfgi+enf8LF8J4sjO98oRRFt39MiRorcIw==",
-      "path": "microsoft.testplatform.objectmodel/17.5.0",
-      "hashPath": "microsoft.testplatform.objectmodel.17.5.0.nupkg.sha512"
+      "sha512": "sha512-AA/rrf5zwC5/OBLEOajkhjbVTM3SvxRXy8kcQ8e4mJKojbyZvqqhpfNg362N9vXU94DLg9NUTFOAnoYVT0pTJw==",
+      "path": "microsoft.testplatform.objectmodel/17.6.0",
+      "hashPath": "microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.TestHost/17.5.0": {
+    "Microsoft.TestPlatform.TestHost/17.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X86aikwp9d4SDcBChwzQYZihTPGEtMdDk+9t64emAl7N0Tq+OmlLAoW+Rs+2FB2k6QdUicSlT4QLO2xABRokaw==",
-      "path": "microsoft.testplatform.testhost/17.5.0",
-      "hashPath": "microsoft.testplatform.testhost.17.5.0.nupkg.sha512"
+      "sha512": "sha512-7YdgUcIeCPVKLC7n7LNKDiEHWc7z3brkkYPdUbDnFsvf6WvY9UfzS0VSUJ8P2NgN0CDSD223GCJFSjSBLZRqOQ==",
+      "path": "microsoft.testplatform.testhost/17.6.0",
+      "hashPath": "microsoft.testplatform.testhost.17.6.0.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
