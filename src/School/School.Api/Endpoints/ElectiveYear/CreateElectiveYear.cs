@@ -25,4 +25,3 @@ public class CreateElectiveYear :
         return await _service.CreateElectiveYearAsync(request, cancellationToken);
     }
 }
-

@@ -1,5 +1,4 @@
-﻿
-namespace Identity.Core.Entities;
+﻿namespace Identity.Core.Entities;
 
 public class BaseEntity
 {
