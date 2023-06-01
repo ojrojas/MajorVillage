@@ -2,23 +2,23 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Ardalis.Specification/6.1.0": {
+      "Ardalis.Specification/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Ardalis.Specification.dll": {
+          "lib/net6.0/Ardalis.Specification.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Ardalis.Specification.dll": {
+          "lib/net6.0/Ardalis.Specification.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Ardalis.Specification.EntityFrameworkCore/6.1.0": {
+      "Ardalis.Specification.EntityFrameworkCore/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Ardalis.Specification": "6.1.0",
+          "Ardalis.Specification": "7.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.6"
         },
@@ -1073,8 +1073,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Ardalis.Specification": "6.1.0",
-          "Ardalis.Specification.EntityFrameworkCore": "6.1.0",
+          "Ardalis.Specification": "7.0.0",
+          "Ardalis.Specification.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.Extensions.Logging": "7.0.0"
@@ -1089,40 +1089,37 @@
     }
   },
   "libraries": {
-    "Ardalis.Specification/6.1.0": {
-      "sha512": "3+DIYrDWwqXMSki3v+kjP8MhKcCoUHLGp6Lhz1+rwjMTHKe8pYUEJWjOxsS5umyL+IIzvaVZUZmwXCs7rGHy4Q==",
+    "Ardalis.Specification/7.0.0": {
+      "sha512": "e2bd6AN7V0FGOgmCq+srEPmz03PEIkESoyG/QKHxX76ezI13COvi/2WX09f1wLFKdex9gVqxCtNSBH9pvYFUVQ==",
       "type": "package",
-      "path": "ardalis.specification/6.1.0",
+      "path": "ardalis.specification/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ardalis.specification.6.1.0.nupkg.sha512",
+        "ardalis.specification.7.0.0.nupkg.sha512",
         "ardalis.specification.nuspec",
         "icon.png",
+        "lib/net6.0/Ardalis.Specification.dll",
+        "lib/net6.0/Ardalis.Specification.pdb",
+        "lib/net6.0/Ardalis.Specification.xml",
         "lib/netstandard2.0/Ardalis.Specification.dll",
         "lib/netstandard2.0/Ardalis.Specification.pdb",
         "lib/netstandard2.0/Ardalis.Specification.xml"
       ]
     },
-    "Ardalis.Specification.EntityFrameworkCore/6.1.0": {
-      "sha512": "/d67ScQWCZaUiNqWoBo3vThRuhKou5hW2XGt6a5ibRp62n7vXd+W8c2Votj52ooaxusitE476uCNJAGt3r0CdA==",
+    "Ardalis.Specification.EntityFrameworkCore/7.0.0": {
+      "sha512": "J8eHtJLCVMARRYC6iy88GHZ2ZMGLv204ygWBNbEULUY2mv4xqRW6qCz9CEv/FeFiS6enZIpPTKbOijk/4wNE/A==",
       "type": "package",
-      "path": "ardalis.specification.entityframeworkcore/6.1.0",
+      "path": "ardalis.specification.entityframeworkcore/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ardalis.specification.entityframeworkcore.6.1.0.nupkg.sha512",
+        "ardalis.specification.entityframeworkcore.7.0.0.nupkg.sha512",
         "ardalis.specification.entityframeworkcore.nuspec",
         "icon.png",
         "lib/net6.0/Ardalis.Specification.EntityFrameworkCore.dll",
         "lib/net6.0/Ardalis.Specification.EntityFrameworkCore.pdb",
-        "lib/net6.0/Ardalis.Specification.EntityFrameworkCore.xml",
-        "lib/netstandard2.0/Ardalis.Specification.EntityFrameworkCore.dll",
-        "lib/netstandard2.0/Ardalis.Specification.EntityFrameworkCore.pdb",
-        "lib/netstandard2.0/Ardalis.Specification.EntityFrameworkCore.xml",
-        "lib/netstandard2.1/Ardalis.Specification.EntityFrameworkCore.dll",
-        "lib/netstandard2.1/Ardalis.Specification.EntityFrameworkCore.pdb",
-        "lib/netstandard2.1/Ardalis.Specification.EntityFrameworkCore.xml"
+        "lib/net6.0/Ardalis.Specification.EntityFrameworkCore.xml"
       ]
     },
     "Azure.Core/1.24.0": {
@@ -3279,7 +3276,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Ardalis.Specification >= 6.1.0",
+      "Ardalis.Specification >= 7.0.0",
       "BuildingBlock.Commons >= 1.0.0",
       "BuildingBlock.Repository >= 1.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0"
@@ -3332,7 +3329,7 @@
         "dependencies": {
           "Ardalis.Specification": {
             "target": "Package",
-            "version": "[6.1.0, )"
+            "version": "[7.0.0, )"
           },
           "Microsoft.Extensions.Logging": {
             "target": "Package",

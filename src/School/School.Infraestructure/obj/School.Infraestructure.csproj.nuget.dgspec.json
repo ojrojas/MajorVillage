@@ -95,11 +95,11 @@
           "dependencies": {
             "Ardalis.Specification": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[7.0.0, )"
             },
             "Ardalis.Specification.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -184,7 +184,7 @@
           "dependencies": {
             "Ardalis.Specification": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -248,11 +248,11 @@
           "dependencies": {
             "Ardalis.Specification": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[7.0.0, )"
             },
             "Ardalis.Specification.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
               "target": "Package",

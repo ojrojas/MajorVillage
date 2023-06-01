@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZOyRD7fcPBp0vVtg2qefAtNWGMo5k9qimghtJFIWldHjRoJmmOxPEik7/z0ETaEcjyy9iBEVZ5KQ2PVwdRKIHQ==",
+  "dgSpecHash": "Xaiwt5pqroTzONRCzBDm7kLyv0j7Z/ZQUgPlzwRE4+VYSNtZWqilP2ty8KgGrLdySW0wEWOxInU2kyTrDnfPTw==",
   "success": true,
   "projectFilePath": "/Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Core/School.Core.csproj",
   "expectedPackageFiles": [
-    "/Users/oscarrojas/.nuget/packages/ardalis.specification/6.1.0/ardalis.specification.6.1.0.nupkg.sha512",
-    "/Users/oscarrojas/.nuget/packages/ardalis.specification.entityframeworkcore/6.1.0/ardalis.specification.entityframeworkcore.6.1.0.nupkg.sha512",
+    "/Users/oscarrojas/.nuget/packages/ardalis.specification/7.0.0/ardalis.specification.7.0.0.nupkg.sha512",
+    "/Users/oscarrojas/.nuget/packages/ardalis.specification.entityframeworkcore/7.0.0/ardalis.specification.entityframeworkcore.7.0.0.nupkg.sha512",
     "/Users/oscarrojas/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/oscarrojas/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/Users/oscarrojas/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
