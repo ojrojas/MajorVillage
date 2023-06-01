@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "L4D1bIyAGgeoVzkiBPVcaNV/vCZ+tDOAfdvo9kMr2rAj/+iQv2/C9H8kCx4/MJk+32xmpCiqUAHuGDq45y2acA==",
+  "dgSpecHash": "RlQg5RWDwFyGRJPCSDGZnODUTb0zhN0UiM4z0GpL1XNz+0uYJ3czQADN8K36YTJpjRjaYeYCNO2MPfovtSH1ew==",
   "success": true,
   "projectFilePath": "/Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/School.Infraestructure.csproj",
   "expectedPackageFiles": [
-    "/Users/oscarrojas/.nuget/packages/ardalis.specification/6.1.0/ardalis.specification.6.1.0.nupkg.sha512",
-    "/Users/oscarrojas/.nuget/packages/ardalis.specification.entityframeworkcore/6.1.0/ardalis.specification.entityframeworkcore.6.1.0.nupkg.sha512",
+    "/Users/oscarrojas/.nuget/packages/ardalis.specification/7.0.0/ardalis.specification.7.0.0.nupkg.sha512",
+    "/Users/oscarrojas/.nuget/packages/ardalis.specification.entityframeworkcore/7.0.0/ardalis.specification.entityframeworkcore.7.0.0.nupkg.sha512",
     "/Users/oscarrojas/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/oscarrojas/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/Users/oscarrojas/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

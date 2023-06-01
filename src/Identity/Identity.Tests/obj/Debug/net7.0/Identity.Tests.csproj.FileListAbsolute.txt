@@ -1,4 +1,4 @@
-/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/bin/Debug/net7.0/CoverletSourceRootsMapping
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/bin/Debug/net7.0/CoverletSourceRootsMapping_Identity.Tests
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/bin/Debug/net7.0/Identity.Api.deps.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/bin/Debug/net7.0/Identity.Api.runtimeconfig.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/bin/Debug/net7.0/appsettings.Development.json
