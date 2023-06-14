@@ -18,4 +18,5 @@ global using System.Runtime.Serialization;
 global using BuildingBlocks.Repository.Data;
 global using School.Core.Data;
 global using Microsoft.AspNetCore.Authorization;
+global using School.Core.Repositories;
 

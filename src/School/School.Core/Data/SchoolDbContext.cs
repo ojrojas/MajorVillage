@@ -16,6 +16,9 @@ public class SchoolDbContext: DbContext
     /// </summary>
     public DbSet<Course> Courses { get; set; }
 
+    public DbSet<Enrollment> Enrollments { get; set; }
+    public DbSet<ElectiveYear> ElectiveYears { get; set; }
+
     /// <summary>
     /// On model creating database, and specific change model
     /// </summary>
