@@ -33,7 +33,26 @@
 		<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
 		<PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
 	</ItemGroup>
+ <ItemGroup>
+   <ProjectReference Include="..\School.Core\School.Core.csproj">
+     <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+   </ProjectReference>
+   <ProjectReference Include="..\School.Infraestructure\School.Infraestructure.csproj">
+     <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+   </ProjectReference>
+ </ItemGroup>
+ <ItemGroup>
+   <None Remove="Endpoints\Course\" />
+   <None Remove="Endpoints\Enrollment\" />
+   <None Remove="Endpoints\ElectiveYear\" />
+ </ItemGroup>
+ <ItemGroup>
+   <Folder Include="Endpoints\Course\" />
+   <Folder Include="Endpoints\Enrollment\" />
+   <Folder Include="Endpoints\ElectiveYear\" />
+ </ItemGroup>
  <ItemGroup>
    <ProjectReference Include="..\School.Core\School.Core.csproj">
      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
