@@ -6,6 +6,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/NotesAndMaths/NotesAndMaths.Core/obj/Debug/net7.0/NotesAndMaths.Core.AssemblyInfoInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/NotesAndMaths/NotesAndMaths.Core/obj/Debug/net7.0/NotesAndMaths.Core.AssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/NotesAndMaths/NotesAndMaths.Core/obj/Debug/net7.0/NotesAndMaths.Core.csproj.CoreCompileInputs.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/NotesAndMaths/NotesAndMaths.Core/obj/Debug/net7.0/NotesAndMaths.Core.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/NotesAndMaths/NotesAndMaths.Core/obj/Debug/net7.0/NotesAndMaths.Core.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/NotesAndMaths/NotesAndMaths.Core/obj/Debug/net7.0/refint/NotesAndMaths.Core.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/NotesAndMaths/NotesAndMaths.Core/obj/Debug/net7.0/NotesAndMaths.Core.pdb

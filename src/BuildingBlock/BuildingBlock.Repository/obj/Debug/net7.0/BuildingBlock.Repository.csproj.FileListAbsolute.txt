@@ -7,6 +7,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/BuildingBlock/BuildingBlock.Repository/obj/Debug/net7.0/BuildingBlock.Repository.AssemblyInfoInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/BuildingBlock/BuildingBlock.Repository/obj/Debug/net7.0/BuildingBlock.Repository.AssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/BuildingBlock/BuildingBlock.Repository/obj/Debug/net7.0/BuildingBlock.Repository.csproj.CoreCompileInputs.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/BuildingBlock/BuildingBlock.Repository/obj/Debug/net7.0/BuildingBlock.Repository.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/BuildingBlock/BuildingBlock.Repository/obj/Debug/net7.0/BuildingBlock.Repository.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/BuildingBlock/BuildingBlock.Repository/obj/Debug/net7.0/refint/BuildingBlock.Repository.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/BuildingBlock/BuildingBlock.Repository/obj/Debug/net7.0/BuildingBlock.Repository.pdb

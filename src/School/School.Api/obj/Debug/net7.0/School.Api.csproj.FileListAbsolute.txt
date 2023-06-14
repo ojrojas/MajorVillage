@@ -114,6 +114,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api/obj/Debug/net7.0/School.Api.csproj.CoreCompileInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api/obj/Debug/net7.0/School.Api.MvcApplicationPartsAssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api/obj/Debug/net7.0/School.Api.MvcApplicationPartsAssemblyInfo.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api/obj/Debug/net7.0/School.Api.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api/obj/Debug/net7.0/staticwebassets/msbuild.School.Api.Microsoft.AspNetCore.StaticWebAssets.props
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api/obj/Debug/net7.0/staticwebassets/msbuild.build.School.Api.props
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Api/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.School.Api.props

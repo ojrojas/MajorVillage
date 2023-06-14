@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotesAndMaths.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4abc5cc6e7fc3b522419ae56327c91156810f4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dbcf2cc9df28cdbfe10583ecb281a4bc26a1897")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotesAndMaths.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotesAndMaths.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,6 +13,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/obj/Debug/net7.0/School.Infraestructure.AssemblyInfoInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/obj/Debug/net7.0/School.Infraestructure.AssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/obj/Debug/net7.0/School.Infraestructure.csproj.CoreCompileInputs.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/obj/Debug/net7.0/School.Infraestructure.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/obj/Debug/net7.0/School.Infraestructure.csproj.CopyComplete
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/obj/Debug/net7.0/School.Infraestructure.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Infraestructure/obj/Debug/net7.0/refint/School.Infraestructure.dll

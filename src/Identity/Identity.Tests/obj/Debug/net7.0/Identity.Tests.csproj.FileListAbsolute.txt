@@ -200,6 +200,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/obj/Debug/net7.0/Identity.Tests.AssemblyInfoInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/obj/Debug/net7.0/Identity.Tests.AssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/obj/Debug/net7.0/Identity.Tests.csproj.CoreCompileInputs.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/obj/Debug/net7.0/Identity.Tests.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/obj/Debug/net7.0/Identity.Tests.csproj.CopyComplete
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/obj/Debug/net7.0/Identity.Tests.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Tests/obj/Debug/net7.0/refint/Identity.Tests.dll

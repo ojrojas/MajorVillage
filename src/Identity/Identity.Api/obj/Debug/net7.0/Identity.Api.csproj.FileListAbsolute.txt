@@ -115,6 +115,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/obj/Debug/net7.0/Identity.Api.csproj.CoreCompileInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/obj/Debug/net7.0/Identity.Api.MvcApplicationPartsAssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/obj/Debug/net7.0/Identity.Api.MvcApplicationPartsAssemblyInfo.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/obj/Debug/net7.0/Identity.Api.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/obj/Debug/net7.0/staticwebassets/msbuild.Identity.Api.Microsoft.AspNetCore.StaticWebAssets.props
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/obj/Debug/net7.0/staticwebassets/msbuild.build.Identity.Api.props
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Identity.Api.props

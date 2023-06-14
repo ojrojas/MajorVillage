@@ -13,6 +13,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Infraestructure/obj/Debug/net7.0/Identity.Infraestructure.AssemblyInfoInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Infraestructure/obj/Debug/net7.0/Identity.Infraestructure.AssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Infraestructure/obj/Debug/net7.0/Identity.Infraestructure.csproj.CoreCompileInputs.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Infraestructure/obj/Debug/net7.0/Identity.Infraestructure.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Infraestructure/obj/Debug/net7.0/Identity.Infraestructure.csproj.CopyComplete
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Infraestructure/obj/Debug/net7.0/Identity.Infraestructure.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Infraestructure/obj/Debug/net7.0/refint/Identity.Infraestructure.dll

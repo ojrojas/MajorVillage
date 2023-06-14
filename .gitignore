@@ -29,10 +29,6 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
-**/[Bb]in/
-**/[Oo]bj/
-
-
 [Ll]og/
 [Ll]ogs/
 
@@ -479,3 +475,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Vim temporary swap files
+*.swp

@@ -90,6 +90,7 @@
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Tests/obj/Debug/net7.0/School.Tests.AssemblyInfoInputs.cache
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Tests/obj/Debug/net7.0/School.Tests.AssemblyInfo.cs
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Tests/obj/Debug/net7.0/School.Tests.csproj.CoreCompileInputs.cache
+/Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Tests/obj/Debug/net7.0/School.Tests.sourcelink.json
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Tests/obj/Debug/net7.0/School.Tests.csproj.CopyComplete
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Tests/obj/Debug/net7.0/School.Tests.dll
 /Users/oscarrojas/Sources/GitHub/MajorVillage/src/School/School.Tests/obj/Debug/net7.0/refint/School.Tests.dll
