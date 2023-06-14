@@ -4,7 +4,7 @@ public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRo
 {
     private readonly ILogger<GenericRepository<T>> _logger;
     private readonly DbContext _context;
-    private ISpecificationEvaluator _specificationEvaluator;
+    private readonly ISpecificationEvaluator _specificationEvaluator;
 
     /// <summary>
     /// Generic Repository
@@ -44,7 +44,7 @@ public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRo
 
     private async Task SaveAsync(CancellationToken cancellationToken)
     {
-        await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync(cancellationToken);
     }
 
     public async Task<T> DeleteAsync(T entity, CancellationToken cancellationToken)

@@ -27927,3 +27927,437 @@ FROM "TypeUser" AS "t"
 2023-04-07 16:23:49.487 -05:00 [DBG] Connection id "0HMPNJMJKJCC7" sending FIN because: "The client closed the connection."
 2023-04-07 16:23:49.488 -05:00 [DBG] Connection id "0HMPNJMJKJCC7" disconnecting.
 2023-04-07 16:23:49.489 -05:00 [DBG] Connection id "0HMPNJMJKJCC7" stopped.
+2023-06-13 19:37:33.336 -05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-06-13 19:37:33.934 -05:00 [DBG] Entity Framework Core 7.0.5 initialized 'IdentityDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.5' with options: None
+2023-06-13 19:37:33.947 -05:00 [DBG] Creating DbConnection.
+2023-06-13 19:37:33.950 -05:00 [DBG] Created DbConnection. (2ms).
+2023-06-13 19:37:33.953 -05:00 [DBG] Opening connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:33.957 -05:00 [DBG] Opened connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:33.959 -05:00 [DBG] Disposing connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:33.960 -05:00 [DBG] Disposed connection to database 'main' on server 'identitydb.db' (0ms).
+2023-06-13 19:37:33.961 -05:00 [DBG] Creating DbConnection.
+2023-06-13 19:37:33.961 -05:00 [DBG] Created DbConnection. (0ms).
+2023-06-13 19:37:33.961 -05:00 [DBG] Opening connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:33.961 -05:00 [DBG] Opened connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:33.962 -05:00 [DBG] Closing connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:33.963 -05:00 [DBG] Closed connection to database 'main' on server 'identitydb.db' (0ms).
+2023-06-13 19:37:33.964 -05:00 [DBG] Creating DbConnection.
+2023-06-13 19:37:33.964 -05:00 [DBG] Created DbConnection. (0ms).
+2023-06-13 19:37:33.964 -05:00 [DBG] Opening connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:33.965 -05:00 [DBG] An error occurred using the connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:33.966 -05:00 [DBG] Disposing connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:33.966 -05:00 [DBG] Disposed connection to database 'main' on server 'identitydb.db' (0ms).
+2023-06-13 19:37:33.966 -05:00 [DBG] Opening connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:33.966 -05:00 [DBG] Opened connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:33.968 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:33.970 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2023-06-13 19:37:33.970 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2023-06-13 19:37:33.973 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-06-13 19:37:33.978 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-06-13 19:37:33.978 -05:00 [DBG] Closing connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:33.978 -05:00 [DBG] Closed connection to database 'main' on server 'identitydb.db' (0ms).
+2023-06-13 19:37:34.020 -05:00 [DBG] Opening connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:34.020 -05:00 [DBG] Opened connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.021 -05:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-06-13 19:37:34.023 -05:00 [DBG] Began transaction with isolation level 'Serializable'.
+2023-06-13 19:37:34.024 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.024 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.025 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.025 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "TypeIdentifications" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_TypeIdentifications" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL
+);
+2023-06-13 19:37:34.026 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "TypeIdentifications" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_TypeIdentifications" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL
+);
+2023-06-13 19:37:34.027 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.027 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "TypeUser" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_TypeUser" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL
+);
+2023-06-13 19:37:34.027 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "TypeUser" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_TypeUser" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL
+);
+2023-06-13 19:37:34.027 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.027 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "MiddleName" TEXT NULL,
+    "LastName" TEXT NOT NULL,
+    "SurName" TEXT NULL,
+    "Identification" TEXT NOT NULL,
+    "BirthDate" TEXT NOT NULL,
+    "TypeIdentificationId" TEXT NOT NULL,
+    "Address" TEXT NOT NULL,
+    "Contact" TEXT NOT NULL,
+    "TypeUserId" TEXT NOT NULL,
+    "HasHealtInsurance" INTEGER NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL,
+    CONSTRAINT "FK_Users_TypeIdentifications_TypeIdentificationId" FOREIGN KEY ("TypeIdentificationId") REFERENCES "TypeIdentifications" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Users_TypeUser_TypeUserId" FOREIGN KEY ("TypeUserId") REFERENCES "TypeUser" ("Id") ON DELETE CASCADE
+);
+2023-06-13 19:37:34.027 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "MiddleName" TEXT NULL,
+    "LastName" TEXT NOT NULL,
+    "SurName" TEXT NULL,
+    "Identification" TEXT NOT NULL,
+    "BirthDate" TEXT NOT NULL,
+    "TypeIdentificationId" TEXT NOT NULL,
+    "Address" TEXT NOT NULL,
+    "Contact" TEXT NOT NULL,
+    "TypeUserId" TEXT NOT NULL,
+    "HasHealtInsurance" INTEGER NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL,
+    CONSTRAINT "FK_Users_TypeIdentifications_TypeIdentificationId" FOREIGN KEY ("TypeIdentificationId") REFERENCES "TypeIdentifications" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Users_TypeUser_TypeUserId" FOREIGN KEY ("TypeUserId") REFERENCES "TypeUser" ("Id") ON DELETE CASCADE
+);
+2023-06-13 19:37:34.027 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.027 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Attendants" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Attendants" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "MiddleName" TEXT NOT NULL,
+    "LastName" TEXT NOT NULL,
+    "Identification" TEXT NOT NULL,
+    "TypeIdentificationId" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL,
+    CONSTRAINT "FK_Attendants_TypeIdentifications_TypeIdentificationId" FOREIGN KEY ("TypeIdentificationId") REFERENCES "TypeIdentifications" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Attendants_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2023-06-13 19:37:34.027 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Attendants" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Attendants" PRIMARY KEY,
+    "Name" TEXT NOT NULL,
+    "MiddleName" TEXT NOT NULL,
+    "LastName" TEXT NOT NULL,
+    "Identification" TEXT NOT NULL,
+    "TypeIdentificationId" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL,
+    CONSTRAINT "FK_Attendants_TypeIdentifications_TypeIdentificationId" FOREIGN KEY ("TypeIdentificationId") REFERENCES "TypeIdentifications" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Attendants_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2023-06-13 19:37:34.027 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.027 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.027 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "UsersApplications" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_UsersApplications" PRIMARY KEY,
+    "UserName" TEXT NOT NULL,
+    "Password" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL,
+    CONSTRAINT "FK_UsersApplications_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2023-06-13 19:37:34.027 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "UsersApplications" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_UsersApplications" PRIMARY KEY,
+    "UserName" TEXT NOT NULL,
+    "Password" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    "CreatedBy" TEXT NOT NULL,
+    "UpdatedBy" TEXT NOT NULL,
+    "CreatedDate" TEXT NOT NULL,
+    "UpdatedDate" TEXT NOT NULL,
+    "State" INTEGER NOT NULL,
+    CONSTRAINT "FK_UsersApplications_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2023-06-13 19:37:34.027 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.028 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Attendants_TypeIdentificationId" ON "Attendants" ("TypeIdentificationId");
+2023-06-13 19:37:34.028 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Attendants_TypeIdentificationId" ON "Attendants" ("TypeIdentificationId");
+2023-06-13 19:37:34.028 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.028 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Attendants_UserId" ON "Attendants" ("UserId");
+2023-06-13 19:37:34.028 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Attendants_UserId" ON "Attendants" ("UserId");
+2023-06-13 19:37:34.028 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.028 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_TypeIdentificationId" ON "Users" ("TypeIdentificationId");
+2023-06-13 19:37:34.028 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_TypeIdentificationId" ON "Users" ("TypeIdentificationId");
+2023-06-13 19:37:34.028 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.028 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_TypeUserId" ON "Users" ("TypeUserId");
+2023-06-13 19:37:34.028 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_TypeUserId" ON "Users" ("TypeUserId");
+2023-06-13 19:37:34.028 -05:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-06-13 19:37:34.028 -05:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-06-13 19:37:34.028 -05:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UsersApplications_UserId" ON "UsersApplications" ("UserId");
+2023-06-13 19:37:34.028 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_UsersApplications_UserId" ON "UsersApplications" ("UserId");
+2023-06-13 19:37:34.029 -05:00 [DBG] Committing transaction.
+2023-06-13 19:37:34.030 -05:00 [DBG] Committed transaction.
+2023-06-13 19:37:34.032 -05:00 [DBG] Disposing transaction.
+2023-06-13 19:37:34.032 -05:00 [DBG] Closing connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.032 -05:00 [DBG] Closed connection to database 'main' on server 'identitydb.db' (0ms).
+2023-06-13 19:37:34.063 -05:00 [INF] Encrypt password options encryptation options
+2023-06-13 19:37:34.116 -05:00 [DBG] Context 'IdentityDbContext' started tracking 'UserApplication' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.136 -05:00 [DBG] Context 'IdentityDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.142 -05:00 [DBG] Context 'IdentityDbContext' started tracking 'TypeIdentification' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.147 -05:00 [DBG] Context 'IdentityDbContext' started tracking 'TypeUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.148 -05:00 [DBG] SaveChanges starting for 'IdentityDbContext'.
+2023-06-13 19:37:34.149 -05:00 [DBG] DetectChanges starting for 'IdentityDbContext'.
+2023-06-13 19:37:34.156 -05:00 [DBG] DetectChanges completed for 'IdentityDbContext'.
+2023-06-13 19:37:34.178 -05:00 [DBG] Opening connection to database 'main' on server 'identitydb.db'.
+2023-06-13 19:37:34.178 -05:00 [DBG] Opened connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.179 -05:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-06-13 19:37:34.179 -05:00 [DBG] Began transaction with isolation level 'Serializable'.
+2023-06-13 19:37:34.181 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-13 19:37:34.181 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.181 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.183 -05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime), @p3='?' (Size = 2), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "TypeIdentifications" ("Id", "CreatedBy", "CreatedDate", "Name", "State", "UpdatedBy", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-06-13 19:37:34.185 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime), @p3='?' (Size = 2), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "TypeIdentifications" ("Id", "CreatedBy", "CreatedDate", "Name", "State", "UpdatedBy", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-06-13 19:37:34.187 -05:00 [DBG] Closing data reader to 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.188 -05:00 [DBG] A data reader for 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db' is being disposed after spending 2ms reading results.
+2023-06-13 19:37:34.188 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-13 19:37:34.188 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.188 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.188 -05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime), @p3='?' (Size = 5), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "TypeUser" ("Id", "CreatedBy", "CreatedDate", "Name", "State", "UpdatedBy", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-06-13 19:37:34.188 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime), @p3='?' (Size = 5), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "TypeUser" ("Id", "CreatedBy", "CreatedDate", "Name", "State", "UpdatedBy", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-06-13 19:37:34.188 -05:00 [DBG] Closing data reader to 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.188 -05:00 [DBG] A data reader for 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db' is being disposed after spending 0ms reading results.
+2023-06-13 19:37:34.188 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-13 19:37:34.188 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.188 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.189 -05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 8), @p2='?' (DbType = DateTime), @p3='?' (Size = 9), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?' (DbType = Boolean), @p7='?' (Size = 8), @p8='?' (Size = 5), @p9='?', @p10='?' (Size = 4), @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = Guid), @p14='?' (DbType = Guid), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Address", "BirthDate", "Contact", "CreatedBy", "CreatedDate", "HasHealtInsurance", "Identification", "LastName", "MiddleName", "Name", "State", "SurName", "TypeIdentificationId", "TypeUserId", "UpdatedBy", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-06-13 19:37:34.189 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 8), @p2='?' (DbType = DateTime), @p3='?' (Size = 9), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?' (DbType = Boolean), @p7='?' (Size = 8), @p8='?' (Size = 5), @p9='?', @p10='?' (Size = 4), @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = Guid), @p14='?' (DbType = Guid), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Address", "BirthDate", "Contact", "CreatedBy", "CreatedDate", "HasHealtInsurance", "Identification", "LastName", "MiddleName", "Name", "State", "SurName", "TypeIdentificationId", "TypeUserId", "UpdatedBy", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-06-13 19:37:34.189 -05:00 [DBG] Closing data reader to 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.189 -05:00 [DBG] A data reader for 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db' is being disposed after spending 0ms reading results.
+2023-06-13 19:37:34.189 -05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-06-13 19:37:34.189 -05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.189 -05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-06-13 19:37:34.189 -05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime), @p3='?' (Size = 57), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime), @p7='?' (DbType = Guid), @p8='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "UsersApplications" ("Id", "CreatedBy", "CreatedDate", "Password", "State", "UpdatedBy", "UpdatedDate", "UserId", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2023-06-13 19:37:34.190 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime), @p3='?' (Size = 57), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime), @p7='?' (DbType = Guid), @p8='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "UsersApplications" ("Id", "CreatedBy", "CreatedDate", "Password", "State", "UpdatedBy", "UpdatedDate", "UserId", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2023-06-13 19:37:34.190 -05:00 [DBG] Closing data reader to 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.190 -05:00 [DBG] A data reader for 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db' is being disposed after spending 0ms reading results.
+2023-06-13 19:37:34.190 -05:00 [DBG] Committing transaction.
+2023-06-13 19:37:34.190 -05:00 [DBG] Committed transaction.
+2023-06-13 19:37:34.190 -05:00 [DBG] Closing connection to database 'main' on server '/Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api/identitydb.db'.
+2023-06-13 19:37:34.190 -05:00 [DBG] Closed connection to database 'main' on server 'identitydb.db' (0ms).
+2023-06-13 19:37:34.190 -05:00 [DBG] Disposing transaction.
+2023-06-13 19:37:34.193 -05:00 [DBG] An entity of type 'UserApplication' tracked by 'IdentityDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.193 -05:00 [DBG] An entity of type 'User' tracked by 'IdentityDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.193 -05:00 [DBG] An entity of type 'TypeIdentification' tracked by 'IdentityDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.193 -05:00 [DBG] An entity of type 'TypeUser' tracked by 'IdentityDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-06-13 19:37:34.194 -05:00 [DBG] SaveChanges completed for 'IdentityDbContext' with 4 entities written to the database.
+2023-06-13 19:37:34.215 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-13 19:37:34.243 -05:00 [DBG] Hosting starting
+2023-06-13 19:37:34.256 -05:00 [INF] User profile is available. Using '/Users/oscarrojas/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-06-13 19:37:34.260 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-bf4216ab-702e-49b9-8f31-f59cf3e6f04d.xml'.
+2023-06-13 19:37:34.262 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-fe04fb26-9613-4157-a19e-c2251c7ec9c0.xml'.
+2023-06-13 19:37:34.262 -05:00 [DBG] Reading data from file '/Users/oscarrojas/.aspnet/DataProtection-Keys/key-1f4e4891-fdd4-4657-a2e1-eddaa9cbec7a.xml'.
+2023-06-13 19:37:34.264 -05:00 [DBG] Found key {bf4216ab-702e-49b9-8f31-f59cf3e6f04d}.
+2023-06-13 19:37:34.265 -05:00 [DBG] Found key {fe04fb26-9613-4157-a19e-c2251c7ec9c0}.
+2023-06-13 19:37:34.265 -05:00 [DBG] Found key {1f4e4891-fdd4-4657-a2e1-eddaa9cbec7a}.
+2023-06-13 19:37:34.267 -05:00 [DBG] Considering key {1f4e4891-fdd4-4657-a2e1-eddaa9cbec7a} with expiration date 2023-09-12 00:35:41Z as default key.
+2023-06-13 19:37:34.268 -05:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-06-13 19:37:34.269 -05:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-06-13 19:37:34.269 -05:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-06-13 19:37:34.270 -05:00 [DBG] Using key {1f4e4891-fdd4-4657-a2e1-eddaa9cbec7a} as the default key.
+2023-06-13 19:37:34.270 -05:00 [DBG] Key ring with default key {1f4e4891-fdd4-4657-a2e1-eddaa9cbec7a} was loaded during application startup.
+2023-06-13 19:37:34.467 -05:00 [INF] Now listening on: https://localhost:7103
+2023-06-13 19:37:34.468 -05:00 [INF] Now listening on: http://localhost:5072
+2023-06-13 19:37:34.468 -05:00 [DBG] Loaded hosting startup assembly Identity.Api
+2023-06-13 19:37:34.468 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-13 19:37:34.468 -05:00 [INF] Hosting environment: Development
+2023-06-13 19:37:34.468 -05:00 [INF] Content root path: /Users/oscarrojas/Sources/GitHub/MajorVillage/src/Identity/Identity.Api
+2023-06-13 19:37:34.468 -05:00 [DBG] Hosting started
+2023-06-13 19:37:34.501 -05:00 [DBG] Connection id "0HMRCDU5S56MB" accepted.
+2023-06-13 19:37:34.502 -05:00 [DBG] Connection id "0HMRCDU5S56MB" started.
+2023-06-13 19:37:35.496 -05:00 [DBG] Connection id "0HMRCDU5S56MB" received FIN.
+2023-06-13 19:37:35.503 -05:00 [DBG] Connection id "0HMRCDU5S56MC" accepted.
+2023-06-13 19:37:35.524 -05:00 [DBG] Connection id "0HMRCDU5S56MC" started.
+2023-06-13 19:37:35.571 -05:00 [DBG] Connection id "0HMRCDU5S56MD" accepted.
+2023-06-13 19:37:35.571 -05:00 [DBG] Connection id "0HMRCDU5S56MD" started.
+2023-06-13 19:37:35.499 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-13 19:37:35.624 -05:00 [DBG] Connection id "0HMRCDU5S56MB" stopped.
+2023-06-13 19:37:35.625 -05:00 [DBG] Connection id "0HMRCDU5S56MB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-13 19:37:35.664 -05:00 [DBG] Connection 0HMRCDU5S56MD established using the following protocol: "Tls12"
+2023-06-13 19:37:35.664 -05:00 [DBG] Connection 0HMRCDU5S56MC established using the following protocol: "Tls12"
+2023-06-13 19:37:35.688 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger - -
+2023-06-13 19:37:35.688 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-06-13 19:37:35.688 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:35.700 -05:00 [DBG] No candidates found for the request path '/swagger'
+2023-06-13 19:37:35.700 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:35.715 -05:00 [DBG] Connection id "0HMRCDU5S56MD" completed keep alive response.
+2023-06-13 19:37:35.716 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger - - - 301 0 - 28.9055ms
+2023-06-13 19:37:35.718 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/index.html - -
+2023-06-13 19:37:35.718 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:35.718 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-06-13 19:37:35.718 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:35.753 -05:00 [DBG] Connection id "0HMRCDU5S56MC" completed keep alive response.
+2023-06-13 19:37:35.753 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/index.html - - - 200 - text/html;charset=utf-8 35.4844ms
+2023-06-13 19:37:35.763 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui.css - -
+2023-06-13 19:37:35.763 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:35.764 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-06-13 19:37:35.764 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:35.765 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-bundle.js - -
+2023-06-13 19:37:35.765 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:35.765 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-06-13 19:37:35.765 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:35.766 -05:00 [VRB] Range header's value is empty.
+2023-06-13 19:37:35.766 -05:00 [VRB] Range header's value is empty.
+2023-06-13 19:37:35.767 -05:00 [DBG] Connection id "0HMRCDU5S56ME" accepted.
+2023-06-13 19:37:35.768 -05:00 [DBG] Connection id "0HMRCDU5S56ME" started.
+2023-06-13 19:37:35.844 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-06-13 19:37:35.844 -05:00 [DBG] Connection id "0HMRCDU5S56MD" completed keep alive response.
+2023-06-13 19:37:35.844 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui.css - - - 200 144929 text/css 81.0825ms
+2023-06-13 19:37:35.851 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-06-13 19:37:35.851 -05:00 [DBG] Connection id "0HMRCDU5S56MC" completed keep alive response.
+2023-06-13 19:37:35.851 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 85.6192ms
+2023-06-13 19:37:35.856 -05:00 [DBG] Connection id "0HMRCDU5S56MF" accepted.
+2023-06-13 19:37:35.856 -05:00 [DBG] Connection id "0HMRCDU5S56MF" started.
+2023-06-13 19:37:35.870 -05:00 [DBG] Connection 0HMRCDU5S56ME established using the following protocol: "Tls12"
+2023-06-13 19:37:35.872 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-standalone-preset.js - -
+2023-06-13 19:37:35.872 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:35.872 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-06-13 19:37:35.872 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:35.872 -05:00 [VRB] Range header's value is empty.
+2023-06-13 19:37:35.904 -05:00 [DBG] Connection 0HMRCDU5S56MF established using the following protocol: "Tls12"
+2023-06-13 19:37:35.907 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-06-13 19:37:35.907 -05:00 [DBG] Connection id "0HMRCDU5S56ME" completed keep alive response.
+2023-06-13 19:37:35.907 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 35.7525ms
+2023-06-13 19:37:35.908 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-bundle.js - -
+2023-06-13 19:37:35.908 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:35.908 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-06-13 19:37:35.908 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:35.908 -05:00 [DBG] Connection id "0HMRCDU5S56MG" accepted.
+2023-06-13 19:37:35.932 -05:00 [DBG] Connection id "0HMRCDU5S56MG" started.
+2023-06-13 19:37:35.932 -05:00 [VRB] Range header's value is empty.
+2023-06-13 19:37:35.932 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/favicon-16x16.png - -
+2023-06-13 19:37:35.932 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:35.932 -05:00 [DBG] No candidates found for the request path '/swagger/favicon-16x16.png'
+2023-06-13 19:37:35.932 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:35.932 -05:00 [VRB] Range header's value is empty.
+2023-06-13 19:37:35.932 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-06-13 19:37:35.932 -05:00 [DBG] Connection id "0HMRCDU5S56ME" completed keep alive response.
+2023-06-13 19:37:35.932 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/favicon-16x16.png - - - 200 665 image/png 0.2863ms
+2023-06-13 19:37:36.007 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/v1/swagger.json - -
+2023-06-13 19:37:36.007 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:36.007 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-06-13 19:37:36.007 -05:00 [DBG] Connection 0HMRCDU5S56MG established using the following protocol: "Tls12"
+2023-06-13 19:37:36.008 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:36.008 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-standalone-preset.js - -
+2023-06-13 19:37:36.008 -05:00 [VRB] All hosts are allowed.
+2023-06-13 19:37:36.008 -05:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-06-13 19:37:36.009 -05:00 [DBG] Request did not match any endpoints
+2023-06-13 19:37:36.031 -05:00 [VRB] Range header's value is empty.
+2023-06-13 19:37:36.068 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-06-13 19:37:36.089 -05:00 [DBG] Connection id "0HMRCDU5S56MF" completed keep alive response.
+2023-06-13 19:37:36.090 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 182.0070ms
+2023-06-13 19:37:36.120 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-06-13 19:37:36.120 -05:00 [DBG] Connection id "0HMRCDU5S56MG" completed keep alive response.
+2023-06-13 19:37:36.120 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 112.0408ms
+2023-06-13 19:37:36.192 -05:00 [DBG] Connection id "0HMRCDU5S56ME" completed keep alive response.
+2023-06-13 19:37:36.192 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7103/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.4172ms
+2023-06-13 19:39:31.424 -05:00 [DBG] Connection id "0HMRCDU5S56MF" received FIN.
+2023-06-13 19:39:31.427 -05:00 [DBG] Connection id "0HMRCDU5S56ME" received FIN.
+2023-06-13 19:39:31.430 -05:00 [DBG] Connection id "0HMRCDU5S56MC" received FIN.
+2023-06-13 19:39:31.430 -05:00 [DBG] Connection id "0HMRCDU5S56MG" received FIN.
+2023-06-13 19:39:31.430 -05:00 [DBG] Connection id "0HMRCDU5S56MD" received FIN.
+2023-06-13 19:39:31.433 -05:00 [DBG] Connection id "0HMRCDU5S56ME" disconnecting.
+2023-06-13 19:39:31.435 -05:00 [DBG] Connection id "0HMRCDU5S56MF" sending FIN because: "The client closed the connection."
+2023-06-13 19:39:31.435 -05:00 [DBG] Connection id "0HMRCDU5S56MF" disconnecting.
+2023-06-13 19:39:31.436 -05:00 [DBG] Connection id "0HMRCDU5S56ME" stopped.
+2023-06-13 19:39:31.437 -05:00 [DBG] Connection id "0HMRCDU5S56MC" disconnecting.
+2023-06-13 19:39:31.437 -05:00 [DBG] Connection id "0HMRCDU5S56MC" stopped.
+2023-06-13 19:39:31.440 -05:00 [DBG] Connection id "0HMRCDU5S56MD" disconnecting.
+2023-06-13 19:39:31.440 -05:00 [DBG] Connection id "0HMRCDU5S56MG" disconnecting.
+2023-06-13 19:39:31.440 -05:00 [DBG] Connection id "0HMRCDU5S56MD" stopped.
+2023-06-13 19:39:31.440 -05:00 [DBG] Connection id "0HMRCDU5S56MG" stopped.
+2023-06-13 19:39:31.440 -05:00 [DBG] Connection id "0HMRCDU5S56ME" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-13 19:39:31.440 -05:00 [DBG] Connection id "0HMRCDU5S56MC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-13 19:39:31.441 -05:00 [DBG] Connection id "0HMRCDU5S56MD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-13 19:39:31.441 -05:00 [DBG] Connection id "0HMRCDU5S56MG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-06-13 19:39:31.471 -05:00 [DBG] Connection id "0HMRCDU5S56MF" stopped.
