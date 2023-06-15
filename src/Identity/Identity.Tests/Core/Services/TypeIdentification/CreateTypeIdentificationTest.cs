@@ -6,14 +6,14 @@ public class CreateTypeIdentificationTest
 	private readonly ILogger<TypeIdentificationService> _logger;
 	private readonly ITypeIdentificationService _typeIdentificationService;
 
-	private readonly IdentityDbContext identityDbContext;
-	private readonly DbContextOptions<IdentityDbContext> options;
+	private readonly IdentityAppDbContext identityDbContext;
+	private readonly DbContextOptions<IdentityAppDbContext> options;
 
 	public CreateTypeIdentificationTest()
 	{
 		var logger = LoggerFactory.Create(factory => factory.AddConsole());
-        options = new DbContextOptionsBuilder<IdentityDbContext>().UseInMemoryDatabase(databaseName: "in-memory").Options;
-		identityDbContext = new IdentityDbContext(options);
+        options = new DbContextOptionsBuilder<IdentityAppDbContext>().UseInMemoryDatabase(databaseName: "in-memory").Options;
+		identityDbContext = new IdentityAppDbContext(options);
 		_repository = new TypeIdentificationRepository(
 			logger.CreateLogger<GenericRepository<TypeIdentification>>(), identityDbContext);
 		_typeIdentificationService = new TypeIdentificationService(_repository,logger.CreateLogger<TypeIdentificationService>());

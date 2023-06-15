@@ -3,24 +3,31 @@
 public class UserApplicationService : IUserApplicationService
 {
     private readonly UserApplicationRepository _repository;
-    private readonly IEncryptService _encryptService;
     private readonly ILogger<UserApplicationService> _logger;
-    private readonly ITokenService<User> _tokenService;
+    private readonly UserManager<UserApplication> _userManager;
+    private readonly SignInManager<UserApplication> _signInManager;
 
-    public UserApplicationService(UserApplicationRepository repository, IEncryptService encryptService, ILogger<UserApplicationService> logger, ITokenService<User> tokenService)
+    private readonly IPasswordHasher<UserApplication> _passwordHasher = new PasswordHasher<UserApplication>();
+
+    public UserApplicationService(UserApplicationRepository repository,
+                                  ILogger<UserApplicationService> logger,
+                                  UserManager<UserApplication> userManager,
+                                  SignInManager<UserApplication> signInManager)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
-        _encryptService = encryptService ?? throw new ArgumentNullException(nameof(encryptService));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        _tokenService = tokenService ?? throw new ArgumentNullException(nameof(tokenService));
+        _userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+        _signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
     }
 
     public async Task<CreateUserApplicationResponse> CreateUserApplicationAsync(CreateUserApplicationRequest request, CancellationToken cancellationToken)
     {
         CreateUserApplicationResponse response = new(request.CorrelationId());
         if (request.UserApplication is null) throw new ArgumentNullException(nameof(request.UserApplication));
+        ArgumentNullException.ThrowIfNull(request.UserApplication.PasswordHash);
+        ArgumentNullException.ThrowIfNull(request.UserApplication.UserName);
         request.UserApplication.UserName = request.UserApplication.UserName.ToLowerInvariant();
-        request.UserApplication.Password = await _encryptService.Encrypt(request.UserApplication.Password);
+        request.UserApplication.PasswordHash = _passwordHasher.HashPassword(request.UserApplication, request.UserApplication.PasswordHash);
         _logger.LogInformation($"Create user application {JsonSerializer.Serialize(request.UserApplication)}");
         var created = await _repository.CreateAsync(request.UserApplication, cancellationToken);
         response.UserApplicationCreated = created is not null;
@@ -48,12 +55,18 @@ public class UserApplicationService : IUserApplicationService
     {
         LoginUserApplicationResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Encrypt password and get user by login");
-        request.Password = await _encryptService.Encrypt(request.Password);
         request.UserName = request.UserName.ToLowerInvariant();
-        UserApplicationSpecifications specification = new(request.UserName, request.Password);
+        UserApplicationSpecifications specification = new(request.UserName);
         var result = await _repository.FirstOrDefaultAsync(specification, cancellationToken);
         if (result is not null)
-            response.Token = await _tokenService.GetTokenAsync(result.User);
+        {
+            var token = await _userManager.CheckPasswordAsync(result, request.Password);
+            if (token)
+            {
+                await _signInManager.SignInAsync(result, true);
+                response.Token = "Signin successful";
+            }
+        }
         return response;
     }
 }

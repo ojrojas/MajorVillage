@@ -2,9 +2,8 @@
 
 [Authorize]
 [Route("api/[controller]")]
-public class GetAllEnrollments : EndpointBaseAsync.WithRequest<GetAllEnrollmentRequest>.WithResult<GetAllEnrollmentResponse>
+public class GetAllEnrollments : EndpointBaseAsync.WithoutRequest.WithResult<GetAllEnrollmentResponse>
 {
-
     private readonly IEnrollmentService _service;
 
     public GetAllEnrollments(IEnrollmentService service)
@@ -19,9 +18,9 @@ public class GetAllEnrollments : EndpointBaseAsync.WithRequest<GetAllEnrollmentR
      Description = "Get all enrollments",
      OperationId = "Enrollment.getallenrollments",
      Tags = new[] { "EnrollmentEndpoints" })]
-    public override async Task<GetAllEnrollmentResponse> HandleAsync(GetAllEnrollmentRequest request, CancellationToken cancellationToken = default)
+    public override async Task<GetAllEnrollmentResponse> HandleAsync(CancellationToken cancellationToken = default)
     {
-        return await _service.GetAllEnrollmentsAsync(request, cancellationToken);
+        return await _service.GetAllEnrollmentsAsync(new GetAllEnrollmentRequest(), cancellationToken);
     }
 }
 

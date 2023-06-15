@@ -13,3 +13,5 @@ global using Identity.Core.Repositories;
 global using Identity.Core.Specifications;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Logging;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
