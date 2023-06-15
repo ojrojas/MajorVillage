@@ -24,4 +24,3 @@ public class DeleteEnrollment : EndpointBaseAsync.WithRequest<DeleteEnrollmentRe
         return await _service.DeleteEnrollmentAsync(request, cancellationToken);
     }
 }
-

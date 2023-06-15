@@ -1,7 +1,13 @@
+using System.Reflection;
+using Identity.Core.Entities;
+using Microsoft.AspNetCore.Identity;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
 Log.Logger = CreateSerilogLogger();
+
+var migrationsAssembly = typeof(IStartup).GetTypeInfo().Assembly.GetName().Name;
 
 var configuration = builder.Configuration;
 // Add services to the container.
@@ -10,9 +16,24 @@ builder.Services.AddControllers(options => options.Filters.Add(typeof(HttpExcept
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<IdentityDbContext>(
+builder.Services.AddDbContext<IdentityAppDbContext>(
     c => c.UseSqlite(builder.Configuration.GetConnectionString("ConnectionSqlite"))
 );
+
+builder.Services.AddIdentity<UserApplication, IdentityRole>()
+    .AddEntityFrameworkStores<IdentityAppDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddIdentityServer(x => { })
+    .AddAspNetIdentity<UserApplication>()
+    .AddConfigurationStore(op =>
+    {
+        op.ConfigureDbContext = builder => builder.UseSqlite("ConnectionSqlite",
+                    sqliteOptionsAction: sqlOptions =>
+                    {
+                        sqlOptions.MigrationsAssembly(migrationsAssembly);
+                    });
+    });
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGenDocumention();

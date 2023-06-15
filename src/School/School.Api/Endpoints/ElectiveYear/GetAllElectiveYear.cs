@@ -2,7 +2,7 @@
 
 [Authorize]
 [Route("api/[controller]")]
-public class GetAllElectiveYear : EndpointBaseAsync.WithRequest<GetAllElectiveYearRequest>.WithResult<GetAllElectiveYearResponse>
+public class GetAllElectiveYear : EndpointBaseAsync.WithoutRequest.WithResult<GetAllElectiveYearResponse>
 {
     private readonly IElectiveYearService _service;
 
@@ -18,9 +18,9 @@ public class GetAllElectiveYear : EndpointBaseAsync.WithRequest<GetAllElectiveYe
      Description = "Get all Elective Year",
      OperationId = "ElectiveYear.getelectiveyear",
      Tags = new[] { "ElectiveYearEndpoints" })]
-    public override async Task<GetAllElectiveYearResponse> HandleAsync(GetAllElectiveYearRequest request, CancellationToken cancellationToken = default)
+    public override async Task<GetAllElectiveYearResponse> HandleAsync(CancellationToken cancellationToken = default)
     {
-        return await _service.GetAllElectiveYearsAsync(request, cancellationToken);
+        return await _service.GetAllElectiveYearsAsync(new GetAllElectiveYearRequest(), cancellationToken);
     }
 }
 

@@ -2,13 +2,12 @@
 
 public class InitializerDbContext
 {
-	private readonly IdentityDbContext _context;
-    private readonly IEncryptService _encryptService;
+	private readonly IdentityAppDbContext _context;
+    private IPasswordHasher<UserApplication> _passwordHasher = new PasswordHasher<UserApplication>();
 
-    public InitializerDbContext(IdentityDbContext context, IEncryptService encryptService)
+    public InitializerDbContext(IdentityAppDbContext context)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
-        _encryptService = encryptService ?? throw new ArgumentNullException(nameof(encryptService));
     }
 
     public virtual async Task Run()
@@ -17,8 +16,9 @@ public class InitializerDbContext
         await _context.Database.EnsureDeletedAsync();
         await _context.Database.EnsureCreatedAsync();
         var userApplication = SeedIdentity.CreateUserApplicationRequest();
-        userApplication.Password = await _encryptService.Encrypt(userApplication.Password);
-        await _context.UsersApplications.AddAsync(userApplication);
+        ArgumentNullException.ThrowIfNull(userApplication.PasswordHash);
+        userApplication.PasswordHash = _passwordHasher.HashPassword(userApplication, userApplication.PasswordHash);
+        await _context.Users.AddAsync(userApplication);
         await _context.SaveChangesAsync();
 #endif
 	}
