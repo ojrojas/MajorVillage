@@ -15,7 +15,10 @@ builder.Services.AddDbContext<SchoolDbContext>(
 );
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGenDocumention();
+
+var ip = configuration["IdentityUrl"];
+
+builder.Services.AddSwaggerGenDocumention(configuration);
 
 //builder.Services.AddDIOptionsConfiguration(configuration);
 builder.Services.AddJwtExtension(configuration);
@@ -49,7 +52,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options => {
+        options.OAuthClientId("schoolclientswaggerui");
+        options.OAuthAppName("Swagger UI School");
+    });
 }
 
 app.UseCors("SchoolCorsPolicy");

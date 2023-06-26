@@ -14,16 +14,6 @@ public class IdentityAppDbContext: IdentityDbContext<UserApplication>
     public IdentityAppDbContext(DbContextOptions<IdentityAppDbContext> options): base(options) { }
 
     /// <summary>
-    /// Table TypeIdentifications
-    /// </summary>
-    public DbSet<TypeIdentification> TypeIdentifications { get; set; }
-
-    /// <summary>
-    /// Table attendants by students
-    /// </summary>
-    public DbSet<Attendant> Attendants { get; set; }
-
-    /// <summary>
     /// On model creating database, and specific change model
     /// </summary>
     /// <param name="modelBuilder">Model builder application</param>

@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  identity.api:
+    image: ${DOCKER_REGISTRY-}identity
+    build:
+      context: .
+      dockerfile: src/Identity/Identity.Api/Dockerfile
+
+  school.api:
+    image: ${DOCKER_REGISTRY-}school
+    build:
+      context: .
+      dockerfile: src/School/School.Api/Dockerfile
+
+  notesandmaths.api:
+    image: ${DOCKER_REGISTRY-}notesandmaths
+    build:
+      context: .
+      dockerfile: src/NotesAndMaths/NotesAndMaths.Api/Dockerfile
+

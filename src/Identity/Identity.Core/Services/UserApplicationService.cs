@@ -54,6 +54,7 @@ public class UserApplicationService : IUserApplicationService
     public async Task<LoginUserApplicationResponse> LoginAsync(LoginUserApplicationRequest request, CancellationToken cancellationToken)
     {
         LoginUserApplicationResponse response = new(request.CorrelationId());
+        response.Token = "Do not get token response";
         _logger.LogInformation($"Encrypt password and get user by login");
         request.UserName = request.UserName.ToLowerInvariant();
         UserApplicationSpecifications specification = new(request.UserName);

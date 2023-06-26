@@ -7,7 +7,7 @@ public static class AddSwaggerDependencyInjection
         services.AddSwaggerGen(c =>
         {
             c.EnableAnnotations();
-            c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Identity Api", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity Api", Version = "v1", Description = "Identity Services Api" });
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
                 Description = "JWT Authorization header using the Bearer scheme. \n\n Enter 'Bearer' [space] and then your token in the text input below. \nExample: 'Bearer 12345abcdef'",

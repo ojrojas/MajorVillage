@@ -3,7 +3,7 @@
 [Authorize]
 [ApiController]
 [Route("api/[controller]")]
-public class GetAllCourse: EndpointBaseAsync.WithRequest<GetAllCoursesRequest>.WithResult<GetAllCoursesResponse>
+public class GetAllCourse: EndpointBaseAsync.WithoutRequest.WithResult<GetAllCoursesResponse>
 {
 	private readonly ICourseService _service;
 
@@ -19,7 +19,7 @@ public class GetAllCourse: EndpointBaseAsync.WithRequest<GetAllCoursesRequest>.W
       Description = "Get All Courses",
       OperationId = "Course.getallcourses",
       Tags = new[] { "CourseEndpoints" })]
-    public override async Task<GetAllCoursesResponse> HandleAsync(GetAllCoursesRequest request, CancellationToken cancellationToken = default)
+    public override async Task<GetAllCoursesResponse> HandleAsync(CancellationToken cancellationToken = default)
     {
         return await _service.GetAllCoursesAsync(new(), cancellationToken);
     }
