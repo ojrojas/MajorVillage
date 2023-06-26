@@ -23,4 +23,3 @@ public class GetAllEnrollments : EndpointBaseAsync.WithoutRequest.WithResult<Get
         return await _service.GetAllEnrollmentsAsync(new GetAllEnrollmentRequest(), cancellationToken);
     }
 }
-

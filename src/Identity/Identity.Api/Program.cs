@@ -1,13 +1,9 @@
-using System.Reflection;
-using Identity.Core.Entities;
-using Microsoft.AspNetCore.Identity;
+using IdentityServer4.EntityFramework.DbContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
 Log.Logger = CreateSerilogLogger();
-
-var migrationsAssembly = typeof(IStartup).GetTypeInfo().Assembly.GetName().Name;
 
 var configuration = builder.Configuration;
 // Add services to the container.
@@ -16,24 +12,12 @@ builder.Services.AddControllers(options => options.Filters.Add(typeof(HttpExcept
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<IdentityAppDbContext>(
     c => c.UseSqlite(builder.Configuration.GetConnectionString("ConnectionSqlite"))
 );
 
-builder.Services.AddIdentity<UserApplication, IdentityRole>()
-    .AddEntityFrameworkStores<IdentityAppDbContext>()
-    .AddDefaultTokenProviders();
-
-builder.Services.AddIdentityServer(x => { })
-    .AddAspNetIdentity<UserApplication>()
-    .AddConfigurationStore(op =>
-    {
-        op.ConfigureDbContext = builder => builder.UseSqlite("ConnectionSqlite",
-                    sqliteOptionsAction: sqlOptions =>
-                    {
-                        sqlOptions.MigrationsAssembly(migrationsAssembly);
-                    });
-    });
+builder.Services.AddIdentityServerApplication(configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGenDocumention();
@@ -61,28 +45,38 @@ builder.Services.AddAuthorization(options =>
     builder => builder.RequireClaim("TypeUser"));
 });
 
-
 builder.Services.AddMemoryCache();
+
 
 var app = builder.Build();
 
 using var scope = app.Services.CreateScope();
 var service = scope.ServiceProvider;
 
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     var initializer = service.GetRequiredService<InitializerDbContext>();
+
+    var configurationDb = service.GetRequiredService<ConfigurationDbContext>();
+    var persistedDb = service.GetRequiredService<PersistedGrantDbContext>();
     await initializer.Run();
+    await configurationDb.Database.MigrateAsync();
+    await persistedDb.Database.MigrateAsync();
+    var applied = persistedDb.Database.GetAppliedMigrations();
+    await configurationDb.Database.EnsureCreatedAsync();
+    await persistedDb.Database.EnsureCreatedAsync();
+    await initializer.RunConfigurationDbContext(configuration);
+    
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+
 app.UseCors("IdentityCorsPolicy");
 app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
+
+app.UseIdentityServer();
 
 app.MapControllers();
 app.MapHealthChecks("/health").RequireAuthorization();

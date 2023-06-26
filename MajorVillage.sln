@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlock.Commons", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlock.Repository", "src\BuildingBlock\BuildingBlock.Repository\BuildingBlock.Repository.csproj", "{BA4D3C23-D0D9-42A5-8CD4-CFA231D744EC}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{456B29D4-1125-487F-B0BA-124740FECD9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,10 @@ Global
 		{BA4D3C23-D0D9-42A5-8CD4-CFA231D744EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA4D3C23-D0D9-42A5-8CD4-CFA231D744EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA4D3C23-D0D9-42A5-8CD4-CFA231D744EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{456B29D4-1125-487F-B0BA-124740FECD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456B29D4-1125-487F-B0BA-124740FECD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456B29D4-1125-487F-B0BA-124740FECD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456B29D4-1125-487F-B0BA-124740FECD9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{32821B3D-614B-4DA9-B323-10F0768F1034} = {E3919FD4-14B8-43A5-BCDA-AEDCF677C12A}

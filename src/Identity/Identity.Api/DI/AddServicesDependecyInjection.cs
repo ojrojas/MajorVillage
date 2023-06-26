@@ -10,7 +10,6 @@ internal static class AddServicesDependecyInjection
         services.AddTransient(typeof(UserApplicationRepository));
         services.AddTransient(typeof(TypeUserRepository));
 
-
         services.AddTransient<ITypeIdentificationService, TypeIdentificationService>();
         services.AddTransient<ITypeUserService, TypeUserService>();
         services.AddTransient<IUserApplicationService, UserApplicationService>();
