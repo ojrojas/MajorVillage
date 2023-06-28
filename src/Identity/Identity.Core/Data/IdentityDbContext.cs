@@ -1,6 +1,4 @@
-﻿
-
-namespace Identity.Core.Data;
+﻿namespace Identity.Core.Data;
 
 /// <summary>
 /// Identity Db Context 

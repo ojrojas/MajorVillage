@@ -14,7 +14,7 @@ public class HttpExceptionsApplicationFilter : IExceptionFilter
     public void OnException(ExceptionContext context)
     {
         _logger.LogError(new EventId(context.Exception.HResult), context.Exception, context.Exception.Message);
-        if (context.Exception.GetType() == typeof(CreditApplicationException))
+        if (context.Exception.GetType() == typeof(Exceptions.ApplicationException))
         {
             var problemDetails = new ValidationProblemDetails()
             {
@@ -25,7 +25,7 @@ public class HttpExceptionsApplicationFilter : IExceptionFilter
 
             problemDetails.Errors.Add("ApplicationValidation", new string[]
             {
-        context.Exception.Message.ToString()
+                context.Exception.Message.ToString()
             });
 
             context.Result = new BadRequestObjectResult(problemDetails);

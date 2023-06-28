@@ -68,6 +68,7 @@ public class UserApplicationService : IUserApplicationService
                 response.Token = "Signin successful";
             }
         }
+
         return response;
     }
 }
