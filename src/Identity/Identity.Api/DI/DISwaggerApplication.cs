@@ -1,8 +1,8 @@
 ﻿namespace Identity.Api.DI;
 
-public static class AddSwaggerDependencyInjection
+internal static class DISwaggerApplication
 {
-    internal static IServiceCollection AddSwaggerGenDocumention(this IServiceCollection services)
+    public static IServiceCollection AddDISwaggerApplication(this IServiceCollection services)
     {
         services.AddSwaggerGen(c =>
         {

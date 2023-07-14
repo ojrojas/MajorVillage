@@ -1,27 +1,65 @@
 version: '3.4'
 
 services:
+  sql.identity:
+    container_name: sql-identity
+    environment:
+      - POSTGRES_PASSWORD=${IDENTITY_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - sqldata-identity-store:/var/lib/postgresql/data \
+    networks:
+      - identitynet
+
+  sql.school:
+    container_name: sql.school
+    environment:
+      - MARIADB_ROOT_PASSWORD=${SCHOOL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - sqldata-school-store:/var/lib/mysql
+    networks:
+      - schoolnet
+
+  sql.notesandmaths:
+    container_name: sql.notesandmaths
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    volumes:
+      - sqldata-notesandmathsnet-store:/var/data
+
+  queue.majorvillage:
+    container_name: queue.majorvillage
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+ 
   identity.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-      - SchoolApiClient=http://school.api
+      - ASPNETCORE_URLS=http://+:80
+      - SchoolApiClient=http://{DNS_OR_IP_HOST_CONTAINER}:5107
+      - NoteAndMathsApi=http://{DNS_OR_IP_HOST_CONTAINER}:5210
+      - ConnectionIdentity=host=sql.identity;port=5432;database=IdentityDb;username=postgres;password=${IDENTITY_PASSWORD}
+      - UrlsAllow=IdentityApi@http://${DNS_OR_IP_HOST_CONTAINER}:5105,SchoolApi@http://${DNS_OR_IP_HOST_CONTAINER}:5107,NoteAndMathsApi@http://${DNS_OR_IP_HOST_CONTAINER}:5210,MajorWeb@http://${DNS_OR_IP_HOST_CONTAINER}:5305
     ports:
       - "5005:80"
-      - "5006:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     networks:
       - identitynet
+
   school.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-      - IdentityUrl=https://localhost:5006
+      - ASPNETCORE_URLS=http://+:80
+      - IdentityUrl=http://${IDENTITYURL}:5005
     ports:
-      - "5007:80"
-      - "5008:443"
+      - "5107:80"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
@@ -33,10 +71,9 @@ services:
   notesandmaths.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
     ports:
-      - "5009:80"
-      - "5010:443"
+      - "5210:80"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
@@ -45,3 +82,15 @@ services:
 networks:
   identitynet:
     driver: bridge
+  schoolnet:
+    driver: bridge
+  notesandmathsnet:
+    driver: bridge
+
+volumes:
+  sqldata-identity-store:
+    external: false
+  sqldata-school-store:
+    external: false
+  sqldata-notesandmathsnet-store:
+    external: false

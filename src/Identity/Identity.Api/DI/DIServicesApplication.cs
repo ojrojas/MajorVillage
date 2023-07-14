@@ -1,8 +1,8 @@
 ﻿namespace Identity.Api.DI;
 
-internal static class AddServicesDependecyInjection
+internal static class DIServicesApplication
 {
-    public static IServiceCollection AddServicesDIApp(this IServiceCollection services)
+    public static IServiceCollection AddDIServicesApplication(this IServiceCollection services)
     {
         services.AddTransient(typeof(GenericRepository<>));
 

@@ -1,17 +1,13 @@
-﻿using AutoMapper;
-
-namespace Identity.Core.Data;
+﻿namespace Identity.Core.Data;
 
 public class InitializerDbContext
 {
     private readonly IdentityAppDbContext _context;
-    private readonly ConfigurationDbContext _context2;
-    private IPasswordHasher<UserApplication> _passwordHasher = new PasswordHasher<UserApplication>();
+    private readonly IPasswordHasher<UserApplication> _passwordHasher = new PasswordHasher<UserApplication>();
 
-    public InitializerDbContext(IdentityAppDbContext context, ConfigurationDbContext context2)
+    public InitializerDbContext(IdentityAppDbContext context)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
-        _context2 = context2 ?? throw new ArgumentNullException(nameof(context2));
     }
 
     public virtual async Task Run()
@@ -38,47 +34,112 @@ public class InitializerDbContext
 #endif
     }
 
-    public virtual async Task RunConfigurationDbContext(IConfiguration configuration)
+    public virtual async Task RunConfigurationDbContext(IOpenIddictApplicationManager manager, IOpenIddictScopeManager _scopeManager, Dictionary<string, string> clientsUrls)
     {
         try
         {
-            var clientsUrls = new Dictionary<string, string>
+            if (await manager.FindByClientIdAsync("identityswaggerui") is null)
             {
-                ["SchoolApiClient"] = configuration["SchoolApiClient"]
-            };
-
-            if (!_context2.Clients.Any())
-            {
-                foreach (var client in IdentityConfig.GetClients(clientsUrls))
+                await manager.CreateAsync(new OpenIddictApplicationDescriptor
                 {
-                    _context2.Clients.Add(client.ToEntity());
-                }
-                await _context2.SaveChangesAsync();
+                    ClientId = "identityswaggerui",
+                    DisplayName = "Identity Swagger UI",
+                    ClientSecret = "a961a072-4a69-4b10-bc17-1551d454d44c",
+
+                    RedirectUris = { new Uri($"{clientsUrls["IdentityApi"]}/swagger/oauth2-redirect.html") },
+                    Permissions = {
+                        Permissions.Endpoints.Token,
+                        Permissions.GrantTypes.ClientCredentials,
+                        Permissions.GrantTypes.AuthorizationCode,
+                        Permissions.GrantTypes.Password,
+                        Permissions.Endpoints.Authorization,
+                        Permissions.ResponseTypes.Code,
+                        Permissions.Scopes.Email,
+                        Permissions.Scopes.Profile,
+                        Permissions.Scopes.Roles,
+                        Permissions.Prefixes.Scope + "identity",
+                    },
+                    PostLogoutRedirectUris = { new Uri($"{clientsUrls["IdentityApi"]}/swagger") },
+                });
             }
 
-            if (!_context2.IdentityResources.Any())
+            if (await manager.FindByClientIdAsync("schoolswaggerui") is null)
             {
-                foreach (var resource in IdentityConfig.GetResources())
+                await manager.CreateAsync(new OpenIddictApplicationDescriptor
                 {
-                    await _context2.IdentityResources.AddAsync(resource.ToEntity());
-                }
+                    ClientId = "schoolswaggerui",
+                    DisplayName = "School Swagger UI",
+                    ClientSecret = "3e0e4c3c-8f86-4cc7-9269-f2db2f1a93c6",
 
-                await _context2.SaveChangesAsync();
+                    RedirectUris = { new Uri($"{clientsUrls["SchoolApi"]}/swagger/oauth2-redirect.html") },
+                    Permissions = {
+                        Permissions.Endpoints.Token,
+                        Permissions.GrantTypes.ClientCredentials,
+                        Permissions.GrantTypes.AuthorizationCode,
+                        Permissions.GrantTypes.Password,
+                        Permissions.Endpoints.Authorization,
+                        Permissions.ResponseTypes.Code,
+                        Permissions.Scopes.Email,
+                        Permissions.Scopes.Profile,
+                        Permissions.Scopes.Roles,
+                        Permissions.Prefixes.Scope + "school",
+                    },
+                    PostLogoutRedirectUris = { new Uri($"{clientsUrls["SchoolApi"]}/swagger") },
+                });
             }
 
-            if (!_context2.ApiResources.Any())
+            if (await manager.FindByClientIdAsync("majorweb-client") is null)
             {
-                foreach (var resource in IdentityConfig.GetApis())
+                await manager.CreateAsync(new OpenIddictApplicationDescriptor
                 {
-                    await _context2.AddAsync(resource.ToEntity());
-                }
+                    ClientId = "majorweb-client",
+                    DisplayName = "Major Web React",
+                    ClientSecret = "db7193c2-d4bd-4b0b-8218-d14c468b140a",
 
-                await _context2.SaveChangesAsync();
+                    RedirectUris = { new Uri("https://oauth.pstmn.io/v1/callback") },
+                    Permissions = {
+                        Permissions.Endpoints.Token,
+                        Permissions.GrantTypes.Password,
+                        Permissions.Endpoints.Authorization,
+                        Permissions.ResponseTypes.Token,
+                        Permissions.Scopes.Email,
+                        Permissions.Scopes.Profile,
+                        Permissions.Scopes.Roles,
+                        Permissions.Prefixes.Scope + "school",
+                        Permissions.Prefixes.Scope + "identity",
+                        Permissions.Prefixes.Scope + "noteandmaths",
+                    },
+                    PostLogoutRedirectUris = { new Uri($"{clientsUrls["MajorWeb"]}/login") },
+                });
+            }
+
+            if (await _scopeManager.FindByNameAsync("SchoolScope") is null)
+            {
+                await _scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+                {
+                    Name = "SchoolScope",
+                    DisplayName = "School Api",
+                    Resources = {
+                        "resource_school"
+                    }
+                });
+            }
+
+            if (await _scopeManager.FindByNameAsync("NoteAndMathsScope") is null)
+            {
+                await _scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+                {
+                    Name = "NoteAndMathsScope",
+                    DisplayName = "Note And Maths Api",
+                    Resources = {
+                        "resource_noteandmaths"
+                    }
+                });
             }
         }
         catch (Exception ex)
         {
-            throw new Exception(ex.Message, ex);
+            throw new InvalidOperationException(ex.Message, ex);
         }
     }
 }

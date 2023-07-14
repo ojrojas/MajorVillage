@@ -6817,3 +6817,427 @@ System.OperationCanceledException: The operation was canceled.
 2023-06-26 04:35:24.074 +00:00 [VRB] Connection id "0HMRLVQVP1A5M" sending "DATA" frame for stream ID 19 with length 10538 and flags "NONE".
 2023-06-26 04:35:24.075 +00:00 [VRB] Connection id "0HMRLVQVP1A5M" sending "DATA" frame for stream ID 19 with length 0 and flags "END_STREAM".
 2023-06-26 04:35:24.076 +00:00 [INF] Request finished HTTP/2 GET https://localhost:5008/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.1302ms
+2023-06-28 01:30:51.619 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-28 01:30:51.719 +00:00 [DBG] Hosting starting
+2023-06-28 01:30:51.765 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-06-28 01:30:51.766 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-06-28 01:30:51.774 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-06-28 01:30:51.775 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-06-28 01:30:51.779 +00:00 [INF] Creating key {f168e418-b28c-4576-9821-f7d1052aab39} with creation date 2023-06-28 01:30:51Z, activation date 2023-06-28 01:30:51Z, and expiration date 2023-09-26 01:30:51Z.
+2023-06-28 01:30:51.798 +00:00 [DBG] Descriptor deserializer type for key {f168e418-b28c-4576-9821-f7d1052aab39} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-06-28 01:30:51.802 +00:00 [DBG] No key escrow sink found. Not writing key {f168e418-b28c-4576-9821-f7d1052aab39} to escrow.
+2023-06-28 01:30:51.803 +00:00 [WRN] No XML encryptor configured. Key {f168e418-b28c-4576-9821-f7d1052aab39} may be persisted to storage in unencrypted form.
+2023-06-28 01:30:51.806 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-f168e418-b28c-4576-9821-f7d1052aab39.xml'.
+2023-06-28 01:30:51.807 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-06-28 01:30:51.809 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-f168e418-b28c-4576-9821-f7d1052aab39.xml'.
+2023-06-28 01:30:51.812 +00:00 [DBG] Found key {f168e418-b28c-4576-9821-f7d1052aab39}.
+2023-06-28 01:30:51.817 +00:00 [DBG] Considering key {f168e418-b28c-4576-9821-f7d1052aab39} with expiration date 2023-09-26 01:30:51Z as default key.
+2023-06-28 01:30:51.820 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-06-28 01:30:51.834 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-06-28 01:30:51.835 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-06-28 01:30:51.843 +00:00 [DBG] Using key {f168e418-b28c-4576-9821-f7d1052aab39} as the default key.
+2023-06-28 01:30:51.844 +00:00 [DBG] Key ring with default key {f168e418-b28c-4576-9821-f7d1052aab39} was loaded during application startup.
+2023-06-28 01:30:52.025 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: FCA2A4FBF03248F3CF31B16AB35562E51233BEE1)
+2023-06-28 01:30:52.091 +00:00 [INF] Now listening on: https://[::]:443
+2023-06-28 01:30:52.092 +00:00 [INF] Now listening on: http://[::]:80
+2023-06-28 01:30:52.093 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-06-28 01:30:52.094 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-28 01:30:52.095 +00:00 [INF] Hosting environment: Development
+2023-06-28 01:30:52.096 +00:00 [INF] Content root path: /app/
+2023-06-28 01:30:52.120 +00:00 [DBG] Hosting started
+2023-06-29 01:37:59.773 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-29 01:37:59.862 +00:00 [DBG] Hosting starting
+2023-06-29 01:37:59.904 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-06-29 01:37:59.905 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-06-29 01:37:59.913 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-06-29 01:37:59.914 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-06-29 01:37:59.917 +00:00 [INF] Creating key {e7a9b5d4-52a8-48c7-b909-1381169ead27} with creation date 2023-06-29 01:37:59Z, activation date 2023-06-29 01:37:59Z, and expiration date 2023-09-27 01:37:59Z.
+2023-06-29 01:37:59.935 +00:00 [DBG] Descriptor deserializer type for key {e7a9b5d4-52a8-48c7-b909-1381169ead27} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-06-29 01:37:59.940 +00:00 [DBG] No key escrow sink found. Not writing key {e7a9b5d4-52a8-48c7-b909-1381169ead27} to escrow.
+2023-06-29 01:37:59.940 +00:00 [WRN] No XML encryptor configured. Key {e7a9b5d4-52a8-48c7-b909-1381169ead27} may be persisted to storage in unencrypted form.
+2023-06-29 01:37:59.944 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-e7a9b5d4-52a8-48c7-b909-1381169ead27.xml'.
+2023-06-29 01:37:59.945 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-06-29 01:37:59.946 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-e7a9b5d4-52a8-48c7-b909-1381169ead27.xml'.
+2023-06-29 01:37:59.949 +00:00 [DBG] Found key {e7a9b5d4-52a8-48c7-b909-1381169ead27}.
+2023-06-29 01:37:59.953 +00:00 [DBG] Considering key {e7a9b5d4-52a8-48c7-b909-1381169ead27} with expiration date 2023-09-27 01:37:59Z as default key.
+2023-06-29 01:37:59.955 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-06-29 01:37:59.967 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-06-29 01:37:59.968 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-06-29 01:37:59.972 +00:00 [DBG] Using key {e7a9b5d4-52a8-48c7-b909-1381169ead27} as the default key.
+2023-06-29 01:37:59.973 +00:00 [DBG] Key ring with default key {e7a9b5d4-52a8-48c7-b909-1381169ead27} was loaded during application startup.
+2023-06-29 01:38:00.152 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 05ABF190B04C1D258C35BFAEEE739AED8D785648)
+2023-06-29 01:38:00.212 +00:00 [INF] Now listening on: https://[::]:443
+2023-06-29 01:38:00.213 +00:00 [INF] Now listening on: http://[::]:80
+2023-06-29 01:38:00.214 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-06-29 01:38:00.215 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-29 01:38:00.215 +00:00 [INF] Hosting environment: Development
+2023-06-29 01:38:00.216 +00:00 [INF] Content root path: /app/
+2023-06-29 01:38:00.216 +00:00 [DBG] Hosting started
+2023-06-29 01:38:55.378 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-29 01:38:55.487 +00:00 [DBG] Hosting starting
+2023-06-29 01:38:55.532 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-06-29 01:38:55.532 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-06-29 01:38:55.544 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-06-29 01:38:55.547 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-06-29 01:38:55.551 +00:00 [INF] Creating key {9b852fed-b05c-42e3-92ed-d67a77f2ef54} with creation date 2023-06-29 01:38:55Z, activation date 2023-06-29 01:38:55Z, and expiration date 2023-09-27 01:38:55Z.
+2023-06-29 01:38:55.570 +00:00 [DBG] Descriptor deserializer type for key {9b852fed-b05c-42e3-92ed-d67a77f2ef54} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-06-29 01:38:55.574 +00:00 [DBG] No key escrow sink found. Not writing key {9b852fed-b05c-42e3-92ed-d67a77f2ef54} to escrow.
+2023-06-29 01:38:55.575 +00:00 [WRN] No XML encryptor configured. Key {9b852fed-b05c-42e3-92ed-d67a77f2ef54} may be persisted to storage in unencrypted form.
+2023-06-29 01:38:55.578 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-9b852fed-b05c-42e3-92ed-d67a77f2ef54.xml'.
+2023-06-29 01:38:55.578 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-06-29 01:38:55.580 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-9b852fed-b05c-42e3-92ed-d67a77f2ef54.xml'.
+2023-06-29 01:38:55.582 +00:00 [DBG] Found key {9b852fed-b05c-42e3-92ed-d67a77f2ef54}.
+2023-06-29 01:38:55.586 +00:00 [DBG] Considering key {9b852fed-b05c-42e3-92ed-d67a77f2ef54} with expiration date 2023-09-27 01:38:55Z as default key.
+2023-06-29 01:38:55.588 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-06-29 01:38:55.599 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-06-29 01:38:55.600 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-06-29 01:38:55.602 +00:00 [DBG] Using key {9b852fed-b05c-42e3-92ed-d67a77f2ef54} as the default key.
+2023-06-29 01:38:55.603 +00:00 [DBG] Key ring with default key {9b852fed-b05c-42e3-92ed-d67a77f2ef54} was loaded during application startup.
+2023-06-29 01:38:55.782 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 05ABF190B04C1D258C35BFAEEE739AED8D785648)
+2023-06-29 01:38:55.842 +00:00 [INF] Now listening on: https://[::]:443
+2023-06-29 01:38:55.842 +00:00 [INF] Now listening on: http://[::]:80
+2023-06-29 01:38:55.843 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-06-29 01:38:55.844 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-29 01:38:55.845 +00:00 [INF] Hosting environment: Development
+2023-06-29 01:38:55.846 +00:00 [INF] Content root path: /app/
+2023-06-29 01:38:55.846 +00:00 [DBG] Hosting started
+2023-06-29 01:39:27.093 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-06-29 01:39:27.194 +00:00 [DBG] Hosting starting
+2023-06-29 01:39:27.239 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-06-29 01:39:27.241 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-06-29 01:39:27.249 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-06-29 01:39:27.250 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-06-29 01:39:27.254 +00:00 [INF] Creating key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3} with creation date 2023-06-29 01:39:27Z, activation date 2023-06-29 01:39:27Z, and expiration date 2023-09-27 01:39:27Z.
+2023-06-29 01:39:27.272 +00:00 [DBG] Descriptor deserializer type for key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-06-29 01:39:27.277 +00:00 [DBG] No key escrow sink found. Not writing key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3} to escrow.
+2023-06-29 01:39:27.278 +00:00 [WRN] No XML encryptor configured. Key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3} may be persisted to storage in unencrypted form.
+2023-06-29 01:39:27.281 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-e56d8d7c-9093-46c7-8c0d-5f1f860bccd3.xml'.
+2023-06-29 01:39:27.282 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-06-29 01:39:27.283 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-e56d8d7c-9093-46c7-8c0d-5f1f860bccd3.xml'.
+2023-06-29 01:39:27.286 +00:00 [DBG] Found key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3}.
+2023-06-29 01:39:27.292 +00:00 [DBG] Considering key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3} with expiration date 2023-09-27 01:39:27Z as default key.
+2023-06-29 01:39:27.294 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-06-29 01:39:27.309 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-06-29 01:39:27.310 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-06-29 01:39:27.313 +00:00 [DBG] Using key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3} as the default key.
+2023-06-29 01:39:27.314 +00:00 [DBG] Key ring with default key {e56d8d7c-9093-46c7-8c0d-5f1f860bccd3} was loaded during application startup.
+2023-06-29 01:39:27.480 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 05ABF190B04C1D258C35BFAEEE739AED8D785648)
+2023-06-29 01:39:27.546 +00:00 [INF] Now listening on: https://[::]:443
+2023-06-29 01:39:27.548 +00:00 [INF] Now listening on: http://[::]:80
+2023-06-29 01:39:27.548 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-06-29 01:39:27.549 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-29 01:39:27.550 +00:00 [INF] Hosting environment: Development
+2023-06-29 01:39:27.551 +00:00 [INF] Content root path: /app/
+2023-06-29 01:39:27.552 +00:00 [DBG] Hosting started
+2023-07-13 02:03:15.881 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 02:03:15.952 +00:00 [DBG] Hosting starting
+2023-07-13 02:03:15.974 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 02:03:15.975 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 02:03:15.982 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 02:03:15.982 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 02:03:15.986 +00:00 [INF] Creating key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b} with creation date 2023-07-13 02:03:15Z, activation date 2023-07-13 02:03:15Z, and expiration date 2023-10-11 02:03:15Z.
+2023-07-13 02:03:16.000 +00:00 [DBG] Descriptor deserializer type for key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 02:03:16.004 +00:00 [DBG] No key escrow sink found. Not writing key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b} to escrow.
+2023-07-13 02:03:16.004 +00:00 [WRN] No XML encryptor configured. Key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b} may be persisted to storage in unencrypted form.
+2023-07-13 02:03:16.007 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-1b92ad58-1b14-452e-97d7-9f61e8c0d99b.xml'.
+2023-07-13 02:03:16.008 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 02:03:16.009 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-1b92ad58-1b14-452e-97d7-9f61e8c0d99b.xml'.
+2023-07-13 02:03:16.011 +00:00 [DBG] Found key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b}.
+2023-07-13 02:03:16.015 +00:00 [DBG] Considering key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b} with expiration date 2023-10-11 02:03:15Z as default key.
+2023-07-13 02:03:16.017 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 02:03:16.022 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 02:03:16.023 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 02:03:16.026 +00:00 [DBG] Using key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b} as the default key.
+2023-07-13 02:03:16.027 +00:00 [DBG] Key ring with default key {1b92ad58-1b14-452e-97d7-9f61e8c0d99b} was loaded during application startup.
+2023-07-13 02:03:16.126 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 02:03:16.186 +00:00 [INF] Now listening on: https://[::]:443
+2023-07-13 02:03:16.187 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 02:03:16.188 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 02:03:16.189 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 02:03:16.190 +00:00 [INF] Hosting environment: Development
+2023-07-13 02:03:16.190 +00:00 [INF] Content root path: /app/
+2023-07-13 02:03:16.191 +00:00 [DBG] Hosting started
+2023-07-13 21:50:41.817 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 21:50:42.100 +00:00 [DBG] Hosting starting
+2023-07-13 21:50:42.177 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 21:50:42.179 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 21:50:42.193 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 21:50:42.204 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 21:50:42.207 +00:00 [INF] Creating key {e424675a-120c-4e30-88b1-80fda2fa03d8} with creation date 2023-07-13 21:50:42Z, activation date 2023-07-13 21:50:42Z, and expiration date 2023-10-11 21:50:42Z.
+2023-07-13 21:50:42.275 +00:00 [DBG] Descriptor deserializer type for key {e424675a-120c-4e30-88b1-80fda2fa03d8} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 21:50:42.293 +00:00 [DBG] No key escrow sink found. Not writing key {e424675a-120c-4e30-88b1-80fda2fa03d8} to escrow.
+2023-07-13 21:50:42.295 +00:00 [WRN] No XML encryptor configured. Key {e424675a-120c-4e30-88b1-80fda2fa03d8} may be persisted to storage in unencrypted form.
+2023-07-13 21:50:42.308 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-e424675a-120c-4e30-88b1-80fda2fa03d8.xml'.
+2023-07-13 21:50:42.309 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 21:50:42.320 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-e424675a-120c-4e30-88b1-80fda2fa03d8.xml'.
+2023-07-13 21:50:42.345 +00:00 [DBG] Found key {e424675a-120c-4e30-88b1-80fda2fa03d8}.
+2023-07-13 21:50:42.353 +00:00 [DBG] Considering key {e424675a-120c-4e30-88b1-80fda2fa03d8} with expiration date 2023-10-11 21:50:42Z as default key.
+2023-07-13 21:50:42.358 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 21:50:42.367 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 21:50:42.375 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 21:50:42.389 +00:00 [DBG] Using key {e424675a-120c-4e30-88b1-80fda2fa03d8} as the default key.
+2023-07-13 21:50:42.394 +00:00 [DBG] Key ring with default key {e424675a-120c-4e30-88b1-80fda2fa03d8} was loaded during application startup.
+2023-07-13 21:50:42.650 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 21:50:42.669 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 21:50:42.671 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 21:50:42.675 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 21:50:42.677 +00:00 [INF] Hosting environment: Development
+2023-07-13 21:50:42.679 +00:00 [INF] Content root path: /app
+2023-07-13 21:50:42.679 +00:00 [DBG] Hosting started
+2023-07-13 23:18:18.776 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:18:18.888 +00:00 [DBG] Hosting starting
+2023-07-13 23:18:18.918 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:18:18.919 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:18:18.926 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 23:18:18.928 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 23:18:18.932 +00:00 [INF] Creating key {67e514c9-05d0-463e-809a-a54e0c96b3a0} with creation date 2023-07-13 23:18:18Z, activation date 2023-07-13 23:18:18Z, and expiration date 2023-10-11 23:18:18Z.
+2023-07-13 23:18:18.951 +00:00 [DBG] Descriptor deserializer type for key {67e514c9-05d0-463e-809a-a54e0c96b3a0} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 23:18:18.958 +00:00 [DBG] No key escrow sink found. Not writing key {67e514c9-05d0-463e-809a-a54e0c96b3a0} to escrow.
+2023-07-13 23:18:18.959 +00:00 [WRN] No XML encryptor configured. Key {67e514c9-05d0-463e-809a-a54e0c96b3a0} may be persisted to storage in unencrypted form.
+2023-07-13 23:18:18.964 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-67e514c9-05d0-463e-809a-a54e0c96b3a0.xml'.
+2023-07-13 23:18:18.964 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 23:18:18.968 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-67e514c9-05d0-463e-809a-a54e0c96b3a0.xml'.
+2023-07-13 23:18:18.974 +00:00 [DBG] Found key {67e514c9-05d0-463e-809a-a54e0c96b3a0}.
+2023-07-13 23:18:18.978 +00:00 [DBG] Considering key {67e514c9-05d0-463e-809a-a54e0c96b3a0} with expiration date 2023-10-11 23:18:18Z as default key.
+2023-07-13 23:18:18.981 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:18:18.983 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:18:18.984 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:18:18.990 +00:00 [DBG] Using key {67e514c9-05d0-463e-809a-a54e0c96b3a0} as the default key.
+2023-07-13 23:18:18.992 +00:00 [DBG] Key ring with default key {67e514c9-05d0-463e-809a-a54e0c96b3a0} was loaded during application startup.
+2023-07-13 23:18:19.147 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:18:19.170 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:18:19.172 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:18:19.173 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:18:19.174 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:18:19.174 +00:00 [INF] Content root path: /app
+2023-07-13 23:18:19.175 +00:00 [DBG] Hosting started
+2023-07-13 23:22:01.907 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:22:01.971 +00:00 [DBG] Hosting starting
+2023-07-13 23:22:01.996 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:22:01.997 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:22:02.004 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 23:22:02.005 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 23:22:02.009 +00:00 [INF] Creating key {1a7d5b25-c350-4115-9539-0291699374ef} with creation date 2023-07-13 23:22:02Z, activation date 2023-07-13 23:22:01Z, and expiration date 2023-10-11 23:22:01Z.
+2023-07-13 23:22:02.024 +00:00 [DBG] Descriptor deserializer type for key {1a7d5b25-c350-4115-9539-0291699374ef} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 23:22:02.027 +00:00 [DBG] No key escrow sink found. Not writing key {1a7d5b25-c350-4115-9539-0291699374ef} to escrow.
+2023-07-13 23:22:02.027 +00:00 [WRN] No XML encryptor configured. Key {1a7d5b25-c350-4115-9539-0291699374ef} may be persisted to storage in unencrypted form.
+2023-07-13 23:22:02.032 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-1a7d5b25-c350-4115-9539-0291699374ef.xml'.
+2023-07-13 23:22:02.033 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 23:22:02.037 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-1a7d5b25-c350-4115-9539-0291699374ef.xml'.
+2023-07-13 23:22:02.041 +00:00 [DBG] Found key {1a7d5b25-c350-4115-9539-0291699374ef}.
+2023-07-13 23:22:02.044 +00:00 [DBG] Considering key {1a7d5b25-c350-4115-9539-0291699374ef} with expiration date 2023-10-11 23:22:01Z as default key.
+2023-07-13 23:22:02.045 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:22:02.046 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:22:02.047 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:22:02.049 +00:00 [DBG] Using key {1a7d5b25-c350-4115-9539-0291699374ef} as the default key.
+2023-07-13 23:22:02.050 +00:00 [DBG] Key ring with default key {1a7d5b25-c350-4115-9539-0291699374ef} was loaded during application startup.
+2023-07-13 23:22:02.135 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:22:02.145 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:22:02.146 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:22:02.146 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:22:02.147 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:22:02.147 +00:00 [INF] Content root path: /app
+2023-07-13 23:22:02.148 +00:00 [DBG] Hosting started
+2023-07-13 23:22:56.128 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:22:56.199 +00:00 [DBG] Hosting starting
+2023-07-13 23:22:56.226 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:22:56.228 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:22:56.235 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-1a7d5b25-c350-4115-9539-0291699374ef.xml'.
+2023-07-13 23:22:56.242 +00:00 [DBG] Found key {1a7d5b25-c350-4115-9539-0291699374ef}.
+2023-07-13 23:22:56.249 +00:00 [DBG] Considering key {1a7d5b25-c350-4115-9539-0291699374ef} with expiration date 2023-10-11 23:22:01Z as default key.
+2023-07-13 23:22:56.252 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:22:56.259 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:22:56.260 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:22:56.265 +00:00 [DBG] Using key {1a7d5b25-c350-4115-9539-0291699374ef} as the default key.
+2023-07-13 23:22:56.266 +00:00 [DBG] Key ring with default key {1a7d5b25-c350-4115-9539-0291699374ef} was loaded during application startup.
+2023-07-13 23:22:56.357 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:22:56.367 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:22:56.368 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:22:56.369 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:22:56.370 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:22:56.372 +00:00 [INF] Content root path: /app
+2023-07-13 23:22:56.372 +00:00 [DBG] Hosting started
+2023-07-13 23:23:35.681 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:23:35.745 +00:00 [DBG] Hosting starting
+2023-07-13 23:23:35.781 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:23:35.782 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:23:35.791 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-1a7d5b25-c350-4115-9539-0291699374ef.xml'.
+2023-07-13 23:23:35.800 +00:00 [DBG] Found key {1a7d5b25-c350-4115-9539-0291699374ef}.
+2023-07-13 23:23:35.808 +00:00 [DBG] Considering key {1a7d5b25-c350-4115-9539-0291699374ef} with expiration date 2023-10-11 23:22:01Z as default key.
+2023-07-13 23:23:35.810 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:23:35.818 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:23:35.819 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:23:35.826 +00:00 [DBG] Using key {1a7d5b25-c350-4115-9539-0291699374ef} as the default key.
+2023-07-13 23:23:35.827 +00:00 [DBG] Key ring with default key {1a7d5b25-c350-4115-9539-0291699374ef} was loaded during application startup.
+2023-07-13 23:23:35.916 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:23:35.927 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:23:35.928 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:23:35.928 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:23:35.929 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:23:35.930 +00:00 [INF] Content root path: /app
+2023-07-13 23:23:35.930 +00:00 [DBG] Hosting started
+2023-07-13 23:25:19.390 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:25:19.454 +00:00 [DBG] Hosting starting
+2023-07-13 23:25:19.478 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:25:19.479 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:25:19.485 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-1a7d5b25-c350-4115-9539-0291699374ef.xml'.
+2023-07-13 23:25:19.492 +00:00 [DBG] Found key {1a7d5b25-c350-4115-9539-0291699374ef}.
+2023-07-13 23:25:19.498 +00:00 [DBG] Considering key {1a7d5b25-c350-4115-9539-0291699374ef} with expiration date 2023-10-11 23:22:01Z as default key.
+2023-07-13 23:25:19.500 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:25:19.508 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:25:19.509 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:25:19.514 +00:00 [DBG] Using key {1a7d5b25-c350-4115-9539-0291699374ef} as the default key.
+2023-07-13 23:25:19.514 +00:00 [DBG] Key ring with default key {1a7d5b25-c350-4115-9539-0291699374ef} was loaded during application startup.
+2023-07-13 23:25:19.594 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:25:19.605 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:25:19.606 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:25:19.607 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:25:19.628 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:25:19.628 +00:00 [INF] Content root path: /app
+2023-07-13 23:25:19.629 +00:00 [DBG] Hosting started
+2023-07-13 23:45:00.575 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:45:00.663 +00:00 [DBG] Hosting starting
+2023-07-13 23:45:00.703 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:45:00.704 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:45:00.714 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 23:45:00.715 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 23:45:00.717 +00:00 [INF] Creating key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7} with creation date 2023-07-13 23:45:00Z, activation date 2023-07-13 23:45:00Z, and expiration date 2023-10-11 23:45:00Z.
+2023-07-13 23:45:00.731 +00:00 [DBG] Descriptor deserializer type for key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 23:45:00.736 +00:00 [DBG] No key escrow sink found. Not writing key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7} to escrow.
+2023-07-13 23:45:00.737 +00:00 [WRN] No XML encryptor configured. Key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7} may be persisted to storage in unencrypted form.
+2023-07-13 23:45:00.742 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7.xml'.
+2023-07-13 23:45:00.743 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 23:45:00.752 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7.xml'.
+2023-07-13 23:45:00.755 +00:00 [DBG] Found key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7}.
+2023-07-13 23:45:00.758 +00:00 [DBG] Considering key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7} with expiration date 2023-10-11 23:45:00Z as default key.
+2023-07-13 23:45:00.760 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:45:00.762 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:45:00.763 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:45:00.766 +00:00 [DBG] Using key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7} as the default key.
+2023-07-13 23:45:00.767 +00:00 [DBG] Key ring with default key {5d0d674e-56f8-4d1b-b8b7-a3f5d53e73a7} was loaded during application startup.
+2023-07-13 23:45:00.875 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:45:00.898 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:45:00.899 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:45:00.899 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:45:00.900 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:45:00.900 +00:00 [INF] Content root path: /app
+2023-07-13 23:45:00.901 +00:00 [DBG] Hosting started
+2023-07-13 23:49:31.600 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:49:31.665 +00:00 [DBG] Hosting starting
+2023-07-13 23:49:31.691 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:49:31.692 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:49:31.698 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 23:49:31.699 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 23:49:31.701 +00:00 [INF] Creating key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} with creation date 2023-07-13 23:49:31Z, activation date 2023-07-13 23:49:31Z, and expiration date 2023-10-11 23:49:31Z.
+2023-07-13 23:49:31.715 +00:00 [DBG] Descriptor deserializer type for key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 23:49:31.718 +00:00 [DBG] No key escrow sink found. Not writing key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} to escrow.
+2023-07-13 23:49:31.719 +00:00 [WRN] No XML encryptor configured. Key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} may be persisted to storage in unencrypted form.
+2023-07-13 23:49:31.723 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-0b3e8ce1-013f-4f26-9dbb-dccf02b20041.xml'.
+2023-07-13 23:49:31.724 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 23:49:31.727 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-0b3e8ce1-013f-4f26-9dbb-dccf02b20041.xml'.
+2023-07-13 23:49:31.730 +00:00 [DBG] Found key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041}.
+2023-07-13 23:49:31.733 +00:00 [DBG] Considering key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} with expiration date 2023-10-11 23:49:31Z as default key.
+2023-07-13 23:49:31.734 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:49:31.736 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:49:31.736 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:49:31.739 +00:00 [DBG] Using key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} as the default key.
+2023-07-13 23:49:31.740 +00:00 [DBG] Key ring with default key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} was loaded during application startup.
+2023-07-13 23:49:31.820 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:49:31.832 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:49:31.833 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:49:31.834 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:49:31.834 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:49:31.835 +00:00 [INF] Content root path: /app
+2023-07-13 23:49:31.836 +00:00 [DBG] Hosting started
+2023-07-13 23:50:22.824 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:50:22.899 +00:00 [DBG] Hosting starting
+2023-07-13 23:50:22.932 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:50:22.934 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:50:22.942 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-0b3e8ce1-013f-4f26-9dbb-dccf02b20041.xml'.
+2023-07-13 23:50:22.952 +00:00 [DBG] Found key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041}.
+2023-07-13 23:50:22.960 +00:00 [DBG] Considering key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} with expiration date 2023-10-11 23:49:31Z as default key.
+2023-07-13 23:50:22.965 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:50:22.977 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:50:22.980 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:50:22.986 +00:00 [DBG] Using key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} as the default key.
+2023-07-13 23:50:22.988 +00:00 [DBG] Key ring with default key {0b3e8ce1-013f-4f26-9dbb-dccf02b20041} was loaded during application startup.
+2023-07-13 23:50:23.080 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:50:23.091 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:50:23.092 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:50:23.093 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:50:23.094 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:50:23.095 +00:00 [INF] Content root path: /app
+2023-07-13 23:50:23.096 +00:00 [DBG] Hosting started
+2023-07-13 23:52:16.550 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:52:16.616 +00:00 [DBG] Hosting starting
+2023-07-13 23:52:16.650 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:52:16.651 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:52:16.658 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 23:52:16.659 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 23:52:16.661 +00:00 [INF] Creating key {919d4e71-7e23-4a5f-af87-12b867c7c538} with creation date 2023-07-13 23:52:16Z, activation date 2023-07-13 23:52:16Z, and expiration date 2023-10-11 23:52:16Z.
+2023-07-13 23:52:16.677 +00:00 [DBG] Descriptor deserializer type for key {919d4e71-7e23-4a5f-af87-12b867c7c538} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 23:52:16.680 +00:00 [DBG] No key escrow sink found. Not writing key {919d4e71-7e23-4a5f-af87-12b867c7c538} to escrow.
+2023-07-13 23:52:16.681 +00:00 [WRN] No XML encryptor configured. Key {919d4e71-7e23-4a5f-af87-12b867c7c538} may be persisted to storage in unencrypted form.
+2023-07-13 23:52:16.685 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-919d4e71-7e23-4a5f-af87-12b867c7c538.xml'.
+2023-07-13 23:52:16.686 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 23:52:16.689 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-919d4e71-7e23-4a5f-af87-12b867c7c538.xml'.
+2023-07-13 23:52:16.693 +00:00 [DBG] Found key {919d4e71-7e23-4a5f-af87-12b867c7c538}.
+2023-07-13 23:52:16.697 +00:00 [DBG] Considering key {919d4e71-7e23-4a5f-af87-12b867c7c538} with expiration date 2023-10-11 23:52:16Z as default key.
+2023-07-13 23:52:16.698 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:52:16.699 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:52:16.700 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:52:16.702 +00:00 [DBG] Using key {919d4e71-7e23-4a5f-af87-12b867c7c538} as the default key.
+2023-07-13 23:52:16.703 +00:00 [DBG] Key ring with default key {919d4e71-7e23-4a5f-af87-12b867c7c538} was loaded during application startup.
+2023-07-13 23:52:16.795 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:52:16.808 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:52:16.809 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:52:16.810 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:52:16.810 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:52:16.811 +00:00 [INF] Content root path: /app
+2023-07-13 23:52:16.811 +00:00 [DBG] Hosting started
+2023-07-13 23:55:09.284 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:55:09.346 +00:00 [DBG] Hosting starting
+2023-07-13 23:55:09.370 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:55:09.371 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:55:09.378 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2023-07-13 23:55:09.378 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2023-07-13 23:55:09.381 +00:00 [INF] Creating key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} with creation date 2023-07-13 23:55:09Z, activation date 2023-07-13 23:55:09Z, and expiration date 2023-10-11 23:55:09Z.
+2023-07-13 23:55:09.397 +00:00 [DBG] Descriptor deserializer type for key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2023-07-13 23:55:09.399 +00:00 [DBG] No key escrow sink found. Not writing key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} to escrow.
+2023-07-13 23:55:09.400 +00:00 [WRN] No XML encryptor configured. Key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} may be persisted to storage in unencrypted form.
+2023-07-13 23:55:09.404 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-47c77a48-fb4e-4b0b-9a89-ba088af8cfc4.xml'.
+2023-07-13 23:55:09.405 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2023-07-13 23:55:09.407 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-47c77a48-fb4e-4b0b-9a89-ba088af8cfc4.xml'.
+2023-07-13 23:55:09.411 +00:00 [DBG] Found key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4}.
+2023-07-13 23:55:09.414 +00:00 [DBG] Considering key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} with expiration date 2023-10-11 23:55:09Z as default key.
+2023-07-13 23:55:09.415 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:55:09.417 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:55:09.418 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:55:09.420 +00:00 [DBG] Using key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} as the default key.
+2023-07-13 23:55:09.421 +00:00 [DBG] Key ring with default key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} was loaded during application startup.
+2023-07-13 23:55:09.503 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:55:09.513 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:55:09.514 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:55:09.516 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:55:09.517 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:55:09.517 +00:00 [INF] Content root path: /app
+2023-07-13 23:55:09.518 +00:00 [DBG] Hosting started
+2023-07-13 23:57:30.268 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-07-13 23:57:30.330 +00:00 [DBG] Hosting starting
+2023-07-13 23:57:30.356 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2023-07-13 23:57:30.358 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-07-13 23:57:30.364 +00:00 [DBG] Reading data from file '/root/.aspnet/DataProtection-Keys/key-47c77a48-fb4e-4b0b-9a89-ba088af8cfc4.xml'.
+2023-07-13 23:57:30.371 +00:00 [DBG] Found key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4}.
+2023-07-13 23:57:30.377 +00:00 [DBG] Considering key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} with expiration date 2023-10-11 23:55:09Z as default key.
+2023-07-13 23:57:30.379 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-07-13 23:57:30.386 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-07-13 23:57:30.387 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-07-13 23:57:30.393 +00:00 [DBG] Using key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} as the default key.
+2023-07-13 23:57:30.394 +00:00 [DBG] Key ring with default key {47c77a48-fb4e-4b0b-9a89-ba088af8cfc4} was loaded during application startup.
+2023-07-13 23:57:30.478 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 890267B6D2A4768A3204457544E648372C87EEE0)
+2023-07-13 23:57:30.492 +00:00 [INF] Now listening on: http://[::]:80
+2023-07-13 23:57:30.493 +00:00 [DBG] Loaded hosting startup assembly School.Api
+2023-07-13 23:57:30.494 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-13 23:57:30.495 +00:00 [INF] Hosting environment: Development
+2023-07-13 23:57:30.496 +00:00 [INF] Content root path: /app
+2023-07-13 23:57:30.496 +00:00 [DBG] Hosting started
