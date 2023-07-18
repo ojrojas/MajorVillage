@@ -55,11 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Certificates\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="GroupsEndpoints\" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Controllers\" />
     <None Remove="Certificates\Identity.Api.Certificates.idsMajorVillage.pfx" />
+    <None Remove="GroupsEndpoints\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Certificates\Identity.Api.Certificates.idsMajorVillage.pfx" />

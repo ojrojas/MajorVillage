@@ -24,4 +24,3 @@ public class GetTypeUserById : EndpointBaseAsync.WithRequest<GetTypeUserByIdRequ
         return await _service.GetTypeUserByIdAsync(request, cancellationToken);
     }
 }
-

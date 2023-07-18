@@ -38,6 +38,7 @@ public class InitializerDbContext
     {
         try
         {
+            var url = new Uri($"{clientsUrls["IdentityApi"]}/swagger/oauth2-redirect.html");
             if (await manager.FindByClientIdAsync("identityswaggerui") is null)
             {
                 await manager.CreateAsync(new OpenIddictApplicationDescriptor
@@ -45,11 +46,11 @@ public class InitializerDbContext
                     ClientId = "identityswaggerui",
                     DisplayName = "Identity Swagger UI",
                     ClientSecret = "a961a072-4a69-4b10-bc17-1551d454d44c",
-
+                    ConsentType = ConsentTypes.Implicit,
                     RedirectUris = { new Uri($"{clientsUrls["IdentityApi"]}/swagger/oauth2-redirect.html") },
                     Permissions = {
                         Permissions.Endpoints.Token,
-                        Permissions.GrantTypes.ClientCredentials,
+                        Permissions.Endpoints.Logout,
                         Permissions.GrantTypes.AuthorizationCode,
                         Permissions.GrantTypes.Password,
                         Permissions.Endpoints.Authorization,
@@ -60,6 +61,7 @@ public class InitializerDbContext
                         Permissions.Prefixes.Scope + "identity",
                     },
                     PostLogoutRedirectUris = { new Uri($"{clientsUrls["IdentityApi"]}/swagger") },
+                    Requirements = { Requirements.Features.ProofKeyForCodeExchange }
                 });
             }
 

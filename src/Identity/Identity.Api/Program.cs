@@ -16,13 +16,11 @@ builder.Services.AddQuartz(conf => {
 builder.Services.AddControllers(options => options.Filters.Add(typeof(HttpExceptionsApplicationFilter)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 builder.Services.AddDIOpenIddictApplication();
 builder.Services.AddIdentityServerApplication(configuration);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDISwaggerApplication();
+builder.Services.AddDISwaggerApplication(configuration);
 
 //builder.Services.AddDIOptionsConfiguration(configuration);
 builder.Services.AddDIJwtApplication(configuration);
@@ -67,7 +65,11 @@ if (app.Environment.IsDevelopment())
     await initializer.RunConfigurationDbContext(_managerApplication,_managerScopes, clientUrls);
     
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options => {
+        options.OAuthClientId("identityswaggerui");
+        options.OAuthClientSecret("a961a072-4a69-4b10-bc17-1551d454d44c");
+        options.OAuthUsePkce();
+    });
 }
 
 app.UseCors("IdentityCorsPolicy");
@@ -75,6 +77,9 @@ app.UseHttpsRedirection();
 
 
 app.MapControllers();
+
+app.MapGroup(string.Empty).AddAuthorizationGroupRoute();
+app.MapGroup("/api").AddAttendantGroupRoute();
 app.MapHealthChecks("/health").RequireAuthorization();
 
 app.Run();

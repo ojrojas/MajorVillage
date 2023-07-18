@@ -2,19 +2,26 @@
 
 internal static class DISwaggerApplication
 {
-    public static IServiceCollection AddDISwaggerApplication(this IServiceCollection services)
+    public static IServiceCollection AddDISwaggerApplication(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddSwaggerGen(c =>
         {
             c.EnableAnnotations();
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity Api", Version = "v1", Description = "Identity Services Api" });
-            c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            c.AddSecurityDefinition("OAuth2", new OpenApiSecurityScheme
             {
-                Description = "JWT Authorization header using the Bearer scheme. \n\n Enter 'Bearer' [space] and then your token in the text input below. \nExample: 'Bearer 12345abcdef'",
+                Description = "OAuth authorization security scheme",
                 Name = "Authorization",
-                In = ParameterLocation.Header,
-                Type = SecuritySchemeType.ApiKey,
-                Scheme = "Bearer"
+                Type = SecuritySchemeType.OAuth2,
+                Flows = new OpenApiOAuthFlows
+                {
+                    AuthorizationCode = new OpenApiOAuthFlow
+                    {
+                        AuthorizationUrl = new Uri($"{configuration["IdentityUrl"]}/connect/authorize"),
+                        TokenUrl = new Uri($"{configuration["IdentityUrl"]}/connect/token"),
+                        Scopes= { { "identity" , "Resource scope"} }
+                    }
+                }
             });
 
             /// add security requeriments
@@ -26,11 +33,9 @@ internal static class DISwaggerApplication
                     Reference = new OpenApiReference
                     {
                         Type = ReferenceType.SecurityScheme,
-                        Id = "Bearer"
+                        Id = "oauth2"
                     },
                     Scheme = "oauth2",
-                    Name = "Bearer",
-                    In = ParameterLocation.Header,
                 },
                 new List<string>()
             }

@@ -2,6 +2,7 @@
 global using System.Net;
 global using System.Reflection;
 global using System.Runtime.Serialization;
+global using System.Security.Claims;
 global using System.Security.Cryptography.X509Certificates;
 global using System.Text;
 global using System.Threading.Tasks;
@@ -10,6 +11,7 @@ global using BuildingBlocks.Repository.Data;
 global using Identity.Api.DI;
 global using Identity.Api.Exceptions;
 global using Identity.Api.Filters;
+global using Identity.Api.GroupsEndpoints;
 global using Identity.Core.Data;
 global using Identity.Core.Dtos;
 global using Identity.Core.Entities;
@@ -17,6 +19,9 @@ global using Identity.Core.Helpers;
 global using Identity.Core.Interfaces;
 global using Identity.Core.Repositories;
 global using Identity.Core.Services;
+global using Microsoft.AspNetCore;
+global using Microsoft.AspNetCore.Authentication;
+global using Microsoft.AspNetCore.Authentication.Cookies;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Identity;
@@ -28,9 +33,8 @@ global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
 global using OpenIddict.Abstractions;
+global using OpenIddict.Server.AspNetCore;
 global using Quartz;
 global using Serilog;
 global using Swashbuckle.AspNetCore.Annotations;
 global using static OpenIddict.Abstractions.OpenIddictConstants;
-
-

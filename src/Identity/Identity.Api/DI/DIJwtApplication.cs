@@ -1,4 +1,6 @@
-﻿namespace Identity.Api.DI;
+﻿using OpenIddict.Validation.AspNetCore;
+
+namespace Identity.Api.DI;
 
 internal static class DIJwtApplication
 {
@@ -11,23 +13,7 @@ internal static class DIJwtApplication
     internal static IServiceCollection AddDIJwtApplication(this IServiceCollection services, IConfiguration configuration)
     {
         var key = Encoding.ASCII.GetBytes(configuration["Jwt:SecretPhrase"]);
-        services.AddAuthentication(config =>
-        {
-            config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-        })
-        .AddJwtBearer(config =>
-        {
-            config.RequireHttpsMetadata = false;
-            config.SaveToken = true;
-            config.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(key),
-                ValidateIssuer = false,
-                ValidateAudience = false
-            };
-        });
-
+        services.AddAuthentication(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme).AddCookie();
         return services;
     }
 }
