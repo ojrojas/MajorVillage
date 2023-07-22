@@ -38,3 +38,18 @@ services:
       context: .
       dockerfile: src/NotesAndMaths/NotesAndMaths.Api/Dockerfile
 
+  majorvillage.web:
+    image: ${DOCKER_REGISTRY-}webmajorvillage
+    build:
+      context: .
+      dockerfile: src/Web/WebMajorVillage/Dockerfile
+      args:
+       - REACT_APP_ROUTE_API_IDENTITY=${IDENTITY_URL}
+
+  majorvillage.admin:
+    image: ${DOCKER_REGISTRY-}adminmajorvillage
+    build:
+       context: .
+       dockerfile: src/Web/AdminMajorVillage/Dockerfile
+       args:
+       - REACT_APP_ROUTE_API_IDENTITY=${IDENTITY_URL}

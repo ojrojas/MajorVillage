@@ -56,10 +56,18 @@
   <ItemGroup>
     <Folder Include="Certificates\" />
     <Folder Include="GroupsEndpoints\" />
+    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\Account\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Certificates\Identity.Api.Certificates.idsMajorVillage.pfx" />
     <None Remove="GroupsEndpoints\" />
+    <None Remove="Views\" />
+    <None Remove="Controllers\" />
+    <None Remove="Controllers\Account\" />
+    <None Remove="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Certificates\Identity.Api.Certificates.idsMajorVillage.pfx" />

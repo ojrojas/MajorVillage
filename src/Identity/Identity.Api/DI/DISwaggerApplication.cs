@@ -8,18 +8,19 @@ internal static class DISwaggerApplication
         {
             c.EnableAnnotations();
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity Api", Version = "v1", Description = "Identity Services Api" });
-            c.AddSecurityDefinition("OAuth2", new OpenApiSecurityScheme
+            c.AddSecurityDefinition("OAuth", new OpenApiSecurityScheme
             {
+                In = ParameterLocation.Header,
                 Description = "OAuth authorization security scheme",
                 Name = "Authorization",
                 Type = SecuritySchemeType.OAuth2,
                 Flows = new OpenApiOAuthFlows
                 {
-                    AuthorizationCode = new OpenApiOAuthFlow
+                    ClientCredentials = new OpenApiOAuthFlow
                     {
                         AuthorizationUrl = new Uri($"{configuration["IdentityUrl"]}/connect/authorize"),
                         TokenUrl = new Uri($"{configuration["IdentityUrl"]}/connect/token"),
-                        Scopes= { { "identity" , "Resource scope"} }
+                        Scopes = { { "identity", "Resource scope" } }
                     }
                 }
             });
@@ -36,6 +37,7 @@ internal static class DISwaggerApplication
                         Id = "oauth2"
                     },
                     Scheme = "oauth2",
+                     In = ParameterLocation.Header
                 },
                 new List<string>()
             }

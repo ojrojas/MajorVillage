@@ -52,6 +52,7 @@ public class InitializerDbContext
                         Permissions.Endpoints.Token,
                         Permissions.Endpoints.Logout,
                         Permissions.GrantTypes.AuthorizationCode,
+                        Permissions.GrantTypes.ClientCredentials,
                         Permissions.GrantTypes.Password,
                         Permissions.Endpoints.Authorization,
                         Permissions.ResponseTypes.Code,

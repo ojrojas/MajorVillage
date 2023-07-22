@@ -70,6 +70,7 @@ services:
       - identitynet
 
   notesandmaths.api:
+    container_name: notesandmaths.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
@@ -79,6 +80,15 @@ services:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
 
+  majorvillage.web:
+    container_name: majorvillage.web
+    ports:
+      - "5305:80"
+
+  majorvillage.admin:
+    container_name: majorvillage.admin
+    ports:
+      - "5405:80"
 
 networks:
   identitynet:

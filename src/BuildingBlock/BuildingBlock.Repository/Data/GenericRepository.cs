@@ -65,7 +65,7 @@ public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRo
     public async Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         _logger.LogInformation($"Get by id {id} type {typeof(T)}");
-        return await _context.Set<T>().FindAsync(new object[] { id }, cancellationToken);
+        return await _context.Set<T>().FindAsync(new object[] { id }, cancellationToken) ?? null!;
     }
 
     public async Task<IEnumerable<T>> ListAsync(CancellationToken cancellationToken)
@@ -86,7 +86,7 @@ public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRo
     {
         _logger.LogInformation($"specification model {typeof(T)}");
         var spec = ApplySpecification(specification);
-        return await spec.FirstOrDefaultAsync(cancellationToken);
+        return await spec.FirstOrDefaultAsync(cancellationToken) ?? null!;
     }
 
     /// <summary>

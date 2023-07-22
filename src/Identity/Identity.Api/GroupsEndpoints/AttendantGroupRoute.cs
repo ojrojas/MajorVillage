@@ -7,8 +7,8 @@ public static class AttendantGroupRoute
         group.WithTags("Attendants");
 
         group.MapGet("GetAllAttendants",
-            [Authorize] async (
-                [FromServices] IAttendantService _service, CancellationToken cancellationToken) =>
+            [Authorize(AuthenticationSchemes = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)]
+        async ([FromServices] IAttendantService _service, CancellationToken cancellationToken) =>
             {
                 return await _service.GetAllAttendantAsync(new(), default);
             })
@@ -16,7 +16,8 @@ public static class AttendantGroupRoute
             .WithSummary("Get all attendants");
 
         group.MapPost("CreateAttendants",
-            [Authorize] async ([FromServices] IAttendantService _service,
+            [Authorize(AuthenticationSchemes = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)]
+        async ([FromServices] IAttendantService _service,
             [FromBody] CreateAttendantRequest request,
             CancellationToken cancellationToken) =>
             {
@@ -27,7 +28,7 @@ public static class AttendantGroupRoute
 
 
         group.MapDelete("DeleteAttendants/{id}",
-            [Authorize] async (
+            [Authorize(AuthenticationSchemes = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)] async (
                 [FromServices] IAttendantService _service,
                 [FromRoute] Guid id,
                 CancellationToken cancellationToken) =>
@@ -38,7 +39,7 @@ public static class AttendantGroupRoute
             .WithDescription("Delete attendants");
 
         group.MapPatch("UpdateAttendants",
-            [Authorize] async (
+            [Authorize(AuthenticationSchemes = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)] async (
                 [FromServices] IAttendantService _service,
                 [FromBody] UpdateAttendantRequest request,
                 CancellationToken cancellationToken) =>
@@ -49,7 +50,7 @@ public static class AttendantGroupRoute
             .WithSummary("Update attendants");
 
         group.MapPost("GetAttendantById/{id}",
-            [Authorize] async (
+            [Authorize(AuthenticationSchemes = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)] async (
                 [FromServices] IAttendantService _service,
                 [FromRoute] Guid id,
                 CancellationToken cancellationToken) =>

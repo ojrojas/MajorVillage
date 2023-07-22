@@ -6,6 +6,5 @@ public record GetAllUserApplicationResponse : BaseResponse
 	{
 	}
 
-	public IEnumerable<UserApplication> UserApplications { get; set; }
+	public IEnumerable<UserApplication>? UserApplications { get; set; }
 }
-

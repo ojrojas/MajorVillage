@@ -51,6 +51,9 @@ public static class AuthorizationGroupRoute
             {
                 var request = _context.GetOpenIddictServerRequest() ?? throw new ArgumentNullException("context_request","not found request valid");
                 ArgumentNullException.ThrowIfNull(request.ClientId);
+
+                var typeAuthorization = request.GrantType;
+
                 var result = await _context.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
                 if (result is not { Succeeded: true })

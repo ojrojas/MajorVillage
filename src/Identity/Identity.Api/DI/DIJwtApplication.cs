@@ -1,6 +1,4 @@
-﻿using OpenIddict.Validation.AspNetCore;
-
-namespace Identity.Api.DI;
+﻿namespace Identity.Api.DI;
 
 internal static class DIJwtApplication
 {
@@ -12,7 +10,6 @@ internal static class DIJwtApplication
     /// <returns>Service configuration</returns>
     internal static IServiceCollection AddDIJwtApplication(this IServiceCollection services, IConfiguration configuration)
     {
-        var key = Encoding.ASCII.GetBytes(configuration["Jwt:SecretPhrase"]);
         services.AddAuthentication(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme).AddCookie();
         return services;
     }

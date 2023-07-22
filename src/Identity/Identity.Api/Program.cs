@@ -13,7 +13,7 @@ builder.Services.AddQuartz(conf => {
     conf.UseInMemoryStore();
 });
 
-builder.Services.AddControllers(options => options.Filters.Add(typeof(HttpExceptionsApplicationFilter)));
+builder.Services.AddControllersWithViews(options => options.Filters.Add(typeof(HttpExceptionsApplicationFilter)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
@@ -36,12 +36,6 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "IdentityCorsPolicy",
     builder => builder.WithOrigins(clientUrls.Values.ToArray()).AllowAnyMethod().AllowAnyHeader());
-});
-
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy(name: "IdentityCorsPolicy",
-    builder => builder.RequireClaim("TypeUser"));
 });
 
 builder.Services.AddMemoryCache();
@@ -68,7 +62,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(options => {
         options.OAuthClientId("identityswaggerui");
         options.OAuthClientSecret("a961a072-4a69-4b10-bc17-1551d454d44c");
-        options.OAuthUsePkce();
     });
 }
 
@@ -76,7 +69,10 @@ app.UseCors("IdentityCorsPolicy");
 app.UseHttpsRedirection();
 
 
-app.MapControllers();
+app.UseAuthentication();
+app.UseRouting();
+app.UseAuthorization();
+app.MapDefaultControllerRoute();
 
 app.MapGroup(string.Empty).AddAuthorizationGroupRoute();
 app.MapGroup("/api").AddAttendantGroupRoute();
