@@ -1,5 +1,4 @@
 global using BuildingBlocks.Repository.Data;
-global using Identity.Api.EndPoints;
 global using Identity.Core.Data;
 global using Identity.Core.Dtos;
 global using Identity.Core.Entities;

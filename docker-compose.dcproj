@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>{456B29D4-1125-487F-B0BA-124740FECD9A}</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://docker.for.mac.localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>identity.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

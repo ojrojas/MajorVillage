@@ -8,9 +8,11 @@ internal static class DIJwtApplication
     /// <param name="services">Services application</param>
     /// <param name="configuration">configuration environments</param>
     /// <returns>Service configuration</returns>
-    internal static IServiceCollection AddDIJwtApplication(this IServiceCollection services, IConfiguration configuration)
+    internal static IServiceCollection AddDIJwtApplication(this IServiceCollection services)
     {
-        services.AddAuthentication(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme).AddCookie();
+        services.AddAuthorization()
+            .AddAuthentication(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)
+            .AddCookie();
         return services;
     }
 }

@@ -7,7 +7,8 @@ var configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddDIContextApplication(configuration);
 
-builder.Services.AddQuartz(conf => {
+builder.Services.AddQuartz(conf =>
+{
     conf.UseMicrosoftDependencyInjectionJobFactory();
     conf.UseSimpleTypeLoader();
     conf.UseInMemoryStore();
@@ -23,7 +24,7 @@ builder.Services.AddIdentityServerApplication(configuration);
 builder.Services.AddDISwaggerApplication(configuration);
 
 //builder.Services.AddDIOptionsConfiguration(configuration);
-builder.Services.AddDIJwtApplication(configuration);
+builder.Services.AddDIJwtApplication();
 builder.Services.AddOptionsExtensions(configuration);
 builder.Services.AddDIServicesApplication();
 builder.Services.AddHealthChecks();
@@ -54,28 +55,27 @@ if (app.Environment.IsDevelopment())
     var _managerScopes = service.GetRequiredService<IOpenIddictScopeManager>();
 
     await initializer.Run();
-  
+
     var applied = context.Database.GetAppliedMigrations();
-    await initializer.RunConfigurationDbContext(_managerApplication,_managerScopes, clientUrls);
-    
+    await initializer.RunConfigurationDbContext(_managerApplication, _managerScopes, clientUrls);
+
     app.UseSwagger();
-    app.UseSwaggerUI(options => {
-        options.OAuthClientId("identityswaggerui");
-        options.OAuthClientSecret("a961a072-4a69-4b10-bc17-1551d454d44c");
-    });
+    app.UseSwaggerUI(
+        options =>
+        {
+            options.DisplayOperationId();
+            options.EnablePersistAuthorization();
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity api v1");
+            options.OAuthClientId("identityswaggerui");
+            options.OAuthClientSecret("a961a072-4a69-4b10-bc17-1551d454d44c");
+        });
 }
 
 app.UseCors("IdentityCorsPolicy");
 app.UseHttpsRedirection();
 
+app.AddDIConfigurationApplication();
 
-app.UseAuthentication();
-app.UseRouting();
-app.UseAuthorization();
-app.MapDefaultControllerRoute();
-
-app.MapGroup(string.Empty).AddAuthorizationGroupRoute();
-app.MapGroup("/api").AddAttendantGroupRoute();
 app.MapHealthChecks("/health").RequireAuthorization();
 
 app.Run();

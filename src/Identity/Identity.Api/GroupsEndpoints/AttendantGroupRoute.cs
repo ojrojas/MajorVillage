@@ -4,7 +4,7 @@ public static class AttendantGroupRoute
 {
     public static RouteGroupBuilder AddAttendantGroupRoute(this RouteGroupBuilder group)
     {
-        group.WithTags("Attendants");
+        group.WithTags("AttendantsEndpoints");
 
         group.MapGet("GetAllAttendants",
             [Authorize(AuthenticationSchemes = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)]
@@ -13,7 +13,8 @@ public static class AttendantGroupRoute
                 return await _service.GetAllAttendantAsync(new(), default);
             })
             .WithDescription("Get all attendants")
-            .WithSummary("Get all attendants");
+            .WithSummary("Get all attendants")
+            .Produces(200, typeof(GetAllAttendantResponse));
 
         group.MapPost("CreateAttendants",
             [Authorize(AuthenticationSchemes = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme)]
