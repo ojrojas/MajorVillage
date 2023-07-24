@@ -1,0 +1,15 @@
+global using System.Net;
+global using System.Net.Http.Headers;
+global using Identity.Core.Data;
+global using Identity.Core.Dtos;
+global using Identity.Core.Entities;
+global using Identity.Tests;
+global using Microsoft.AspNetCore.Mvc.Testing;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Serialization;
+global using Serilog;
+global using Xunit;

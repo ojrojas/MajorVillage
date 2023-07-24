@@ -1,64 +1,105 @@
-﻿namespace Tests.Core.Services;
+﻿using System.Net;
+using System.Net.Http.Headers;
+using Azure.Core;
+using OpenIddict.Client;
+
+namespace Tests.Core.Services;
 
 public class CreateTypeIdentificationTest
 {
-	private readonly TypeIdentificationRepository _repository;
-	private readonly ILogger<TypeIdentificationService> _logger;
-	private readonly ITypeIdentificationService _typeIdentificationService;
+    private readonly IdentityApiFactory _application;
+    private readonly HttpClient Client;
+    private readonly OpenIddictClientService _authenticateCredentials;
+    private readonly JsonSerializerSettings _serializeSettings = new JsonSerializerSettings()
+    {
+        ContractResolver = new CamelCasePropertyNamesContractResolver(),
+        DateTimeZoneHandling = DateTimeZoneHandling.Utc,
+        NullValueHandling = NullValueHandling.Ignore
+    };
 
-	private readonly IdentityAppDbContext identityDbContext;
-	private readonly DbContextOptions<IdentityAppDbContext> options;
-
-	public CreateTypeIdentificationTest()
-	{
-		var logger = LoggerFactory.Create(factory => factory.AddConsole());
-        options = new DbContextOptionsBuilder<IdentityAppDbContext>().UseInMemoryDatabase(databaseName: "in-memory").Options;
-		identityDbContext = new IdentityAppDbContext(options);
-		_repository = new TypeIdentificationRepository(
-			logger.CreateLogger<GenericRepository<TypeIdentification>>(), identityDbContext);
-		_typeIdentificationService = new TypeIdentificationService(_repository,logger.CreateLogger<TypeIdentificationService>());
-	}
-
-	[Fact]
-	public async Task Create_TypeIdentification_Success()
-	{
-		//Arrange
-		// dtos
-		CreateTypeIdentificationRequest request = GetTypeIdentificationRequestFake();
-
-		//Act
-		CreateTypeIdentification endpoint = new CreateTypeIdentification(_typeIdentificationService);
-		var actionResult = endpoint.HandleAsync(request, default); 
-
-		Assert.NotNull((actionResult.Result as CreateTypeIdentificationResponse).TypeIdentificationCreated);
-
-	}
+    public CreateTypeIdentificationTest()
+    {
+        _application = new IdentityApiFactory("Testing");
+        var logger = LoggerFactory.Create(factory => factory.AddConsole());
+        Client = _application.CreateClient();
+    }
 
     [Fact]
-    public async Task Create_TypeIdentification_Fail()
+    public async Task Create_TypeIdentification_Success()
+    {
+        //Arrange
+        // dtos
+        CreateTypeIdentificationRequest request = GetTypeIdentificationRequestFake();
+
+        //Act
+        Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await GetToken());
+        StringContent content = new(JsonConvert.SerializeObject(request), System.Text.Encoding.UTF8, "application/json");
+        var response = await Client.PostAsync("/api/CreateTypeIdentification", content);
+        response.EnsureSuccessStatusCode();
+      
+        Assert.True(response.StatusCode.Equals(HttpStatusCode.OK));
+
+    }
+
+    [Fact]
+    public async Task Create_TypeIdentification_StatusCode_UnAthorize()
     {
         //Act
-        CreateTypeIdentification endpoint = new CreateTypeIdentification(_typeIdentificationService);
-        var actionResult = endpoint.HandleAsync(default, default);
-		Assert.ThrowsAsync(typeof (InvalidOperationException),() => actionResult);
+        var response = await Client.PostAsync("/api/CreateTypeIdentification", default);
+        Assert.True(response.StatusCode == HttpStatusCode.Unauthorized);
+    }
 
+    [Fact]
+    public async Task Create_TypeIdentification_Null_Exception()
+    {
+        //Act
+        Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await GetToken());
+        var response = await Client.PostAsync("/api/CreateTypeIdentification", default);
+        var stringResponse = await response.Content.ReadAsStringAsync();
+        var model = JsonConvert.DeserializeObject<CreateTypeIdentificationResponse>(stringResponse, _serializeSettings);
+        Assert.Null(model);
+    }
+
+    private async ValueTask<string> GetToken()
+    {
+        try
+        {
+            var request = new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("grant_type", "client_credentials"),
+                new KeyValuePair<string, string>("scope", "identity"),
+                new KeyValuePair<string, string>("client_id", "identityswaggeruitesting"),
+                new KeyValuePair<string, string>("client_secret", "187b02a3-7611-4a05-974c-3337655d169b")
+            };
+
+            FormUrlEncodedContent content = new FormUrlEncodedContent(request);
+            var response = await Client.PostAsync("/connect/token", content);
+            response.EnsureSuccessStatusCode();
+            var stringResponse = await response.Content.ReadAsStringAsync();
+            var model = JsonConvert.DeserializeObject<TokenResponse>(stringResponse, _serializeSettings);
+            return model.Access_Token;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message, ex);
+        }
     }
 
     private CreateTypeIdentificationRequest GetTypeIdentificationRequestFake()
     {
-		return new CreateTypeIdentificationRequest { TypeIdentification = GetTypeIdentificationFake() };
+        return new CreateTypeIdentificationRequest { TypeIdentification = GetTypeIdentificationFake() };
     }
 
     private TypeIdentification GetTypeIdentificationFake()
     {
-		return new TypeIdentification
-		{
-			Id = Guid.NewGuid(),
-			Name = "CCI",
-			CreatedBy = Guid.NewGuid(),
-			CreatedDate = DateTime.UtcNow,
-			State = true
-		};
+        return new TypeIdentification
+        {
+            Id = Guid.NewGuid(),
+            Name = "CCI",
+            CreatedBy = Guid.NewGuid(),
+            CreatedDate = DateTime.UtcNow,
+            State = true
+        };
     }
 }
 

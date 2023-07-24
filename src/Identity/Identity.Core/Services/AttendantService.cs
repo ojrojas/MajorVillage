@@ -23,7 +23,7 @@ public class AttendantService : IAttendantService
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<CreateAttendantResponse> CreateAttendantAsync(CreateAttendantRequest request, CancellationToken cancellationToken)
+    public async ValueTask<CreateAttendantResponse> CreateAttendantAsync(CreateAttendantRequest request, CancellationToken cancellationToken)
     {
         CreateAttendantResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -32,7 +32,7 @@ public class AttendantService : IAttendantService
         return response;
     }
 
-    public async Task<DeleteAttendantResponse> DeleteAttendantAsync(DeleteAttendantRequest request, CancellationToken cancellationToken)
+    public async ValueTask<DeleteAttendantResponse> DeleteAttendantAsync(DeleteAttendantRequest request, CancellationToken cancellationToken)
     {
         DeleteAttendantResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -43,7 +43,7 @@ public class AttendantService : IAttendantService
 
     }
 
-    public async Task<GetAllAttendantResponse> GetAllAttendantAsync(GetAllAttendantRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetAllAttendantResponse> GetAllAttendantAsync(GetAllAttendantRequest request, CancellationToken cancellationToken)
     {
         GetAllAttendantResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -52,7 +52,7 @@ public class AttendantService : IAttendantService
         return response;
     }
 
-    public async Task<GetAttendantByIdResponse> GetAttendantByIdAsync(GetAttendantByIdRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetAttendantByIdResponse> GetAttendantByIdAsync(GetAttendantByIdRequest request, CancellationToken cancellationToken)
     {
         GetAttendantByIdResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -61,7 +61,7 @@ public class AttendantService : IAttendantService
         return response;
     }
 
-    public async Task<UpdateAttendantResponse> UpdateAttendantAsync(UpdateAttendantRequest request, CancellationToken cancellationToken)
+    public async ValueTask<UpdateAttendantResponse> UpdateAttendantAsync(UpdateAttendantRequest request, CancellationToken cancellationToken)
     {
         UpdateAttendantResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");

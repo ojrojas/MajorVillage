@@ -2,7 +2,7 @@
 
 public static class DIIdentityServerApplication
 {
-    public static IServiceCollection AddIdentityServerApplication(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddIdentityServerApplication(this IServiceCollection services)
     {
         services.AddIdentity<UserApplication, IdentityRole>()
             .AddEntityFrameworkStores<IdentityAppDbContext>()

@@ -23,7 +23,7 @@ public class TypeIdentificationService : ITypeIdentificationService
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<CreateTypeIdentificationResponse> CreateTypeIdentificationAsync(CreateTypeIdentificationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<CreateTypeIdentificationResponse> CreateTypeIdentificationAsync(CreateTypeIdentificationRequest request, CancellationToken cancellationToken)
     {
         CreateTypeIdentificationResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -32,7 +32,7 @@ public class TypeIdentificationService : ITypeIdentificationService
         return response;
     }
 
-    public async Task<DeleteTypeIdentificationResponse> DeleteTypeIdentificationAsync(DeleteTypeIdentificationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<DeleteTypeIdentificationResponse> DeleteTypeIdentificationAsync(DeleteTypeIdentificationRequest request, CancellationToken cancellationToken)
     {
         DeleteTypeIdentificationResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -43,7 +43,7 @@ public class TypeIdentificationService : ITypeIdentificationService
 
     }
 
-    public async Task<GetAllTypeIdentificationResponse> GetAllTypeIdentificationAsync(GetAllTypeIdentificationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetAllTypeIdentificationResponse> GetAllTypeIdentificationAsync(GetAllTypeIdentificationRequest request, CancellationToken cancellationToken)
     {
         GetAllTypeIdentificationResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -52,7 +52,7 @@ public class TypeIdentificationService : ITypeIdentificationService
         return response;
     }
 
-    public async Task<GetTypeIdentificationByIdResponse> GetTypeIdentificationByIdAsync(GetTypeIdentificationByIdRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetTypeIdentificationByIdResponse> GetTypeIdentificationByIdAsync(GetTypeIdentificationByIdRequest request, CancellationToken cancellationToken)
     {
         GetTypeIdentificationByIdResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -61,7 +61,7 @@ public class TypeIdentificationService : ITypeIdentificationService
         return response;
     }
 
-    public async Task<UpdateTypeIdentificationResponse> UpdateTypeIdentificationAsync(UpdateTypeIdentificationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<UpdateTypeIdentificationResponse> UpdateTypeIdentificationAsync(UpdateTypeIdentificationRequest request, CancellationToken cancellationToken)
     {
         UpdateTypeIdentificationResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
