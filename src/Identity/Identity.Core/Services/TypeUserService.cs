@@ -11,7 +11,7 @@ public class TypeUserService : ITypeUserService
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<CreateTypeUserResponse> CreateTypeUserAsync(CreateTypeUserRequest request, CancellationToken cancellationToken)
+    public async ValueTask<CreateTypeUserResponse> CreateTypeUserAsync(CreateTypeUserRequest request, CancellationToken cancellationToken)
     {
         CreateTypeUserResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -20,7 +20,7 @@ public class TypeUserService : ITypeUserService
         return response;
     }
 
-    public async Task<UpdateTypeUserResponse> UpdateTypeUserAsync(UpdateTypeUserRequest request, CancellationToken cancellationToken)
+    public async ValueTask<UpdateTypeUserResponse> UpdateTypeUserAsync(UpdateTypeUserRequest request, CancellationToken cancellationToken)
     {
         UpdateTypeUserResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -29,7 +29,7 @@ public class TypeUserService : ITypeUserService
         return response;
     }
 
-    public async Task<DeleteTypeUserResponse> DeleteTypeUserAsync(DeleteTypeUserRequest request, CancellationToken cancellationToken)
+    public async ValueTask<DeleteTypeUserResponse> DeleteTypeUserAsync(DeleteTypeUserRequest request, CancellationToken cancellationToken)
     {
         DeleteTypeUserResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -39,7 +39,7 @@ public class TypeUserService : ITypeUserService
         return response;
     }
 
-    public async Task<GetAllTypeUserResponse> GetAllTypeUserAsync(GetAllTypeUserRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetAllTypeUserResponse> GetAllTypeUserAsync(GetAllTypeUserRequest request, CancellationToken cancellationToken)
     {
         GetAllTypeUserResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");
@@ -48,7 +48,7 @@ public class TypeUserService : ITypeUserService
         return response;
     }
 
-    public async Task<GetTypeUserByIdResponse> GetTypeUserByIdAsync(GetTypeUserByIdRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetTypeUserByIdResponse> GetTypeUserByIdAsync(GetTypeUserByIdRequest request, CancellationToken cancellationToken)
     {
         GetTypeUserByIdResponse response = new(request.CorrelationId());
         _logger.LogInformation($"Request correlationId: {response.CorrelationId()}");

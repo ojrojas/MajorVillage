@@ -38,7 +38,6 @@ public class InitializerDbContext
     {
         try
         {
-            var url = new Uri($"{clientsUrls["IdentityApi"]}/swagger/oauth2-redirect.html");
             if (await manager.FindByClientIdAsync("identityswaggerui") is null)
             {
                 await manager.CreateAsync(new OpenIddictApplicationDescriptor
@@ -145,4 +144,31 @@ public class InitializerDbContext
             throw new InvalidOperationException(ex.Message, ex);
         }
     }
+
+    public virtual async Task RunConfigurationDbContextTesting(IOpenIddictApplicationManager manager)
+    {
+        try
+        {
+            if (await manager.FindByClientIdAsync("identityswaggeruitesting") is null)
+            {
+                await manager.CreateAsync(new OpenIddictApplicationDescriptor
+                {
+                    ClientId = "identityswaggeruitesting",
+                    DisplayName = "Identity Swagger UI Testing",
+                    ClientSecret = "187b02a3-7611-4a05-974c-3337655d169b",
+                    Permissions = {
+                        Permissions.Endpoints.Token,
+                        Permissions.GrantTypes.ClientCredentials,
+                        Permissions.Prefixes.Scope + "identity",
+                    },
+                });
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException(ex.Message, ex);
+        }
+    }
+
+
 }

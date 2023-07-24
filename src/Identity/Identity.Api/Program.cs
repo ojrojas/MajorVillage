@@ -19,7 +19,7 @@ builder.Services.AddControllersWithViews(options => options.Filters.Add(typeof(H
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddDIOpenIddictApplication();
-builder.Services.AddIdentityServerApplication(configuration);
+builder.Services.AddIdentityServerApplication();
 
 builder.Services.AddDISwaggerApplication(configuration);
 
@@ -71,6 +71,17 @@ if (app.Environment.IsDevelopment())
         });
 }
 
+if(app.Environment.EnvironmentName.Equals("Testing"))
+{
+    var initializer = service.GetRequiredService<InitializerDbContext>();
+    var context = service.GetRequiredService<IdentityAppDbContext>();
+    var _managerApplication = service.GetRequiredService<IOpenIddictApplicationManager>();
+
+    await initializer.Run();
+
+    await initializer.RunConfigurationDbContextTesting(_managerApplication);
+}
+
 app.UseCors("IdentityCorsPolicy");
 app.UseHttpsRedirection();
 
@@ -87,3 +98,5 @@ static Serilog.ILogger CreateSerilogLogger() => new LoggerConfiguration()
         .Enrich.FromLogContext()
         .WriteTo.Console()
         .CreateLogger();
+
+public partial class Program { }

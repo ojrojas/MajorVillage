@@ -26,9 +26,10 @@ public class UserApplicationService : IUserApplicationService
         _authorizationManager = authorizationManager ?? throw new ArgumentNullException(nameof(authorizationManager));
     }
 
-    public async Task<CreateUserApplicationResponse> CreateUserApplicationAsync(CreateUserApplicationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<CreateUserApplicationResponse> CreateUserApplicationAsync(CreateUserApplicationRequest request, CancellationToken cancellationToken)
     {
         CreateUserApplicationResponse response = new(request.CorrelationId());
+        _logger.LogInformation($"Create user application request {response.CorrelationId()}");
         if (request.UserApplication is null) throw new ArgumentNullException(nameof(request.UserApplication));
         ArgumentNullException.ThrowIfNull(request.UserApplication.PasswordHash);
         ArgumentNullException.ThrowIfNull(request.UserApplication.UserName);
@@ -40,38 +41,60 @@ public class UserApplicationService : IUserApplicationService
         return response;
     }
 
-    public async Task<DeleteUserApplicationResponse> DeleteUserApplicationAsync(DeleteUserApplicationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<DeleteUserApplicationResponse> DeleteUserApplicationAsync(DeleteUserApplicationRequest request, CancellationToken cancellationToken)
     {
         DeleteUserApplicationResponse response = new(request.CorrelationId());
+        _logger.LogInformation($"Delete userapplication request {response.CorrelationId()}");
         if (request.Id.Equals(Guid.Empty)) throw new ArgumentNullException(nameof(request.Id));
         UserApplication userApplication = await _repository.GetByIdAsync(request.Id, cancellationToken);
         response.UserApplicationDeleted = await _repository.DeleteAsync(userApplication, cancellationToken);
         return response;
     }
 
-    public async Task<GetAllUserApplicationResponse> GetAllUserApplicationsAsync(GetAllUserApplicationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetAllUserApplicationResponse> GetAllUserApplicationsAsync(GetAllUserApplicationRequest request, CancellationToken cancellationToken)
     {
         GetAllUserApplicationResponse response = new(request.CorrelationId());
-        _logger.LogInformation($"Get all user applications request");
+        _logger.LogInformation($"Get all user applications request {response.CorrelationId()}");
         response.UserApplications = await _repository.ListAsync(cancellationToken);
         if(response is not null && response.UserApplications.Any())
         {
             foreach(var user in response.UserApplications)
             {
                 user.PasswordHash = "Private Field";
+                user.ConcurrencyStamp = "Private Field";
+                user.SecurityStamp = "Private Field";
             }
         }
         return response;
     }
 
-    public async Task<IResult> LoginAsync(LoginUserApplicationRequest request, CancellationToken cancellationToken)
+    public async ValueTask<GetUserByIdResponse> GetUserByIdAsync(GetUserByIdRequest request, CancellationToken cancellationToken)
+    {
+        GetUserByIdResponse response = new(request.CorrelationId());
+        _logger.LogInformation($"Get user by  applications request {response.CorrelationId()}");
+        response.UserApplication = await _repository.GetByIdAsync(request.Id, cancellationToken);
+        response.UserApplication.PasswordHash = string.Empty;
+        response.UserApplication.SecurityStamp = string.Empty;
+        response.UserApplication.ConcurrencyStamp = string.Empty;
+        return response;
+    }
+
+    public async ValueTask<UpdateUserApplicationResponse> UpdateUserApplicationAsync(UpdateUserApplicationRequest request, CancellationToken cancellationToken)
+    {
+        UpdateUserApplicationResponse response = new(request.CorrelationId());
+        _logger.LogInformation($"Update user application request {response.CorrelationId()}");
+        response.UserApplication = await _repository.UpdateAsync(request.UserApplication, cancellationToken);
+        return response;
+    }
+
+    public async ValueTask<IResult> LoginAsync(LoginUserApplicationRequest request, CancellationToken cancellationToken)
     {
         LoginUserApplicationResponse response = new(request.CorrelationId())
         {
             Token = "Do not get token response"
         };
 
-        _logger.LogInformation($"Encrypt password and get user by login");
+        _logger.LogInformation($"Encrypt password and get user by login {response.CorrelationId()}");
 
         request.UserName = request.UserName.ToLowerInvariant();
         UserApplicationSpecifications specification = new(request.UserName);
