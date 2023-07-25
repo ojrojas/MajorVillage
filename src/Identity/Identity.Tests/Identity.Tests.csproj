@@ -39,5 +39,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="appconfiguration.json" />
+    <None Remove="Core\Services\TypeUser\" />
+    <None Remove="Core\Services\ApplicationUser\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Services\TypeUser\" />
+    <Folder Include="Core\Services\ApplicationUser\" />
   </ItemGroup>
 </Project>

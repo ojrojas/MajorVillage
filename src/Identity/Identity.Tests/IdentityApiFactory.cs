@@ -1,24 +1,15 @@
-﻿using OpenIddict.Client;
-
-namespace Identity.Tests;
+﻿namespace Identity.Tests;
 
 public class IdentityApiFactory : WebApplicationFactory<Program>
 {
-    private readonly string _environment;
-
-    public IdentityApiFactory(string environment)
-    {
-        _environment = environment ?? throw new ArgumentNullException(nameof(environment));
-    }
-
     protected override IHost CreateHost(IHostBuilder builder)
     {
-        builder.UseEnvironment(_environment);
+        builder.UseEnvironment("Testing");
         builder.UseSerilog();
 
         builder.ConfigureServices(services =>
         {
-            services.AddScoped(sp =>
+            services.AddTransient(sp =>
             {
                 return new DbContextOptionsBuilder<IdentityAppDbContext>()
                 .UseInMemoryDatabase("Tests")
