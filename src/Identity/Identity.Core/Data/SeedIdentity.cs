@@ -4,9 +4,13 @@ public static class SeedIdentity
 {
     public static UserApplication CreateUserApplicationRequest()
     {
+        var UserApplicationId = Guid.NewGuid().ToString();
+        var TypeIdentificationId = Guid.NewGuid();
+        var TypeUserId = Guid.NewGuid();
+
         return new UserApplication()
         {
-            Id = "886572d4-0f16-4411-a365-f5960465447f",
+            Id = UserApplicationId,
             UserName = "pepe@example.com",
             Name = "Pepe",
             LastName = "Perez",
@@ -17,22 +21,22 @@ public static class SeedIdentity
             Contact = "123451234",
             TypeIdentification = new()
             {
-                Id = Guid.Parse("02277856-dcc6-44ac-895a-6733f13bbca3"),
-                CreatedBy = Guid.Parse("886572d4-0f16-4411-a365-f5960465447f"),
+                Id = TypeIdentificationId,
+                CreatedBy = Guid.Parse(UserApplicationId),
                 CreatedDate = DateTime.UtcNow,
                 State = true,
                 Name = "CC"
             },
-            TypeIdentificationId = Guid.Parse("02277856-dcc6-44ac-895a-6733f13bbca3"),
+            TypeIdentificationId = TypeIdentificationId,
             TypeUser = new()
             {
-                Id = Guid.Parse("acae4028-e16b-4c61-a3d6-9b000851fee5"),
-                CreatedBy = Guid.Parse("886572d4-0f16-4411-a365-f5960465447f"),
+                Id = TypeUserId,
+                CreatedBy = Guid.Parse(UserApplicationId),
                 CreatedDate = DateTime.UtcNow,
                 State = true,
                 Name = "Admin"
             },
-            TypeUserId = Guid.Parse("acae4028-e16b-4c61-a3d6-9b000851fee5")
+            TypeUserId = TypeUserId
         };
     }
 }
