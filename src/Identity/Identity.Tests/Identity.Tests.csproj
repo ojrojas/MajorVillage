@@ -41,6 +41,9 @@
     <None Remove="appconfiguration.json" />
     <None Remove="Core\Services\TypeUser\" />
     <None Remove="Core\Services\ApplicationUser\" />
+    <None Remove="Core\Services\.DS_Store" />
+    <None Remove="Core\.DS_Store" />
+    <None Remove=".DS_Store" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\Services\TypeUser\" />

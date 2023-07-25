@@ -35,9 +35,6 @@ public class CreateTypeUserTest : IClassFixture<IdentityApiFactory>
     public async Task Create_TypeUser_Should_UnAuthorize()
     {
         var response = await Client.PostAsync("/api/CreateTypeUser", default);
-        var stringResponse = await response.Content.ReadAsStringAsync();
-        var model = JsonConvert.DeserializeObject<CreateTypeIdentificationResponse>(stringResponse, Helpers._serializeSettings);
-
         Assert.True(response.StatusCode.Equals(HttpStatusCode.Unauthorized));
     }
 
