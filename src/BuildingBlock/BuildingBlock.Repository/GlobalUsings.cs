@@ -1,9 +1,7 @@
-﻿global using BuildingBlocks.Repository.Data;
-global using BuildingBlocks.Repository.Interfaces;
-global using Microsoft.EntityFrameworkCore.SqlServer;
-global using Microsoft.EntityFrameworkCore;
-global using Microsoft.EntityFrameworkCore.Design;
+﻿global using System.ComponentModel.DataAnnotations;
+global using System.Text.Json;
 global using Ardalis.Specification;
 global using Ardalis.Specification.EntityFrameworkCore;
+global using BuildingBlock.Repository.Interfaces;
+global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Logging;
-global using System.Text.Json;

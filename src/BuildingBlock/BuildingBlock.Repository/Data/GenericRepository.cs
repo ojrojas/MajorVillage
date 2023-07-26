@@ -1,4 +1,4 @@
-﻿namespace BuildingBlocks.Repository.Data;
+﻿namespace BuildingBlock.Repository.Data;
 
 public class GenericRepository<T> : IRepository<T> where T : class, IAggregateRoot
 {

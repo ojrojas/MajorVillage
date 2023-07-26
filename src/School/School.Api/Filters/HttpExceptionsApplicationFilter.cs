@@ -53,6 +53,6 @@ public class HttpExceptionsApplicationFilter : IExceptionFilter
 
 public class ErrorDetails
 {
-    public string[] Messages { get; set; }
-    public object MessagesEnvDeveloper { get; set; }
+    public string[]? Messages { get; set; }
+    public object? MessagesEnvDeveloper { get; set; }
 }

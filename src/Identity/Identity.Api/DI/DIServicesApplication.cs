@@ -4,7 +4,7 @@ internal static class DIServicesApplication
 {
     public static IServiceCollection AddDIServicesApplication(this IServiceCollection services)
     {
-        services.AddTransient(typeof(GenericRepository<>));
+        //services.AddTransient(typeof(GenericRepository<>));
 
         services.AddTransient(typeof(TypeIdentificationRepository));
         services.AddTransient(typeof(UserApplicationRepository));

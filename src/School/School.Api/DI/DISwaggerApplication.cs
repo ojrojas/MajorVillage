@@ -1,8 +1,8 @@
 ﻿namespace School.Api.DI;
 
-internal static class AddSwaggerDependencyInjection
+internal static class DISwaggerApplication
 {
-    internal static IServiceCollection AddSwaggerGenDocumention(this IServiceCollection services, IConfiguration configuration)
+    internal static IServiceCollection AddDISwaggerApplication(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddSwaggerGen(c =>
         {

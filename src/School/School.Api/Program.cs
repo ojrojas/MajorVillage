@@ -9,40 +9,17 @@ var configuration = builder.Configuration;
 builder.Services.AddControllers(options => options.Filters.Add(typeof(HttpExceptionsApplicationFilter)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<SchoolDbContext>(
-    c => c.UseSqlite(builder.Configuration.GetConnectionString("ConnectionSqlite"))
-);
 
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddDIDbContextApplication(configuration);
 
-var ip = configuration["IdentityUrl"];
-
-builder.Services.AddSwaggerGenDocumention(configuration);
+builder.Services.AddDISwaggerApplication(configuration);
 
 //builder.Services.AddDIOptionsConfiguration(configuration);
-builder.Services.AddJwtExtension(configuration);
-builder.Services.AddServicesDIApp();
+builder.Services.AddDIJwtApplication(configuration);
+builder.Services.AddServicesDIApplication();
 builder.Services.AddHealthChecks();
 
-IList<string> urlsAllowed = new List<string>();
-var appsurls = configuration.GetSection("Apps").GetChildren();
-
-foreach (var url in appsurls)
-    urlsAllowed.Add(url.Value);
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: "SchoolCorsPolicy",
-    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-});
-
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy(name: "SchoolCorsPolicy",
-    builder => builder.RequireClaim("TypeUser"));
-});
-
+builder.Services.AddDICorsAndAuthenticationAuthorization(configuration);
 
 builder.Services.AddMemoryCache();
 
@@ -73,6 +50,4 @@ static Serilog.ILogger CreateSerilogLogger() => new LoggerConfiguration()
         .Enrich.WithProperty("ApplicationContext", typeof(Program).Namespace)
         .Enrich.FromLogContext()
         .WriteTo.Console()
-        .WriteTo.File("Schoollogger.txt",
-        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
         .CreateLogger();

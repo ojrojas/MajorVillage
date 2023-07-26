@@ -26,11 +26,9 @@
     <ProjectReference Include="..\..\BuildingBlock\BuildingBlock.Repository\BuildingBlock.Repository.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Configuration\" />
     <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configuration\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
