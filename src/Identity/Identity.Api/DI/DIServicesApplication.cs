@@ -11,6 +11,7 @@ internal static class DIServicesApplication
         services.AddTransient(typeof(TypeUserRepository));
         services.AddTransient(typeof(AttendantRepository));
 
+        services.AddTransient(typeof(ILoggerApplicationService<>), typeof(LoggerApplicationService<>));
         services.AddTransient<ITypeIdentificationService, TypeIdentificationService>();
         services.AddTransient<ITypeUserService, TypeUserService>();
         services.AddTransient<IUserApplicationService, UserApplicationService>();

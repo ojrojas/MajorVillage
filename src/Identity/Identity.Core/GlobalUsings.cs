@@ -27,4 +27,5 @@ global using Microsoft.IdentityModel.Tokens;
 global using OpenIddict.Abstractions;
 global using OpenIddict.Server.AspNetCore;
 global using static OpenIddict.Abstractions.OpenIddictConstants;
+global using BuildingBlock.Commons.Helpers;
 
