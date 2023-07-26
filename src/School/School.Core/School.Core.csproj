@@ -17,8 +17,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Interfaces\" />
+    <None Remove="Dtos\Area\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Dtos\Area\" />
   </ItemGroup>
 </Project>

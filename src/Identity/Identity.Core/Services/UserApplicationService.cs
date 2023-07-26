@@ -3,7 +3,7 @@
 public class UserApplicationService : IUserApplicationService
 {
     private readonly UserApplicationRepository _repository;
-    private readonly ILogger<UserApplicationService> _logger;
+    private readonly ILoggerApplicationService<UserApplicationService> _logger;
     private readonly UserManager<UserApplication> _userManager;
     private readonly IOpenIddictApplicationManager _applicationManager;
     private readonly IOpenIddictAuthorizationManager _authorizationManager;
@@ -12,7 +12,7 @@ public class UserApplicationService : IUserApplicationService
     private readonly IPasswordHasher<UserApplication> _passwordHasher = new PasswordHasher<UserApplication>();
 
     public UserApplicationService(UserApplicationRepository repository,
-                                  ILogger<UserApplicationService> logger,
+                                  ILoggerApplicationService<UserApplicationService> logger,
                                   IOpenIddictApplicationManager applicationManager,
                                   IOpenIddictScopeManager scopeManager,
                                   IOpenIddictAuthorizationManager authorizationManager,
@@ -29,7 +29,7 @@ public class UserApplicationService : IUserApplicationService
     public async ValueTask<CreateUserApplicationResponse> CreateUserApplicationAsync(CreateUserApplicationRequest request, CancellationToken cancellationToken)
     {
         CreateUserApplicationResponse response = new(request.CorrelationId());
-        _logger.LogInformation($"Create user application request {response.CorrelationId()}");
+        _logger.LogInformation(response, "Create user application request");
         if (request.UserApplication is null) throw new ArgumentNullException(nameof(request.UserApplication));
         ArgumentNullException.ThrowIfNull(request.UserApplication.PasswordHash);
         ArgumentNullException.ThrowIfNull(request.UserApplication.UserName);
@@ -44,7 +44,7 @@ public class UserApplicationService : IUserApplicationService
     public async ValueTask<DeleteUserApplicationResponse> DeleteUserApplicationAsync(DeleteUserApplicationRequest request, CancellationToken cancellationToken)
     {
         DeleteUserApplicationResponse response = new(request.CorrelationId());
-        _logger.LogInformation($"Delete userapplication request {response.CorrelationId()}");
+        _logger.LogInformation(response, "Delete userapplication request");
         if (request.Id.Equals(Guid.Empty)) throw new ArgumentNullException(nameof(request.Id));
         UserApplication userApplication = await _repository.GetByIdAsync(request.Id, cancellationToken);
         response.UserApplicationDeleted = await _repository.DeleteAsync(userApplication, cancellationToken);
@@ -54,7 +54,7 @@ public class UserApplicationService : IUserApplicationService
     public async ValueTask<GetAllUserApplicationResponse> GetAllUserApplicationsAsync(GetAllUserApplicationRequest request, CancellationToken cancellationToken)
     {
         GetAllUserApplicationResponse response = new(request.CorrelationId());
-        _logger.LogInformation($"Get all user applications request {response.CorrelationId()}");
+        _logger.LogInformation(response, "Get all user applications request");
         response.UserApplications = await _repository.ListAsync(cancellationToken);
         if(response is not null && response.UserApplications.Any())
         {
@@ -65,13 +65,14 @@ public class UserApplicationService : IUserApplicationService
                 user.SecurityStamp = "Private Field";
             }
         }
+
         return response;
     }
 
     public async ValueTask<GetUserByIdResponse> GetUserByIdAsync(GetUserByIdRequest request, CancellationToken cancellationToken)
     {
         GetUserByIdResponse response = new(request.CorrelationId());
-        _logger.LogInformation($"Get user by  applications request {response.CorrelationId()}");
+        _logger.LogInformation(response, "Get user by  applications request");
         response.UserApplication = await _repository.GetByIdAsync(request.Id, cancellationToken);
         response.UserApplication.PasswordHash = string.Empty;
         response.UserApplication.SecurityStamp = string.Empty;
@@ -82,7 +83,7 @@ public class UserApplicationService : IUserApplicationService
     public async ValueTask<UpdateUserApplicationResponse> UpdateUserApplicationAsync(UpdateUserApplicationRequest request, CancellationToken cancellationToken)
     {
         UpdateUserApplicationResponse response = new(request.CorrelationId());
-        _logger.LogInformation($"Update user application request {response.CorrelationId()}");
+        _logger.LogInformation(response, "Update user application request");
         response.UserApplication = await _repository.UpdateAsync(request.UserApplication, cancellationToken);
         return response;
     }
@@ -94,7 +95,7 @@ public class UserApplicationService : IUserApplicationService
             Token = "Do not get token response"
         };
 
-        _logger.LogInformation($"Encrypt password and get user by login {response.CorrelationId()}");
+        _logger.LogInformation(response, "Encrypt password and get user by login");
 
         request.UserName = request.UserName.ToLowerInvariant();
         UserApplicationSpecifications specification = new(request.UserName);

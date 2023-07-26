@@ -33,6 +33,7 @@ global using OpenIddict.Server.AspNetCore;
 global using OpenIddict.Validation.AspNetCore;
 global using Quartz;
 global using Serilog;
+global using BuildingBlock.Commons.Helpers;
 global using static OpenIddict.Abstractions.OpenIddictConstants;
 global using BuildingBlock.Repository.Data;
 
