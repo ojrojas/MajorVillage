@@ -1,4 +1,4 @@
-namespace BuildingBlocks.Commons.BaseEndpoints;
+namespace BuildingBlock.Commons.BaseEndpoints;
 
 public record BaseRequest : BaseMessage
 {

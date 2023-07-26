@@ -2,9 +2,7 @@
 
 public class AttendantRepository : GenericRepository<Attendant>
 {
-    public AttendantRepository(
-        ILogger<GenericRepository<Attendant>> logger,
-        IdentityAppDbContext context) : base(logger, context)
+    public AttendantRepository(ILogger<GenericRepository<Attendant>> logger,IdentityAppDbContext context) : base(logger, context)
     {
 
     }

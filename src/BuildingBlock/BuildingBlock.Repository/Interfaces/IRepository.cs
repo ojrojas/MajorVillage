@@ -1,4 +1,4 @@
-﻿namespace BuildingBlocks.Repository.Interfaces;
+﻿namespace BuildingBlock.Repository.Interfaces;
 
 public interface IRepository<T>
     where T : class,

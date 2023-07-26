@@ -5,8 +5,6 @@ global using System.Runtime.Serialization;
 global using System.Security.Claims;
 global using System.Security.Cryptography.X509Certificates;
 global using System.Threading.Tasks;
-global using Ardalis.ApiEndpoints;
-global using BuildingBlocks.Repository.Data;
 global using Identity.Api.DI;
 global using Identity.Api.Exceptions;
 global using Identity.Api.Filters;
@@ -35,6 +33,6 @@ global using OpenIddict.Server.AspNetCore;
 global using OpenIddict.Validation.AspNetCore;
 global using Quartz;
 global using Serilog;
-global using Swashbuckle.AspNetCore.Annotations;
 global using static OpenIddict.Abstractions.OpenIddictConstants;
+global using BuildingBlock.Repository.Data;
 

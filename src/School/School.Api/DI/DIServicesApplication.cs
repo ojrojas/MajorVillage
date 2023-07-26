@@ -1,10 +1,8 @@
-﻿using Ardalis.Specification;
+﻿namespace School.Api.DI;
 
-namespace School.Api.DI;
-
-internal static class AddServicesDependecyInjection
+internal static class DIServicesApplication
 {
-    internal static IServiceCollection AddServicesDIApp(this IServiceCollection services)
+    internal static IServiceCollection AddServicesDIApplication(this IServiceCollection services)
     {
         services.AddTransient(typeof(GenericRepository<>));
 
