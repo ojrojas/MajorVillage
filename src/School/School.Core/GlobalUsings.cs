@@ -12,4 +12,6 @@ global using School.Core.Dtos;
 global using School.Core.Entities;
 global using School.Core.Repositories;
 global using School.Core.Specifications;
+global using BuildingBlock.Commons.Helpers;
+global using School.Core.Interfaces;
 

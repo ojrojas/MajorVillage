@@ -2,6 +2,6 @@
 
 public record UpdateUserApplicationRequest: BaseRequest
 {
-    public UserApplication? UserApplication { get; set; }
+    public ApplicationUser? UserApplication { get; set; }
 }
 

@@ -34,7 +34,7 @@ public class TypeUserService : ITypeUserService
         DeleteTypeUserResponse response = new(request.CorrelationId());
         _logger.LogInformation(response, "Delete type user request");
         var typeUser = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        response.TypeUserDeleted = await _repository.UpdateAsync(typeUser, cancellationToken);
+        response.IsTypeUserDeleted = await _repository.UpdateAsync(typeUser, cancellationToken) is not null;
         _logger.LogInformation($"Delete record params {JsonSerializer.Serialize(request.Id)}");
         return response;
     }

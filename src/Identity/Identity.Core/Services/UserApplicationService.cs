@@ -4,19 +4,19 @@ public class UserApplicationService : IUserApplicationService
 {
     private readonly UserApplicationRepository _repository;
     private readonly ILoggerApplicationService<UserApplicationService> _logger;
-    private readonly UserManager<UserApplication> _userManager;
+    private readonly UserManager<ApplicationUser> _userManager;
     private readonly IOpenIddictApplicationManager _applicationManager;
     private readonly IOpenIddictAuthorizationManager _authorizationManager;
     private readonly IOpenIddictScopeManager _scopeManager;
 
-    private readonly IPasswordHasher<UserApplication> _passwordHasher = new PasswordHasher<UserApplication>();
+    private readonly IPasswordHasher<ApplicationUser> _passwordHasher = new PasswordHasher<ApplicationUser>();
 
     public UserApplicationService(UserApplicationRepository repository,
                                   ILoggerApplicationService<UserApplicationService> logger,
                                   IOpenIddictApplicationManager applicationManager,
                                   IOpenIddictScopeManager scopeManager,
                                   IOpenIddictAuthorizationManager authorizationManager,
-                                  UserManager<UserApplication> userManager)
+                                  UserManager<ApplicationUser> userManager)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -46,8 +46,8 @@ public class UserApplicationService : IUserApplicationService
         DeleteUserApplicationResponse response = new(request.CorrelationId());
         _logger.LogInformation(response, "Delete userapplication request");
         if (request.Id.Equals(Guid.Empty)) throw new ArgumentNullException(nameof(request.Id));
-        UserApplication userApplication = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        response.UserApplicationDeleted = await _repository.DeleteAsync(userApplication, cancellationToken);
+        ApplicationUser userApplication = await _repository.GetByIdAsync(request.Id, cancellationToken);
+        response.IsUserApplicationDeleted = await _repository.DeleteAsync(userApplication, cancellationToken) is not null;
         return response;
     }
 

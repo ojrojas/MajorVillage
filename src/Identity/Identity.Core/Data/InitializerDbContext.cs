@@ -3,7 +3,7 @@
 public class InitializerDbContext
 {
     private readonly IdentityAppDbContext _context;
-    private readonly IPasswordHasher<UserApplication> _passwordHasher = new PasswordHasher<UserApplication>();
+    private readonly IPasswordHasher<ApplicationUser> _passwordHasher = new PasswordHasher<ApplicationUser>();
 
     public InitializerDbContext(IdentityAppDbContext context)
     {

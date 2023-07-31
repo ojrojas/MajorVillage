@@ -16,6 +16,7 @@ global using Identity.Core.Dtos;
 global using Identity.Core.Entities;
 global using Identity.Core.Helpers;
 global using Identity.Core.Interfaces;
+global using Identity.Core.Services;
 global using Identity.Core.Repositories;
 global using Identity.Core.Specifications;
 global using Microsoft.AspNetCore.Http;

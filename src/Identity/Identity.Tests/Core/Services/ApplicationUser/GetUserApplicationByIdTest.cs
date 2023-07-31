@@ -34,9 +34,9 @@ public class GetUserApplicationByIdTest: IClassFixture<IdentityApiFactory>
         Assert.True(response2.StatusCode.Equals(HttpStatusCode.OK));
     }
 
-    private UserApplication GetCreateUserApplication()
+    private ApplicationUser GetCreateUserApplication()
     {
-        return new UserApplication
+        return new ApplicationUser
         {
             Id = Guid.NewGuid().ToString(),
             Name = "Test1",

@@ -6,6 +6,6 @@ public record DeleteUserApplicationResponse : BaseResponse
 	{
 	}
 
-	public UserApplication UserApplicationDeleted { get; set; }
+	public bool IsUserApplicationDeleted { get; set; }
 }
 

@@ -2,13 +2,13 @@
 
 public static class SeedIdentity
 {
-    public static UserApplication CreateUserApplicationRequest()
+    public static ApplicationUser CreateUserApplicationRequest()
     {
         var UserApplicationId = Guid.NewGuid().ToString();
         var TypeIdentificationId = Guid.NewGuid();
         var TypeUserId = Guid.NewGuid();
 
-        return new UserApplication()
+        return new ApplicationUser()
         {
             Id = UserApplicationId,
             UserName = "pepe@example.com",

@@ -6,6 +6,6 @@ public record DeleteTypeUserResponse : BaseResponse
 	{
 	}
 
-	public TypeUser TypeUserDeleted { get; set; }
+	public bool IsTypeUserDeleted { get; set; }
 }
 

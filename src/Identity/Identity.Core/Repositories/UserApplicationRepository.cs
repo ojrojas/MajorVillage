@@ -1,9 +1,9 @@
 ﻿namespace Identity.Core.Repositories;
 
-public class UserApplicationRepository : GenericRepository<UserApplication>
+public class UserApplicationRepository : GenericRepository<ApplicationUser>
 {
     public UserApplicationRepository(
-        ILogger<GenericRepository<UserApplication>> logger,
+        ILogger<GenericRepository<ApplicationUser>> logger,
         IdentityAppDbContext context) : base(logger, context)
     {
 
