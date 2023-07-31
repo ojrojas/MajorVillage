@@ -2,7 +2,7 @@
 global using System.Runtime.Serialization;
 global using System.Text;
 global using Ardalis.ApiEndpoints;
-global using BuildingBlock.Repository.Data;
+global using BuildingBlock.Commons.Helpers;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
@@ -20,4 +20,5 @@ global using School.Core.Services;
 global using Serilog;
 global using Swashbuckle.AspNetCore.Annotations;
 global using Swashbuckle.AspNetCore.SwaggerGen;
+
 
