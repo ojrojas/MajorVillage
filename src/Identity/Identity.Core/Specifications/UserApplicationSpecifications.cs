@@ -1,6 +1,6 @@
 ﻿namespace Identity.Core.Specifications;
 
-public class UserApplicationSpecifications : Specification<UserApplication>
+public class UserApplicationSpecifications : Specification<ApplicationUser>
 {
     public UserApplicationSpecifications(string userName)
     {

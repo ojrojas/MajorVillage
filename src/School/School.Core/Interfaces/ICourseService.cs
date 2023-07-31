@@ -1,4 +1,4 @@
-﻿namespace School.Core.Services;
+﻿namespace School.Core.Interfaces;
 
 public interface ICourseService
 {

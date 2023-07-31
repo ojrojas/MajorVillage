@@ -3,7 +3,7 @@
 /// <summary>
 /// Identity Db Context 
 /// </summary>
-public class IdentityAppDbContext: IdentityDbContext<UserApplication>
+public class IdentityAppDbContext: IdentityDbContext<ApplicationUser>
 {
     /// <summary>
     /// Identity Constructor 
@@ -31,6 +31,11 @@ public class IdentityAppDbContext: IdentityDbContext<UserApplication>
     protected override void OnModelCreating(ModelBuilder modelBuilder) 
     {
         base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<ApplicationUser>().HasIndex(u => new { u.TypeIdentificationId, u.Identification }).IsUnique();
+        modelBuilder.Entity<Attendant>().HasIndex(a => new { a.TypeIdentificationId, a.Identification })
+            .IsUnique();
+
         modelBuilder.ApplyConfigurationsFromAssembly(assembly: Assembly.GetExecutingAssembly());
     }
 }

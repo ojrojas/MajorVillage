@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Identity.Core.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -373,9 +373,10 @@ namespace Identity.Core.Data.Migrations
                 column: "NormalizedEmail");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AspNetUsers_TypeIdentificationId",
+                name: "IX_AspNetUsers_TypeIdentificationId_Identification",
                 table: "AspNetUsers",
-                column: "TypeIdentificationId");
+                columns: new[] { "TypeIdentificationId", "Identification" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUsers_TypeUserId",
@@ -389,9 +390,10 @@ namespace Identity.Core.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Attendants_TypeIdentificationId",
+                name: "IX_Attendants_TypeIdentificationId_Identification",
                 table: "Attendants",
-                column: "TypeIdentificationId");
+                columns: new[] { "TypeIdentificationId", "Identification" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_OpenIddictApplications_ClientId",

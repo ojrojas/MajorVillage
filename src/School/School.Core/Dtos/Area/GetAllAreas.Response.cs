@@ -1,6 +1,7 @@
 ﻿namespace School.Core.Dtos;
 
-public record GetAllAreaResponse: BaseRequest
+public record GetAllAreasResponse: BaseResponse
 {
+    public GetAllAreasResponse(Guid correlationId): base(correlationId) { }
     public IEnumerable<Area>? Areas { get; set; }
 }

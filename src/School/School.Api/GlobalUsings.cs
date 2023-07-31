@@ -14,6 +14,7 @@ global using School.Api.DI;
 global using School.Api.Filters;
 global using School.Core.Data;
 global using School.Core.Dtos;
+global using School.Core.Interfaces;
 global using School.Core.Repositories;
 global using School.Core.Services;
 global using Serilog;

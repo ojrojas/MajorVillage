@@ -6,5 +6,5 @@ public record UpdateUserApplicationResponse : BaseResponse
 	{
 	}
 
-	public UserApplication? UserApplication { get; set; }
+	public ApplicationUser? UserApplication { get; set; }
 }

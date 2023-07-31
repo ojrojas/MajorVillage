@@ -3,6 +3,6 @@
 public record DeleteAttendantResponse : BaseResponse
 {
 	public DeleteAttendantResponse(Guid CorrelationId): base(CorrelationId){	}
-	public Attendant AttendantDeleted { get; set; }
+	public bool IsAttendantDeleted { get; set; }
 }
 

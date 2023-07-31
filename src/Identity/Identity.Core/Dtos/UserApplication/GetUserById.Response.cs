@@ -6,6 +6,6 @@ public record GetUserByIdResponse: BaseResponse
 	{
 	}
 
-	public UserApplication UserApplication { get; set; }
+	public ApplicationUser UserApplication { get; set; }
 }
 

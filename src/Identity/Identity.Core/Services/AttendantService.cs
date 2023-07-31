@@ -37,7 +37,7 @@ public class AttendantService : IAttendantService
         DeleteAttendantResponse response = new(request.CorrelationId());
         _logger.LogInformation(response, "Delete attendant request");
         var Attendant = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        response.AttendantDeleted = await _repository.DeleteAsync(Attendant, cancellationToken);
+        response.IsAttendantDeleted = await _repository.DeleteAsync(Attendant, cancellationToken) is not null;
         _logger.LogInformation($"Delete record params {JsonSerializer.Serialize(request.Id)}");
         return response;
 

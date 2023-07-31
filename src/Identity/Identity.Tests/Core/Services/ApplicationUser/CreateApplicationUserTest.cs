@@ -43,9 +43,9 @@ public class CreateApplicationUserTest: IClassFixture<IdentityApiFactory>
         Assert.Null(model);
     }
 
-    private UserApplication GetCreateUserApplication()
+    private ApplicationUser GetCreateUserApplication()
     {
-        return new UserApplication
+        return new ApplicationUser
         {
             Name = "Test1",
             LastName = "Test1",

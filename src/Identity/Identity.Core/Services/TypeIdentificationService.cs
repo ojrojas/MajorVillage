@@ -37,7 +37,7 @@ public class TypeIdentificationService : ITypeIdentificationService
         DeleteTypeIdentificationResponse response = new(request.CorrelationId());
         _logger.LogInformation(response, "Delete type identification request");
         var TypeIdentification = await _repository.GetByIdAsync(request.Id, cancellationToken);
-        response.TypeIdentificationDeleted = await _repository.DeleteAsync(TypeIdentification, cancellationToken);
+        response.IsTypeIdentificationDeleted = await _repository.DeleteAsync(TypeIdentification, cancellationToken) is not null;
         _logger.LogInformation($"Delete record params {JsonSerializer.Serialize(request.Id)}");
         return response;
 
