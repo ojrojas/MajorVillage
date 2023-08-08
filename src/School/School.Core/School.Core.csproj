@@ -19,10 +19,16 @@
     <None Remove="Interfaces\" />
     <None Remove="Dtos\Area\" />
     <None Remove="Dtos\ClassRoom\" />
+    <None Remove="Dtos\Subject\" />
+    <None Remove="Dtos\Student\" />
+    <None Remove="Dtos\Period\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Dtos\Area\" />
     <Folder Include="Dtos\ClassRoom\" />
+    <Folder Include="Dtos\Subject\" />
+    <Folder Include="Dtos\Student\" />
+    <Folder Include="Dtos\Period\" />
   </ItemGroup>
 </Project>
