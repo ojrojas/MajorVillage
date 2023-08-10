@@ -4,7 +4,7 @@ public static class DIIdentityServerApplication
 {
     public static IServiceCollection AddIdentityServerApplication(this IServiceCollection services)
     {
-        services.AddIdentity<ApplicationUser, IdentityRole>()
+        services.AddIdentity<ApplicationUser, TypeUser>()
             .AddEntityFrameworkStores<IdentityAppDbContext>()
             .AddDefaultTokenProviders();
 

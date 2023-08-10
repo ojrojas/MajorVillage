@@ -1,0 +1,4 @@
+{
+  "id": "{{ faker.random.uuid }}",
+  "correlationid": "{{ faker.random.uuid }}"
+}

@@ -1,4 +1,4 @@
-﻿namespace School.Core.Interfaces;
+﻿namespace School.Core.Services;
 
 public interface IClassRoomService
 {

@@ -1,0 +1,74 @@
+﻿syntax = "proto3";
+
+option csharp_namespace ="GrpcSchool";
+import "google/protobuf/timestamp.proto";
+
+package SchoolApi;
+
+service ClassRoomService {
+    rpc CreateClassRoom(CreateClassRoomRequest) returns (CreateClassRoomResponse) {};
+    rpc UpdateClassRoom(UpdateClassRoomRequest) returns (UpdateClassRoomResponse) {};
+    rpc DeleteClassRoom(DeleteClassRoomRequest) returns (DeleteClassRoomResponse) {};
+    rpc GetClassRoomById(GetClassRoomByIdRequest) returns (GetClassRoomByIdResponse) {};
+    rpc GetAllClassRooms(GetAllClassRoomsRequest) returns (GetAllClassRoomsResponse) {};
+}
+
+enum ClassRoomStatus {
+    FREE = 0;
+    AVALIABLE = 1;
+    BUSY = 2;
+    CLOSED = 3;
+    IN_REPARATION = 4;
+}
+
+message ClassRoom {
+    string id = 1;
+    string name = 2;
+    ClassRoomStatus classroomstatus = 3;
+    string located = 4;
+    bool state = 5;
+}
+
+message CreateClassRoomRequest {
+    ClassRoom classroom = 1;
+    string correlationid = 2;
+}
+
+message CreateClassRoomResponse {
+    ClassRoom classroomcreated = 1;
+}
+
+message UpdateClassRoomRequest {
+    ClassRoom classroom = 1;
+    string correlationid = 2;
+}
+
+message UpdateClassRoomResponse {
+    ClassRoom classroomupdated = 1;
+}
+
+message DeleteClassRoomRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message DeleteClassRoomResponse {
+    bool isclassroomdeleted = 1;
+}
+
+message GetClassRoomByIdRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message GetClassRoomByIdResponse {
+    ClassRoom classroom = 1;
+}
+
+message GetAllClassRoomsRequest {
+    string correlationid = 1;
+}
+
+message GetAllClassRoomsResponse {
+    repeated ClassRoom classrooms = 1;
+}

@@ -10,4 +10,3 @@ public class BaseEntity
     public DateTime UpdatedDate { get; set; }
     public bool State { get; set; }
 }
-

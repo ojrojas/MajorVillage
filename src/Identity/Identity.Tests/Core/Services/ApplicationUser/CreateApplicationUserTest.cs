@@ -66,8 +66,6 @@ public class CreateApplicationUserTest: IClassFixture<IdentityApiFactory>
             {
                 Id = Guid.NewGuid(),
                 Name = "TEST1",
-                CreatedBy = Guid.NewGuid(),
-                CreatedDate = DateTime.UtcNow
             }
         };
     }

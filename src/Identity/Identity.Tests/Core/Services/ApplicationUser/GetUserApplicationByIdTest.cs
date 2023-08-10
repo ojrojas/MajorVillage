@@ -38,7 +38,7 @@ public class GetUserApplicationByIdTest: IClassFixture<IdentityApiFactory>
     {
         return new ApplicationUser
         {
-            Id = Guid.NewGuid().ToString(),
+            Id = Guid.NewGuid(),
             Name = "Test1",
             LastName = "Test1",
             UserName = "TEST@TEST.COM",
@@ -58,8 +58,6 @@ public class GetUserApplicationByIdTest: IClassFixture<IdentityApiFactory>
             {
                 Id = Guid.NewGuid(),
                 Name = "TEST1",
-                CreatedBy = Guid.NewGuid(),
-                CreatedDate = DateTime.UtcNow
             }
         };
     }
