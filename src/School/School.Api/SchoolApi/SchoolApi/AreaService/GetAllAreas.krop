@@ -1,0 +1,13 @@
+{
+  "details": {
+    "methodFqn": "SchoolApi.AreaService.GetAllAreas"
+  },
+  "requests": [
+    {
+      "location": "GetAllAreas-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc",
+  "importStreamId": "59570255-063b-4040-99f3-20269dc3b0f1"
+}

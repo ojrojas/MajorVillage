@@ -1,0 +1,12 @@
+{
+  "area": {
+    "id": "{{ faker.random.uuid }}",
+    "name": "{{ faker.name.last_name }}",
+    "createby": "wireless multimedia",
+    "updateby": "Brand encoding",
+    "createdate": "1970-01-01T00:06:52.000000386Z",
+    "updatedate": "1970-01-01T00:15:29.000000146Z",
+    "state": false
+  },
+  "correlationid": "{{ faker.random.uuid }}"
+}

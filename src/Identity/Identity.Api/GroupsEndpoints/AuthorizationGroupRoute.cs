@@ -12,50 +12,47 @@ public static class AuthorizationGroupRoute
 
     private static RouteHandlerBuilder ConnectAuthorize(RouteGroupBuilder group)
     {
-        return
-                group.MapMethods("/connect/authorize", new[] { HttpMethods.Post, HttpMethods.Get },
-                    async (
-                        HttpContext _context,
-                        IOpenIddictApplicationManager _applicationManager,
-                        IOpenIddictScopeManager _scopeManager) =>
+        return group.MapMethods("/connect/authorize", new[] { HttpMethods.Post, HttpMethods.Get },
+            async (
+                HttpContext _context,
+                IOpenIddictApplicationManager _applicationManager,
+                IOpenIddictScopeManager _scopeManager) =>
+            {
+                var request = _context.GetOpenIddictServerRequest() ?? throw new ArgumentNullException("context_request", "not found request valid");
+                ArgumentNullException.ThrowIfNull(request.ClientId);
+
+                var typeAuthorization = request.GrantType;
+
+                var result = await _context.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                if (result is not { Succeeded: true })
+                {
+                    var url = _context.Request.PathBase + _context.Request.Path + QueryString.Create(
+                        _context.Request.HasFormContentType ? _context.Request.Form.ToList() : _context.Request.Query.ToList());
+                    return Results.Challenge(properties: new AuthenticationProperties
                     {
-                        var request = _context.GetOpenIddictServerRequest() ?? throw new ArgumentNullException("context_request", "not found request valid");
-                        ArgumentNullException.ThrowIfNull(request.ClientId);
+                        RedirectUri = url
+                    }, new List<string> { CookieAuthenticationDefaults.AuthenticationScheme });
+                }
 
-                        var typeAuthorization = request.GrantType;
+                var application = await _applicationManager.FindByClientIdAsync(request.ClientId) ??
+                throw new InvalidOperationException("the application details cannot be found into database");
 
-                        var result = await _context.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                var identity = new ClaimsIdentity(
+               authenticationType: TokenValidationParameters.DefaultAuthenticationType,
+               nameType: Claims.Name,
+               roleType: Claims.Role);
 
-                        if (result is not { Succeeded: true })
-                        {
-                            var url = _context.Request.PathBase + _context.Request.Path + QueryString.Create(
-                                _context.Request.HasFormContentType ? _context.Request.Form.ToList() : _context.Request.Query.ToList());
+                // Add the claims that will be persisted in the tokens (use the client_id as the subject identifier).
+                identity.SetClaim(Claims.Subject, await _applicationManager.GetClientIdAsync(application));
+                identity.SetClaim(Claims.Name, await _applicationManager.GetDisplayNameAsync(application));
 
-                            return Results.Challenge(properties: new AuthenticationProperties
-                            {
-                                RedirectUri = url
-                            }, new List<string> { CookieAuthenticationDefaults.AuthenticationScheme }
-                            );
-                        }
+                identity.SetScopes(request.GetScopes());
+                identity.SetResources(await _scopeManager.ListResourcesAsync(identity.GetScopes()).ToListAsync());
+                identity.SetDestinations(GetDestination.GetDestinations);
 
-                        var application = await _applicationManager.FindByClientIdAsync(request.ClientId) ??
-                        throw new InvalidOperationException("the application details cannot be found into database");
-
-                        var identity = new ClaimsIdentity(
-                       authenticationType: TokenValidationParameters.DefaultAuthenticationType,
-                       nameType: Claims.Name,
-                       roleType: Claims.Role);
-
-                        // Add the claims that will be persisted in the tokens (use the client_id as the subject identifier).
-                        identity.SetClaim(Claims.Subject, await _applicationManager.GetClientIdAsync(application));
-                        identity.SetClaim(Claims.Name, await _applicationManager.GetDisplayNameAsync(application));
-
-                        identity.SetScopes(request.GetScopes());
-                        identity.SetResources(await _scopeManager.ListResourcesAsync(identity.GetScopes()).ToListAsync());
-                        identity.SetDestinations(GetDestination.GetDestinations);
-
-                        return Results.SignIn(new ClaimsPrincipal(identity), new(), OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
-                    });
+                return Results.SignIn(new ClaimsPrincipal(identity), new(), OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
+            });
     }
 
     private static RouteHandlerBuilder ConnectToken(RouteGroupBuilder group)

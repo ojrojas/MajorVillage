@@ -1,6 +1,6 @@
 ﻿namespace Identity.Core.Entities;
 
-public class ApplicationUser : IdentityUser, IAggregateRoot
+public class ApplicationUser : IdentityUser<Guid>, IAggregateRoot
 {
     [Required] public string? Name { get; set; } 
     public string? MiddleName { get; set; }

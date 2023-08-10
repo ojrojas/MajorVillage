@@ -37,30 +37,16 @@ services:
       - "15672:15672"
       - "5672:5672"
  
-  identity.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80
-      - SchoolApiClient=http://{DNS_OR_IP_HOST_CONTAINER}:5107
-      - NoteAndMathsApi=http://{DNS_OR_IP_HOST_CONTAINER}:5210
-      - ConnectionIdentity=host=sql.identity;port=5432;database=IdentityDb;username=postgres;password=${IDENTITY_PASSWORD}
-      - IdentityUrl=${IDENTITYURL}
-      - UrlsAllow=IdentityApi@http://${DNS_OR_IP_HOST_CONTAINER}:5005,SchoolApi@http://${DNS_OR_IP_HOST_CONTAINER}:5107,NoteAndMathsApi@http://${DNS_OR_IP_HOST_CONTAINER}:5210,MajorWeb@http://${DNS_OR_IP_HOST_CONTAINER}:5305
-    ports:
-      - "5005:80"
-    volumes:
-      - ~/.aspnet/https:/root/.aspnet/https:ro
-      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
-    networks:
-      - identitynet
-
   school.api:
+    container_name: school.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80
       - IdentityUrl=${IDENTITYURL}
+      - GRPC_PORT=81
+      - ConnectionSchool=server=sql.school;user id=root;password=${SCHOOL_PASSWORD};database=SchoolDb
+      - EncryptedKey=${ENCRYPTED_KEY}
     ports:
-      - "5107:80"
+      - "5108:81"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
@@ -68,12 +54,14 @@ services:
       - identity.api
     networks:
       - identitynet
+      - schoolgrpcnet
 
   notesandmaths.api:
     container_name: notesandmaths.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
+      - EncryptedKey=${ENCRYPTED_KEY}
     ports:
       - "5210:80"
     volumes:
@@ -90,10 +78,43 @@ services:
     ports:
       - "5405:80"
 
+  aggregator.web.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - GRPC_URL=http://school.api:81
+    ports:
+      - "5505:80"
+    volumes:
+      - ~/.aspnet/https:/root/.aspnet/https:ro
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    networks:
+      - schoolgrpcnet
+      
+  identity.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - SchoolApiClient=http://{DNS_OR_IP_HOST_CONTAINER}:5107
+      - NoteAndMathsApi=http://{DNS_OR_IP_HOST_CONTAINER}:5210
+      - ConnectionIdentity=host=sql.identity;port=5432;database=IdentityDb;username=postgres;password=${IDENTITY_PASSWORD}
+      - IdentityUrl=${IDENTITYURL}
+      - UrlsAllow=IdentityApi@http://${DNS_OR_IP_HOST_CONTAINER}:5005,SchoolApi@http://${DNS_OR_IP_HOST_CONTAINER}:5107,NoteAndMathsApi@http://${DNS_OR_IP_HOST_CONTAINER}:5210,MajorWeb@http://${DNS_OR_IP_HOST_CONTAINER}:5305
+      - EncryptedKey=${ENCRYPTED_KEY}
+    ports:
+      - "5005:80"
+    volumes:
+      - ~/.aspnet/https:/root/.aspnet/https:ro
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    networks:
+      - identitynet
+
 networks:
   identitynet:
     driver: bridge
   schoolnet:
+    driver: bridge
+  schoolgrpcnet:
     driver: bridge
   notesandmathsnet:
     driver: bridge
@@ -105,3 +126,5 @@ volumes:
     external: false
   sqldata-notesandmathsnet-store:
     external: false
+
+

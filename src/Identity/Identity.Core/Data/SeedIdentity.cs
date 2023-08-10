@@ -4,7 +4,7 @@ public static class SeedIdentity
 {
     public static ApplicationUser CreateUserApplicationRequest()
     {
-        var UserApplicationId = Guid.NewGuid().ToString();
+        var UserApplicationId = Guid.NewGuid();
         var TypeIdentificationId = Guid.NewGuid();
         var TypeUserId = Guid.NewGuid();
 
@@ -22,7 +22,7 @@ public static class SeedIdentity
             TypeIdentification = new()
             {
                 Id = TypeIdentificationId,
-                CreatedBy = Guid.Parse(UserApplicationId),
+                CreatedBy = UserApplicationId,
                 CreatedDate = DateTime.UtcNow,
                 State = true,
                 Name = "CC"
@@ -31,9 +31,6 @@ public static class SeedIdentity
             TypeUser = new()
             {
                 Id = TypeUserId,
-                CreatedBy = Guid.Parse(UserApplicationId),
-                CreatedDate = DateTime.UtcNow,
-                State = true,
                 Name = "Admin"
             },
             TypeUserId = TypeUserId

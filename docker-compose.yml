@@ -20,12 +20,6 @@ services:
   displaylog.kibana:
     image: kibana:8.8.1
 
-  identity.api:
-    image: ${DOCKER_REGISTRY-}identity
-    build:
-      context: .
-      dockerfile: src/Identity/Identity.Api/Dockerfile
-
   school.api:
     image: ${DOCKER_REGISTRY-}school
     build:
@@ -53,3 +47,15 @@ services:
        dockerfile: src/Web/AdminMajorVillage/Dockerfile
        args:
        - REACT_APP_ROUTE_API_IDENTITY=${IDENTITY_URL}
+       
+  aggregator.web.api:
+    image: ${DOCKER_REGISTRY-}aggregatorweb
+    build:
+      context: .
+      dockerfile: src/Aggregator/Aggregator.Web/Aggregator.Web.Api/Dockerfile
+
+  identity.api:
+    image: ${DOCKER_REGISTRY-}identity
+    build:
+      context: .
+      dockerfile: src/Identity/Identity.Api/Dockerfile

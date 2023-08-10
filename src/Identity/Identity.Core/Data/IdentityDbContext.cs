@@ -3,7 +3,7 @@
 /// <summary>
 /// Identity Db Context 
 /// </summary>
-public class IdentityAppDbContext: IdentityDbContext<ApplicationUser>
+public class IdentityAppDbContext: IdentityDbContext<ApplicationUser, TypeUser, Guid>
 {
     /// <summary>
     /// Identity Constructor 

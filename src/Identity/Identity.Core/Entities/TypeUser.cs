@@ -1,6 +1,5 @@
 ﻿namespace Identity.Core.Entities;
 
-public  class TypeUser: BaseEntity, IAggregateRoot
+public  class TypeUser: IdentityRole<Guid>, IAggregateRoot
 {
-    public string Name { get; set; }
 }

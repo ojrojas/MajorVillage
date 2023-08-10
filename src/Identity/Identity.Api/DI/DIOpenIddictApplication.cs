@@ -2,11 +2,10 @@
 
 public static class DIOpenIddictApplication
 {
-    public static IServiceCollection AddDIOpenIddictApplication(this IServiceCollection services)
+    public static IServiceCollection AddDIOpenIddictApplication(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddOpenIddict(cfg =>
         {
-
             cfg.AddCore(conf =>
                 conf.UseEntityFrameworkCore()
                 .UseDbContext<IdentityAppDbContext>());
@@ -25,7 +24,7 @@ public static class DIOpenIddictApplication
 
                 conf.AddEncryptionKey(
                     new SymmetricSecurityKey(
-                        Convert.FromBase64String("QXBwbGljYXRpb25NYWpvclNvbHV0aW9uc0lkZW50MTI=")));
+                        Convert.FromBase64String(configuration["EncryptedKey"])));
 
                 conf.AddSigningCertificate(Certificates.Certificate.GetCert());
 
@@ -43,7 +42,6 @@ public static class DIOpenIddictApplication
                 conf.UseLocalServer();
                 conf.UseAspNetCore();
             });
-
         });
 
         return services;

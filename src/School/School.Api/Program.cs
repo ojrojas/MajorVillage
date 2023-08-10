@@ -5,43 +5,47 @@ Log.Logger = CreateSerilogLogger();
 
 var configuration = builder.Configuration;
 // Add services to the container.
-
-builder.Services.AddControllers(options => options.Filters.Add(typeof(HttpExceptionsApplicationFilter)));
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddDIDbContextApplication(configuration);
-
-builder.Services.AddDISwaggerApplication(configuration);
-
-//builder.Services.AddDIOptionsConfiguration(configuration);
-builder.Services.AddDIJwtApplication(configuration);
+builder.Services.AddDIAuthenticationAndAuthorizationApplication();
 builder.Services.AddServicesDIApplication();
 builder.Services.AddHealthChecks();
 
-builder.Services.AddDICorsAndAuthenticationAuthorization(configuration);
-
 builder.Services.AddMemoryCache();
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    // Setup a HTTP/2 endpoint without TLS.
+    var port = configuration.GetValue("GRPC_PORT", 5290);
+    options.Listen(IPAddress.Any, port, listenOptions =>
+    {
+        listenOptions.Protocols = HttpProtocols.Http2;
+    });
+});
+
+builder.Services.AddGrpc();
+builder.Services.AddGrpcReflection();
+builder.Services.AddProblemDetails();
+
+builder.Services.AddCors(setup => {
+    setup.AddPolicy("SchoolCorsPolicy", policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(options => {
-        options.OAuthClientId("schoolclientswaggerui");
-        options.OAuthAppName("Swagger UI School");
-    });
+    app.MapGrpcReflectionService();
 }
 
-app.UseCors("SchoolCorsPolicy");
-app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
+//app.UseCors("SchoolCorsPolicy");
+//app.UseHttpsRedirection();
+//app.UseAuthentication();
+//app.UseAuthorization();
 
-app.MapControllers();
-app.MapHealthChecks("/health").RequireAuthorization();
+// app.MapHealthChecks("/health").RequireAuthorization();
+app.MapGrpcService<AreaGrpc>();
+app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 
 app.Run();
 

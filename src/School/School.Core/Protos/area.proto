@@ -1,0 +1,64 @@
+﻿syntax = "proto3";
+
+option csharp_namespace ="GrpcSchool";
+import "google/protobuf/timestamp.proto";
+
+package SchoolApi;
+
+service AreaService {
+    rpc CreateArea(CreateAreaRequest) returns (CreateAreaResponse) {};
+    rpc UpdateArea(UpdateAreaRequest) returns (UpdateAreaResponse) {};
+    rpc DeleteArea(DeleteAreaRequest) returns (DeleteAreaResponse) {};
+    rpc GetAreaById(GetAreaByIdRequest) returns (GetAreaByIdResponse) {};
+    rpc GetAllAreas(GetAllAreasRequest) returns (GetAllAreasResponse) {};
+}
+
+message Area {
+    string id = 1;
+    string name = 2;
+    bool state = 3;
+}
+
+message CreateAreaRequest {
+    Area area = 1;
+    string correlationid = 2;
+}
+
+message CreateAreaResponse {
+    Area areacreated = 1;
+}
+
+message UpdateAreaRequest {
+    Area area = 1;
+    string correlationid = 2;
+}
+
+message UpdateAreaResponse {
+    Area areaupdated = 1;
+}
+
+message DeleteAreaRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message DeleteAreaResponse {
+    bool isdeletedarea = 1;
+}
+
+message GetAreaByIdRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message GetAreaByIdResponse {
+    Area area = 1;
+}
+
+message GetAllAreasRequest {
+    string correlationid = 1;
+}
+
+message GetAllAreasResponse {
+    repeated Area areas = 1;
+}

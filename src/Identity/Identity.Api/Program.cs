@@ -1,9 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
-Log.Logger = CreateSerilogLogger();
-
 var configuration = builder.Configuration;
+
+Log.Logger = CreateSerilogLogger();
 // Add services to the container.
 builder.Services.AddDIContextApplication(configuration);
 
@@ -18,12 +18,11 @@ builder.Services.AddControllersWithViews(options => options.Filters.Add(typeof(H
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddDIOpenIddictApplication();
+builder.Services.AddDIOpenIddictApplication(configuration);
 builder.Services.AddIdentityServerApplication();
 
 builder.Services.AddDISwaggerApplication(configuration);
 
-//builder.Services.AddDIOptionsConfiguration(configuration);
 builder.Services.AddDIJwtApplication();
 builder.Services.AddOptionsExtensions(configuration);
 builder.Services.AddDIServicesApplication();
