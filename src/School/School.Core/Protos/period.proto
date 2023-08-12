@@ -1,0 +1,74 @@
+﻿syntax = "proto3";
+
+option csharp_namespace ="GrpcSchool";
+import "google/protobuf/timestamp.proto";
+
+package SchoolApi;
+
+service PeriodService {
+    rpc CreatePeriod(CreatePeriodRequest) returns (CreatePeriodResponse) {};
+    rpc UpdatePeriod(UpdatePeriodRequest) returns (UpdatePeriodResponse) {};
+    rpc DeletePeriod(DeletePeriodRequest) returns (DeletePeriodResponse) {};
+    rpc GetPeriodById(GetPeriodByIdRequest) returns (GetPeriodByIdResponse) {};
+    rpc GetAllsPeriods(GetAllPeriodsRequest) returns (GetAllPeriodsResponse) {};
+}
+
+enum PeriodStatus {
+    NO_ASSIGNED = 0;
+    STARTER = 1;
+    ENDEND = 2;
+    CANCELLED = 3;
+    ABORTED = 4;
+}
+
+message Period {
+    string id = 1;
+    string name = 2;
+    google.protobuf.Timestamp startdate = 3;
+    google.protobuf.Timestamp enddate = 4;
+    PeriodStatus periodstatus = 5;
+}
+
+message CreatePeriodRequest {
+    Period period = 1;
+    string correlationid = 2;
+}
+
+message CreatePeriodResponse {
+    Period periodcreated = 1;
+}
+
+message UpdatePeriodRequest {
+    Period period = 1;
+    string correlationid = 2;
+}
+
+message UpdatePeriodResponse {
+    Period periodupdated = 1;
+}
+
+message DeletePeriodRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message DeletePeriodResponse {
+    bool isperioddeleted = 1;
+}
+
+message GetPeriodByIdRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message GetPeriodByIdResponse {
+    Period period = 1;
+}
+
+message GetAllPeriodsRequest {
+    string correlationid = 1;
+}
+
+message GetAllPeriodsResponse {
+    repeated Period periods = 1;
+}

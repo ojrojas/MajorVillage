@@ -17,7 +17,7 @@ internal static class DIServicesApplication
         //services.AddTransient<IEnrollmentService, EnrollmentService>();
         //services.AddTransient<IElectiveYearService, ElectiveYearService>();
         //services.AddTransient<IClassRoomService, ClassRoomService>();
-        services.AddTransient<IAreaService, AreaService>();
+        services.AddTransient<IAreaService, Core.Services.AreaService>();
 
         services.AddTransient<InitializerDbContext>();
         return services;

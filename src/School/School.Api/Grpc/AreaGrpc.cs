@@ -1,40 +1,43 @@
-﻿using Grpc.Core;
-
-namespace School.Api.Grpc;
+﻿namespace School.Api.Grpc;
 
 public class AreaGrpc : GrpcSchool.AreaService.AreaServiceBase
 {
-	private readonly ILogger<AreaGrpc> _logger;
+	private readonly ILoggerApplicationService<AreaGrpc> _logger;
 	private readonly IAreaService _service;
 
-    public AreaGrpc(ILogger<AreaGrpc> logger, IAreaService service)
+    public AreaGrpc(ILoggerApplicationService<AreaGrpc> logger, IAreaService service)
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _service = service ?? throw new ArgumentNullException(nameof(service));
     }
 
-    public override async Task<GrpcSchool.CreateAreaResponse> CreateArea(GrpcSchool.CreateAreaRequest request, ServerCallContext context)
+    public override async Task<CreateAreaResponse> CreateArea(CreateAreaRequest request, ServerCallContext context)
     {
+        _logger.LogInformation("Grpc communication receive create area");
         return await _service.CreateAreaAsync(request, context.CancellationToken);
     }
 
-    public override Task<GrpcSchool.UpdateAreaResponse> UpdateArea(GrpcSchool.UpdateAreaRequest request, ServerCallContext context)
+    public override async Task<UpdateAreaResponse> UpdateArea(UpdateAreaRequest request, ServerCallContext context)
     {
-        return base.UpdateArea(request, context);
+        _logger.LogInformation("Grpc communication receive update area");
+        return await _service.UpdateAreaAsync(request, context.CancellationToken);
     }
 
-    public override Task<GrpcSchool.DeleteAreaResponse> DeleteArea(GrpcSchool.DeleteAreaRequest request, ServerCallContext context)
+    public override async Task<DeleteAreaResponse> DeleteArea(DeleteAreaRequest request, ServerCallContext context)
     {
-        return base.DeleteArea(request, context);
+        _logger.LogInformation("Grpc communication receive delete area");
+        return await _service.DeleteAreaAsync(request, context.CancellationToken);
     }
 
-    public override Task<GrpcSchool.GetAreaByIdResponse> GetAreaById(GrpcSchool.GetAreaByIdRequest request, ServerCallContext context)
+    public override async Task<GetAreaByIdResponse> GetAreaById(GetAreaByIdRequest request, ServerCallContext context)
     {
-        return base.GetAreaById(request, context);
+        _logger.LogInformation("Grpc communication receive get by id area");
+        return await _service.GetAreaByIdAsync(request, context.CancellationToken);
     }
 
-    public override Task<GrpcSchool.GetAllAreasResponse> GetAllAreas(GrpcSchool.GetAllAreasRequest request, ServerCallContext context)
+    public override async Task<GetAllAreasResponse> GetAllAreas(GetAllAreasRequest request, ServerCallContext context)
     {
-        return base.GetAllAreas(request, context);
+        _logger.LogInformation("Grpc communication receive get all areas");
+        return await _service.GetAllAreasAsync(request, context.CancellationToken);
     }
 }

@@ -10,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddGrpcServices(configuration);
+builder.Services.AddDIServiceApplication();
+builder.Services.AddDIGrpcServices(configuration);
 
 var app = builder.Build();
 
@@ -25,6 +26,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.AddDIWebConfiguration();
 
 app.Run();

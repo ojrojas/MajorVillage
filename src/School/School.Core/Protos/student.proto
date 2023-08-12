@@ -1,0 +1,63 @@
+﻿syntax = "proto3";
+
+option csharp_namespace ="GrpcSchool";
+
+package SchoolApi;
+
+service StudentService {
+    rpc CreateStudent(CreateStudentRequest) returns (CreateStudentResponse) {};
+    rpc UpdateStudent(UpdateStudentRequest) returns (UpdateStudentResponse) {};
+    rpc DeleteStudent(DeleteStudentRequest) returns (DeleteStudentResponse) {};
+    rpc GetStudentById(GetStudentByIdRequest) returns (GetStudentByIdResponse) {};
+    rpc GetAllStudents(GetAllStudentsRequest) returns (GetAllStudentsResponse) {};
+}
+
+message Student {
+    string id = 1;
+    string name = 2;
+    string lastname = 3;
+}
+
+message CreateStudentRequest {
+    Student student = 1;
+    string correlationid = 2;
+}
+
+message CreateStudentResponse {
+    Student studentcreated = 1;
+}
+
+message UpdateStudentRequest {
+    Student student = 1;
+    string correlationid = 2;
+}
+
+message UpdateStudentResponse {
+    Student studentupdated = 1;
+}
+
+message DeleteStudentRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message DeleteStudentResponse {
+    bool isstudentdeleted = 1;
+}
+
+message GetStudentByIdRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message GetStudentByIdResponse {
+    Student student = 1;
+}
+
+message GetAllStudentsRequest {
+    string correlationid = 1;
+}
+
+message GetAllStudentsResponse {
+    repeated Student students = 1;
+}

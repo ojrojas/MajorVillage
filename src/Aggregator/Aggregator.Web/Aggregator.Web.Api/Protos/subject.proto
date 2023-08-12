@@ -1,0 +1,65 @@
+﻿syntax = "proto3";
+
+option csharp_namespace ="GrpcSchool";
+import "Protos/area.proto";
+
+package SchoolApi;
+
+service SubjectService {
+	rpc CreateSubject(CreateSubjectRequest) returns (CreateSubjectResponse) {};
+	rpc UpdateSubject(UpdateSubjectRequest) returns (UpdateSubjectResponse) {};
+	rpc DeleteSubject(DeleteSubjectRequest) returns (DeleteSubjectResponse) {};
+	rpc GetSubjectById(GetSubjectByIdRequest) returns (GetSubjectByIdResponse) {};
+	rpc GetAllSubjects(GetAllSubjectsRequest) returns (GetAllSubjectsResponse) {};
+}
+
+message Subject {
+	string id = 1;
+	string name = 2;
+	string areaid = 3;
+	Area area = 4;
+}
+
+message CreateSubjectRequest {
+	Subject subject = 1;
+	string correlationid = 2;
+}
+
+message CreateSubjectResponse {
+	Subject subjectcreated = 1;
+}
+
+message UpdateSubjectRequest {
+	Subject subject = 1;
+	string correlationid = 2;
+}
+
+message UpdateSubjectResponse {
+	Subject subjectupdated = 1;
+}
+
+message DeleteSubjectRequest {
+	string id = 1;
+	string correlationid = 2;
+}
+
+message DeleteSubjectResponse {
+	bool issubjectdeleted = 1;
+}
+
+message GetSubjectByIdRequest {
+	string id = 1;
+	string correlationid = 2;
+}
+
+message GetSubjectByIdResponse {
+	Subject subject = 1;
+}
+
+message GetAllSubjectsRequest {
+	string correlationid = 1;
+}
+
+message GetAllSubjectsResponse {
+	repeated Subject subjects = 1;
+}
