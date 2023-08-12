@@ -1,9 +1,9 @@
 ﻿global using System;
 global using System.Net;
 global using System.Runtime.Serialization;
-global using System.Text;
 global using BuildingBlock.Commons.Helpers;
-global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Grpc.Core;
+global using GrpcSchool;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Filters;

@@ -16,23 +16,36 @@
     <PackageReference Include="Grpc.Core" Version="2.46.6" />
     <PackageReference Include="Grpc.Net.Client" Version="2.55.0" />
     <PackageReference Include="Grpc.Net.ClientFactory" Version="2.55.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.56.2">
+    <PackageReference Include="Grpc.Tools" Version="2.57.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" Version="2.55.0" />
     <PackageReference Include="Google.Protobuf" Version="3.24.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Protobuf Include="..\..\..\School\School.Core\Protos\area.proto" GrpcServices="Client" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="DI\" />
-    <None Remove="Exceptions\" />
+    <PackageReference Include="OpenIddict.Validation.AspNetCore" Version="4.7.0" />
+    <PackageReference Include="OpenIddict.Validation.SystemNetHttp" Version="4.7.0" />
+    <PackageReference Include="OpenIddict.Client.AspNetCore" Version="4.7.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DI\" />
-    <Folder Include="Exceptions\" />
+    <Folder Include="Protos\" />
+    <Folder Include="Services\School\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProtoBuf Include="Protos\area.proto" GrpcServices="Client" />
+    <ProtoBuf Include="Protos\classroom.proto" GrpcServices="Client" />
+    <ProtoBuf Include="Protos\course.proto" GrpcServices="Client" />
+    <ProtoBuf Include="Protos\electiveyear.proto" GrpcServices="Client" />
+    <ProtoBuf Include="Protos\enrollment.proto" GrpcServices="Client" />
+    <ProtoBuf Include="Protos\period.proto" GrpcServices="Client" />
+    <ProtoBuf Include="Protos\student.proto" GrpcServices="Client" />
+    <ProtoBuf Include="Protos\subject.proto" GrpcServices="Client" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlock\BuildingBlock.Commons\BuildingBlock.Commons.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\School\Interfaces\" />
   </ItemGroup>
 </Project>

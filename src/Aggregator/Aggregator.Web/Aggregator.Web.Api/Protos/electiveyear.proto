@@ -1,0 +1,62 @@
+﻿syntax = "proto3";
+
+option csharp_namespace ="GrpcSchool";
+
+package SchoolApi;
+
+service ElectiveYearService {
+    rpc CreateElectiveYear(CreateElectiveYearRequest) returns (CreateElectiveYearResponse) {};
+    rpc UpdateElectiveYear(UpdateElectiveYearRequest) returns (UpdateElectiveYearResponse) {};
+    rpc DeleteElectiveYear(DeleteElectiveYearRequest) returns (DeleteElectiveYearResponse) {};
+    rpc GetElectiveYearById(GetElectiveYearByIdRequest) returns (GetElectiveYearByIdResponse) {};
+    rpc GetAllElectivesYears(GetAllElectivesYearsRequest) returns (GetAllElectivesYearsResponse) {};
+}
+
+message ElectiveYear {
+    string id = 1;
+    int32 year = 2;
+}
+
+message CreateElectiveYearRequest {
+    ElectiveYear electiveyear = 1;
+    string correlationid = 2;
+}
+
+message CreateElectiveYearResponse {
+    ElectiveYear electiveyearcreated = 1;
+}
+
+message UpdateElectiveYearRequest {
+    ElectiveYear electiveyear = 1;
+    string correlationid = 2;
+}
+
+message UpdateElectiveYearResponse {
+    ElectiveYear electiveyearupdated = 1;
+}
+
+message DeleteElectiveYearRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message DeleteElectiveYearResponse {
+    bool iselectiveyeardeleted = 1;
+}
+
+message GetElectiveYearByIdRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message GetElectiveYearByIdResponse {
+    ElectiveYear electiveyear = 1; 
+}
+
+message GetAllElectivesYearsRequest {
+    string correlationid = 1;
+}
+
+message GetAllElectivesYearsResponse {
+    repeated ElectiveYear electivesyears = 1;
+}

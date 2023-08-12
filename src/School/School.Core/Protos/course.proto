@@ -1,0 +1,84 @@
+﻿syntax = "proto3";
+
+option csharp_namespace ="GrpcSchool";
+import "Protos/electiveyear.proto";
+import "Protos/classroom.proto";
+import "Protos/student.proto";
+
+package SchoolApi;
+
+service CourseService {
+    rpc CreateCourse(CreateCourseRequest) returns (CreateCourseResponse) {};
+    rpc UpdateCourse(UpdateCourseRequest) returns (UpdateCourseResponse) {};
+    rpc DeleteCourse(DeleteCourseRequest) returns (DeleteCourseResponse) {};
+    rpc GetCourseById(GetCourseByIdRequest) returns (GetCourseByIdResponse) {};
+    rpc GetAllCourses(GetAllCoursesRequest) returns (GetAllCoursesResponse) {};
+    rpc GetAllCoursesByElectiveYear(GetAllCoursesByElectiveYearRequest) returns (GetAllCoursesResponse) {};
+}
+
+enum CourseStatus {
+    AVAILABLE = 0;
+    UN_AVAILABLE = 1;
+}
+
+message Course {
+    string id = 1;
+    string name = 2;
+    string coursedirectorid = 3;
+    string currentperiodid = 4;
+    CourseStatus coursestatus = 5;
+    ElectiveYear electiveyear = 6;
+    string electiveyearid = 7;
+    ClassRoom classroom = 8;
+    string classroomid = 9;
+    repeated Student students = 10;
+}
+
+message CreateCourseRequest {
+    Course course = 1;
+    string correlationid = 2;
+}
+
+message CreateCourseResponse {
+    Course coursecreated = 1;
+}
+
+message UpdateCourseRequest {
+    Course course = 1;
+    string correlationid = 2;
+}
+
+message UpdateCourseResponse {
+    Course courseupdated = 1;
+}
+
+message DeleteCourseRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message DeleteCourseResponse {
+    bool iscoursedeleted = 1;
+}
+
+message GetCourseByIdRequest {
+    string id = 1;
+    string correlationid = 2;
+}
+
+message GetCourseByIdResponse {
+    Course course = 1;
+}
+
+message GetAllCoursesRequest {
+    string correlationid = 1;
+}
+
+message GetAllCoursesByElectiveYearRequest {
+    string correlationid = 1;
+    string electiveyearid = 2;
+}
+
+message GetAllCoursesResponse {
+    repeated Course courses = 1;
+}

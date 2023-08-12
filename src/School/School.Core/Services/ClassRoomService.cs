@@ -1,6 +1,6 @@
 ﻿namespace School.Core.Services;
 
-public class ClassRoomService //: IClassRoomService
+public class ClassRoomService : IClassRoomService
 {
     private readonly ClassRoomRepository _repository;
     private readonly ILoggerApplicationService<ClassRoomService> _logger;
@@ -17,7 +17,7 @@ public class ClassRoomService //: IClassRoomService
     {
         CreateClassRoomResponse response = new();
         _logger.LogInformation(request.Correlationid, "Create ClassRoom request");
-        response.Classroomcreated =_mapper.Map<GrpcSchool.ClassRoom>(await _repository.CreateAsync(_mapper.Map<ClassRoom>(request.Classroom), cancellationToken));
+        response.Classroomcreated = _mapper.Map<GrpcSchool.ClassRoom>(await _repository.CreateAsync(_mapper.Map<ClassRoom>(request.Classroom), cancellationToken));
         _logger.LogInformation($"Created record params {JsonSerializer.Serialize(request.Classroom)}");
 
         return response;
@@ -27,9 +27,8 @@ public class ClassRoomService //: IClassRoomService
     {
         UpdateClassRoomResponse response = new();
         _logger.LogInformation(request.Correlationid, "Update ClassRoom request");
-        response.Classroomupdated =_mapper.Map<GrpcSchool.ClassRoom>(await _repository.UpdateAsync(_mapper.Map<ClassRoom>(request.Classroom), cancellationToken));
+        response.Classroomupdated = _mapper.Map<GrpcSchool.ClassRoom>(await _repository.UpdateAsync(_mapper.Map<ClassRoom>(request.Classroom), cancellationToken));
         _logger.LogInformation($"Update record params {JsonSerializer.Serialize(request.Classroom)}");
-
         return response;
     }
 
@@ -58,7 +57,7 @@ public class ClassRoomService //: IClassRoomService
     {
         GetAllClassRoomsResponse response = new();
         _logger.LogInformation(request.Correlationid, "Get all ClassRooms request");
-        response.Classrooms.AddRange((await _repository.ListAsync(cancellationToken)).ToRepeatedTypeAsync<ClassRoom,GrpcSchool.ClassRoom>(_mapper));
+        response.Classrooms.AddRange((await _repository.ListAsync(cancellationToken)).ToRepeatedTypeAsync<ClassRoom, GrpcSchool.ClassRoom>(_mapper));
         _logger.LogInformation($"Get all ClassRooms response count: {response.Classrooms.Count()}");
 
         return response;

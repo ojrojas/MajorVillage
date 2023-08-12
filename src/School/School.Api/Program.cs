@@ -12,7 +12,7 @@ builder.Services.AddHealthChecks();
 
 builder.Services.AddMemoryCache();
 
-builder.WebHost.ConfigureKestrel(options =>
+builder.WebHost.UseKestrel(options =>
 {
     // Setup a HTTP/2 endpoint without TLS.
     var port = configuration.GetValue("GRPC_PORT", 5290);

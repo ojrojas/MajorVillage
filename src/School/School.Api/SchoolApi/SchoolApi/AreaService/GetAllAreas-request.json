@@ -1,3 +1,0 @@
-{
-  "correlationid": "{{ faker.random.uuid }}"
-}

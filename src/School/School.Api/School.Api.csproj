@@ -47,15 +47,9 @@
 		<ProjectReference Include="..\School.Core\School.Core.csproj">
 			<GlobalPropertiesToRemove></GlobalPropertiesToRemove>
 		</ProjectReference>
-		<ProjectReference Include="..\School.Infraestructure\School.Infraestructure.csproj">
-			<GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-		</ProjectReference>
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\School.Core\School.Core.csproj">
-			<GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-		</ProjectReference>
-		<ProjectReference Include="..\School.Infraestructure\School.Infraestructure.csproj">
 			<GlobalPropertiesToRemove></GlobalPropertiesToRemove>
 		</ProjectReference>
 	</ItemGroup>
