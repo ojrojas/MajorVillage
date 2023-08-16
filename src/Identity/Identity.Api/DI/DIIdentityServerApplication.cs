@@ -1,6 +1,6 @@
 ﻿namespace Identity.Api.DI;
 
-public static class DIIdentityServerApplication
+internal static class DIIdentityServerApplication
 {
     public static IServiceCollection AddIdentityServerApplication(this IServiceCollection services)
     {
@@ -11,4 +11,3 @@ public static class DIIdentityServerApplication
         return services;
     }
 }
-

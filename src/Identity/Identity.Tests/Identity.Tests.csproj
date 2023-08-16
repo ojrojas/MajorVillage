@@ -28,12 +28,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Identity.Api\Identity.Api.csproj" />
     <ProjectReference Include="..\Identity.Core\Identity.Core.csproj" />
-    <ProjectReference Include="..\Identity.Infraestructure\Identity.Infraestructure.csproj" />
     <ProjectReference Include="..\..\BuildingBlock\BuildingBlock.Commons\BuildingBlock.Commons.csproj" />
     <ProjectReference Include="..\..\BuildingBlock\BuildingBlock.Repository\BuildingBlock.Repository.csproj" />
     <ProjectReference Include="..\Identity.Api\Identity.Api.csproj" />
     <ProjectReference Include="..\Identity.Core\Identity.Core.csproj" />
-    <ProjectReference Include="..\Identity.Infraestructure\Identity.Infraestructure.csproj" />
     <ProjectReference Include="..\..\BuildingBlock\BuildingBlock.Commons\BuildingBlock.Commons.csproj" />
     <ProjectReference Include="..\..\BuildingBlock\BuildingBlock.Repository\BuildingBlock.Repository.csproj" />
   </ItemGroup>

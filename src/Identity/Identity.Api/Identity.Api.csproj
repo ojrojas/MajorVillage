@@ -44,31 +44,21 @@
 	<PackageReference Include="Quartz.Extensions.Hosting" Version="3.7.0" />
 	<PackageReference Include="System.Linq.Async" Version="6.0.1" />
 	<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+	<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
 </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Identity.Core\Identity.Core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\Identity.Infraestructure\Identity.Infraestructure.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Certificates\" />
     <Folder Include="GroupsEndpoints\" />
-    <Folder Include="Views\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Controllers\Account\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Certificates\Identity.Api.Certificates.idsMajorVillage.pfx" />
     <None Remove="GroupsEndpoints\" />
-    <None Remove="Views\" />
-    <None Remove="Controllers\" />
-    <None Remove="Controllers\Account\" />
-    <None Remove="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Certificates\Identity.Api.Certificates.idsMajorVillage.pfx" />

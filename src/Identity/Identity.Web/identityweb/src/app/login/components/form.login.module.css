@@ -1,0 +1,60 @@
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.input_box {
+    position: relative;
+    width:320px;
+    margin: 30px 0;
+    border:none;
+    border-bottom: 1px solid grey;
+}
+
+.input_box label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.input_box input:focus~label,
+.input_box input:valid~label {
+    top:.5px;
+}
+
+
+.input_box input {
+    width: 85%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    height: 50px;
+    background: transparent;
+}
+
+.input_box .icon {
+    position: absolute;
+    right: 8px;
+    bottom: 15px;
+    font-size: 1.4em;
+    line-height:50px;
+}
+
+.btn {
+    width: 100%;
+    border-radius: 20px;
+    background-color:grey;
+    height: 50px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.error {
+    color:red;
+}

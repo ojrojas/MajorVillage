@@ -45,6 +45,8 @@ services:
       - GRPC_PORT=81
       - ConnectionSchool=server=sql.school;user id=root;password=${SCHOOL_PASSWORD};database=SchoolDb
       - EncryptedKey=${ENCRYPTED_KEY}
+      - ClientIdSchoolApi=
+      - ClientSecretSchoolApi=
     ports:
       - "5108:81"
     volumes:
@@ -83,6 +85,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - GRPC_URL=http://school.api:81
+      - EncryptedKey=${ENCRYPTED_KEY}
+      - IdentityUrl=${IDENTITYURL}
     ports:
       - "5505:80"
     volumes:
@@ -99,7 +103,7 @@ services:
       - NoteAndMathsApi=http://{DNS_OR_IP_HOST_CONTAINER}:5210
       - ConnectionIdentity=host=sql.identity;port=5432;database=IdentityDb;username=postgres;password=${IDENTITY_PASSWORD}
       - IdentityUrl=${IDENTITYURL}
-      - UrlsAllow=IdentityApi@http://${DNS_OR_IP_HOST_CONTAINER}:5005,SchoolApi@http://${DNS_OR_IP_HOST_CONTAINER}:5107,NoteAndMathsApi@http://${DNS_OR_IP_HOST_CONTAINER}:5210,MajorWeb@http://${DNS_OR_IP_HOST_CONTAINER}:5305
+      - UrlsAllow=IdentityApi@5005,SchoolApi@5107,NoteAndMathsApi@5210,MajorWeb@5305,IdentityLogin@3000
       - EncryptedKey=${ENCRYPTED_KEY}
     ports:
       - "5005:80"

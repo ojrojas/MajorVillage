@@ -11,4 +11,3 @@ public record LoginUserApplicationRequest : BaseRequest
     public string? ReturnUrl { get; set; } 
     public IEnumerable<string>? Scopes { get; set; } 
 }
-

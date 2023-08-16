@@ -10,7 +10,10 @@ public static class TransformString
         foreach (var dic in urls)
         {
             var value = dic.Split("@");
-            dictionary.Add(value[0], value[1]);
+            if (value[1].Equals("3000"))
+                dictionary.Add(value[0], $"http://localhost:{value[1]}");
+            else
+                dictionary.Add(value[0], $"http://docker.for.mac.localhost:{value[1]}");
         }
 
         return dictionary;
