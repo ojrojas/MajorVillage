@@ -1,6 +1,6 @@
 ﻿namespace Identity.Api.DI;
 
-public static class DIConfigurationApplication
+internal static class DIConfigurationApplication
 {
     public static WebApplication AddDIConfigurationApplication(this WebApplication app)
     {
@@ -18,4 +18,3 @@ public static class DIConfigurationApplication
         return app;
     }
 }
-

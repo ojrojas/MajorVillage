@@ -10,10 +10,13 @@ public static class DIOpenIddictApplication
                 config.SetIssuer(configuration["IdentityUrl"]);
                 config.AddAudiences("resource_school");
 
-                //// Spocify3d9c278b-82d1-4b88-944c-82193bea0595
                 config.AddEncryptionKey(
                     new SymmetricSecurityKey(
                         Convert.FromBase64String(configuration["EncryptedKey"])));
+
+                config.UseIntrospection()
+                .SetClientId(configuration["aggregatorclient"])
+                .SetClientSecret(configuration["752b827a-08a5-483f-abcd-d9e9fabdf657"]);
 
                 // Register the System.Net.Http integration.
                 config.UseSystemNetHttp();

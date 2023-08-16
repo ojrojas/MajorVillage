@@ -65,28 +65,23 @@ public class InitializerDbContext
                 });
             }
 
-            if (await manager.FindByClientIdAsync("schoolswaggerui") is null)
+            if (await manager.FindByClientIdAsync("identitylogin-client") is null)
             {
                 await manager.CreateAsync(new OpenIddictApplicationDescriptor
                 {
-                    ClientId = "schoolswaggerui",
-                    DisplayName = "School Swagger UI",
-                    ClientSecret = "3e0e4c3c-8f86-4cc7-9269-f2db2f1a93c6",
+                    ClientId = "identitylogin-client",
+                    DisplayName = "Identity Login Client",
+                    ClientSecret = "f3b16b5f-34b1-49be-9e55-0fd7e4644724",
 
                     RedirectUris = { new Uri($"{clientsUrls["SchoolApi"]}/swagger/oauth2-redirect.html") },
                     Permissions = {
                         Permissions.Endpoints.Token,
-                        Permissions.GrantTypes.ClientCredentials,
-                        Permissions.GrantTypes.AuthorizationCode,
                         Permissions.GrantTypes.Password,
                         Permissions.Endpoints.Authorization,
-                        Permissions.ResponseTypes.Code,
-                        Permissions.Scopes.Email,
-                        Permissions.Scopes.Profile,
-                        Permissions.Scopes.Roles,
-                        Permissions.Prefixes.Scope + "school",
+                        Permissions.ResponseTypes.Token,
+                        Permissions.Prefixes.Scope + "identity",
                     },
-                    PostLogoutRedirectUris = { new Uri($"{clientsUrls["SchoolApi"]}/swagger") },
+                    PostLogoutRedirectUris = { new Uri($"{clientsUrls["IdentityApi"]}/login") },
                 });
             }
 
@@ -112,6 +107,19 @@ public class InitializerDbContext
                         Permissions.Prefixes.Scope + "noteandmaths",
                     },
                     PostLogoutRedirectUris = { new Uri($"{clientsUrls["MajorWeb"]}/login") },
+                });
+            }
+
+            if (await manager.FindByClientIdAsync("aggregatorclient") is null)
+            {
+                await manager.CreateAsync(new OpenIddictApplicationDescriptor
+                {
+                    ClientId = "aggregatorclient",
+                    DisplayName = "Aggregator-Client",
+                    ClientSecret = "752b827a-08a5-483f-abcd-d9e9fabdf657",
+                    Permissions = {
+                        Permissions.Endpoints.Introspection,
+                    },
                 });
             }
 
@@ -169,6 +177,4 @@ public class InitializerDbContext
             throw new InvalidOperationException(ex.Message, ex);
         }
     }
-
-
 }

@@ -1,6 +1,6 @@
 ﻿namespace Identity.Api.DI;
 
-public static class DIOpenIddictApplication
+internal static class DIOpenIddictApplication
 {
     public static IServiceCollection AddDIOpenIddictApplication(this IServiceCollection services, IConfiguration configuration)
     {
@@ -16,11 +16,11 @@ public static class DIOpenIddictApplication
                 conf.AllowPasswordFlow();
                 conf.AllowAuthorizationCodeFlow();
                 conf.RequireProofKeyForCodeExchange();
-                //conf.Configure(c => c.CodeChallengeMethods.Add(CodeChallengeMethods.Plain));
 
                 conf.SetTokenEndpointUris("connect/token");
                 conf.SetAuthorizationEndpointUris("connect/authorize");
                 conf.SetLogoutEndpointUris("/connect/signout");
+                conf.SetIntrospectionEndpointUris("connect/introspect");
 
                 conf.AddEncryptionKey(
                     new SymmetricSecurityKey(

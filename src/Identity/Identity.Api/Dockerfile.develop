@@ -1,0 +1,22 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+ARG BUILD_CONFIGURATION=Debug
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+EXPOSE 80
+WORKDIR /app
+
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+COPY ["src/Identity/Identity.Api/Identity.Api.csproj", "src/Identity/Identity.Api/"]
+COPY ["src/Identity/Identity.Core/Identity.Core.csproj", "src/Identity/Identity.Core/"]
+COPY ["src/BuildingBlock/BuildingBlock.Commons/BuildingBlock.Commons.csproj", "src/BuildingBlock/BuildingBlock.Commons/"]
+COPY ["src/BuildingBlock/BuildingBlock.Repository/BuildingBlock.Repository.csproj", "src/BuildingBlock/BuildingBlock.Repository/"]
+COPY ["src/Identity/Identity.Infraestructure/Identity.Infraestructure.csproj", "src/Identity/Identity.Infraestructure/"]
+RUN dotnet restore "src/Identity/Identity.Api/Identity.Api.csproj"
+COPY . .
+WORKDIR "/src/src/Identity/Identity.Api"
+RUN dotnet build "Identity.Api.csproj" -c $BUILD_CONFIGURATION
+
+ENTRYPOINT ["dotnet", "run","--no-build", "--no-launch-profile", "-c", "$BUILD_CONFIGURATION","Identity.Api.dll"]

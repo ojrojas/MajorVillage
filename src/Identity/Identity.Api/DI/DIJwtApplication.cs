@@ -6,7 +6,6 @@ internal static class DIJwtApplication
     /// Extension Jwt configuration
     /// </summary>
     /// <param name="services">Services application</param>
-    /// <param name="configuration">configuration environments</param>
     /// <returns>Service configuration</returns>
     internal static IServiceCollection AddDIJwtApplication(this IServiceCollection services)
     {

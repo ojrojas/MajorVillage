@@ -6,7 +6,7 @@ public record LoginUserApplicationResponse : BaseResponse
 {
 	public LoginUserApplicationResponse(Guid CorrelationId): base(CorrelationId){}
 
-	public string Token { get; set; } = string.Empty;
+	public int Status { get; set; } = 400;
     public IResult ActionResult { get; set; } = null!;
 }
 

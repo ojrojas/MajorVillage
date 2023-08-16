@@ -92,7 +92,7 @@ public class UserApplicationService : IUserApplicationService
     {
         LoginUserApplicationResponse response = new(request.CorrelationId())
         {
-            Token = "Do not get token response"
+            Status = 400
         };
 
         _logger.LogInformation(response, "Encrypt password and get user by login");
@@ -152,10 +152,11 @@ public class UserApplicationService : IUserApplicationService
 
                 // Returning a SignInResult will ask OpenIddict to issue the appropriate access/identity tokens.
                 response.ActionResult = Results.SignIn(new ClaimsPrincipal(identity), new(), OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
-                response.Token = "Signin successful";
+                response.Status = 200;
+                return response.ActionResult;
             }
         }
-
+        response.ActionResult = Results.BadRequest(response);
         return response.ActionResult;
     }
 }

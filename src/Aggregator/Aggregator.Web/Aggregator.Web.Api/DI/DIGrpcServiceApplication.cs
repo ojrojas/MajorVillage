@@ -1,6 +1,6 @@
 ﻿namespace Aggregator.Web.Api.DI;
 
-public static class DIGrpcServiceApp
+public static class DIGrpcServiceApplication
 {
     /// <summary>
     /// Add grpc services
