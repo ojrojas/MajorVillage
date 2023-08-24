@@ -1,0 +1,12 @@
+
+
+.nav_content__profile_img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav_content__profile_img img {
+    background: cover no-repeat;
+    width: inherit;
+    height: inherit;
+}

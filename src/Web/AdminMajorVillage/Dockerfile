@@ -22,8 +22,8 @@ FROM base as deps
 # Leverage a cache mount to /root/.npm to speed up subsequent builds.
 # Leverage bind mounts to package.json and package-lock.json to avoid having to copy them
 # into this layer.
-RUN --mount=type=bind,source=/src/Web/AdminMajorVillage/package.json,target=package.json \
-    --mount=type=bind,source=/src/Web/AdminMajorVillage/package-lock.json,target=package-lock.json \
+RUN --mount=type=bind,source=/src/Web/adminmajorvillage/package.json,target=package.json \
+    --mount=type=bind,source=/src/Web/adminmajorvillage/package-lock.json,target=package-lock.json \
     --mount=type=cache,target=/root/.npm \
     npm ci --omit=dev
 
@@ -33,13 +33,13 @@ FROM deps as build
 
 # Download additional development dependencies before building, as some projects require
 # "devDependencies" to be installed to build. If you don't need this, remove this step.
-RUN --mount=type=bind,source=/src/Web/AdminMajorVillage/package.json,target=package.json \
-    --mount=type=bind,source=/src/Web/AdminMajorVillage/package-lock.json,target=package-lock.json \
+RUN --mount=type=bind,source=/src/Web/adminmajorvillage/package.json,target=package.json \
+    --mount=type=bind,source=/src/Web/adminmajorvillage/package-lock.json,target=package-lock.json \
     --mount=type=cache,target=/root/.npm \
     npm ci
 
 # Copy the rest of the source files into the image.
-COPY /src/Web/AdminMajorVillage/ .
+COPY /src/Web/adminmajorvillage/ .
 
 # Pass through variables to react app
 ARG REACT_APP_ROUTE_API_IDENTITY
@@ -62,7 +62,7 @@ ENV REACT_APP_ROUTE_API_IDENTITY $REACT_APP_ROUTE_API_IDENTITY
 USER node
 
 # Copy package.json so that package manager commands can be used.
-COPY /src/Web/AdminMajorVillage/package.json .
+COPY /src/Web/adminmajorvillage/package.json .
 
 # Using nginx server
  FROM nginx
@@ -71,7 +71,7 @@ COPY /src/Web/AdminMajorVillage/package.json .
 # the built application from the build stage into the image.
 COPY default.conf /etc/nginx/conf.d/
 COPY --from=deps /usr/src/app/node_modules ./node_modules
-COPY --from=build /usr/src/app/dist ./usr/share/nginx/html
+COPY --from=build /usr/src/app/build ./usr/share/nginx/html
 # COPY --from=build /usr/src/app ./
 
 # Expose the port that the application listens on.
