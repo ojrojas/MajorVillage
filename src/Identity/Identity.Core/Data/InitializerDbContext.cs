@@ -65,11 +65,11 @@ public class InitializerDbContext
                 });
             }
 
-            if (await manager.FindByClientIdAsync("identitylogin-client") is null)
+            if (await manager.FindByClientIdAsync("identitylogin-client-admin") is null)
             {
                 await manager.CreateAsync(new OpenIddictApplicationDescriptor
                 {
-                    ClientId = "identitylogin-client",
+                    ClientId = "identitylogin-client-admin",
                     DisplayName = "Identity Login Client",
                     ClientSecret = "f3b16b5f-34b1-49be-9e55-0fd7e4644724",
 
@@ -80,6 +80,7 @@ public class InitializerDbContext
                         Permissions.Endpoints.Authorization,
                         Permissions.ResponseTypes.Token,
                         Permissions.Prefixes.Scope + "identity",
+                        Permissions.Prefixes.Scope + "aggregator",
                     },
                     PostLogoutRedirectUris = { new Uri($"{clientsUrls["IdentityApi"]}/login") },
                 });

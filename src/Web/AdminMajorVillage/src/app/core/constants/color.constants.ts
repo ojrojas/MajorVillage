@@ -1,0 +1,20 @@
+export const ColorConstants = {
+    PRIMARY:'#0000de',
+    PRIMARY_VARIANT:'#976af7',
+    SECOND:'#0b6e00',
+    SECOND_VARIANT:'#6bb82d',
+    THIRD:'#ae6a1c',
+    THIRD_VARIANT:'#bf8c2c',
+    BACKGROUND_1:'#953c25',
+    BACKGROUND_1_VARIANT:'#c55137',
+    BACKGROUND_2:'#ced73d',
+    BACKGROUND_2_VARIANT:'#e6eb9c',
+    BACKGROUND_3:'#4bb1ed',
+    BACKGROUND_3_VARIANT:'#e2f4fd',
+    COLOR_1:'#00000',
+    COLOR_1_VARIANT:'grey',
+    COLOR_2:'white',
+    COLOR_2_VARIANT:'whitesmoke',
+    COLOR_3:'#2b029d',
+    COLOR_3_VARIANT:'#6829be'
+}
