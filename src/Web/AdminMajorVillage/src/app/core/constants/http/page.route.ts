@@ -1,5 +1,7 @@
 export const PagesRoutes = {
-    root:'/',
-    login:'/login',
-    dashboard:'/dashboard'
+    root: '/',
+    login: '/login',
+    dashboard: '/dashboard',
+    users: '/users',
+    settings: '/settings'
 }
