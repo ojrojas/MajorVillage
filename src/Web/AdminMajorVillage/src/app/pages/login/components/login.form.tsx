@@ -75,6 +75,7 @@ export const LoginFormComponent: React.FC = () => {
                     size="small"
                     required
                     id="outlined-username"
+                    data-testid="outlined-username"
                     error={errors.username ? true : false}
                     type={'text'}
                     {...register("username", { required: true })}
@@ -86,6 +87,7 @@ export const LoginFormComponent: React.FC = () => {
                 <TextField
                     size="small"
                     id="outlined-password"
+                    data-testid="outlined-password"
                     type={showPassword ? 'text' : 'password'}
                     required
                     error={errors.password ? true : false}

@@ -18,10 +18,10 @@ const SideNavComponent: React.FC = () => {
                     </div>
                 </div>
                 <div className={styles.nav_content__menu}>
-                    <ul className={styles.nav_content__list}>
-                        <li className={styles.nav_content__item}>Users</li>
-                        <li className={styles.nav_content__item}>Type Users</li>
-                        <li className={styles.nav_content__item}>Settings</li>
+                    <ul data-testid="list-item-nav" className={styles.nav_content__list}>
+                        <li data-testid="item-nav-users" className={styles.nav_content__item}>Users</li>
+                        <li data-testid="item-nav-typeusers" className={styles.nav_content__item}>Type Users</li>
+                        <li data-testid="item-nav-settings" className={styles.nav_content__item}>Settings</li>
                     </ul>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { Dispatch, SetStateAction } from "react";
 import { ITheme, ThemeType } from "../models/theme.model";
 import { THEMES } from "../configurations/theme.config";
+import { Breakpoint } from "@mui/material";
 
 interface IThemeProviderProps {
     children: React.ReactNode;
