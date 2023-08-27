@@ -19,7 +19,7 @@ export function RenderWithProviders(
         ...renderOptions
     }: ExtendedRenderOptions = {}
 ) {
-    function Wrapper({ children }: PropsWithChildren<{}>): React.ReactNode {
+    function Wrapper({ children }: PropsWithChildren<{}>): React.JSX.Element {
         return <Provider store={appStore}>
             <SnackbarProvider>
                 {children}
