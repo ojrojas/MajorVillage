@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import { useAppSelector } from "../../hooks";
 import { Outlet, useNavigate } from "react-router-dom";
 import { PagesRoutes } from "../../core/constants/http/page.route";
-import NavListComponent from "../sidenav/components/sidenavlist.component";
-import NavConfiguration from "../../core/configurations/nav.config";
+import HeaderComponent from "../header/header.component";
+import { Box, CssBaseline } from "@mui/material";
 
 export const LayoutComponent: React.FC = () => {
     const { logged, user } = useAppSelector(state => state.login);
     const navigateOn = useNavigate();
+    const onOpen = () => { }
+
     useEffect(() => {
         if (logged) {
             navigateOn(PagesRoutes.dashboard);
@@ -18,11 +20,17 @@ export const LayoutComponent: React.FC = () => {
     }, [logged, navigateOn, user]);
 
     return (
-        <React.Fragment>
-            <h1>Drawer</h1>
-            <NavListComponent data={NavConfiguration} />
-            <Outlet />
-        </React.Fragment>
-        
-    )
+        <Box sx={{ display: 'flex', flexDirection: 'column', margin: 0, padding: 0 }}>
+            <CssBaseline />
+            <div style={{ flex: 1 }}>
+                <HeaderComponent onOpen={onOpen} />
+            </div>
+            <div style={{ display:'flex', flexDirection:'row' }}>
+                <Box component="main" sx={{ backgroundColor: 'papayawhip' }}>
+                <Outlet />
+            </Box>
+            </div>
+           
+        </Box>
+    );
 }

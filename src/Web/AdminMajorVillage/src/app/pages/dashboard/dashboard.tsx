@@ -1,10 +1,9 @@
 import React  from "react"
-import SideNavComponent from "../../components/sidenav/sidenav.component";
 
 const DashboardPage: React.FC = () => {
     return (
         <React.Fragment>
-            <SideNavComponent />
+            <h1>Dashboard Page</h1>
         </React.Fragment>
     );
 }

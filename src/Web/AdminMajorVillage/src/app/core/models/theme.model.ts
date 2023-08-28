@@ -10,4 +10,9 @@ export interface ITheme {
     '--color-1':string;
     '--color-2':string;
     '--color-3':string;
+    '--tran-02': string;
+    '--tran-03': string;
+    '--tran-04': string;
+    '--tran-05': string;
 }
+

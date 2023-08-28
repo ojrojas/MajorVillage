@@ -3,11 +3,13 @@ import type { RootState, AppDispatch } from './store';
 import { ThemeContext } from './core/contexts/theme.context';
 import React from 'react';
 import { Breakpoint, useMediaQuery, useTheme as muiUseTheme } from '@mui/material';
+import { CollapseDrawerContext } from './core/contexts/collapse.context';
 
 // Use throughout your app instead of plain `useDispatch` and `useSelector`
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const useTheme = () => React.useContext(ThemeContext);
+export const useCollapseDrawer = () => React.useContext(CollapseDrawerContext);
 export const useResponsive = (query: string, start: number | Breakpoint, end: number | Breakpoint) => {
     const theme = muiUseTheme();
 

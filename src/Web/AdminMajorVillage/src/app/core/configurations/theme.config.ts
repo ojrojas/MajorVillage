@@ -12,6 +12,10 @@ export const THEMES: Record<ThemeType, ITheme> = {
         '--color-1': ColorConstants.COLOR_1,
         '--color-2': ColorConstants.PRIMARY,
         '--color-3': ColorConstants.PRIMARY,
+        '--tran-02': 'all 0.2s ease',
+        '--tran-03': 'all 0.3s ease',
+        '--tran-04': 'all 0.4s ease',
+        '--tran-05': 'all 0.5s ease',
     },
     dark: {
         '--primary': ColorConstants.PRIMARY_VARIANT,
@@ -22,6 +26,10 @@ export const THEMES: Record<ThemeType, ITheme> = {
         '--background-3': ColorConstants.PRIMARY_VARIANT,
         '--color-1': ColorConstants.COLOR_1_VARIANT,
         '--color-2': ColorConstants.PRIMARY_VARIANT,
-        '--color-3': ColorConstants.PRIMARY_VARIANT
+        '--color-3': ColorConstants.PRIMARY_VARIANT,
+        '--tran-02': 'all 0.2s ease',
+        '--tran-03': 'all 0.3s ease',
+        '--tran-04': 'all 0.4s ease',
+        '--tran-05': 'all 0.5s ease',
     }
 }
