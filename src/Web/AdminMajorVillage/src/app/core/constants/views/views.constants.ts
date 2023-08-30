@@ -1,0 +1,8 @@
+ export const ViewContants = {
+    APP_BAR_MOBILE: 64,
+    APP_BAR_DESKTOP: 9,
+    DRAWER_WIDTH: 280,
+    APPBAR_MOBILE: 64,
+    APPBAR_DESKTOP: 92,
+    COLLAPSE_WIDTH: 102,
+}

@@ -8,17 +8,17 @@ import SettingsIcon from '@mui/icons-material/Settings';
 // const icon = (name: string) => <Icon>{name}</Icon>
 const NavConfiguration = [
     {
-        title: 'dashboard',
+        title: 'Dashboard',
         path: PagesRoutes.dashboard,
         icon: <DashboardIcon/>
     },
     {
-        title: 'users',
+        title: 'Users',
         path: PagesRoutes.users,
         icon: <PersonIcon/>
     },
     {
-        title: 'settings',
+        title: 'Settings',
         path: PagesRoutes.settings,
         icon: <SettingsIcon/>
     }

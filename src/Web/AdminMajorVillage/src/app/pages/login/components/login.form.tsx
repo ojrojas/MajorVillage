@@ -15,7 +15,7 @@ import { PagesRoutes } from "../../../core/constants/http/page.route";
 import { setlogged } from "../redux/login.slice";
 import '@fontsource/comic-mono';
 
-export const LoginFormComponent: React.FC = () => {
+const LoginFormComponent: React.FC = () => {
     const dispatch = useAppDispatch();
     const [showPassword, setShowPassword] = React.useState(false);
     const navigationTo = useNavigate();
@@ -115,3 +115,5 @@ export const LoginFormComponent: React.FC = () => {
         </Card>
     );
 };
+
+export default LoginFormComponent;
