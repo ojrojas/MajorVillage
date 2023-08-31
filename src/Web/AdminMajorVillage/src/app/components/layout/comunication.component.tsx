@@ -7,8 +7,12 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Menu, MenuItem } from '@mui/material';
+import { Logout } from '@mui/icons-material';
+import { useAppDispatch } from '../../hooks';
+import { setlogout } from '../../pages/login/redux/login.slice';
 
 const ComunicationComponent: React.FC = () => {
+  const dispatch = useAppDispatch();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
         React.useState<null | HTMLElement>(null);
@@ -36,6 +40,10 @@ const ComunicationComponent: React.FC = () => {
         handleMobileMenuClose();
     };
 
+    const handleLogout = ()=> {
+      dispatch(setlogout())
+    }
+
     const mobileMenuId = 'primary-search-account-menu-mobile';
 
     const renderMenu = (
@@ -56,6 +64,7 @@ const ComunicationComponent: React.FC = () => {
         >
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem onClick={handleLogout}>Logout</MenuItem>
         </Menu>
     );
 
@@ -106,6 +115,18 @@ const ComunicationComponent: React.FC = () => {
               <AccountCircle />
             </IconButton>
             <p>Profile</p>
+          </MenuItem>
+          <MenuItem onClick={handleLogout}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="primary-search-account-menu"
+              aria-haspopup="true"
+              color="inherit"
+            >
+              <Logout />
+            </IconButton>
+            <p>Logout</p>
           </MenuItem>
         </Menu>
       );

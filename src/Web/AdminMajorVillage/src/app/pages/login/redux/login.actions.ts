@@ -23,7 +23,3 @@ export const login = createAsyncThunk<ILoginResponse, ILogin>('login/login', asy
     const response = await api.Login<ILoginResponse>(HttpRoutes.login, formData);
     return response;
 });
-
-export const logout = createAsyncThunk("login/logout", async () => {
-    return false;
-});

@@ -3,5 +3,6 @@ export const PagesRoutes = {
     login: '/login',
     dashboard: '/dashboard',
     users: '/users',
-    settings: '/settings'
+    settings: '/settings',
+    typeUsers: '/typeusers'
 }

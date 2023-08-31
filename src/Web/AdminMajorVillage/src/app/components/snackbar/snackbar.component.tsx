@@ -10,14 +10,26 @@ const SnackbarComponent: React.FC = () => {
     const dispatch = useAppDispatch();
     const [timer, setTimer] = useState<number>(duration ?? 4000);
 
+    let time: NodeJS.Timeout | undefined;
+
+    const handleTimeOut = () => {
+        time = setTimeout(() => {
+            dispatch(closeSnackbar());
+        }, timer);
+    }
+
     const handleClose = () => {
-        setTimer(0);
-        dispatch(closeSnackbar());
-    };
+        clearTimeout(time);
+    }
 
     useEffect(() => {
-        setTimeout(() => { handleClose() }, timer);
-    }, [duration, handleClose, timer]);
+        if (open) {
+            handleTimeOut();
+        }
+        return () => {
+            clearTimeout(time);
+        }
+    }, [open, time]);
 
     return (
         <React.Fragment>

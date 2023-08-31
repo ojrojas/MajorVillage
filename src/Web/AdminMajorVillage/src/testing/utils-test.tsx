@@ -5,6 +5,8 @@ import { PreloadedState } from '@reduxjs/toolkit';
 import SnackbarComponent from '../app/components/snackbar/snackbar.component';
 import { SnackbarProvider } from '../app/core/contexts/snackbar.context';
 import { AppStore, RootState, setupStore } from './store-test';
+import { RouterProvider } from 'react-router-dom';
+import router from '../app/core/routes/route.component';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
     preloadedState?: PreloadedState<RootState>
@@ -19,10 +21,10 @@ export function RenderWithProviders(
         ...renderOptions
     }: ExtendedRenderOptions = {}
 ) {
-    function Wrapper({ children }: PropsWithChildren<{}>): React.JSX.Element {
+    function Wrapper(): React.JSX.Element {
         return <Provider store={appStore}>
             <SnackbarProvider>
-                {children}
+                <RouterProvider router={router} />
                 <SnackbarComponent />
             </SnackbarProvider>
         </Provider>

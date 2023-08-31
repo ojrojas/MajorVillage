@@ -1,10 +1,10 @@
 import { screen } from "@testing-library/react";
 import { RenderWithProviders } from "../../../testing/utils-test";
-import DashboardPage from "./dashboard";
+import LayoutComponent from "../../components/layout/layout.component";
 
 describe("load dashboard Page Should", () => {
-    test('load nav item item-nav-typeusers', async () => {
-      const {appStore} =   RenderWithProviders(<DashboardPage/>,{
+    test('load nav list-items item-navs', async () => {
+      const {appStore} = RenderWithProviders(<LayoutComponent/>,{
             preloadedState: {
                 login: {
                     loginRequest: undefined,
