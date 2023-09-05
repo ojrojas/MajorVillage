@@ -4,7 +4,7 @@ public static class TypeUserGroupRoute
 {
     public static RouteGroupBuilder AddTypeUserGroupRoute(this RouteGroupBuilder group)
     {
-        group.WithTags("TypeUserEndponts");
+        group.WithTags("TypeUserEndpoints");
         GetAllTypeUser(group);
         CreateTypeUser(group);
         GetTypeUserById(group);

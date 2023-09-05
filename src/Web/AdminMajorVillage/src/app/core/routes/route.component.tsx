@@ -11,22 +11,47 @@ const router = createBrowserRouter([
     {
         path: PagesRoutes.root,
         element: <LayoutComponent />,
+        handle: {
+            infos: {
+                title:'Layout'
+            }
+        },
         children: [
             {
                 path: PagesRoutes.dashboard,
-                element: <DashboardPage />
+                element: <DashboardPage />,
+                handle: {
+                    infos: {
+                        title:'Dashboard'
+                    }
+                }
             },
             {
                 path:PagesRoutes.users,
-                element: <UsersPage />
+                element: <UsersPage />,
+                handle: {
+                    infos:{
+                        title: 'User'
+                    }
+                }
             },
             {
                 path: PagesRoutes.typeUsers,
-                element: <TypeUsersPage />
+                element: <TypeUsersPage />,
+                handle: {
+                    infos: {
+                        title:'Type Users'
+                    }
+                }
             },
             {
                 path: PagesRoutes.settings,
-                element: <SettingsPage />
+                element: <SettingsPage />,
+                handle: {
+                    infos: {
+                        title:'Settings'
+                    }
+                }
             }
         ]
     },

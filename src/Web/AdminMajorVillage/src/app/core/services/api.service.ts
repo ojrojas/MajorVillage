@@ -1,12 +1,20 @@
+import { RootState } from "../../store";
+import StorageService from "./storage.service";
+
 class HttpClient {
     private headers: Headers;
 
     constructor() {
         this.headers = new Headers();
+        const state = StorageService.GetState() as RootState;
+        this.headers.append("Content-Type", "application/json");
+        this.headers.append("authorization", `Bearer ${state.login.loginResponse?.access_token}`)
     }
 
     public Login = async <T>(url: string, body: any): Promise<T> => {
         try {
+            this.headers.delete("Content-Type");
+            this.headers.delete("Accept");
             this.headers.append("Content-Type", "application/x-www-form-urlencoded");
             this.headers.append("Accept", "*/*");
             const response = await fetch(url, {

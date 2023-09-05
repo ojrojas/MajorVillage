@@ -1,7 +1,7 @@
-import { IType } from "../type/type.model";
+import { ITypeUser } from "../type/typeuser.model";
 
 export interface IUser {
     name:string;
     lastName:string;
-    type:IType
+    type:ITypeUser
 }

@@ -20,6 +20,9 @@ const SnackbarComponent: React.FC = () => {
 
     const handleClose = () => {
         clearTimeout(time);
+        console.log(time);
+        setTimer(timer);
+        dispatch(closeSnackbar());
     }
 
     useEffect(() => {

@@ -1,15 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import loginSlice from './pages/login/redux/login.slice';
 import { throttle } from 'lodash';
 import StorageService from './core/services/storage.service';
-import snackbarSlice from './components/snackbar/redux/snackbar.slice';
+import { rootReducer } from './combine.reducer';
 
 const persistedState = StorageService.GetState();
 export const store = configureStore({
-	reducer: {
-		login: loginSlice,
-		snackbar: snackbarSlice
-	}, preloadedState: persistedState,
+	reducer: rootReducer, preloadedState: persistedState,
 	middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }),
 });
 

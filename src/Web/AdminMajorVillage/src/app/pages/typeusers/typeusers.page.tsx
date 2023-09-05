@@ -1,5 +1,12 @@
+import React from "react";
+import ListTypeUsersComponent from "./components/list-typeusers.component";
+
 const TypeUsersPage : React.FC = ()=> {
-    return <h1>Type Users Page</h1>
+    return (
+        <React.Fragment>
+            <ListTypeUsersComponent />
+        </React.Fragment>
+    )
 }
 
 export default TypeUsersPage;

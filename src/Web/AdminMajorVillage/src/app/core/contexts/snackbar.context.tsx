@@ -1,6 +1,7 @@
 import React from "react";
 import { ISnackbarOptions } from "../../components/snackbar/snackbar.options";
 import { useAppSelector } from "../../hooks";
+import SnackbarComponent from "../../components/snackbar/snackbar.component";
 
 export const SnackbarContext = React.createContext<ISnackbarOptions>({
     message: '',
@@ -9,15 +10,13 @@ export const SnackbarContext = React.createContext<ISnackbarOptions>({
     open: false
 });
 
-interface Props {
-    children: React.ReactNode;
-}
-
-export const SnackbarProvider: React.FC<Props> = ({ children }) => {
+const SnackbarProvider: React.FC = () => {
     const { duration, message, severity, open } = useAppSelector(state => state.snackbar.snackbarOption);
     return (
         <SnackbarContext.Provider value={{ duration, message, severity, open }}>
-            {children}
+            <SnackbarComponent />
         </SnackbarContext.Provider>
     );
 }
+
+export default SnackbarProvider;

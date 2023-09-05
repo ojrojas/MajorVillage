@@ -18,7 +18,7 @@ export const ThemeContext = React.createContext<IThemeContextProps>({
     theme: THEMES['light'],
 } as IThemeContextProps);
 
-export const ThemeProvider: React.FC<IThemeProviderProps> = ({children})=> {
+const ThemeProvider: React.FC<IThemeProviderProps> = ({children})=> {
     const [currentTheme, setCurrentTheme] = React.useState<ThemeType>('light');
     return (
         <ThemeContext.Provider value={{
@@ -31,3 +31,5 @@ export const ThemeProvider: React.FC<IThemeProviderProps> = ({children})=> {
         </ThemeContext.Provider>
     )
 }
+
+export default ThemeProvider;

@@ -1,5 +1,5 @@
-import { Button, Card, FormControl, IconButton, InputAdornment, TextField, Typography } from "@mui/material";
 import React from "react";
+import { Button, Card, FormControl, IconButton, InputAdornment, TextField, Typography } from "@mui/material";
 import styles from './login.form.module.css';
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { useAppDispatch } from "../../../hooks";
@@ -13,6 +13,8 @@ import { IError } from "../../../core/models/error/error.model";
 import { useNavigate } from "react-router-dom";
 import { PagesRoutes } from "../../../core/constants/http/page.route";
 import { setlogged } from "../redux/login.slice";
+import { closeLoader, openLoader } from "../../../components/loaders/redux/loader.slice";
+import { initialLoaderOptions } from "../../../core/contexts/loaders.context";
 import '@fontsource/comic-mono';
 
 const LoginFormComponent: React.FC = () => {
@@ -35,7 +37,10 @@ const LoginFormComponent: React.FC = () => {
     };
 
     const onSubmit = handleSubmit(async (data) => {
+        dispatch(openLoader({ ...initialLoaderOptions, type: 'leapfrog', open: true }));
         var response = await dispatch(login(data));
+        const load = dispatch(closeLoader());
+        console.log(load);
         if (login.fulfilled.match(response)) {
             if (response.payload.access_token) {
                 dispatch(openSnackbar({

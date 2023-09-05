@@ -10,7 +10,6 @@ COPY ["src/Identity/Identity.Api/Identity.Api.csproj", "src/Identity/Identity.Ap
 COPY ["src/Identity/Identity.Core/Identity.Core.csproj", "src/Identity/Identity.Core/"]
 COPY ["src/BuildingBlock/BuildingBlock.Commons/BuildingBlock.Commons.csproj", "src/BuildingBlock/BuildingBlock.Commons/"]
 COPY ["src/BuildingBlock/BuildingBlock.Repository/BuildingBlock.Repository.csproj", "src/BuildingBlock/BuildingBlock.Repository/"]
-COPY ["src/Identity/Identity.Infraestructure/Identity.Infraestructure.csproj", "src/Identity/Identity.Infraestructure/"]
 RUN dotnet restore "src/Identity/Identity.Api/Identity.Api.csproj"
 COPY . .
 WORKDIR "/src/src/Identity/Identity.Api"

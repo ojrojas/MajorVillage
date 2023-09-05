@@ -14,7 +14,6 @@ COPY ["src/School/School.Api/School.Api.csproj", "src/School/School.Api/"]
 COPY ["src/School/School.Core/School.Core.csproj", "src/School/School.Core/"]
 COPY ["src/BuildingBlock/BuildingBlock.Commons/BuildingBlock.Commons.csproj", "src/BuildingBlock/BuildingBlock.Commons/"]
 COPY ["src/BuildingBlock/BuildingBlock.Repository/BuildingBlock.Repository.csproj", "src/BuildingBlock/BuildingBlock.Repository/"]
-COPY ["src/School/School.Infraestructure/School.Infraestructure.csproj", "src/School/School.Infraestructure/"]
 RUN dotnet restore "src/School/School.Api/School.Api.csproj"
 COPY . .
 WORKDIR "/src/src/School/School.Api"

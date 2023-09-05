@@ -16,6 +16,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../hooks';
 import { PagesRoutes } from '../../core/constants/http/page.route';
 import NavComponent from './nav.component';
+import BreadCrumbsComponent from './breadcrumbs.component';
 
 const drawerWidth = 240;
 
@@ -68,8 +69,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-const LayoutComponent:React.FC = () =>  {
-  const {user, logged} = useAppSelector(state => state.login);
+const LayoutComponent: React.FC = () => {
+  const { user, logged } = useAppSelector(state => state.login);
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const navigateOn = useNavigate();
@@ -94,7 +95,7 @@ const LayoutComponent:React.FC = () =>  {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{backgroundColor:'rbga(0,0,0,.9)'}}>
+      <AppBar position="fixed" open={open} sx={{ backgroundColor: 'rbga(0,0,0,.9)' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -130,10 +131,11 @@ const LayoutComponent:React.FC = () =>  {
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
-       <NavComponent />
+        <NavComponent />
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
+        <BreadCrumbsComponent />
         <Outlet />
       </Main>
     </Box>
